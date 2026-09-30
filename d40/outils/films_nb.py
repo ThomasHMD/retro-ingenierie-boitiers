@@ -8,12 +8,12 @@ Sources (relevées en octobre 2026, courbes numérisées à la main ou au pixel 
   « Characteristic Curves, Tri-X 400 / 400TX 35 mm », révélateur T-MAX, 6 min à 20 °C (indice de contraste
   ≈ 0,56, celui que vise la fiche).
   https://kodakprofessional.com/sites/default/files/wysiwyg/film/f4017_trix_320400.pdf
-- Ilford HP5 Plus, fiche technique Harman (juin 2010) : « Wedge spectrogram to tungsten light (2850 K) »,
+- Ilford HP5 Plus, fiche technique Ilford (juin 2010) : « Wedge spectrogram to tungsten light (2850 K) »,
   lu comme une réponse relative linéaire à une source de 2 850 K (on divise par le corps noir à 2 850 K pour
   revenir à une sensibilité par énergie) ; « Characteristic curves », Ilfotec HC 1+31, 6 min 30 à 20 °C.
   https://www.ilfordphoto.com/amfile/file/download/file/1903/product/691/ (copie lue : kennethleegallery.com/pdf/HP5Plus.pdf)
 - Ilford FP4 Plus, fiche Ilford d'avril 2004 (graphiques vectoriels, lus dans le PDF par fiches_vectorielles.py,
-  données complètes dans recherche/donnees-films/fp4-plus.json ; la fiche Harman de novembre 2018 reprend les mêmes
+  données complètes dans recherche/donnees-films/fp4-plus.json ; la fiche Ilford de novembre 2018 reprend les mêmes
   graphiques en image) : « Wedge spectrogram to tungsten light (2850K) », même lecture que HP5 ; « Characteristic
   curve », Ilfotec HC 1+31, 8 min à 20 °C. https://125px.com/docs/film/ilford/FP4+-200404.pdf
 - Sensibilités spectrales du D40 : base camspec (Jiang et al. 2013), voir matrices_spectrales.py.
@@ -52,7 +52,7 @@ TRIX_SPECTRE = {300: 2.50, 350: 2.70, 370: 2.72, 380: 2.72, 390: 2.72, 400: 2.71
                 440: 2.62, 450: 2.58, 460: 2.53, 470: 2.46, 480: 2.37, 490: 2.29, 500: 2.24, 510: 2.24, 520: 2.28,
                 530: 2.33, 540: 2.37, 550: 2.41, 560: 2.44, 570: 2.46, 580: 2.46, 590: 2.42, 600: 2.38, 610: 2.40,
                 620: 2.42, 630: 2.34, 640: 1.95, 650: 1.15, 660: 0.40, 670: -3.0}
-# HP5 Plus : spectrogramme au tungstène 2 850 K, hauteur relative (fiche Harman p. 1)
+# HP5 Plus : spectrogramme au tungstène 2 850 K, hauteur relative (fiche Ilford p. 1)
 HP5_SPECTROGRAMME = {353: 0.0, 367: 0.27, 385: 0.59, 400: 0.71, 422: 0.78, 450: 0.81, 477: 0.81, 503: 0.78, 523: 0.84,
                      550: 0.94, 573: 0.99, 587: 0.96, 601: 0.92, 619: 0.94, 632: 0.92, 638: 0.69, 645: 0.36, 655: 0.0}
 # FP4 Plus : spectrogramme au tungstène 2 850 K (fiche Ilford 2004 p. 1, zéro de l'axe pris aux graduations 0,5 et 1,0 ;

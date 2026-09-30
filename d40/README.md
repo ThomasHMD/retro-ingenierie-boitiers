@@ -8,7 +8,7 @@ Un D40 de 2006 qui sort en JPEG direct cinq looks (Hasselblad, Classic Chrome, P
 | Chrome | Vivid | Classic Chrome (JPEG du Fujifilm X-T4) | 1,4 (2,7), 1 vue |
 | Positive | More Vivid | Positive (Ricoh GR III) | 1,6 (2,8), 3 vues |
 | Tri-X | Portrait | Tri-X 400, d'après un preset acheté que j'aimais beaucoup | 0,5 (2,8), 4 vues |
-| HP5 | Black And White | HP5+ (fiche Harman, tirage grade 2) | 2,7 (4,6), 11 vues |
+| HP5 | Black And White | HP5+ (fiche Ilford, tirage grade 2) | 2,7 (4,6), 11 vues |
 
 Le menu garde aussi Nikon (rendu d'origine) et Personnalisée ; la photo note le préréglage dans le champ « Optimiser l'image » de Nikon, recyclé. Mesures et réserves : [`../d750/recherche/resultats-mesures.md`](../d750/recherche/resultats-mesures.md) (partie D40).
 

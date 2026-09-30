@@ -593,7 +593,7 @@ def noir_et_blanc(dossier, chemin_modele, sortie):
     pm = P['MONOCHROME']
     cibles = {
         'TRI-X': (dc.cible_nb('preset_trix', dc.courbe_trix_preset()), 'mélange et courbe du preset Tri-X'),
-        'HP5': (dc.cible_nb('hp5_fiche', courbe_hp5_scans(m, k)), 'mélange de la fiche Harman, tonalité de ses scans HP5'),
+        'HP5': (dc.cible_nb('hp5_fiche', courbe_hp5_scans(m, k)), 'mélange de la fiche Ilford, tonalité de ses scans HP5'),
         'FP4': (dc.cible_nb('fp4_fiche', dc.courbe_film('fp4')), 'mélange et courbe de la fiche Ilford (Ilfotec HC)'),
     }
     kelvins = [5000, 5600, 6250, 7100, 8000, 9100, 10000]

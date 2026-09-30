@@ -14,7 +14,7 @@ balance 5 600 K lue dans le NEF (convention des cibles : la WB réglée ne chang
 des lots 1 à 4 refont les jeux d'évaluation du §5.1 (géométrie reprise de modele.json).
 D40 (images/d40/2026-10-test-v1/, V3, mêmes tables de rendu que la V5) : simulateur.camera (balance du boîtier),
 blocs de 6 × 6 en demi-résolution ; scène = M_D40_vers_XYZ des mesures camspec, échelle : gris rendu 118/255 par la
-courbe IIIa Normal = Y 0,18. Cibles : celles du D750 (d750_cibles) ; HP5 : fiche Harman et tirage (cible de la V1 du
+courbe IIIa Normal = Y 0,18. Cibles : celles du D750 (d750_cibles) ; HP5 : fiche Ilford et tirage (cible de la V1 du
 D40) ; Classic Chrome : aussi le modèle des JPEG du X-T4 (cible de conception du D40).
 
   mesures_reelles.py d750 <travail/> <status_A/>       blocs, mesures, prévisions refaites, Tri-X v2 → <travail>/*.json

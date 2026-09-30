@@ -15,7 +15,7 @@ Les calculs ont été faits dans le dossier jetable de la session (scripts `filt
 |---|---|---|---|---|
 | Sensibilité spectrale, cible Tri-X « preset acheté » | Monochrome sans filtre, balance des blancs (WB) fixe 8 000 à 10 000 K (§3.3) | ΔL\* médian 1,3 (§3.3) | rien d'important | vérifié (calcul du §3.3) |
 | Sensibilité spectrale, cible fiche Kodak Tri-X | même réglage (WB 10 000 K) ; un filtre 80A avec blanc mesuré à travers (PRE) n'apporte presque rien de plus | 5,3 (§3.3) ; 80A + PRE : 4,9 à 5,1 (−1,8 IL) | le reste de l'écart | calcul (capteurs Nikon de substitution) |
-| Sensibilité spectrale, cible fiche Harman HP5 | réglage seul : WB 10 000 K, 0,13 de bleu (§3.3). **Nouveau** : filtre bleu de conversion + blanc PRE mesuré à travers | réglage seul : 7,9 ; 80A + PRE : 7,2 à 7,4 (−1,8 IL) ; 80A + 80B + PRE : 5,3 à 5,7 (−3,3 IL) ; filtre sans PRE : aucun gain | le bleu de la fiche (0,67) | calcul, à vérifier sur le boîtier |
+| Sensibilité spectrale, cible fiche Ilford HP5 | réglage seul : WB 10 000 K, 0,13 de bleu (§3.3). **Nouveau** : filtre bleu de conversion + blanc PRE mesuré à travers | réglage seul : 7,9 ; 80A + PRE : 7,2 à 7,4 (−1,8 IL) ; 80A + 80B + PRE : 5,3 à 5,7 (−3,3 IL) ; filtre sans PRE : aucun gain | le bleu de la fiche (0,67) | calcul, à vérifier sur le boîtier |
 | Courbe film puis tirage | courbe perso 20 points sur base Monochrome, D-Lighting actif désactivé, contraste et luminosité à 0 | D40 : ΔE médian 1,0 à 1,6 avec courbe ajustée ; D750 : 1,9 avec une courbe commune (§3.2) | effets locaux du développement ; JPEG 8 bits | vérifié (capacité) ; fidélité : hypothèse |
 | Grain : quantité | ISO élevé, réduction du bruit ISO désactivée | à Hi 2 (ISO 51 200), bruit « visible » (basse fréquence) 1,9 à 2,6 fois plus faible que HP5 poussé à 1 600 ; égalité vers ISO 280 000 à 500 000 | la quantité, surtout à ISO modéré | calcul |
 | Grain : répartition par tonalité | aucune | à grain égal au gris moyen, bruit 3,8 à 6,5 fois trop fort à −3 IL, 3 à 5 fois trop faible à +3 et +4 IL | tout | calcul (sur mesures publiées) |
@@ -31,7 +31,7 @@ Les calculs ont été faits dans le dossier jetable de la session (scripts `filt
 **Décision de Thomas (octobre 2026)** : pas de filtre devant l'objectif, pas de grain par l'ISO, pas de ColorChecker. Les §5.1 (filtres), §5.3 (grain) et les séances A (filtres), C et F du §5.7 sont donc écartés ; la cible HP5 devient ses propres scans HP5 retouchés dans Lightroom.
 
 **Ce qui compte le plus :**
-1. **La fiche Harman actuelle (novembre 2018) ne publie ni granularité, ni FTM, ni pouvoir résolvant, ni indice de contraste, et une seule courbe caractéristique (Ilfotec HC 1+31).** Les courbes par révélateur demandées n'existent pas chez Harman ; seuls les temps de développement jusqu'à EI 3 200 sont publiés. Vérifié.
+1. **La fiche Ilford actuelle (novembre 2018) ne publie ni granularité, ni FTM, ni pouvoir résolvant, ni indice de contraste, et une seule courbe caractéristique (Ilfotec HC 1+31).** Les courbes par révélateur demandées n'existent pas chez Ilford ; seuls les temps de développement jusqu'à EI 3 200 sont publiés. Vérifié.
 2. **Le grain du film n'est pas « maximal dans les tons bas du négatif »** : mesuré sur HP5 poussé à 1 600, l'écart type de densité monte du voile (0,048) à un plateau de 0,09 à 0,10 entre D 1,0 et 2,3. Ramené à l'exposition de la scène, il est presque constant d'une tonalité à l'autre, alors que le bruit photonique décroît comme la racine de l'exposition. Ce désaccord de forme ne se corrige par aucun réglage. Vérifié (mesures grainifier) ; comparaison : calcul.
 3. **Même à Hi 2, le D750 a trop peu de grain « visible »** : par pixel il égale HP5@1600 scanné, mais le grain du film est corrélé sur 2 à 4 pixels, ce qui double son poids aux fréquences que l'œil voit. Calcul.
 4. **Un filtre bleu sur l'objectif ne sert que si le blanc est mesuré à travers lui (PRE).** Avec une WB fixe, il n'ajoute presque rien. Avec un PRE, par rapport au meilleur réglage sans accessoire (WB 10 000 K, ΔL\* médian 7,9 au §3.3), un 80A (−1,8 IL) ne gagne qu'environ 0,5 point ; un 80A + 80B (−3,3 IL) environ 2,4 points (5,3 à 5,7). Seule piste nouvelle vers le bleu de HP5 sans firmware, coûteuse en lumière. Calcul (modèles un peu différents de ceux du §3.3 : ordre de grandeur), à vérifier sur le boîtier.
@@ -39,7 +39,7 @@ Les calculs ont été faits dans le dossier jetable de la session (scripts `filt
 
 ## 1. Données fabricant
 
-### 1.1 HP5 Plus : fiche Harman en vigueur
+### 1.1 HP5 Plus : fiche Ilford en vigueur
 
 La fiche en ligne est datée de **novembre 2018** (6 pages, PDF créé le 28/11/2018) ; c'est toujours celle que sert le lien officiel (captures de la Wayback Machine de février et d'août 2026, lue dans celle d’août 2026). Le site d'Ilford bloque les téléchargements automatisés, d'où la lecture par l'archive. Vérifié. Le projet utilisait la version d'avril 2010 (`films_nb.py`) : **le spectrogramme et la courbe caractéristique sont les mêmes dans les deux versions** (vérifié à l'œil, graphiques superposables), donc la numérisation de `films_nb.py` reste valable.
 
@@ -71,9 +71,9 @@ Temps de développement, cuve à spirale, 20 °C, en minutes, par EI (vérifié,
 | Agfa Rodinal | 1+25 | 6 | 8 | non donné | non donné |
 | Perceptol | stock, EI 250 | 13 | | | |
 
-Choix conseillés par Harman (vérifié) : meilleure qualité à EI 400 et 800, DD-X ou ID-11 stock ; à 1 600 et 3 200, DD-X ou Microphen stock ; grain le plus fin, DD-X ou Perceptol ; netteté maximale, Ilfosol 3 (1+9) ou ID-11 (1+3).
+Choix conseillés par Ilford (vérifié) : meilleure qualité à EI 400 et 800, DD-X ou ID-11 stock ; à 1 600 et 3 200, DD-X ou Microphen stock ; grain le plus fin, DD-X ou Perceptol ; netteté maximale, Ilfosol 3 (1+9) ou ID-11 (1+3).
 
-Granularité de HP5 : aucune valeur Harman trouvée. Les notes du projet grainifier citent « HP5+ ≈ 10 à 12 » sans source primaire ; à ne pas utiliser (hypothèse invérifiable). La seule mesure chiffrée trouvée est celle de grainifier sur HP5 poussé à 1 600 (§3.2).
+Granularité de HP5 : aucune valeur Ilford trouvée. Les notes du projet grainifier citent « HP5+ ≈ 10 à 12 » sans source primaire ; à ne pas utiliser (hypothèse invérifiable). La seule mesure chiffrée trouvée est celle de grainifier sur HP5 poussé à 1 600 (§3.2).
 
 ### 1.2 Tri-X 400 : fiche Kodak F-4017
 
@@ -98,7 +98,7 @@ Les facteurs de filtre sont une mesure indirecte de la sensibilité spectrale, f
 
 ### 1.3 Comparaison
 
-| | HP5 Plus (Harman, 2018) | Tri-X 400 (Kodak, 2021) |
+| | HP5 Plus (Ilford, 2018) | Tri-X 400 (Kodak, 2021) |
 |---|---|---|
 | Sensibilité spectrale | spectrogramme au tungstène, sans chiffres | courbes chiffrées D = 0,3 et 1,0 |
 | Mélange équivalent en sRGB linéaire (lumière du jour) | 0,10 à 0,12 / 0,21 à 0,24 / 0,67 | 0,17 à 0,18 / 0,30 à 0,31 / 0,52 |
@@ -112,8 +112,8 @@ Les facteurs de filtre sont une mesure indirecte de la sensibilité spectrale, f
 Statut des mélanges : calcul (§3.3 du rapport précédent et recalcul de cette session, à 0,02 près).
 
 ### Sources de la section 1
-- Harman technology Ltd, *HP5 PLUS Technical Information*, novembre 2018. Lien officiel : https://www.ilfordphoto.com/amfile/file/download/file/1903/product/691/ (bloqué aux robots) ; lu via la copie Wayback d’août 2026 : https://web.archive.org/web/20260803233234/https://www.ilfordphoto.com/amfile/file/download/file/1903/product/691/?___store=ilford_brochure&___from_store=ilford_uk ; consulté en octobre 2026.
-- Harman technology Ltd, *HP5 Plus Technical Information*, avril 2010, copie https://mail.kennethleegallery.com/pdf/HP5Plus.pdf, consultée en octobre 2026.
+- Ilford, *HP5 PLUS Technical Information*, novembre 2018. Lien officiel : https://www.ilfordphoto.com/amfile/file/download/file/1903/product/691/ (bloqué aux robots) ; lu via la copie Wayback d’août 2026 : https://web.archive.org/web/20260803233234/https://www.ilfordphoto.com/amfile/file/download/file/1903/product/691/?___store=ilford_brochure&___from_store=ilford_uk ; consulté en octobre 2026.
+- Ilford, *HP5 Plus Technical Information*, avril 2010, copie https://mail.kennethleegallery.com/pdf/HP5Plus.pdf, consultée en octobre 2026.
 - Kodak Alaris, *Kodak Professional Tri-X 320 and 400 Films*, publication F-4017, octobre 2021, https://kodakprofessional.com/sites/default/files/wysiwyg/film/f4017_trix_320400.pdf, consultée en octobre 2026.
 - Eastman Kodak Company, *Kodak Professional Tri-X 320 and 400 Films*, publication F-4017, septembre 2002, https://125px.com/docs/unsorted/kodak/f4017.pdf, consultée en octobre 2026.
 - Wikipedia, *Kodak Tri-X*, https://en.wikipedia.org/wiki/Kodak_Tri-X (distribution depuis janvier 2026 ; lu dans un extrait de recherche, page non ouverte).
@@ -134,7 +134,7 @@ Recherche : OpenAlex, Crossref, GitHub, Zenodo, recherche web. **Aucun jeu publi
 | Code de Newson et al. | rendu de grain par modèle booléen | GPLv3 (d'après les notes de grainifier) | modèle, pas données. Hypothèse (licence non relue) |
 | ProMist-5K (2026) | paires d'images avec et sans filtre de diffusion Pro-Mist | dataset annoncé sur Kaggle | hors sujet film ; utile seulement pour un effet de halo par filtre. Vérifié (titre, sujet) |
 | Film-GAN (Gong et al., 2023, cité par grainifier) | transfert de style numérique → film, dont HP5 | fermé | non. Hypothèse (non retrouvé) |
-| Fiches Kodak et Harman | courbes en graphiques | droits des fabricants | déjà numérisées dans `films_nb.py`. Vérifié |
+| Fiches Kodak et Ilford | courbes en graphiques | droits des fabricants | déjà numérisées dans `films_nb.py`. Vérifié |
 | Paires du preset acheté de Thomas (projet) | RAW du D750 + exports du preset Tri-X | privées | utilisables, mais ce sont des **émulations**, pas du film. Vérifié (§3.2) |
 
 Jeux académiques de paires numérique / film : aucun trouvé pour le noir et blanc ; ceux trouvés traitent du grain synthétique (InterDigital) ou d'autres effets (ProMist-5K). Vérifié (recherches faites).
@@ -168,7 +168,7 @@ Jeux académiques de paires numérique / film : aucun trouvé pour le noir et bl
 |---|---|---|
 | Tri-X 400, HC-110 B, EI 400 | RMS 17 (ancienne émulsion, voir §1.2) | vérifié |
 | Tri-X 400 poussé à 1 600 ou 3 200 | « plus de grain », sans chiffre | vérifié |
-| HP5 Plus, tous révélateurs | aucun chiffre Harman ; seulement « grain le plus fin » en DD-X ou Perceptol | vérifié |
+| HP5 Plus, tous révélateurs | aucun chiffre Ilford ; seulement « grain le plus fin » en DD-X ou Perceptol | vérifié |
 | **HP5 Plus à EI 1 600, labo, scan Coolscan 4 000 dpi** (grainifier) | σ de densité par pixel de 6,35 µm : 0,048 au voile (D 0,05) ; 0,082 à D 0,55 ; 0,089 à D 1,05 ; 0,095 à D 1,55 ; 0,097 à D 2,05 ; 0,091 à D 2,25 ; au-delà de D 2,4, bruit du scanner | vérifié (profil JSON) |
 | idem, asymétrie | +0,93 au voile, ≈ 0 vers D 1,1, −0,34 vers D 2,3 : ce que prévoit un modèle booléen quand le taux de couverture passe 50 % ; aplatissement ≈ 2,9 à 3,0 (presque gaussien) | vérifié |
 | idem, structure | autocorrélation au décalage 1 : 0,59 à 0,65 en x, 0,40 à 0,47 en y ; ≈ 0 au décalage 4 ; aire de corrélation 3,7 à 4,1 px², soit des amas de 13 à 25 µm ; anisotropie due en partie au scanner | vérifié |
@@ -394,11 +394,11 @@ Calcul : gris de chaque patch contre le gris prévu pour HP5 et Tri-X (sensibili
 
 **E. Vignetage et halo** : ciel couvert à travers un diffuseur opalin, à f/1,8, 2,8 et 5,6, Contrôle du vignetage désactivé puis Normal ; une lampe nue de nuit, pour voir s'il y a quoi que ce soit autour des hautes lumières.
 
-**F. La référence qui manque : un vrai film.** Un film HP5 (et un Tri-X) dans un boîtier argentique à monture F avec le même objectif, mêmes mires (A, B, D) et la carte grise de C ; développement connu (ID-11 stock 7 min 30 à 20 °C, ou DD-X 9 min, fiche Harman) ; scan **RAW linéaire** (VueScan RAW DNG sur scanner à film, ou le D750 lui-même avec un macro 1:1 sur table lumineuse, qui échantillonne le grain à 5,97 µm, assez pour des amas de 2 à 4 pixels). Avec grainifier, ce film donne σ_D(D), le spectre et l'asymétrie de **HP5 à EI 400 dans le révélateur de Thomas** : la cible de grain qui n'existe nulle part en données publiées. Les patchs du ColorChecker donnent en même temps la vraie réponse spectrale de HP5, à comparer à la fiche.
+**F. La référence qui manque : un vrai film.** Un film HP5 (et un Tri-X) dans un boîtier argentique à monture F avec le même objectif, mêmes mires (A, B, D) et la carte grise de C ; développement connu (ID-11 stock 7 min 30 à 20 °C, ou DD-X 9 min, fiche Ilford) ; scan **RAW linéaire** (VueScan RAW DNG sur scanner à film, ou le D750 lui-même avec un macro 1:1 sur table lumineuse, qui échantillonne le grain à 5,97 µm, assez pour des amas de 2 à 4 pixels). Avec grainifier, ce film donne σ_D(D), le spectre et l'asymétrie de **HP5 à EI 400 dans le révélateur de Thomas** : la cible de grain qui n'existe nulle part en données publiées. Les patchs du ColorChecker donnent en même temps la vraie réponse spectrale de HP5, à comparer à la fiche.
 
 ### Sources de la section 5
 - Rapport perspectives-d200-xt4-d750.md, §3.2 et §3.3 (mesures d’octobre 2026 sur 66 NEF du D750, mélanges des filtres, réglages proposés).
-- Kodak Alaris, F-4017 (2021) et Harman, HP5 Plus (2018), voir section 1.
+- Kodak Alaris, F-4017 (2021) et Ilford, HP5 Plus (2018), voir section 1.
 - Nikon, *D750 User's Manual*, voir section 3.
 - Zengerle P. L. (1983), voir section 3 ; Cline D. S. (1982). *Prediction of Small-Scale Densities Using the Chemical and Optical Spread Functions*. Mémoire, Rochester Institute of Technology, https://scholarworks.rit.edu/theses/6469.
 - Fyhr P. (2026), grainifier, voir section 2.

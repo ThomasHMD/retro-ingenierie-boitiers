@@ -66,7 +66,7 @@ Outil : [`outils/d750_cibles.py`](../outils/d750_cibles.py). Chaque cible transf
 | Positive (GR III), Hasselblad (X2D) | modèles matrice + courbe mesurés sur paires RAW + JPEG ([`recettes/mesures/`](../recettes/mesures/)) ; ces modèles reproduisent les JPEG d'origine à 1,0 (Positive) et 2,0 (Hasselblad). Le gris de 18 % est rendu à 118/255, convention des recettes V1 du D40 | mesure ; calage du gris : hypothèse |
 | Kodachrome | modèle spectral de la fiche Kodak E-55 ([`kodachrome.py`](../outils/kodachrome.py)), calage du posemètre (diapositive dense). Le spectre de chaque couleur est reconstruit depuis son RVB par les spectres de base de Mallett et Yuksel (2019) ; une couleur hors du gamut sRGB est ramenée au bord | modèle (sans effets inter-couches) |
 | Tri-X | mélange et courbe du preset Tri-X vérifiés sur ses exports ([`recettes/v1/tri-x.json`](../recettes/v1/tri-x.json)) | mesure |
-| HP5 | mélange de la fiche Harman et tonalité de ses scans HP5 retouchés (centiles de perspectives §3.3), appliquée au rendu de son « TRI-X » actuel | mesure ; correspondance des centiles : hypothèse (le D-Lighting Auto de ses JPEG brouille le départ) |
+| HP5 | mélange de la fiche Ilford et tonalité de ses scans HP5 retouchés (centiles de perspectives §3.3), appliquée au rendu de son « TRI-X » actuel | mesure ; correspondance des centiles : hypothèse (le D-Lighting Auto de ses JPEG brouille le départ) |
 | FP4 | mélange et courbe de la fiche Ilford (Ilfotec HC) | fiche |
 | Portra 400 | Preset Portra (profil Base) : vraie table du profil (lue dans son .xmp, qui reste hors du dépôt) posée sur la base d'Adobe Camera Raw, elle-même ajustée sur 20 paires NEF du D750 + export (§3.6) | mesure |
 
@@ -203,7 +203,7 @@ Mélange de canaux de chaque filtre, mesuré contre le JPEG (lots 4 et 5, même 
 | Rouge | 0,68 / 0,22 / 0,10 | 1,23 |
 | Vert | 0,20 / 0,56 / 0,24 | 1,26 |
 | *Cible du preset Tri-X* | *0,28 / 0,52 / 0,19* | |
-| *Fiche Harman HP5+* | *0,10 / 0,24 / 0,67* | |
+| *Fiche Ilford HP5+* | *0,10 / 0,24 / 0,67* | |
 
 Vérifié (mesure) ; la conversion en sRGB linéaire passe par la matrice du §1.3 (calcul).
 
@@ -408,7 +408,7 @@ Calcul sur mesures. **Filtre aucun, WB 10 000 K** (le maximum du boîtier) : le 
 
 ### 4.2 HP5
 
-Meilleur : **filtre aucun** : 2,36 (7,97) sur les scènes, 0,83 sur la peau, 3,11 sur la mire, à 5 600 K. Le p90 reste haut : la fiche Harman veut deux tiers de bleu (0,67), le boîtier en donne au mieux 0,36. Ciels et bleus restent trop sombres. Une WB plus froide aiderait : 1,92 (6,00) à 4 000 K. **Hors d'atteinte : la sensibilité au bleu de la HP5.** La tonalité, elle, est calée sur tes scans (gris moyen nettement plus clair que ton TRI-X actuel, blancs jamais purs).
+Meilleur : **filtre aucun** : 2,36 (7,97) sur les scènes, 0,83 sur la peau, 3,11 sur la mire, à 5 600 K. Le p90 reste haut : la fiche Ilford veut deux tiers de bleu (0,67), le boîtier en donne au mieux 0,36. Ciels et bleus restent trop sombres. Une WB plus froide aiderait : 1,92 (6,00) à 4 000 K. **Hors d'atteinte : la sensibilité au bleu de la HP5.** La tonalité, elle, est calée sur tes scans (gris moyen nettement plus clair que ton TRI-X actuel, blancs jamais purs).
 
 ### 4.3 FP4
 

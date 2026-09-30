@@ -31,8 +31,8 @@ Retour à Nikon : même procédure avec la carte de retour. Les rendus ne s'exé
 | Normal, Personnalisé | inchangées | |
 | Moins net | **Chrome** | Classic Chrome mesuré (paires RAW + JPEG) |
 | Saturé | **Positive** | Positive Film mesuré (Ricoh GR III) |
-| Très saturé | **FP4** | fiche Ilford Harman |
-| Portrait | **HP5** | fiche Ilford Harman |
+| Très saturé | **FP4** | fiche Ilford |
+| Portrait | **HP5** | fiche Ilford |
 | Noir et blanc | **Tri-X** | d'après un preset acheté que j'aimais beaucoup, contrôlé sur la fiche Kodak |
 
 La V2 ne change que des données (les quatre emplacements des rendus et la courbe Tri-X) et le CRC, aucun code ; tous les contrôles de l'émulateur passent ; une relecture indépendante l'a validée avant le flash : [`recherche/d200-v2-relecture.md`](recherche/d200-v2-relecture.md).
