@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+# firmware officiel de Nikon (rangé par d40/fabriquer_v5.py) et fichiers fabriqués : jamais dans git
+d40/firmware/
+d40/build/
+# documents tiers rapatriés par d750/outils/references.sh (docs du SDK Nikon : jamais dans git)
+references/
+d750/references/
+# photos de travail, scans, tables et profils tiers
+images/
+*.NEF
+*.nef
+*.jpg
+*.JPG
+# sauf les vues de démonstration du README (JPEG sans métadonnées, contrôlés par publier.py)
+!vues/*/*.jpg
+*.cube
+*.npz
+*.xmp

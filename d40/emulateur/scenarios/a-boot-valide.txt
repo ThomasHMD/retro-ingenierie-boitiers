@@ -1,0 +1,5 @@
+# Démarrage du A seul, 40 M instructions (2,5 s si 16 instructions par µs : hypothèse), EEPROM simulée
+# (HLE de la tâche 5) avec une image minimale valide : octet 0 = 1, octet 0x37F = 0xFF (somme nulle).
+# Rien d'autre n'est branché (pas de B : PDR9 bit 1 = 0).
+eeprom valide
+run 40M

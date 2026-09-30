@@ -1,0 +1,316 @@
+{
+ "lot": "images/d750/2026-10-fenetre",
+ "colorimetrie_mire": {
+  "mediane": 1.4,
+  "p90": 3.27
+ },
+ "blocs_communs": 6235,
+ "looks": [
+  {
+   "vue": "CLASSIC CHROME",
+   "cible": "CLASSIC CHROME",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.39,
+    "p90": 4.79
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.34,
+    "p90": 2.02
+   },
+   "prevu": {
+    "mediane": 2.56,
+    "p90": 3.46
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "bleu",
+     "n": 210,
+     "dE": 6.12,
+     "teinte_deg": 21.5,
+     "chroma_x": 1.54,
+     "dL": 0.4
+    },
+    {
+     "secteur": "neutres",
+     "n": 6022,
+     "dE": 3.32,
+     "da": 1.4,
+     "db": -3.4,
+     "dL": 0.0
+    }
+   ]
+  },
+  {
+   "vue": "CLASSIC NEG",
+   "cible": "CLASSIC NEG",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 6.34,
+    "p90": 7.31
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.82,
+    "p90": 1.36
+   },
+   "prevu": {
+    "mediane": 5.71,
+    "p90": 6.3
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 6227,
+     "dE": 6.34,
+     "da": -2.4,
+     "db": -5.8,
+     "dL": -0.6
+    }
+   ]
+  },
+  {
+   "vue": "POSITIVE",
+   "cible": "POSITIVE",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 2.12,
+    "p90": 3.56
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.83,
+    "p90": 1.64
+   },
+   "prevu": {
+    "mediane": 1.77,
+    "p90": 2.65
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "bleu",
+     "n": 950,
+     "dE": 3.72,
+     "teinte_deg": 10.0,
+     "chroma_x": 1.36,
+     "dL": 2.1
+    },
+    {
+     "secteur": "neutres",
+     "n": 5285,
+     "dE": 2.01,
+     "da": 0.9,
+     "db": -1.7,
+     "dL": 0.9
+    }
+   ]
+  },
+  {
+   "vue": "PORTRA 400",
+   "cible": "PORTRA ESPRIT",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.03,
+    "p90": 4.54
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.17,
+    "p90": 2.08
+   },
+   "prevu": {
+    "mediane": 3.84,
+    "p90": 4.44
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "bleu",
+     "n": 351,
+     "dE": 5.75,
+     "teinte_deg": 12.2,
+     "chroma_x": 1.71,
+     "dL": -1.5
+    },
+    {
+     "secteur": "neutres",
+     "n": 5884,
+     "dE": 2.96,
+     "da": 1.4,
+     "db": -2.9,
+     "dL": -0.3
+    }
+   ]
+  },
+  {
+   "vue": "HASSELBLAD",
+   "cible": "HASSELBLAD",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.14,
+    "p90": 3.92
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.68,
+    "p90": 1.32
+   },
+   "prevu": {
+    "mediane": 3.23,
+    "p90": 3.65
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "bleu",
+     "n": 261,
+     "dE": 4.98,
+     "teinte_deg": 18.9,
+     "chroma_x": 1.33,
+     "dL": 0.6
+    },
+    {
+     "secteur": "neutres",
+     "n": 5974,
+     "dE": 3.11,
+     "da": 1.7,
+     "db": -2.5,
+     "dL": -0.1
+    }
+   ]
+  },
+  {
+   "vue": "HP5+",
+   "cible": "HP5",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 1.02,
+    "p90": 2.23
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.97,
+    "p90": 1.31
+   },
+   "prevu": {
+    "mediane": 1.09,
+    "p90": 2.45
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 6235,
+     "dE": 1.02,
+     "da": -0.4,
+     "db": 0.4,
+     "dL": -0.7
+    }
+   ]
+  },
+  {
+   "vue": "FP4+",
+   "cible": "FP4",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 1.18,
+    "p90": 3.32
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.99,
+    "p90": 1.88
+   },
+   "prevu": {
+    "mediane": 1.65,
+    "p90": 3.38
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 6235,
+     "dE": 1.18,
+     "da": -0.4,
+     "db": 0.4,
+     "dL": -1.2
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME",
+   "cible": "KODACHROME VIF",
+   "kelvin": 6250,
+   "mesure": {
+    "mediane": 4.05,
+    "p90": 4.7
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.45,
+    "p90": 1.14
+   },
+   "prevu": {
+    "mediane": 3.8,
+    "p90": 4.16
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 6235,
+     "dE": 4.05,
+     "da": 2.0,
+     "db": -3.0,
+     "dL": 0.0
+    }
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "cible": "TRI-X",
+   "kelvin": 10000,
+   "mesure": {
+    "mediane": 1.07,
+    "p90": 1.81
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.98,
+    "p90": 1.55
+   },
+   "prevu": {
+    "mediane": 0.37,
+    "p90": 0.59
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 6235,
+     "dE": 1.07,
+     "da": -0.4,
+     "db": 0.5,
+     "dL": 1.0
+    }
+   ]
+  }
+ ],
+ "wb": [
+  {
+   "vue": "KODACHROME",
+   "kelvin": 6250,
+   "gains_nef_sur_5600": [
+    1.0522,
+    1.0,
+    0.9387
+   ],
+   "gains_calcules": [
+    1.0448,
+    1.0,
+    0.933
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "kelvin": 10000,
+   "gains_nef_sur_5600": [
+    1.3075,
+    1.0,
+    0.8037
+   ],
+   "gains_calcules": [
+    1.1843,
+    1.0,
+    0.7566
+   ]
+  }
+ ],
+ "crans": []
+}

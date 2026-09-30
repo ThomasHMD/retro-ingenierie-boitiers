@@ -1,0 +1,140 @@
+Boîtier trouvé : 645D
+Séance 645D 2026-10 +0000
+Batterie 67 %
+Fichiers déjà sur la carte : 4
+Vue 01/30 mono-filtre-0-aucun
+  mode : 0 → 5
+  netteté : 6 → 4
+  dossier 100PENTX
+  01-mono-filtre-0-aucun-THAM3272.PEF 54511 Ko
+Vue 02/30 mono-filtre-1-vert
+  D024 : 0 → 1
+  dossier 100PENTX
+  02-mono-filtre-1-vert-THAM3273.PEF 54524 Ko
+Vue 03/30 mono-filtre-2-jaune
+  D024 : 1 → 2
+  dossier 100PENTX
+  03-mono-filtre-2-jaune-THAM3274.PEF 54578 Ko
+Vue 04/30 mono-filtre-3-orange
+  D024 : 2 → 3
+  dossier 100PENTX
+  04-mono-filtre-3-orange-THAM3275.PEF 54677 Ko
+Vue 05/30 mono-filtre-4-rouge
+  D024 : 3 → 4
+  dossier 100PENTX
+  05-mono-filtre-4-rouge-THAM3276.PEF 54692 Ko
+Vue 06/30 mono-filtre-5-magenta
+  D024 : 4 → 5
+  dossier 100PENTX
+  06-mono-filtre-5-magenta-THAM3277.PEF 54518 Ko
+Vue 07/30 mono-filtre-6-bleu
+  D024 : 5 → 6
+  dossier 100PENTX
+  07-mono-filtre-6-bleu-THAM3278.PEF 54783 Ko
+Vue 08/30 mono-filtre-7-cyan
+  D024 : 6 → 7
+  dossier 100PENTX
+  08-mono-filtre-7-cyan-THAM3279.PEF 54684 Ko
+Vue 09/30 mono-filtre-8-infrarouge
+  D024 : 7 → 8
+  dossier 100PENTX
+  09-mono-filtre-8-infrarouge-THAM3280.PEF 54724 Ko
+Vue 10/30 mono-contraste-0
+  contraste : 4 → 0
+  D024 : 8 → 0
+  dossier 100PENTX
+  10-mono-contraste-0-THAM3281.PEF 54850 Ko
+Vue 11/30 mono-contraste-2
+  contraste : 0 → 2
+  dossier 100PENTX
+  11-mono-contraste-2-THAM3282.PEF 54963 Ko
+Vue 12/30 mono-contraste-6
+  contraste : 2 → 6
+  dossier 100PENTX
+  12-mono-contraste-6-THAM3283.PEF 54996 Ko
+Vue 13/30 mono-contraste-8
+  contraste : 6 → 8
+  dossier 100PENTX
+  13-mono-contraste-8-THAM3284.PEF 54770 Ko
+Vue 14/30 mono-virage-2
+  contraste : 8 → 4
+  D025 : 4 → 2
+  dossier 100PENTX
+  14-mono-virage-2-THAM3285.PEF 54585 Ko
+Vue 15/30 mono-virage-6
+  D025 : 2 → 6
+  dossier 100PENTX
+  15-mono-virage-6-THAM3286.PEF 54596 Ko
+Vue 16/30 mono-d026-1
+  D025 : 6 → 4
+  D026 : 0 → 1
+  dossier 100PENTX
+  16-mono-d026-1-THAM3287.PEF 53906 Ko
+Vue 17/30 mono-d027-1
+  D026 : 1 → 0
+  D027 : 0 → 1
+  dossier 100PENTX
+  17-mono-d027-1-THAM3288.PEF 45480 Ko
+Vue 18/30 mode-0
+  mode : 5 → 0
+  D027 : 1 → 0
+  dossier 100PENTX
+  18-mode-0-THAM3289.PEF 53475 Ko
+Vue 19/30 mode-1
+  mode : 0 → 1
+  contraste : 5 → 4
+  netteté : 5 → 4
+  dossier 100PENTX
+  19-mode-1-THAM3290.PEF 53228 Ko
+Vue 20/30 mode-2
+  mode : 1 → 2
+  dossier 100PENTX
+  20-mode-2-THAM3291.PEF 52895 Ko
+Vue 21/30 mode-3
+  mode : 2 → 3
+  contraste : 5 → 4
+  netteté : 5 → 4
+  dossier 100PENTX
+  21-mode-3-THAM3292.PEF 52986 Ko
+Vue 22/30 mode-4
+  mode : 3 → 4
+  dossier 100PENTX
+  22-mode-4-THAM3293.PEF 53000 Ko
+Vue 23/30 mode-6
+  mode : 4 → 6
+  contraste : 1 → 4
+  netteté : 2 → 4
+  dossier 100PENTX
+  23-mode-6-THAM3294.PEF 52572 Ko
+Vue 24/30 mode-7
+  mode : 6 → 7
+  dossier 100PENTX
+  24-mode-7-THAM3295.PEF 52617 Ko
+Vue 25/30 naturel-saturation-0
+  mode : 7 → 0
+  saturation : 4 → 0
+  dossier 100PENTX
+  25-naturel-saturation-0-THAM3296.PEF 52740 Ko
+Vue 26/30 naturel-saturation-2
+  saturation : 0 → 2
+  dossier 100PENTX
+  26-naturel-saturation-2-THAM3297.PEF 52711 Ko
+Vue 27/30 naturel-saturation-6
+  saturation : 2 → 6
+  dossier 100PENTX
+  27-naturel-saturation-6-THAM3298.PEF 52580 Ko
+Vue 28/30 naturel-saturation-8
+  saturation : 6 → 8
+  dossier 100PENTX
+  28-naturel-saturation-8-THAM3299.PEF 52446 Ko
+Vue 29/30 naturel-teinte-2
+  saturation : 8 → 4
+  teinte : 4 → 2
+  dossier 100PENTX
+  29-naturel-teinte-2-THAM3300.PEF 52516 Ko
+Vue 30/30 naturel-teinte-6
+  teinte : 2 → 6
+  dossier 100PENTX
+  30-naturel-teinte-6-THAM3301.PEF 52560 Ko
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

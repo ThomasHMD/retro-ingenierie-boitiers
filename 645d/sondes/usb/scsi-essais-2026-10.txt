@@ -1,0 +1,349 @@
+# Essais MSC d’octobre 2026 (645d_scsi en root). Sortie du lanceur, puis journal de l'outil.
+16:39:26 j'attends le 645D en MSC (menu USB = MSC, boîtier allumé et branché)
+16:39:26 645D en MSC : fenêtre de mot de passe de macOS
+113:371: execution error: *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0000000186ae68c0 __exceptionPreprocess + 176
+	1   libobjc.A.dylib                     0x000000018654460c objc_exception_throw + 88
+	2   CoreFoundation                      0x00000001869fec88 -[__NSPlaceholderDictionary initWithObjects:forKeys:count:] + 764
+	3   CoreFoundation                      0x00000001869fe960 +[NSDictionary dictionaryWithObjects:forKeys:count:] + 52
+	4   IOUSBHost                           0x000000019dc04fcc -[IOUSBHostObject openWithOptions:error:] + 408
+	5   IOUSBHost                           0x000000019dc042e0 -[IOUSBHostObject initWithIOService:options:queue:error:interestHandler:] + 1688
+	6   IOUSBHost                           0x000000019dbfa6b4 -[IOUSBHostInterface initWithIOService:options:queue:error:interestHandler:] + 84
+	7   645d_scsi                           0x0000000102f3192c main + 2876
+	8   dyld                                0x00000001865dfe80 start + 6688
+)
+libc++abi: terminating due to uncaught exception of type NSException
+/bin/sh: line 1: 16140 Abort trap: 6           '<dossier de travail> lire-reglages
+chown: 645d/sondes/usb/scsi-*: No such file or directory (134)
+16:39:33 fin, code 1 ; journal : /journal.txt
+
+[exited with code 1]
+88:401: execution error: *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0000000186ae68c0 __exceptionPreprocess + 176
+	1   libobjc.A.dylib                     0x000000018654460c objc_exception_throw + 88
+	2   CoreFoundation                      0x00000001869fec88 -[__NSPlaceholderDictionary initWithObjects:forKeys:count:] + 764
+	3   CoreFoundation                      0x00000001869fe960 +[NSDictionary dictionaryWithObjects:forKeys:count:] + 52
+	4   IOUSBHost                           0x000000019dc051ec -[IOUSBHostObject openWithOptions:error:] + 952
+	5   IOUSBHost                           0x000000019dc042e0 -[IOUSBHostObject initWithIOService:options:queue:error:interestHandler:] + 1688
+	6   645d_scsi2                          0x00000001046495dc main + 1948
+	7   dyld                                0x00000001865dfe80 start + 6688
+)
+libc++abi: terminating due to uncaught exception of type NSException
+/bin/sh: line 1: 18794 Abort trap: 6           '<dossier de travail> lire-reglages
+chown: 645d/sondes/usb/scsi-*: No such file or directory (134)
+code 1
+Carte démontée : /Volumes/645D 1 (code 0)
+Carte démontée : /Volumes/645D (code 0)
+Capture faite
+  |                           | | +-o 645D@08320000  <class IOUSBHostDevice, id 0x10085c01e, registered, matched, active, busy 0 (246 ms), retain 34>
+  |                           | |   | {
+  |                           | |   |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   |   "bDeviceClass" = 0
+  |                           | |   |   "UsbLinkSpeed" = 480000000
+  |                           | |   |   "bDeviceSubClass" = 0
+  |                           | |   |   "iSerialNumber" = 3
+  |                           | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   |   "iProduct" = 2
+  |                           | |   |   "USB Serial Number" = "<effacé>"
+  |                           | |   |   "USB Vendor Name" = "PENTAX"
+  |                           | |   |   "USBSpeed" = 3
+  |                           | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2,"DriverPowerState"=0}
+  |                           | |   |   "bNumConfigurations" = 1
+  |                           | |   |   "kUSBProductString" = "645D"
+  |                           | |   |   "kUSBVendorString" = "PENTAX"
+  |                           | |   |   "USB Product Name" = "645D"
+  |                           | |   |   "iManufacturer" = 1
+  |                           | |   |   "idVendor" = 9723
+  |                           | |   |   "Device Speed" = 2
+  |                           | |   |   "kUSBCurrentConfiguration" = 1
+  |                           | |   |   "idProduct" = 240
+  |                           | |   |   "bcdDevice" = 307
+  |                           | |   |   "UsbDeviceSignature" = <fb25f00034303033343338000000080650>
+  |                           | |   |   "sessionID" = 33351121115068
+  |                           | |   |   "USB Address" = 87
+  |                           | |   |   "UsbExclusiveOwner" = "pid 18620, 645d_scsi"
+  |                           | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   |   "USBPortType" = 5
+  |                           | |   |   "UsbDeviceFunction" = 0
+  |                           | |   |   "bDeviceProtocol" = 0
+  |                           | |   |   "locationID" = 137494528
+  |                           | |   |   "kUSBAddress" = 87
+  |                           | |   |   "bcdUSB" = 512
+  |                           | |   |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |                           | |   |   "bMaxPacketSize0" = 64
+  |                           | |   | }
+  |                           | |   | 
+  |                           | |   +-o IOUSBHostInterface@0  <class IOUSBHostInterface, id 0x10085c023, registered, matched, active, busy 0 (245 ms), retain 10>
+  |                           | |   +-o 645d_scsi@08320000  <class AppleUSBHostFrameworkDeviceClient, id 0x10085c0ff, !registered, !matched, active, busy 0, retain 5>
+  |                           | +-o usb2-hub-port3@08330000  <class AppleUSB20HubPort, id 0x100807b1d, registered, matched, active, busy 0 (19130 ms), retain 21>
+  |                           | | +-o USB2.0 Hub@08330000  <class IOUSBHostDevice, id 0x10084c731, registered, matched, active, busy 0 (3414 ms), retain 49>
+  |                           | |   | {
+  |                           | |   |   "sessionID" = 33250064881000
+  |                           | |   |   "USBSpeed" = 3
+  |                           | |   |   "UsbLinkSpeed" = 480000000
+  |                           | |   |   "idProduct" = 1552
+  |                           | |   |   "iManufacturer" = 1
+  |                           | |   |   "bDeviceClass" = 9
+  |                           | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |                           | |   |   "bcdDevice" = 37414
+  |                           | |   |   "bMaxPacketSize0" = 64
+  |                           | |   |   "iProduct" = 2
+  |                           | |   |   "iSerialNumber" = 0
+  |                           | |   |   "bNumConfigurations" = 1
+  |                           | |   |   "kUSBContainerID" = "11369ebf-b04d-4528-a5c9-10d935a6605a"
+  |                           | |   |   "UsbDeviceSignature" = <e3051006090002090001090002>
+  |                           | |   |   "locationID" = 137560064
+  |                           | |   |   "bDeviceSubClass" = 0
+  |                           | |   |   "bcdUSB" = 528
+  |                           | |   |   "USB Product Name" = "USB2.0 Hub"
+  |                           | |   |   "USB Address" = 54
+  |                           | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   |   "UsbDeviceFunction" = 3
+  |                           | |   |   "bDeviceProtocol" = 2
+  |                           | |   |   "USBPortType" = 0
+  |                           | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   |   "UsbExclusiveOwner" = "AppleUSB20Hub"
+  |                           | |   |   "USB Vendor Name" = "GenesysLogic"
+  |                           | |   |   "Device Speed" = 2
+  |                           | |   |   "idVendor" = 1507
+  |                           | |   |   "kUSBCurrentConfiguration" = 1
+  |                           | |   |   "kUSBProductString" = "USB2.0 Hub"
+  |                           | |   |   "kUSBAddress" = 54
+  |                           | |   |   "kUSBVendorString" = "GenesysLogic"
+  |                           | |   | }
+  |                           | |   | 
+  |                           | |   +-o AppleUSB20Hub@08330000  <class AppleUSB20Hub, id 0x10084c734, registered, matched, active, busy 0 (3413 ms), retain 24>
+  |                           | |   | +-o AppleUSB20HubPort@08331000  <class AppleUSB20HubPort, id 0x10084c73c, registered, matched, active, busy 0 (2 ms), retain 11>
+  |                           | |   | +-o AppleUSB20HubPort@08332000  <class AppleUSB20HubPort, id 0x10084c73e, registered, matched, active, busy 0 (2 ms), retain 11>
+  |                           | |   | +-o AppleUSB20HubPort@08333000  <class AppleUSB20HubPort, id 0x10084c740, registered, matched, active, busy 0 (1790 ms), retain 16>
+  |                           | |   | | +-o IOUSBHostDevice@08333000  <class IOUSBHostDevice, id 0x10084c749, registered, matched, active, busy 0 (1791 ms), retain 46>
+  |                           | |   | |   | {
+  |                           | |   | |   |   "sessionID" = 33250071438922
+  |                           | |   | |   |   "USBSpeed" = 3
+  |                           | |   | |   |   "UsbLinkSpeed" = 480000000
+  |                           | |   | |   |   "idProduct" = 33090
+  |                           | |   | |   |   "iManufacturer" = 0
+  |                           | |   | |   |   "bDeviceClass" = 9
+  |                           | |   | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |                           | |   | |   |   "bcdDevice" = 256
+  |                           | |   | |   |   "bMaxPacketSize0" = 64
+  |                           | |   | |   |   "iProduct" = 0
+  |                           | |   | |   |   "iSerialNumber" = 1
+  |                           | |   | |   |   "bNumConfigurations" = 1
+  |                           | |   | |   |   "kUSBContainerID" = "02404a5e-c10d-539e-5616-27c2b6c9d000"
+  |                           | |   | |   |   "UsbDeviceSignature" = <51044281324130373138353934303944090002090001090002>
+  |                           | |   | |   |   "locationID" = 137572352
+  |                           | |   | |   |   "bDeviceSubClass" = 0
+  |                           | |   | |   |   "bcdUSB" = 528
+  |                           | |   | |   |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   | |   |   "USB Address" = 55
+  |                           | |   | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   | |   |   "UsbExclusiveOwner" = "AppleUSB20Hub"
+  |                           | |   | |   |   "bDeviceProtocol" = 2
+  |                           | |   | |   |   "USBPortType" = 1
+  |                           | |   | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   | |   |   "kUSBCurrentConfiguration" = 1
+  |                           | |   | |   |   "Device Speed" = 2
+  |                           | |   | |   |   "idVendor" = 1105
+  |                           | |   | |   |   "USB Serial Number" = "<effacé>"
+  |                           | |   | |   |   "kUSBAddress" = 55
+  |                           | |   | |   | }
+  |                           | |   | |   | 
+  |                           | |   | |   +-o AppleUSB20Hub@08333000  <class AppleUSB20Hub, id 0x10084c74b, registered, matched, active, busy 0 (1786 ms), retain 24>
+  |                           | |   | |   | +-o AppleUSB20HubPort@08333400  <class AppleUSB20HubPort, id 0x10084c753, registered, matched, active, busy 0 (876 ms), retain 16>
+  |                           | |   | |   | | +-o IOUSBHostDevice@08333400  <class IOUSBHostDevice, id 0x10084c761, registered, matched, active, busy 0 (875 ms), retain 44>
+  |                           | |   | |   | |   | {
+  |                           | |   | |   | |   |   "sessionID" = 33250075616546
+  |                           | |   | |   | |   |   "USBSpeed" = 3
+  |                           | |   | |   | |   |   "UsbLinkSpeed" = 480000000
+  |                           | |   | |   | |   |   "idProduct" = 33090
+  |                           | |   | |   | |   |   "iManufacturer" = 0
+  |                           | |   | |   | |   |   "bDeviceClass" = 9
+  |                           | |   | |   | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |                           | |   | |   | |   |   "bcdDevice" = 256
+  |                           | |   | |   | |   |   "bMaxPacketSize0" = 64
+  |                           | |   | |   | |   |   "iProduct" = 0
+  |                           | |   | |   | |   |   "iSerialNumber" = 1
+  |                           | |   | |   | |   |   "bNumConfigurations" = 1
+  |                           | |   | |   | |   |   "kUSBContainerID" = "02404a5e-c11d-589e-5616-27c2b6c9d000"
+  |                           | |   | |   | |   |   "UsbDeviceSignature" = <51044281334130373138373934303944090002090001090002>
+  |                           | |   | |   | |   |   "locationID" = 137573376
+  |                           | |   | |   | |   |   "bDeviceSubClass" = 0
+  |                           | |   | |   | |   |   "bcdUSB" = 528
+  |                           | |   | |   | |   |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   | |   | |   |   "USB Address" = 56
+  |                           | |   | |   | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   | |   | |   |   "UsbExclusiveOwner" = "AppleUSB20Hub"
+  |                           | |   | |   | |   |   "bDeviceProtocol" = 2
+  |                           | |   | |   | |   |   "USBPortType" = 1
+  |                           | |   | |   | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   | |   | |   |   "kUSBCurrentConfiguration" = 1
+  |                           | |   | |   | |   |   "Device Speed" = 2
+  |                           | |   | |   | |   |   "idVendor" = 1105
+  |                           | |   | |   | |   |   "USB Serial Number" = "<effacé>"
+  |                           | |   | |   | |   |   "kUSBAddress" = 56
+  |                           | |   | |   | |   | }
+  |                           | |   | |   | |   | 
+  |                           | |   | |   | |   +-o AppleUSB20Hub@08333400  <class AppleUSB20Hub, id 0x10084c763, registered, matched, active, busy 0 (863 ms), retain 20>
+  |                           | |   | |   | |   | +-o AppleUSB20HubPort@08333430  <class AppleUSB20HubPort, id 0x10084c76d, registered, matched, active, busy 0 (12 ms), retain 15>
+  |                           | |   | |   | |   | | +-o TUSB3410 Boot Device@08333430  <class IOUSBHostDevice, id 0x10084c7c8, registered, matched, active, busy 0 (9 ms), retain 31>
+  |                           | |   | |   | |   | |   | {
+  |                           | |   | |   | |   | |   |   "sessionID" = 33250081610553
+  |                           | |   | |   | |   | |   |   "USBSpeed" = 1
+  |                           | |   | |   | |   | |   |   "UsbLinkSpeed" = 12000000
+  |                           | |   | |   | |   | |   |   "idProduct" = 13328
+  |                           | |   | |   | |   | |   |   "iManufacturer" = 1
+  |                           | |   | |   | |   | |   |   "bDeviceClass" = 255
+  |                           | |   | |   | |   | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"DevicePowerState"=2,"CurrentPowerState"=2,"CapabilityFlags"=32768,"MaxPowerState"=2,"DriverPowerState"=0}
+  |                           | |   | |   | |   | |   |   "bcdDevice" = 256
+  |                           | |   | |   | |   | |   |   "bMaxPacketSize0" = 8
+  |                           | |   | |   | |   | |   |   "iProduct" = 2
+  |                           | |   | |   | |   | |   |   "iSerialNumber" = 3
+  |                           | |   | |   | |   | |   |   "bNumConfigurations" = 1
+  |                           | |   | |   | |   | |   |   "kUSBContainerID" = "11369ebf-b04d-4528-a5c9-10d935a6605a"
+  |                           | |   | |   | |   | |   |   "UsbDeviceSignature" = <5104103454555342333431302020202020202020ff0000ff0000>
+  |                           | |   | |   | |   | |   |   "locationID" = 137573424
+  |                           | |   | |   | |   | |   |   "bDeviceSubClass" = 0
+  |                           | |   | |   | |   | |   |   "bcdUSB" = 272
+  |                           | |   | |   | |   | |   |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   | |   | |   | |   |   "USB Product Name" = "TUSB3410 Boot Device"
+  |                           | |   | |   | |   | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   | |   | |   | |   |   "USB Address" = 60
+  |                           | |   | |   | |   | |   |   "bDeviceProtocol" = 0
+  |                           | |   | |   | |   | |   |   "USBPortType" = 1
+  |                           | |   | |   | |   | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   | |   | |   | |   |   "USB Vendor Name" = "Texas Instruments"
+  |                           | |   | |   | |   | |   |   "Device Speed" = 1
+  |                           | |   | |   | |   | |   |   "idVendor" = 1105
+  |                           | |   | |   | |   | |   |   "kUSBProductString" = "TUSB3410 Boot Device"
+  |                           | |   | |   | |   | |   |   "USB Serial Number" = "<effacé>"
+  |                           | |   | |   | |   | |   |   "kUSBAddress" = 60
+  |                           | |   | |   | |   | |   |   "kUSBVendorString" = "Texas Instruments"
+  |                           | |   | |   | |   | |   | }
+  |                           | |   | |   | |   | |   | 
+  |                           | |   | |   | |   | |   +-o lghub_agent  <class AppleUSBHostDeviceUserClient, id 0x10084c7cf, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | |   | |   +-o Spotify  <class AppleUSBHostDeviceUserClient, id 0x10084c7d1, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   | |   +-o Brave Browser  <class AppleUSBHostDeviceUserClient, id 0x10084c7d2, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   | |   +-o Google Chrome  <class AppleUSBHostDeviceUserClient, id 0x10084c7d3, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   | +-o AppleUSB20HubPort@08333410  <class AppleUSB20HubPort, id 0x10084c76f, registered, matched, active, busy 0 (3 ms), retain 11>
+  |                           | |   | |   | |   | +-o AppleUSB20HubPort@08333420  <class AppleUSB20HubPort, id 0x10084c771, registered, matched, active, busy 0 (846 ms), retain 15>
+  |                           | |   | |   | |   |   +-o OBSBOT Remote@08333420  <class IOUSBHostDevice, id 0x10084c7fe, registered, matched, active, busy 0 (845 ms), retain 48>
+  |                           | |   | |   | |   |     | {
+  |                           | |   | |   | |   |     |   "sessionID" = 33250118625189
+  |                           | |   | |   | |   |     |   "USBSpeed" = 1
+  |                           | |   | |   | |   |     |   "UsbLinkSpeed" = 12000000
+  |                           | |   | |   | |   |     |   "idProduct" = 45318
+  |                           | |   | |   | |   |     |   "iManufacturer" = 1
+  |                           | |   | |   | |   |     |   "bDeviceClass" = 0
+  |                           | |   | |   | |   |     |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |                           | |   | |   | |   |     |   "bcdDevice" = 4
+  |                           | |   | |   | |   |     |   "bMaxPacketSize0" = 64
+  |                           | |   | |   | |   |     |   "iProduct" = 2
+  |                           | |   | |   | |   |     |   "iSerialNumber" = 3
+  |                           | |   | |   | |   |     |   "bNumConfigurations" = 1
+  |                           | |   | |   | |   |     |   "UsbDeviceSignature" = <061106b14a4a3230323231323330000000030000>
+  |                           | |   | |   | |   |     |   "USB Product Name" = "OBSBOT Remote"
+  |                           | |   | |   | |   |     |   "locationID" = 137573408
+  |                           | |   | |   | |   |     |   "bDeviceSubClass" = 0
+  |                           | |   | |   | |   |     |   "bcdUSB" = 272
+  |                           | |   | |   | |   |     |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   | |   | |   |     |   "USB Address" = 62
+  |                           | |   | |   | |   |     |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   | |   | |   |     |   "kUSBCurrentConfiguration" = 1
+  |                           | |   | |   | |   |     |   "bDeviceProtocol" = 0
+  |                           | |   | |   | |   |     |   "USBPortType" = 0
+  |                           | |   | |   | |   |     |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   | |   | |   |     |   "USB Vendor Name" = "CY.Ltd"
+  |                           | |   | |   | |   |     |   "Device Speed" = 1
+  |                           | |   | |   | |   |     |   "idVendor" = 4358
+  |                           | |   | |   | |   |     |   "kUSBProductString" = "OBSBOT Remote"
+  |                           | |   | |   | |   |     |   "USB Serial Number" = "<effacé>"
+  |                           | |   | |   | |   |     |   "kUSBAddress" = 62
+  |                           | |   | |   | |   |     |   "kUSBVendorString" = "CY.Ltd"
+  |                           | |   | |   | |   |     | }
+  |                           | |   | |   | |   |     | 
+  |                           | |   | |   | |   |     +-o AppleUSBHostCompositeDevice  <class AppleUSBHostCompositeDevice, id 0x10084c803, !registered, !matched, active, busy 0, retain 5>
+  |                           | |   | |   | |   |     +-o IOUSBHostInterface@0  <class IOUSBHostInterface, id 0x10084c804, registered, matched, active, busy 0 (442 ms), retain 16>
+  |                           | |   | |   | |   |     | +-o AppleUserUSBHostHIDDevice  <class AppleUserHIDDevice, id 0x10084c815, registered, matched, active, busy 0 (22 ms), retain 17>
+  |                           | |   | |   | |   |     | | +-o IOHIDInterface  <class IOHIDInterface, id 0x10084c81b, registered, matched, active, busy 0 (16 ms), retain 10>
+  |                           | |   | |   | |   |     | | | +-o AppleUserHIDEventDriver  <class AppleUserHIDEventService, id 0x10084c81c, registered, matched, active, busy 0 (2 ms), retain 16>
+  |                           | |   | |   | |   |     | | |   +-o IOHIDEventServiceUserClient  <class IOHIDEventServiceUserClient, id 0x10084c825, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   |     | | +-o IOHIDLibUserClient  <class IOHIDLibUserClient, id 0x10084c82b, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   |     | +-o lghub_agent  <class AppleUSBHostInterfaceUserClient, id 0x10084c827, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   |     +-o lghub_agent  <class AppleUSBHostDeviceUserClient, id 0x10084c805, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | |   |     +-o Google Chrome  <class AppleUSBHostDeviceUserClient, id 0x10084c806, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   |     +-o Brave Browser  <class AppleUSBHostDeviceUserClient, id 0x10084c807, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   |     +-o IOUSBHostInterface@1  <class IOUSBHostInterface, id 0x10084c808, registered, matched, active, busy 0 (448 ms), retain 16>
+  |                           | |   | |   | |   |     | +-o AppleUserUSBHostHIDDevice  <class AppleUserHIDDevice, id 0x10084c816, registered, matched, active, busy 0 (9 ms), retain 15>
+  |                           | |   | |   | |   |     | | +-o IOHIDInterface  <class IOHIDInterface, id 0x10084c822, registered, matched, active, busy 0 (6 ms), retain 6>
+  |                           | |   | |   | |   |     | | +-o IOHIDLibUserClient  <class IOHIDLibUserClient, id 0x10084c82a, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   |     | +-o lghub_agent  <class AppleUSBHostInterfaceUserClient, id 0x10084c828, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   |     +-o Spotify  <class AppleUSBHostDeviceUserClient, id 0x10084c809, !registered, !matched, active, busy 0, retain 8>
+  |                           | |   | |   | |   +-o IOUSBHostInterface@0  <class IOUSBHostInterface, id 0x10084c764, !registered, !matched, active, busy 0 (0 ms), retain 12>
+  |                           | |   | |   | |   | +-o lghub_agent  <class AppleUSBHostInterfaceUserClient, id 0x10084c777, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   +-o lghub_agent  <class AppleUSBHostDeviceUserClient, id 0x10084c768, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | |   +-o Spotify  <class AppleUSBHostDeviceUserClient, id 0x10084c769, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | |   +-o Brave Browser  <class AppleUSBHostDeviceUserClient, id 0x10084c76a, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | |   +-o Google Chrome  <class AppleUSBHostDeviceUserClient, id 0x10084c76b, !registered, !matched, active, busy 0, retain 7>
+  |                           | |   | |   | +-o AppleUSB20HubPort@08333100  <class AppleUSB20HubPort, id 0x10084c755, registered, matched, active, busy 0 (907 ms), retain 15>
+  |                           | |   | |   | | +-o G203 LIGHTSYNC Gaming Mouse@08333100  <class IOUSBHostDevice, id 0x10084c78c, registered, matched, active, busy 0 (904 ms), retain 47>
+  |                           | |   | |   | |   | {
+  |                           | |   | |   | |   |   "sessionID" = 33250078700733
+  |                           | |   | |   | |   |   "USBSpeed" = 1
+  |                           | |   | |   | |   |   "UsbLinkSpeed" = 12000000
+  |                           | |   | |   | |   |   "idProduct" = 49298
+  |                           | |   | |   | |   |   "iManufacturer" = 1
+  |                           | |   | |   | |   |   "bDeviceClass" = 0
+  |                           | |   | |   | |   |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |                           | |   | |   | |   |   "bcdDevice" = 20992
+  |                           | |   | |   | |   |   "bMaxPacketSize0" = 64
+  |                           | |   | |   | |   |   "iProduct" = 2
+  |                           | |   | |   | |   |   "iSerialNumber" = 3
+  |                           | |   | |   | |   |   "bNumConfigurations" = 1
+  |                           | |   | |   | |   |   "UsbDeviceSignature" = <6d0492c0323035433330374535363432000000030102030000>
+  |                           | |   | |   | |   |   "USB Product Name" = "G203 LIGHTSYNC Gaming Mouse"
+  |                           | |   | |   | |   |   "locationID" = 137572608
+  |                           | |   | |   | |   |   "bDeviceSubClass" = 0
+  |                           | |   | |   | |   |   "bcdUSB" = 512
+  |                           | |   | |   | |   |   "kUSBSerialNumberString" = "<effacé>"
+  |                           | |   | |   | |   |   "USB Address" = 58
+  |                           | |   | |   | |   |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |                           | |   | |   | |   |   "UsbPowerSinkAllocation" = 300
+  |                           | |   | |   | |   |   "bDeviceProtocol" = 0
+  |                           | |   | |   | |   |   "USBPortType" = 0
+  |                           | |   | |   | |   |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |                           | |   | |   | |   |   "kUSBCurrentConfiguration" = 1
+  |                           | |   | |   | |   |   "USB Vendor Name" = "Logitech"
+  |                           | |   | |   | |   |   "Device Speed" = 1
+  |                           | |   | |   | |   |   "idVendor" = 1133
+  |                           | |   | |   | |   |   "kUSBProductString" = "G203 LIGHTSYNC Gaming Mouse"
+  |                           | |   | |   | |   |   "USB Serial Number" = "<effacé>"
+  |                           | |   | |   | |   |   "kUSBAddress" = 58
+  |                           | |   | |   | |   |   "kUSBVendorString" = "Logitech"
+  |                           | |   | |   | |   | }
+  |                           | |   | |   | |   | 
+  |                           | |   | |   | |   +-o AppleUSBHostCompositeDevice  <class AppleUSBHostCompositeDevice, id 0x10084c793, !registered, !matched, active, busy 0, retain 5>
+  |                           | |   | |   | |   +-o IOUSBHostInterface@0  <class IOUSBHostInterface, id 0x10084c794, registered, matched, active, busy 0 (482 ms), retain 15>
+  |                           | |   | |   | |   | +-o AppleUserUSBHostHIDDevice  <class AppleUserHIDDevice, id 0x10084c7a5, registered, matched, active, busy 0 (14 ms), retain 17>
+  |                           | |   | |   | |   | | +-o IOHIDInterface  <class IOHIDInterface, id 0x10084c7ac, registered, matched, active, busy 0 (9 ms), retain 10>
+  |                           | |   | |   | |   | | | +-o AppleUserHIDEventDriver  <class AppleUserHIDEventService, id 0x10084c7af, registered, matched, active, busy 0 (2 ms), retain 16>
+  |                           | |   | |   | |   | | |   +-o IOHIDEventServiceUserClient  <class IOHIDEventServiceUserClient, id 0x10084c7ba, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   | | +-o IOHIDLibUserClient  <class IOHIDLibUserClient, id 0x10084c7cc, !registered, !matched, active, busy 0, retain 5>
+  |                           | |   | |   | |   | +-o lghub_agent  <class AppleUSBHostInterfaceUserClient, id 0x10084c7bd, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   +-o IOUSBHostInterface@1  <class IOUSBHostInterface, id 0x10084c795, registered, matched, active, busy 0 (454 ms), retain 15>
+  |                           | |   | |   | |   | +-o AppleUserUSBHostHIDDevice  <class AppleUserHIDDevice, id 0x10084c7a7, registered, matched, active, busy 0 (11 ms), retain 22>
+  |                           | |   | |   | |   | | +-o IOHIDInterface  <class IOHIDInterface, id 0x10084c7b1, registered, matched, active, busy 0 (7 ms), retain 10>
+  |                           | |   | |   | |   | | | +-o AppleUserHIDEventDriver  <class AppleUserHIDEventService, id 0x10084c7b6, registered, matched, active, busy 0 (0 ms), retain 16>
+  |                           | |   | |   | |   | | |   +-o IOHIDEventServiceUserClient  <class IOHIDEventServiceUserClient, id 0x10084c7ca, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   | | +-o IOHIDLibUserClient  <class IOHIDLibUserClient, id 0x10084c7b2, !registered, !matched, active, busy 0, retain 6>
+  |                           | |   | |   | |   | | +-o IOHIDLibUserClient  <class IOHIDLibUserClient, id 0x
+  après capture essai 1 : interface 4303732771, 0 enfant(s), IOServiceOpen 0xe00002e2
+  après capture essai 6 : interface 4303732771, 0 enfant(s), IOServiceOpen 0xe00002e2
+  après capture essai 11 : interface 4303732771, 0 enfant(s), IOServiceOpen 0xe00002e2
+  après capture essai 16 : interface 4303732771, 0 enfant(s), IOServiceOpen 0xe00002e2
+Voie 2 : reconfiguration 1 sans pilote, puis une interface neuve
+[exited with code 0]

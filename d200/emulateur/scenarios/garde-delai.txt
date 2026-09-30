@@ -1,0 +1,6 @@
+# Garde : une instruction de plusieurs mots dans un créneau de délai doit arrêter l'émulation (code 2).
+# On pose LDI:32 (0x9F8A) à la place de LDI:8 #0,R10 dans le créneau du BRA:D en 0xD93D4 (FUN_000d93a6),
+# en mémoire seulement : le firmware sur disque n'est pas touché.
+poke8 0x97F0004D 0x0C
+poke16 0xD93D6 0x9F8A
+appel 0x5D616 0x97F00000 1

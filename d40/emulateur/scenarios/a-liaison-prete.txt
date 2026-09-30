@@ -1,0 +1,9 @@
+# Le A seul, B « présent » (PDR9 bit 1 = 1) et prêt (PDR0 bit 4 = 0) : la liaison s'ouvre-t-elle ?
+eeprom valide
+entree 0x09 0x02
+entree 0x00 0x00 0xEF
+run 3M
+peek 0x3CC14 4
+peek 0x40 3
+peek 0x0E 1
+taches

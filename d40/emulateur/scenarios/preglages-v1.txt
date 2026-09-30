@@ -1,0 +1,420 @@
+# Préréglages V1 (patchs/v1.json = menu Pip-Boy + preglages-v1.json), outils/preglages_v1.py.
+# La prise de vue n'est pas émulée : on joue la chaîne réelle du boîtier, fonction par fonction,
+# sur une fiche de prise de vue posée en RAM libre (0x83F00000) :
+#   FUN_0004793a(fiche + 0x2C)  recopie les réglages du menu dans la fiche (tâche 5)
+#   FUN_0031a0f8(fiche, 0)      calcule les paramètres d'image (modes, matrice, courbe, secteurs)
+#   FUN_0004b41c(fiche)         charge la puce ; c'est là qu'est le crochet (0x4B5B2 → 0x3F3000)
+# (second crochet, 0x31B232 → preglage_reglages : netteté _DAT_83eb3d20, saturation _DAT_83eb3d44 et
+# tons _DAT_83eb3d50 des 5 rendus, Moyennement élevée, Normale et Normal, posés juste après modesScene_reglages)
+# puis on compare les registres de la puce (0x40010022 matrice, 0x40010034 YCbCr, 0x4001E400
+# secteurs, 0x40018400/A400/C400 courbes) aux données de l'emplacement en ROM (préréglage V1) ou à
+# ce que le code de Nikon a calculé dans la fiche (Nikon, Personnalisé, mode scène).
+# Netteté, saturation, tons : la puce reçoit, pour chaque rendu, le paramètre de netteté (0x40010054),
+# le demi-mot suivant (0x40010056, fixé par les tons) et la table de saturation (0x4001EC00) d'un
+# Personnalisé réglé à la main sur Netteté Moyennement élevée, Tons Normal et Saturation Normale, dans le
+# même mode couleur (références copiées en 0x83F08000). Teinte : elle ne change que la YCbCr (remplacée
+# par le crochet) ; vérifié sur toute la page 0x40010000, et vaut 0° dans les 5 préréglages recyclés.
+# python3 emulateur/d40emu.py scenario preglages-v1 --firmware build/v1/BD400111.BIN
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+press menu 4M 30M
+png 00-prise-de-vue.png
+# --- Nikon (valeur 0)
+expect8 0x83CED225 0x00
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect32min 0x83EB3AB4 13              # IIIa : matrice 13 (12 + balance 1)
+expect8 0x83EB3D23 0x00                # Nikon garde sa netteté (Auto), sa saturation (Auto), ses tons (Auto)
+expect8 0x83EB3D47 0x00
+expect8 0x83EB3D53 0x00
+expect8 0x83EB3D37 0x03                # teinte 0° (d34 = 3)
+expectegal 0x40010054 0X83F003D8 4     # paramètres de netteté de la fiche, tels quels
+# Nikon : la puce reçoit exactement ce que le code de Nikon a calculé
+expectegal 0x40010022 0X83F003A4 18
+expectegal 0x40010034 0X83F003B6 18
+expectegal 0x4001E400 0X83F003DC 128
+expectegal 0x40018400 0x83EB586C 8192
+expectegal 0x4001A400 0x83EB586C 8192
+expectegal 0x4001C400 0x83EB586C 8192
+# --- références : Personnalisé réglé à la main, Netteté Moyennement élevée, Tons Normal, Saturation Normale
+# (0x83CED224 = 4 << 5 | 1 << 2 | 1), en Ia (mode couleur 1) puis en IIIa (0) ; on remet Nikon après
+poke8 0x83CED224 0x85
+poke8 0x83CED225 0x54                  # Personnalisé (5 << 2), mode couleur Ia
+remplir 0x40010054 4 0xEE
+remplir 0x4001EC00 0x800 0xEE
+appel 0x4793A 0X83F0002C
+appel 0x31A0F8 0X83F00000 0
+appel 0x4B41C 0X83F00000
+expect8 0x83EB3AB7 0x01                # Ia
+expect8 0x83EB3D23 0x04
+expect8 0x83EB3D47 0x01
+peek 0x40010054 2
+copier 0x40010054 0x83F08000 4         # netteté Moyennement élevée et 0x40010056 (tons Normal), Ia
+copier 0x4001EC00 0x83F08100 2048      # table de saturation Normale
+# teinte ±9° (0x83CED226 = ±3) : toute la page de la puce reste identique, sauf la YCbCr (0x40010034-45)
+copier 0x40010000 0x83F20000 0x10000
+poke8 0x83CED226 0x03                  # +9°
+remplir 0x40010054 4 0xEE
+remplir 0x4001EC00 0x800 0xEE
+appel 0x4793A 0X83F0002C
+appel 0x31A0F8 0X83F00000 0
+appel 0x4B41C 0X83F00000
+expect8 0x83EB3D37 0x06
+expectegal 0x40010000 0x83F20000 0x34
+expectegal 0x40010046 0x83F20046 0xFFBA
+poke8 0x83CED226 0xFD                  # −9°
+remplir 0x40010054 4 0xEE
+remplir 0x4001EC00 0x800 0xEE
+appel 0x4793A 0X83F0002C
+appel 0x31A0F8 0X83F00000 0
+appel 0x4B41C 0X83F00000
+expect8 0x83EB3D37 0x00
+expectegal 0x40010000 0x83F20000 0x34
+expectegal 0x40010046 0x83F20046 0xFFBA
+poke8 0x83CED226 0x00
+poke8 0x83CED225 0x14                  # Personnalisé, mode couleur IIIa
+remplir 0x40010054 4 0xEE
+remplir 0x4001EC00 0x800 0xEE
+appel 0x4793A 0X83F0002C
+appel 0x31A0F8 0X83F00000 0
+appel 0x4B41C 0X83F00000
+expect8 0x83EB3AB7 0x0D                # IIIa
+peek 0x40010054 2
+copier 0x40010054 0x83F08004 4         # netteté Moyennement élevée et tons Normal, IIIa
+copier 0x4001EC00 0x83F08900 2048
+poke8 0x83CED224 0x00
+poke8 0x83CED225 0x00
+# --- Hasselblad (valeur 1, ex-Plus doux (SO)) choisi dans le menu
+press right 4M 20M
+press down 4M 16M
+png 01-liste-hasselblad.png             # liste des 7 préréglages, hasselblad en surbrillance
+press ok 4M 40M
+png 02-pdv-hasselblad.png               # PRISE DE VUE : pictogramme du préréglage choisi
+expect8 0x83CED225 0X04          # mode d'optimisation, bits 2-5 (lu par le traitement d'image)
+expect8 0x83CE957F 0X10          # copie envoyée au A
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3AB7 0X01          # matrice Nikon choisie : Ia (0 + 1)
+expectegal 0x40010022 0X3F3412 18      # matrice de l'emplacement 0, balance k = 1
+expectegal 0x40010034 0X3F376C 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3F34EC 128     # 16 secteurs × 4 tables, balance k = 1
+expectegal 0x40018400 0X3F3780 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3F3780 8192
+expectegal 0x4001C400 0X3F3780 8192
+expect8 0x83EB3D23 0x04                # netteté Moyennement élevée (préréglage recyclé : Faible)
+expect8 0x83EB3D47 0x01                # saturation Normale (préréglage recyclé : Auto)
+expect8 0x83EB3D53 0x01                # tons Normal (préréglage recyclé : Moins de contraste)
+expect8 0x83EB3D37 0x03                # teinte 0°, celle du préréglage recyclé
+expectegal 0x40010054 0x83F08000 4     # netteté et 0x40010056 = Personnalisé Moyennement élevée, Tons Normal
+expectegal 0x4001EC00 0x83F08100 2048  # table de saturation = Personnalisé Saturation Normale
+# --- Chrome (valeur 2, ex-Vif (VI)) choisi dans le menu
+press right 4M 20M
+press down 4M 16M
+png 03-liste-chrome.png             # liste des 7 préréglages, chrome en surbrillance
+press ok 4M 40M
+png 04-pdv-chrome.png               # PRISE DE VUE : pictogramme du préréglage choisi
+expect8 0x83CED225 0X08          # mode d'optimisation, bits 2-5 (lu par le traitement d'image)
+expect8 0x83CE957F 0X20          # copie envoyée au A
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3AB7 0X0D          # matrice Nikon choisie : IIIa (12 + 1)
+expectegal 0x40010022 0X3F5792 18      # matrice de l'emplacement 1, balance k = 1
+expectegal 0x40010034 0X3F5AEC 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3F586C 128     # 16 secteurs × 4 tables, balance k = 1
+expectegal 0x40018400 0X3F5B00 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3F5B00 8192
+expectegal 0x4001C400 0X3F5B00 8192
+expect8 0x83EB3D23 0x04                # netteté Moyennement élevée (préréglage recyclé : déjà Moyennement élevée)
+expect8 0x83EB3D47 0x01                # saturation Normale (préréglage recyclé : Rehaussée)
+expect8 0x83EB3D53 0x01                # tons Normal (préréglage recyclé : déjà Normal)
+expect8 0x83EB3D37 0x03                # teinte 0°, celle du préréglage recyclé
+expectegal 0x40010054 0x83F08004 4     # netteté et 0x40010056 = Personnalisé Moyennement élevée, Tons Normal
+expectegal 0x4001EC00 0x83F08900 2048  # table de saturation = Personnalisé Saturation Normale
+# deux photos, deux balances (revue critique, risque 4b) : la balance vient de la fiche de la photo
+# (+0x4FE, rangée par image_parametres), pas de la globale _DAT_83eb3ab4. Fiche B en 0x83F01000,
+# balance Incandescent (+0x37 = 2 : matrice Nikon 16, IIIa, k = 4), calculée APRÈS la fiche A
+# (matrice 13, k = 1) ; puis la puce est chargée pour A, puis pour B (rafale, chemins de la tâche 16).
+expect8 0x83F004FE 0x0D                # fiche A : matrice 13
+appel 0x4793A 0X83F0102C
+poke8 0x83F01037 0x02
+appel 0x31A0F8 0X83F01000 0
+expect8 0x83EB3AB7 0x10                # la globale vaut maintenant celle de B
+expect8 0x83F014FE 0x10                # rangée dans la fiche B
+expect8 0x83F004FE 0x0D                # la fiche A garde la sienne
+remplir 0x40010022 0x24 0xEE
+remplir 0x4001E400 0x80 0xEE
+appel 0x4B41C 0X83F00000               # puce chargée pour A
+expectegal 0x40010022 0X3F5792 18      # matrice de l'emplacement 1, balance k = 1 (celle de A, pas celle de B)
+expectegal 0x4001E400 0X3F586C 128     # secteurs, k = 1
+remplir 0x40010022 0x24 0xEE
+remplir 0x4001E400 0x80 0xEE
+appel 0x4B41C 0X83F01000               # puce chargée pour B
+expectegal 0x40010022 0X3F57C8 18      # matrice de l'emplacement 1, balance k = 4
+expectegal 0x40010034 0X3F5AEC 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3F59EC 128     # 16 secteurs × 4 tables, balance k = 4
+expectegal 0x40018400 0X3F5B00 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3F5B00 8192
+expectegal 0x4001C400 0X3F5B00 8192
+# indice hors table dans la fiche (≥ 18) : rendu Nikon, le crochet ne lit rien au-delà de ses tables
+poke8 0x83F004FE 0x12
+appel 0x4B41C 0X83F00000
+expectegal 0x40018400 0x83EB586C 8192
+poke8 0x83F004FE 0x0D
+# --- Positive (valeur 3, ex-Très vif (VI+)) choisi dans le menu
+press right 4M 20M
+press down 4M 16M
+png 05-liste-positive.png             # liste des 7 préréglages, positive en surbrillance
+press ok 4M 40M
+png 06-pdv-positive.png               # PRISE DE VUE : pictogramme du préréglage choisi
+expect8 0x83CED225 0X0C          # mode d'optimisation, bits 2-5 (lu par le traitement d'image)
+expect8 0x83CE957F 0X30          # copie envoyée au A
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3AB7 0X0D          # matrice Nikon choisie : IIIa (12 + 1)
+expectegal 0x40010022 0X3F7B12 18      # matrice de l'emplacement 2, balance k = 1
+expectegal 0x40010034 0X3F7E6C 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3F7BEC 128     # 16 secteurs × 4 tables, balance k = 1
+expectegal 0x40018400 0X3F7E80 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3F7E80 8192
+expectegal 0x4001C400 0X3F7E80 8192
+expect8 0x83EB3D23 0x04                # netteté Moyennement élevée (préréglage recyclé : Élevée)
+expect8 0x83EB3D47 0x01                # saturation Normale (préréglage recyclé : Rehaussée)
+expect8 0x83EB3D53 0x01                # tons Normal (préréglage recyclé : Plus de contraste)
+expect8 0x83EB3D37 0x03                # teinte 0°, celle du préréglage recyclé
+expectegal 0x40010054 0x83F08004 4     # netteté et 0x40010056 = Personnalisé Moyennement élevée, Tons Normal
+expectegal 0x4001EC00 0x83F08900 2048  # table de saturation = Personnalisé Saturation Normale
+# --- Tri-X (valeur 4, ex-Portrait (PO)) choisi dans le menu
+press right 4M 20M
+press down 4M 16M
+png 07-liste-trix.png             # liste des 7 préréglages, trix en surbrillance
+press ok 4M 40M
+png 08-pdv-trix.png               # PRISE DE VUE : pictogramme du préréglage choisi
+expect8 0x83CED225 0X10          # mode d'optimisation, bits 2-5 (lu par le traitement d'image)
+expect8 0x83CE957F 0X40          # copie envoyée au A
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3AB7 0X01          # matrice Nikon choisie : Ia (0 + 1)
+expectegal 0x40010022 0X3F9E92 18      # matrice de l'emplacement 3, balance k = 1
+expectegal 0x40010034 0X3FA1EC 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3F9F6C 128     # 16 secteurs × 4 tables, balance k = 1
+expectegal 0x40018400 0X3FA200 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3FA200 8192
+expectegal 0x4001C400 0X3FA200 8192
+expect8 0x83EB3D23 0x04                # netteté Moyennement élevée (préréglage recyclé : Moyennement faible)
+expect8 0x83EB3D47 0x01                # saturation Normale (préréglage recyclé : Auto)
+expect8 0x83EB3D53 0x01                # tons Normal (préréglage recyclé : Auto)
+expect8 0x83EB3D37 0x03                # teinte 0°, celle du préréglage recyclé
+expectegal 0x40010054 0x83F08000 4     # netteté et 0x40010056 = Personnalisé Moyennement élevée, Tons Normal
+expectegal 0x4001EC00 0x83F08100 2048  # table de saturation = Personnalisé Saturation Normale
+# --- HP5 (valeur 6, ex-Noir et blanc (BW)) choisi dans le menu
+press right 4M 20M
+press down 4M 16M
+png 09-liste-hp5.png             # liste des 7 préréglages, hp5 en surbrillance
+press ok 4M 40M
+png 10-pdv-hp5.png               # PRISE DE VUE : pictogramme du préréglage choisi
+expect8 0x83CED225 0X18          # mode d'optimisation, bits 2-5 (lu par le traitement d'image)
+expect8 0x83CE957F 0X60          # copie envoyée au A
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3AB7 0X01          # matrice Nikon choisie : Ia (0 + 1)
+expectegal 0x40010022 0X3FC212 18      # matrice de l'emplacement 4, balance k = 1
+expectegal 0x40010034 0X3FC56C 18      # YCbCr de l'emplacement
+expectegal 0x4001E400 0X3FC2EC 128     # 16 secteurs × 4 tables, balance k = 1
+expectegal 0x40018400 0X3FC580 8192    # courbe du préréglage, copiée par Nikon dans les 3 tables
+expectegal 0x4001A400 0X3FC580 8192
+expectegal 0x4001C400 0X3FC580 8192
+expect8 0x83EB3D23 0x04                # netteté Moyennement élevée (préréglage recyclé : Normale)
+expect8 0x83EB3D47 0x01                # saturation Normale (déjà celle de Noir et blanc)
+expect8 0x83EB3D53 0x01                # tons Normal (déjà ceux de Noir et blanc)
+expect8 0x83EB3D37 0x03                # teinte 0°
+expect16 0x40010054 0x010E              # Moyennement élevée du jeu N&B de Nikon (Normale : 0x00B1, témoin)
+expectegal 0x40010054 0X83F003D8 4     # la puce reçoit les paramètres de netteté de la fiche
+# même fiche en mode scène (quartet haut de +0x5A = 9, Portrait) : pas de préréglage
+poke8 0X83F0005A 0x90
+appel 0x4B41C 0X83F00000
+# HP5 en mode scène : la puce reçoit exactement ce que le code de Nikon a calculé
+expectegal 0x40010022 0X83F003A4 18
+expectegal 0x40010034 0X83F003B6 18
+expectegal 0x4001E400 0X83F003DC 128
+expectegal 0x40018400 0x83EB586C 8192
+expectegal 0x4001A400 0x83EB586C 8192
+expectegal 0x4001C400 0x83EB586C 8192
+# chemin des matrices en dur (_DAT_83eb3d3c ≠ 0) : pas de préréglage
+poke8 0X83F0005A 0x00
+poke32 0x83EB3D3C 1
+appel 0x4B41C 0X83F00000
+expectegal 0x40018400 0x83EB586C 8192
+poke32 0x83EB3D3C 0
+# preglage_reglages, mêmes conditions : en mode scène (Portrait) et sur le chemin des matrices en dur,
+# netteté et saturation restent celles de Nikon
+appel 0x4793A 0X83F0002C
+poke8 0X83F0005A 0x90
+appel 0x31A0F8 0X83F00000 0
+expect8 0x83EB3D23 0x03                # scène Portrait : Moyennement faible et Normale, celles de Nikon
+expect8 0x83EB3D47 0x01
+poke8 0X83F0005A 0x00
+poke8 0x83CE974C 0x04                  # bit 2 : _DAT_83eb3d3c = 1, posé par modesScene_reglages
+appel 0x4793A 0X83F0002C
+appel 0x31A0F8 0X83F00000 0
+expect8 0x83EB3D3F 0x01
+expect8 0x83EB3D23 0x01                # matrices en dur : Normale, celle du Noir et blanc de Nikon
+expect8 0x83EB3D47 0x01
+poke8 0x83CE974C 0x00
+# --- Personnalisé (valeur 5) : comportement Nikon d'origine
+press right 4M 20M
+press down 4M 16M
+png 11-preglage-personnalise.png
+press ok 4M 40M
+png 12-personnalise-reglages.png  # OK ouvre les réglages fins de Nikon ; « Terminé » valide
+press ok 4M 40M
+expect8 0x83CED225 0x14
+poke8 0x83CED224 0x4B                  # réglages fins : Netteté Faible (2 << 5), Tons Moins de contraste (2 << 2), Saturation Rehaussée (3)
+poke8 0x83CED226 0x03                  # Teinte +9°
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+expect8 0x83EB3D23 0x02                # Personnalisé garde netteté, saturation, tons et teinte de l'utilisateur
+expect8 0x83EB3D47 0x03
+expect8 0x83EB3D53 0x02
+expect8 0x83EB3D37 0x06
+poke8 0x83CED224 0x00
+poke8 0x83CED226 0x00
+# Personnalisé : la puce reçoit exactement ce que le code de Nikon a calculé
+expectegal 0x40010022 0X83F003A4 18
+expectegal 0x40010034 0X83F003B6 18
+expectegal 0x4001E400 0X83F003DC 128
+expectegal 0x40018400 0x83EB586C 8192
+expectegal 0x4001A400 0x83EB586C 8192
+expectegal 0x4001C400 0x83EB586C 8192
+expectegal 0x40010054 0X83F003D8 4
+# --- retour à Nikon par le menu
+png 13-pdv-personnalise.png
+press right 4M 20M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press ok 4M 40M
+expect8 0x83CED225 0x00
+remplir 0x40010022 0x24 0xEE           # registres brouillés avant chaque passage
+remplir 0x4001E400 0x80 0xEE
+remplir 0x40018400 0x2000 0xEE
+remplir 0x4001A400 0x2000 0xEE
+remplir 0x4001C400 0x2000 0xEE
+remplir 0x40010054 4 0xEE              # netteté (0x40010054) et 2e paramètre (0x40010056)
+remplir 0x4001EC00 0x800 0xEE          # table de saturation, 1 024 valeurs
+appel 0x4793A 0X83F0002C         # réglages → fiche
+appel 0x31A0F8 0X83F00000 0       # paramètres d'image
+appel 0x4B41C 0X83F00000          # puce (crochet)
+# Nikon, de nouveau : la puce reçoit exactement ce que le code de Nikon a calculé
+expectegal 0x40010022 0X83F003A4 18
+expectegal 0x40010034 0X83F003B6 18
+expectegal 0x4001E400 0X83F003DC 128
+expectegal 0x40018400 0x83EB586C 8192
+expectegal 0x4001A400 0x83EB586C 8192
+expectegal 0x4001C400 0x83EB586C 8192
+expect8 0x83EB3D23 0x00                # netteté, saturation et tons de Nikon (Auto), de nouveau
+expect8 0x83EB3D47 0x00
+expect8 0x83EB3D53 0x00
+# --- Programme et Si trop sombre gardés à l'extinction : octets 0x83CED24E et 0x83CED24F du bloc
+# de réglages 10, relu de la flash au démarrage. On simule une relecture (Street, ISO) puis une valeur
+# hors bornes écrite par un autre firmware (bornée à Standard / baisser la vitesse).
+poke8 0x83CED24E 0x03
+poke8 0x83CED24F 0x01
+press left 4M 16M              # colonne des onglets, puis on ressort du menu et on y revient
+press menu 4M 30M
+press menu 4M 30M
+png 14-pdv-street.png          # Programme : STR
+press ok 4M 20M                # rouvert sur les onglets : OK entre (les deux navigations)
+press down 4M 16M
+press right 4M 20M
+png 15-programme-street.png    # surbrillance sur Street
+press ok 4M 40M
+expect8 0x83CED24E 0x03
+press down 4M 16M
+press right 4M 20M
+png 16-iso-auto-iso.png        # Si trop sombre : ISO
+press left 4M 16M
+press left 4M 16M
+poke8 0x83CED24E 0x09
+poke8 0x83CED24F 0x07
+press menu 4M 30M
+press menu 4M 30M
+png 17-pdv-borne.png           # valeur hors bornes : STD, sans planter
+press ok 4M 20M                # le menu revient sur les onglets ; OK entre, sur la dernière ligne (ISO auto)
+press up 4M 16M
+press right 4M 20M
+png 18-programme-borne.png     # surbrillance sur Standard
+press ok 4M 40M
+expect8 0x83CED24E 0x00
+press down 4M 16M
+press right 4M 20M
+png 19-iso-auto-borne.png      # Si trop sombre hors bornes : VIT
+# --- « Réinitialiser » (PERSO, Oui) remet Programme à Standard et Si trop sombre à 0 : FUN_00135570 appelle
+# preglage_reinit à la place de son second envoi au A (0x138546). Ici : la constante patchée, puis
+# preglage_reinit lui-même (le passage par le menu est dans le scénario reinitialiser).
+expect8 0x13567C 0x31                  # LDI:32 #0x003F3136,R12 à 0x135678 (au lieu de #0x00138546)
+expect8 0x13567D 0x36
+poke8 0x83CED24E 0x03                  # Street
+poke8 0x83CED24F 0x01                  # ISO
+appel 0x3F3136
+expect8 0x83CED24E 0x00                # Programme : Standard
+expect8 0x83CED24F 0x00                # Si trop sombre : baisser la vitesse

@@ -1,0 +1,301 @@
+[
+ {
+  "emplacement": "C-1",
+  "profil": "KODACHROME VIF",
+  "nom": "KODACHROME",
+  "fichier": "usb/kodachrome-v2.json",
+  "version": "v2",
+  "base": "STANDARD",
+  "saturation": -1,
+  "teinte": -3,
+  "kelvin": 6250,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.81,
+    "p90": 4.85
+   },
+   "peau": {
+    "mediane": 0.6,
+    "p90": 1.39
+   },
+   "mire": {
+    "mediane": 3.26,
+    "p90": 9.32
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-2",
+  "profil": "CLASSIC CHROME",
+  "nom": "CLASSIC CHROME",
+  "fichier": "usb/classic-chrome-v1.json",
+  "version": "v1",
+  "base": "STANDARD",
+  "saturation": -1,
+  "teinte": -2,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 1.35,
+    "p90": 2.48
+   },
+   "peau": {
+    "mediane": 1.07,
+    "p90": 1.49
+   },
+   "mire": {
+    "mediane": 2.2,
+    "p90": 7.0
+   }
+  },
+  "base_brute": {
+   "scene": {
+    "mediane": 3.66,
+    "p90": 5.75
+   },
+   "peau": {
+    "mediane": 3.96,
+    "p90": 4.13
+   },
+   "mire": {
+    "mediane": 5.28,
+    "p90": 8.38
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-3",
+  "profil": "CLASSIC NEG",
+  "nom": "CLASSIC NEG",
+  "fichier": "usb/classic-neg-v1.json",
+  "version": "v1",
+  "base": "STANDARD",
+  "saturation": 0,
+  "teinte": 0,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 4.41,
+    "p90": 6.2
+   },
+   "peau": {
+    "mediane": 1.69,
+    "p90": 2.73
+   },
+   "mire": {
+    "mediane": 4.73,
+    "p90": 10.35
+   }
+  },
+  "base_brute": {
+   "scene": {
+    "mediane": 4.78,
+    "p90": 7.01
+   },
+   "peau": {
+    "mediane": 4.16,
+    "p90": 5.0
+   },
+   "mire": {
+    "mediane": 5.61,
+    "p90": 10.71
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-4",
+  "profil": "POSITIVE",
+  "nom": "POSITIVE",
+  "fichier": "usb/positive-v1.json",
+  "version": "v1",
+  "base": "STANDARD",
+  "saturation": 2,
+  "teinte": -2,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.36,
+    "p90": 4.13
+   },
+   "peau": {
+    "mediane": 1.13,
+    "p90": 2.33
+   },
+   "mire": {
+    "mediane": 2.75,
+    "p90": 8.25
+   }
+  },
+  "base_brute": {
+   "scene": {
+    "mediane": 3.15,
+    "p90": 6.21
+   },
+   "peau": {
+    "mediane": 6.62,
+    "p90": 6.98
+   },
+   "mire": {
+    "mediane": 3.78,
+    "p90": 9.96
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-5",
+  "profil": "PORTRA ESPRIT",
+  "nom": "PORTRA 400",
+  "fichier": "usb/portra-400-v2.json",
+  "version": "v2",
+  "base": "STANDARD",
+  "saturation": 3,
+  "teinte": 2,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.79,
+    "p90": 5.36
+   },
+   "peau": {
+    "mediane": 1.66,
+    "p90": 2.81
+   },
+   "mire": {
+    "mediane": 4.16,
+    "p90": 8.11
+   }
+  },
+  "base_brute": {
+   "scene": {
+    "mediane": 6.08,
+    "p90": 7.13
+   },
+   "peau": {
+    "mediane": 8.3,
+    "p90": 8.83
+   },
+   "mire": {
+    "mediane": 4.46,
+    "p90": 9.42
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-6",
+  "profil": "HASSELBLAD",
+  "nom": "HASSELBLAD",
+  "fichier": "usb/hasselblad-v1.json",
+  "version": "v1",
+  "base": "STANDARD",
+  "saturation": 1,
+  "teinte": -3,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.23,
+    "p90": 3.85
+   },
+   "peau": {
+    "mediane": 1.03,
+    "p90": 1.3
+   },
+   "mire": {
+    "mediane": 4.14,
+    "p90": 6.59
+   }
+  },
+  "base_brute": {
+   "scene": {
+    "mediane": 2.76,
+    "p90": 4.82
+   },
+   "peau": {
+    "mediane": 5.57,
+    "p90": 5.83
+   },
+   "mire": {
+    "mediane": 4.36,
+    "p90": 8.4
+   }
+  },
+  "octets": 610
+ },
+ {
+  "emplacement": "C-7",
+  "profil": "TRI-X",
+  "nom": "TRI-X",
+  "fichier": "usb/tri-x-v1.json",
+  "version": "v1",
+  "base": "MONOCHROME",
+  "filtre": "AUCUN",
+  "kelvin": 10000,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 0.44,
+    "p90": 1.59
+   },
+   "peau": {
+    "mediane": 0.62,
+    "p90": 1.54
+   },
+   "mire": {
+    "mediane": 0.88,
+    "p90": 4.12
+   }
+  },
+  "cible": "mélange et courbe du preset Tri-X",
+  "octets": 610
+ },
+ {
+  "emplacement": "C-8",
+  "profil": "HP5",
+  "nom": "HP5+",
+  "fichier": "usb/hp5-v1.json",
+  "version": "v1",
+  "base": "MONOCHROME",
+  "filtre": "AUCUN",
+  "kelvin": 5600,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.19,
+    "p90": 7.97
+   },
+   "peau": {
+    "mediane": 0.93,
+    "p90": 1.98
+   },
+   "mire": {
+    "mediane": 3.02,
+    "p90": 14.29
+   }
+  },
+  "cible": "mélange de la fiche Harman, tonalité de ses scans HP5",
+  "octets": 610
+ },
+ {
+  "emplacement": "C-9",
+  "profil": "FP4",
+  "nom": "FP4+",
+  "fichier": "usb/fp4-v1.json",
+  "version": "v1",
+  "base": "MONOCHROME",
+  "filtre": "AUCUN",
+  "kelvin": 5600,
+  "ecarts_prevus": {
+   "scene": {
+    "mediane": 2.11,
+    "p90": 5.68
+   },
+   "peau": {
+    "mediane": 0.62,
+    "p90": 1.67
+   },
+   "mire": {
+    "mediane": 3.11,
+    "p90": 17.17
+   }
+  },
+  "cible": "mélange et courbe de la fiche Ilford (Ilfotec HC)",
+  "octets": 610
+ }
+]

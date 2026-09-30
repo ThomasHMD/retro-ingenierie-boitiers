@@ -1,0 +1,9 @@
+{
+ "_lisezmoi": "Recettes de Thomas pour le Pentax 645D, chargées en octobre 2026 par USB (645d/README.md). Réglage seulement : le firmware n'est pas modifié. 'usb' = valeurs envoyées en mode constructeur (0 à 8, 4 = 0 au menu) ; 'menu' = les mêmes réglages à la main. Mesures : 645d/recherche/645d-usb-et-reglages.md §8.",
+ "recettes": [
+  {"nom": "Classic Chrome", "emplacement": "Naturel (mode actif)", "menu": {"Custom Image": "Naturel", "Saturation": 0, "Teinte": -2, "Contraste": 0, "Netteté": 0}, "usb": {"D020": 0, "D021": 4, "D022": 2, "5014": 4, "5015": 4, "D026": 0, "D027": 0}, "ecart_cible": "ΔE2000 médian 1,9 contre Classic Chrome (LUT officielle F-Log2), scène peu colorée"},
+  {"nom": "Portra 400", "emplacement": "Lumineux", "menu": {"Custom Image": "Lumineux", "Saturation": 0, "Teinte": 0, "Contraste": 0, "Netteté": 0}, "usb": {"D020": 1, "D021": 4, "D022": 4, "5014": 4, "5015": 4, "D026": 0, "D027": 0}, "exposition": "−⅓ à −½ IL", "ecart_cible": "ΔE2000 médian 2,3 contre le preset Portra tel que Thomas le règle, 3,2 contre l'esprit Portra (ses scans) ; scène peu colorée"},
+  {"nom": "Tri-X 400", "emplacement": "Monochrome", "menu": {"Custom Image": "Monochrome", "Filtre": "aucun", "Virage": 0, "Contraste": 3, "Netteté": 2}, "usb": {"D020": 5, "D024": 0, "D025": 4, "5014": 7, "5015": 6, "D026": 0, "D027": 0}, "ecart_cible": "courbe : 4,2 à 4,6 niveaux sur 255 pour +4 et +2 (6,7 au contraste 0) ; couleur : 0,44 IL quadratique sur une ColorChecker"},
+  {"nom": "HP5 Plus", "emplacement": "préréglage USER (molette)", "menu": {"Custom Image": "Monochrome", "Filtre": "cyan", "Virage": 0, "Contraste": 4, "Netteté": 2, "puis": "A4 › Enregistrer mode USER"}, "usb": {"D020": 5, "D024": 7, "D025": 4, "5014": 8, "5015": 6, "D026": 0, "D027": 0}, "ecart_cible": "courbe : 3,3 niveaux (9,8 au contraste 0) ; couleur : 0,52 IL (cyan, le plus proche des 9 filtres)"}
+ ]
+}

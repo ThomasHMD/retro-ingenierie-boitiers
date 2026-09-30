@@ -1,0 +1,662 @@
+{
+ "lot": "images/d750/2026-10-test-v2",
+ "colorimetrie_mire": {
+  "mediane": 1.4,
+  "p90": 3.27
+ },
+ "blocs_communs": 3847,
+ "looks": [
+  {
+   "vue": "CLASSIC CHROME",
+   "cible": "CLASSIC CHROME",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 2.36,
+    "p90": 4.04
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.81,
+    "p90": 1.63
+   },
+   "prevu": {
+    "mediane": 1.67,
+    "p90": 3.53
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 18,
+     "dE": 2.71,
+     "teinte_deg": -8.4,
+     "chroma_x": 0.89,
+     "dL": -2.2
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1218,
+     "dE": 1.89,
+     "teinte_deg": 1.7,
+     "chroma_x": 1.03,
+     "dL": -0.7
+    },
+    {
+     "secteur": "cyan",
+     "n": 90,
+     "dE": 3.65,
+     "teinte_deg": 18.0,
+     "chroma_x": 1.06,
+     "dL": 0.1
+    },
+    {
+     "secteur": "bleu",
+     "n": 254,
+     "dE": 4.88,
+     "teinte_deg": 18.2,
+     "chroma_x": 0.98,
+     "dL": -0.5
+    },
+    {
+     "secteur": "neutres",
+     "n": 2266,
+     "dE": 2.36,
+     "da": 1.2,
+     "db": 0.3,
+     "dL": -1.6
+    }
+   ]
+  },
+  {
+   "vue": "CLASSIC NEG",
+   "cible": "CLASSIC NEG",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.8,
+    "p90": 5.45
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.88,
+    "p90": 1.6
+   },
+   "prevu": {
+    "mediane": 3.95,
+    "p90": 5.55
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 1066,
+     "dE": 3.71,
+     "teinte_deg": 0.4,
+     "chroma_x": 1.05,
+     "dL": 1.2
+    },
+    {
+     "secteur": "jaune",
+     "n": 61,
+     "dE": 7.67,
+     "teinte_deg": -20.2,
+     "chroma_x": 1.62,
+     "dL": -2.3
+    },
+    {
+     "secteur": "bleu",
+     "n": 253,
+     "dE": 4.4,
+     "teinte_deg": 9.6,
+     "chroma_x": 1.18,
+     "dL": -3.6
+    },
+    {
+     "secteur": "neutres",
+     "n": 2451,
+     "dE": 3.66,
+     "da": 1.2,
+     "db": -0.7,
+     "dL": -2.6
+    }
+   ]
+  },
+  {
+   "vue": "POSITIVE",
+   "cible": "POSITIVE",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.51,
+    "p90": 6.2
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.43,
+    "p90": 2.34
+   },
+   "prevu": {
+    "mediane": 2.81,
+    "p90": 5.62
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 80,
+     "dE": 3.02,
+     "teinte_deg": 8.0,
+     "chroma_x": 0.85,
+     "dL": -2.1
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1493,
+     "dE": 4.18,
+     "teinte_deg": 3.7,
+     "chroma_x": 1.07,
+     "dL": -3.1
+    },
+    {
+     "secteur": "cyan-vert",
+     "n": 24,
+     "dE": 2.89,
+     "teinte_deg": 3.3,
+     "chroma_x": 0.76,
+     "dL": -2.3
+    },
+    {
+     "secteur": "cyan",
+     "n": 137,
+     "dE": 4.19,
+     "teinte_deg": 16.8,
+     "chroma_x": 1.03,
+     "dL": 1.5
+    },
+    {
+     "secteur": "bleu",
+     "n": 957,
+     "dE": 3.24,
+     "teinte_deg": 12.2,
+     "chroma_x": 0.9,
+     "dL": -0.6
+    },
+    {
+     "secteur": "neutres",
+     "n": 1139,
+     "dE": 2.89,
+     "da": 0.4,
+     "db": 0.1,
+     "dL": -1.9
+    }
+   ]
+  },
+  {
+   "vue": "PORTRA 400",
+   "cible": "PORTRA ESPRIT",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 4.07,
+    "p90": 6.03
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.07,
+    "p90": 2.8
+   },
+   "prevu": {
+    "mediane": 3.3,
+    "p90": 5.27
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 62,
+     "dE": 5.58,
+     "teinte_deg": 16.7,
+     "chroma_x": 0.91,
+     "dL": -3.5
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1523,
+     "dE": 5.09,
+     "teinte_deg": 9.4,
+     "chroma_x": 1.05,
+     "dL": -1.4
+    },
+    {
+     "secteur": "jaune",
+     "n": 105,
+     "dE": 4.13,
+     "teinte_deg": -3.7,
+     "chroma_x": 0.96,
+     "dL": 1.0
+    },
+    {
+     "secteur": "cyan",
+     "n": 21,
+     "dE": 3.16,
+     "teinte_deg": -6.7,
+     "chroma_x": 0.76,
+     "dL": -2.6
+    },
+    {
+     "secteur": "bleu",
+     "n": 706,
+     "dE": 4.13,
+     "teinte_deg": 15.0,
+     "chroma_x": 1.15,
+     "dL": -0.1
+    },
+    {
+     "secteur": "neutres",
+     "n": 1413,
+     "dE": 2.42,
+     "da": 1.0,
+     "db": -0.3,
+     "dL": -1.4
+    }
+   ]
+  },
+  {
+   "vue": "HASSELBLAD",
+   "cible": "HASSELBLAD",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.23,
+    "p90": 4.64
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.13,
+    "p90": 1.87
+   },
+   "prevu": {
+    "mediane": 2.9,
+    "p90": 4.49
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 25,
+     "dE": 2.89,
+     "teinte_deg": -3.4,
+     "chroma_x": 0.82,
+     "dL": -1.3
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1477,
+     "dE": 1.78,
+     "teinte_deg": -1.6,
+     "chroma_x": 1.04,
+     "dL": -1.0
+    },
+    {
+     "secteur": "jaune",
+     "n": 66,
+     "dE": 2.02,
+     "teinte_deg": -3.6,
+     "chroma_x": 0.94,
+     "dL": -1.8
+    },
+    {
+     "secteur": "cyan-vert",
+     "n": 28,
+     "dE": 4.58,
+     "teinte_deg": 6.1,
+     "chroma_x": 0.63,
+     "dL": -0.5
+    },
+    {
+     "secteur": "cyan",
+     "n": 174,
+     "dE": 5.51,
+     "teinte_deg": 23.4,
+     "chroma_x": 0.91,
+     "dL": -0.1
+    },
+    {
+     "secteur": "bleu",
+     "n": 238,
+     "dE": 4.83,
+     "teinte_deg": 17.3,
+     "chroma_x": 1.05,
+     "dL": -0.4
+    },
+    {
+     "secteur": "neutres",
+     "n": 1809,
+     "dE": 3.58,
+     "da": 2.4,
+     "db": -1.8,
+     "dL": -1.3
+    }
+   ]
+  },
+  {
+   "vue": "HP5+",
+   "cible": "HP5",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 5.15,
+    "p90": 9.46
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.1,
+    "p90": 1.7
+   },
+   "prevu": {
+    "mediane": 4.87,
+    "p90": 9.12
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 3847,
+     "dE": 5.15,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": -5.0
+    }
+   ]
+  },
+  {
+   "vue": "FP4+",
+   "cible": "FP4",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 5.41,
+    "p90": 11.79
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.06,
+    "p90": 1.44
+   },
+   "prevu": {
+    "mediane": 5.35,
+    "p90": 11.3
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 3847,
+     "dE": 5.41,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": -4.7
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME",
+   "cible": "KODACHROME VIF",
+   "kelvin": 6250,
+   "mesure": {
+    "mediane": 3.52,
+    "p90": 5.32
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.97,
+    "p90": 1.86
+   },
+   "prevu": {
+    "mediane": 2.95,
+    "p90": 4.83
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 28,
+     "dE": 5.36,
+     "teinte_deg": -6.5,
+     "chroma_x": 0.62,
+     "dL": -0.2
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1673,
+     "dE": 3.9,
+     "teinte_deg": -3.3,
+     "chroma_x": 0.99,
+     "dL": -2.0
+    },
+    {
+     "secteur": "vert",
+     "n": 18,
+     "dE": 5.66,
+     "teinte_deg": -2.0,
+     "chroma_x": 0.54,
+     "dL": -3.1
+    },
+    {
+     "secteur": "cyan",
+     "n": 130,
+     "dE": 3.17,
+     "teinte_deg": 13.6,
+     "chroma_x": 0.94,
+     "dL": 0.3
+    },
+    {
+     "secteur": "bleu",
+     "n": 124,
+     "dE": 3.03,
+     "teinte_deg": 13.3,
+     "chroma_x": 0.92,
+     "dL": 0.0
+    },
+    {
+     "secteur": "neutres",
+     "n": 1836,
+     "dE": 3.34,
+     "da": 1.6,
+     "db": 1.9,
+     "dL": -1.7
+    }
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "cible": "TRI-X",
+   "kelvin": 10000,
+   "mesure": {
+    "mediane": 2.7,
+    "p90": 4.37
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.19,
+    "p90": 2.11
+   },
+   "prevu": {
+    "mediane": 1.7,
+    "p90": 4.26
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 3847,
+     "dE": 2.7,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": 2.7
+    }
+   ]
+  },
+  {
+   "vue": "TRI-X V2",
+   "cible": "TRI-X",
+   "kelvin": 10000,
+   "mesure": {
+    "mediane": 1.96,
+    "p90": 3.79
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.19,
+    "p90": 2.19
+   },
+   "prevu": {
+    "mediane": 1.21,
+    "p90": 2.82
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 3847,
+     "dE": 1.96,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": 0.7
+    }
+   ]
+  }
+ ],
+ "wb": [
+  {
+   "vue": "KODACHROME",
+   "kelvin": 6250,
+   "gains_nef_sur_5600": [
+    1.0522,
+    1.0,
+    0.9387
+   ],
+   "gains_calcules": [
+    1.0448,
+    1.0,
+    0.933
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "kelvin": 10000,
+   "gains_nef_sur_5600": [
+    1.3075,
+    1.0,
+    0.8037
+   ],
+   "gains_calcules": [
+    1.1843,
+    1.0,
+    0.7566
+   ]
+  },
+  {
+   "vue": "TRI-X V2",
+   "kelvin": 10000,
+   "gains_nef_sur_5600": [
+    1.3075,
+    1.0,
+    0.8037
+   ],
+   "gains_calcules": [
+    1.1843,
+    1.0,
+    0.7566
+   ]
+  },
+  {
+   "vue": "WB 4000K",
+   "kelvin": 4000,
+   "gains_nef_sur_5600": [
+    0.7853,
+    1.0,
+    1.2331
+   ],
+   "gains_calcules": [
+    0.8343,
+    1.0,
+    1.3051
+   ]
+  },
+  {
+   "vue": "WB 5000K",
+   "kelvin": 5000,
+   "gains_nef_sur_5600": [
+    0.9439,
+    1.0,
+    1.089
+   ],
+   "gains_calcules": [
+    0.9487,
+    1.0,
+    1.0842
+   ]
+  },
+  {
+   "vue": "WB 8000K",
+   "kelvin": 8000,
+   "gains_nef_sur_5600": [
+    1.1838,
+    1.0,
+    0.8681
+   ],
+   "gains_calcules": [
+    1.1278,
+    1.0,
+    0.8226
+   ]
+  }
+ ],
+ "crans": [
+  {
+   "vue": "STANDARD SAT+2",
+   "curseur": "SAT",
+   "cran": 2.0,
+   "mesure": {
+    "gain_cbcr": 1.282,
+    "rotation_deg": -1.06
+   },
+   "modele": 1.257804038791417,
+   "ecart_modele_contre_jpeg": {
+    "mediane": 1.53,
+    "p90": 2.17
+   }
+  },
+  {
+   "vue": "STANDARD TEI-2",
+   "curseur": "TEI",
+   "cran": -2.0,
+   "mesure": {
+    "gain_cbcr": 0.981,
+    "rotation_deg": -4.71
+   },
+   "modele": -4.185,
+   "ecart_modele_contre_jpeg": {
+    "mediane": 0.87,
+    "p90": 1.57
+   }
+  },
+  {
+   "vue": "STANDARD TEI+2",
+   "curseur": "TEI",
+   "cran": 2.0,
+   "mesure": {
+    "gain_cbcr": 0.982,
+    "rotation_deg": 3.35
+   },
+   "modele": 3.7649999999999997,
+   "ecart_modele_contre_jpeg": {
+    "mediane": 0.86,
+    "p90": 1.55
+   }
+  },
+  {
+   "vue": "STANDARD SAT+2.5",
+   "curseur": "SAT",
+   "cran": 2.5,
+   "mesure": {
+    "gain_cbcr": 1.353,
+    "rotation_deg": -1.15
+   },
+   "modele": 1.3217752493829191,
+   "ecart_modele_contre_jpeg": {
+    "mediane": 1.71,
+    "p90": 2.39
+   }
+  },
+  {
+   "vue": "STANDARD TEI-2.5",
+   "curseur": "TEI",
+   "cran": -2.5,
+   "mesure": {
+    "gain_cbcr": 0.98,
+    "rotation_deg": -5.72
+   },
+   "modele": -5.1375,
+   "ecart_modele_contre_jpeg": {
+    "mediane": 0.87,
+    "p90": 1.58
+   }
+  }
+ ]
+}

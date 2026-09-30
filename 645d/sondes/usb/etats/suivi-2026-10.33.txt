@@ -1,0 +1,5 @@
+14:51:27 suivi pendant 8 s : Thomas règle au menu, chaque changement est noté.
+14:51:27 départ : 5004=2 5014=4 5015=4 D013=0 D020=0 D021=4 D022=4 D023=0 D024=4 D025=4 D026=0 D027=0 D028=0 D029=0
+14:51:37 changement :
+    D003[92] : 880 → 879
+14:51:38 fin du suivi.

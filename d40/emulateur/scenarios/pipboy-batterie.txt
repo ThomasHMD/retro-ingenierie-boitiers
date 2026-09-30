@@ -1,0 +1,24 @@
+# Indicateur de batterie sur l'écran d'infos (menu Pip-Boy). Le niveau arrive du processeur A par la
+# commande 0x2D (26 octets, tampon 0x83CE92ED, recopié en 0x83CEE4C1) : octet 19 = 0x83CEE4D4,
+# bits 4-5 = 1 : niveau dans les bits 0-3 (table 0xDF6A8 : 0x81EC, 0x81EB, 0x81EA) ; lu par FUN_000a1302.
+# Le faux A envoie ici ce bloc avec plusieurs niveaux.
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+png 1-batterie-0x00.png
+a 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 00 00 00 00
+run 30M
+expect8 0x83CEE4D4 0x11
+png 2-batterie-0x11.png
+a 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00
+run 30M
+expect8 0x83CEE4D4 0x12
+png 3-batterie-0x12.png
+a 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 00 00 00 00 00
+run 30M
+expect8 0x83CEE4D4 0x13
+png 4-batterie-0x13.png
+a 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 30 00 00 00 00 00 00
+run 30M
+expect8 0x83CEE4D4 0x30
+png 5-batterie-0x30.png

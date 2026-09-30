@@ -1,0 +1,239 @@
+{
+ "dossier": "images/d750/2026-10-exterieur",
+ "vues": [
+  {
+   "vue": "01-FP4+",
+   "cible": "FP4",
+   "blocs": 6608,
+   "wb_sur_5600": [
+    0.9381,
+    1.0,
+    1.0736
+   ],
+   "mesure_5600K": {
+    "mediane": 0.92,
+    "p90": 1.6
+   },
+   "mesure_wb_boitier": {
+    "mediane": 0.94,
+    "p90": 1.7
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.85,
+    "p90": 1.13
+   },
+   "prevu_wb_boitier": {
+    "mediane": 0.29,
+    "p90": 1.03
+   }
+  },
+  {
+   "vue": "02-HP5+",
+   "cible": "HP5",
+   "blocs": 7277,
+   "wb_sur_5600": [
+    0.94,
+    1.0,
+    1.0706
+   ],
+   "mesure_5600K": {
+    "mediane": 1.44,
+    "p90": 2.21
+   },
+   "mesure_wb_boitier": {
+    "mediane": 1.65,
+    "p90": 2.31
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.88,
+    "p90": 1.36
+   },
+   "prevu_wb_boitier": {
+    "mediane": 1.38,
+    "p90": 2.05
+   }
+  },
+  {
+   "vue": "03-TRI-X",
+   "cible": "TRI-X",
+   "blocs": 8003,
+   "wb_sur_5600": [
+    0.942,
+    1.0,
+    1.0675
+   ],
+   "mesure_5600K": {
+    "mediane": 1.05,
+    "p90": 1.55
+   },
+   "mesure_wb_boitier": {
+    "mediane": 1.0,
+    "p90": 1.35
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.98,
+    "p90": 1.49
+   },
+   "prevu_wb_boitier": {
+    "mediane": 0.44,
+    "p90": 0.7
+   }
+  },
+  {
+   "vue": "04-HASSELBLAD",
+   "cible": "HASSELBLAD",
+   "blocs": 4649,
+   "wb_sur_5600": [
+    0.9458,
+    1.0,
+    1.0613
+   ],
+   "mesure_5600K": {
+    "mediane": 4.38,
+    "p90": 5.71
+   },
+   "mesure_wb_boitier": {
+    "mediane": 4.14,
+    "p90": 6.55
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.95,
+    "p90": 4.45
+   },
+   "prevu_wb_boitier": {
+    "mediane": 4.18,
+    "p90": 7.49
+   }
+  },
+  {
+   "vue": "05-PORTRA_400",
+   "cible": "PORTRA ESPRIT",
+   "blocs": 3247,
+   "wb_sur_5600": [
+    0.9458,
+    1.0,
+    1.0613
+   ],
+   "mesure_5600K": {
+    "mediane": 3.07,
+    "p90": 5.31
+   },
+   "mesure_wb_boitier": {
+    "mediane": 2.23,
+    "p90": 3.57
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.45,
+    "p90": 4.33
+   },
+   "prevu_wb_boitier": {
+    "mediane": 2.7,
+    "p90": 3.91
+   }
+  },
+  {
+   "vue": "06-POSITIVE",
+   "cible": "POSITIVE",
+   "blocs": 5528,
+   "wb_sur_5600": [
+    0.9458,
+    1.0,
+    1.0613
+   ],
+   "mesure_5600K": {
+    "mediane": 4.64,
+    "p90": 6.42
+   },
+   "mesure_wb_boitier": {
+    "mediane": 3.22,
+    "p90": 5.19
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.43,
+    "p90": 3.89
+   },
+   "prevu_wb_boitier": {
+    "mediane": 3.74,
+    "p90": 5.36
+   }
+  },
+  {
+   "vue": "07-CLASSIC_NEG",
+   "cible": "CLASSIC NEG",
+   "blocs": 6259,
+   "wb_sur_5600": [
+    0.9458,
+    1.0,
+    1.0613
+   ],
+   "mesure_5600K": {
+    "mediane": 6.89,
+    "p90": 8.96
+   },
+   "mesure_wb_boitier": {
+    "mediane": 4.85,
+    "p90": 6.24
+   },
+   "modele_contre_jpeg": {
+    "mediane": 3.77,
+    "p90": 5.08
+   },
+   "prevu_wb_boitier": {
+    "mediane": 3.25,
+    "p90": 5.83
+   }
+  },
+  {
+   "vue": "08-CLASSIC_CHROME",
+   "cible": "CLASSIC CHROME",
+   "blocs": 7763,
+   "wb_sur_5600": [
+    0.9478,
+    1.0,
+    1.0583
+   ],
+   "mesure_5600K": {
+    "mediane": 3.27,
+    "p90": 4.97
+   },
+   "mesure_wb_boitier": {
+    "mediane": 2.35,
+    "p90": 5.62
+   },
+   "modele_contre_jpeg": {
+    "mediane": 4.6,
+    "p90": 7.31
+   },
+   "prevu_wb_boitier": {
+    "mediane": 5.28,
+    "p90": 10.04
+   }
+  },
+  {
+   "vue": "09-KODACHROME",
+   "cible": "KODACHROME VIF",
+   "blocs": 8205,
+   "wb_sur_5600": [
+    0.9574,
+    1.0,
+    1.0521
+   ],
+   "mesure_5600K": {
+    "mediane": 10.14,
+    "p90": 12.78
+   },
+   "mesure_wb_boitier": {
+    "mediane": 9.15,
+    "p90": 12.2
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.71,
+    "p90": 3.5
+   },
+   "prevu_wb_boitier": {
+    "mediane": 6.85,
+    "p90": 10.09
+   }
+  }
+ ]
+}

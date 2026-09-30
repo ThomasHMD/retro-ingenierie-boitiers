@@ -1,0 +1,13 @@
+Boîtier trouvé : 645D
+Séance 645D 2026-10 +0000
+Batterie 67 %
+Fichiers déjà sur la carte : 12
+Vue 01/30 mono-filtre-0-aucun
+  mode : 0 → 5
+  netteté : 6 → 4
+  dossier 100PENTX
+  01-mono-filtre-0-aucun-THAM3247.PEF 53364 Ko
+Vue 02/30 mono-filtre-1-vert
+  0x1016 : pas de réponse en 15 s : ARRÊT, plus aucune commande (éteindre et rallumer le boîtier)
+  réglage refusé : vue faite quand même (l'EXIF dira ce qui a pris)
+  arrêt sur blocage : reprendre avec --depuis 2 après redémarrage du boîtier

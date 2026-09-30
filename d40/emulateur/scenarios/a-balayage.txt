@@ -1,0 +1,20 @@
+# Table Ev -> Tv, Av de la ligne de P (50 mm f/1,8G), puis de la chaîne complète avec ISO auto
+# (maxi 800, vitesse mini 1/125), à comparer au tableau de recherche/programmes-expo-iso-auto.md §2.
+run 2M
+poke8 0x3C3C0 0
+poke8 0x3C3C1 0
+poke8 0x3C3C4 0
+poke8 0x3E1E0 0
+poke8 0x3D0E6 1
+poke8 0x3D0F0 0x50
+poke8 0x3D100 0x14
+poke8 0x3D0F3 0x4C
+poke8 0x3CCB9 0x0A
+poke8 0x3D0B2 0
+poke8 0x3D105 0
+poke8 0x3E1EE 0x24
+poke8 0x3D0BC 0
+balayage p 2 18 2
+poke8 0x3D0BC 2
+poke8 0x3D25B 0xA0
+balayage chaine 0 14 1

@@ -1,0 +1,5 @@
+# Démarrage jusqu'à l'écran d'infos de prise de vue (palier 1 et 2).
+# Le noyau démarre les tâches dès ~1,2 M instructions ; l'écran d'infos est dessiné vers 63 M.
+run 70M
+expect8 0x83CE9919 0x40      # mode d'interface observé une fois l'écran d'infos affiché (0x41 posé par FUN_0004c456, bit 0 retiré ensuite)
+png demarrage.png            # le fond de l'écran d'infos (JPEG décodé par le matériel) n'est pas émulé

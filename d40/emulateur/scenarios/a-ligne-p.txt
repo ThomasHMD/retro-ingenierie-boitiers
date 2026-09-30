@@ -1,0 +1,50 @@
+# Processeur A : la ligne de P (0xC60E2) appelée directement, sur un état fabriqué.
+# Unités (recherche/programmes-expo-iso-auto.md §2) : 1/48 d'IL, Tv 0 = 1 s, Av 0 = f/1, Ev = Tv + Av.
+# Attendu (ligne d'usine, < 57 mm) : Tv = 0x150 + ½ (Ev − 0x240), Av = Ev − Tv, borné à f/1,8–f/16.
+#   Ev 4  (192) : Tv 112 (1/5),   Av 80 (f/1,8, butée)
+#   Ev 8  (384) : Tv 240 (1/30),  Av 144 (f/2,8)
+#   Ev 12 (576) : Tv 336 (1/125), Av 240 (f/5,6)
+#   Ev 16 (768) : Tv 432 (1/500), Av 336 (f/11)
+run 2M                      # démarrage jusqu'à la tâche de repos (0xFF01C)
+poke8 0x3C3C0 0             # mode P
+poke8 0x3C3C1 0             # état du flash : rien (ni 3, ni 5, ni 0xD)
+poke8 0x3C3C4 0             # pas de décalage de programme
+poke8 0x3D0BC 0             # ISO auto coupé
+poke8 0x3D0F0 0x50          # focale : 5·2^(80/24) = 50 mm
+poke8 0x3D100 0x14          # ouverture maxi f/1,8 (2^(20/24)) ; ×4 = Av 80
+poke8 0x3D0F3 0x4C          # étendue 76/12 IL : f/16 (Av 384)
+poke8 0x3CCB9 0x0A          # plancher d'ouverture = d100/2, comme expo_programme
+poke16 0x3CCC2 192
+appel 0xC60E2
+expect16 0x3CCC0 112
+expect16 0x3CCBE 80
+poke16 0x3CCC2 384
+appel 0xC60E2
+expect16 0x3CCC0 240
+expect16 0x3CCBE 144
+poke16 0x3CCC2 576
+appel 0xC60E2
+expect16 0x3CCC0 336
+expect16 0x3CCBE 240
+poke16 0x3CCC2 768
+appel 0xC60E2
+expect16 0x3CCC0 432
+expect16 0x3CCBE 336
+# Au-delà de 138 mm (d0f0 ≥ 0x73) : Tv0 = 0x1B0 (1/500) ; Ev 12 → Tv 432, Av 144
+poke8 0x3D0F0 0x80          # 5·2^(128/24) = 202 mm
+poke16 0x3CCC2 576
+appel 0xC60E2
+expect16 0x3CCC0 432
+expect16 0x3CCBE 144
+# Entre 57 et 138 mm : Tv0 = 0x180 (1/250) ; Ev 12 → Tv 384, Av 192
+poke8 0x3D0F0 0x60          # 5·2^(96/24) = 80 mm
+appel 0xC60E2
+expect16 0x3CCC0 384
+expect16 0x3CCBE 192
+# Butée 1/4000 : Ev 22 (1056), 50 mm → ligne 0x150 + 240 = 576 = 0x240 (1/4000), Av 480 (f/32 demandé),
+# borné à f/16 (384), d'où Tv = 672, ramené à 0x240 : la surexposition reste (Ev − Tv − Av = 96)
+poke8 0x3D0F0 0x50
+poke16 0x3CCC2 1056
+appel 0xC60E2
+expect16 0x3CCC0 576
+expect16 0x3CCBE 384

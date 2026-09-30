@@ -1,0 +1,15 @@
+# Menu Prise de vue en français, puis la liste d'Optimisation images (devenue « Préréglages » avec patchs/menu-preglages.json).
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+press menu 4M 30M
+png 1-menu-prise-de-vue.png
+press right 4M 20M
+png 2-preglages.png
+press down 4M 16M
+png 3-preglages-hasselblad.png
+# aide : touche ? maintenue = b08 (vérifié à l'écran en octobre 2026)
+down b08
+run 30M
+png 4-aide.png
+up b08

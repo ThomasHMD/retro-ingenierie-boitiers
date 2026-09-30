@@ -1,0 +1,22 @@
+Fabricant : PENTAX | modèle : 645D | firmware : 1.33 | extension : 0x6 v100 « microsoft.com/DeviceServices: 1.0;  » | réponse 0x2001
+Commandes annoncées : 23, événements : 4, réglages : 5
+  commandes : 0x1001 0x1002 0x1003 0x1004 0x1005 0x1006 0x1007 0x1008 0x1009 0x100A 0x100B 0x100C 0x100D 0x100F 0x1014 0x1015 0x1016 0x101B 0x9001 0x9801 0x9802 0x9803 0x9805
+  événements : 0x4003 0x4004 0x4005 0x4002
+  réglages : 0x5001 0x5011 0xD406 0xD407 0xD303
+  formats de capture :  | formats d'image : 0x3001 0x3006 0x380D 0x3801 0x3800 0x3000
+  annoncé 0x5001 : lecture | 01 50 02 00 00 64 43 01 00 64 01
+  annoncé 0x5011 : lecture | 11 50 ff ff 00 10 32 00 30 00 31 00 30 00 30 00 31 00 30 00 31 00 54 00 …
+  annoncé 0xD406 : écriture | 06 d4 ff ff 01 00 00 00
+  annoncé 0xD407 : lecture | 07 d4 06 00 00 00 00 00 00 01 00 00 00 00
+  annoncé 0xD303 : lecture | 03 d3 02 00 00 00 01 00
+SetPentaxVendorMode 0x9001 (0x0D, 0x12E08, 1) : réponse 0x2001
+Mode constructeur : 26 commandes, 5 réglages
+  commandes : 0x1001 0x1002 0x1003 0x1004 0x1005 0x1006 0x1007 0x1008 0x1009 0x100A 0x100C 0x100D 0x1014 0x1015 0x1016 0x101B 0x9001 0x9003 0x9004 0x900F 0x9011 0x9012 0x9801 0x9802 0x9803 0x9805
+  réglages : 0x5001 0x5011 0xD406 0xD407 0xD303
+  constructeur 0x5001 : lecture | 01 50 02 00 00 64 43 01 00 64 01
+  constructeur 0x5011 : écriture | 11 50 ff ff 01 10 32 00 30 00 31 00 30 00 30 00 31 00 30 00 31 00 54 00 …
+  constructeur 0xD406 : écriture | 06 d4 ff ff 01 00 00 00
+  constructeur 0xD407 : lecture | 07 d4 06 00 00 00 00 00 00 01 00 00 00 00
+  constructeur 0xD303 : lecture | 03 d3 02 00 00 00 01 00
+Stockages (0x1004) : 04 00 00 00 01 00 01 00 01 00 02 00 01 00 03 00 01 00 04 00
+Fin : mode constructeur refermé (0x9001 … 0) : réponse 0x2001

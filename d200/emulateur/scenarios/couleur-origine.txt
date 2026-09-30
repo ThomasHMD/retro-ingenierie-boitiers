@@ -1,0 +1,77 @@
+# c. Couleur, firmware B 2.01 d'origine (octobre 2026) : un jeu de la table tblMatrices (0x384BF8, 24 demi-mots par jeu :
+# caméra 9, YCbCr 9, 6 autres) jusqu'aux registres de la puce, par la même chaîne que nb-origine.txt.
+# Une fiche neuve par cas (0x97E00000 + n x 0x10000), à zéro sauf les octets cités ; les variables globales
+# du firmware restent d'un cas à l'autre, comme dans le boîtier.
+# Le numéro de jeu et de courbe choisis par FUN_000d57e6 et FUN_000d3ee6 sont ceux que l'émulateur donne avec
+# une fiche à zéro (mesures nulles) : ils servent de repère, pas de vérité sur le boîtier.
+
+macro temoins
+remplir 0x97BE09CC 0x48 0xEE
+remplir 0x50010022 0x24 0xEE
+remplir 0x50018400 0x6000 0xEE
+fin
+
+titre c1. Normal (Optimiser = 0) : jeu 11, courbe 2
+jouer temoins
+appel 0x5D616 0x97E00000 1
+expect32 0x97BE3DBC 0
+expect32 0x97BE0A14 11 2           # jeu (0x97BE0A14), puis courbe (0x97BE0A18)
+expectconv 0x97E0033C 0x384E08 9 2 0x400     # fiche = table convertie
+appel 0x5D716 0x97E00000
+expect16 0x50010022 0x02C9 0x04C8 0x0401 0x041A 0x0264 0x044A 0x0408 0x0426 0x022E
+expectconv 0x50010022 0x384E08 9 2 0x400     # caméra : demi-mots 0 à 8 du jeu 11
+expectconv 0x50010034 0x384E1A 9 2 0x200     # Y, Cb, Cr : demi-mots 9 à 17 du jeu 11 (teinte neutre)
+expectegal 0x50010022 0x97E0033C 36
+expectcourbe 0x50018400 0x3888D8             # courbe intégrée 2 développée, sur R, V, B
+expectcourbe 0x5001A400 0x3888D8
+expectcourbe 0x5001C400 0x3888D8
+
+titre c2. Optimiser = 1 (Moins net) : jeu 13, courbe 0
+jouer temoins
+poke8 0x97E1004D 0x02
+appel 0x5D616 0x97E10000 1
+expect32 0x97BE0A14 13 0
+appel 0x5D716 0x97E10000
+expectconv 0x50010022 0x384E68 9 2 0x400
+expectconv 0x50010034 0x384E7A 9 2 0x200
+expectcourbe 0x50018400 0x3884D8
+expectcourbe 0x5001A400 0x3884D8
+expectcourbe 0x5001C400 0x3884D8
+
+titre c3. Optimiser = 2 (Saturé, mode couleur III) : jeu 94, courbe 17 ; coefficient -335 et coefficient positif 96
+jouer temoins
+poke8 0x97E2004D 0x04
+appel 0x5D616 0x97E20000 1
+expect32 0x97BE0A14 94 17
+appel 0x5D716 0x97E20000
+expect16 0x50010022 0x02EF 0x054F 0x0060 0x0446 0x0298 0x0452 0x040A 0x0006 0x0204
+expectconv 0x50010022 0x385D98 9 2 0x400
+expectconv 0x50010034 0x385DAA 9 2 0x200
+expectcourbe 0x50018400 0x38A6D8
+expectcourbe 0x5001A400 0x38A6D8
+expectcourbe 0x5001C400 0x38A6D8
+
+titre c4. Optimiser = 3 (Très saturé) : jeu 91, courbe 20
+jouer temoins
+poke8 0x97E3004D 0x06
+appel 0x5D616 0x97E30000 1
+expect32 0x97BE0A14 91 20
+appel 0x5D716 0x97E30000
+expectconv 0x50010022 0x385D08 9 2 0x400
+expectconv 0x50010034 0x385D1A 9 2 0x200
+expectcourbe 0x50018400 0x38ACD8
+expectcourbe 0x5001A400 0x38ACD8
+expectcourbe 0x5001C400 0x38ACD8
+
+titre c5. Personnalisé (Optimiser = 5), teinte +9 (octet 0x4F = +3) : Cb et Cr tournés par FUN_000d846a, puis convertis
+jouer temoins
+poke8 0x97E4004D 0x0A 0x00 0x03
+appel 0x5D616 0x97E40000 1
+expect32 0x97BE3DE8 6              # teinte = octet 0x4F + 3
+expect32 0x97BE0A14 11 2
+expect32 0x97BE09CC 76 151 29 -63 -119 183 154 -124 -29   # Cb, Cr : -50 -130 180 / 159 -114 -45 dans la table
+appel 0x5D716 0x97E40000
+expectconv 0x50010022 0x384E08 9 2 0x400     # caméra : la table telle quelle
+expectconv 0x50010034 0x384E1A 3 2 0x200     # ligne Y : la table telle quelle
+expectconv 0x5001003A 0x97BE09D8 6 4 0x200   # Cb, Cr : les mots calculés, convertis
+expect16 0x5001003A 0x023F 0x0277 0x00B7 0x009A 0x027C 0x021D

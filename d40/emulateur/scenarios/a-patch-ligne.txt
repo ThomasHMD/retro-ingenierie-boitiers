@@ -1,0 +1,48 @@
+# Essayer un patch du A sans le flasher : on écrit dans la flash émulée (poke, sans passer par la garde
+# d'écriture, qui ne vise que le code), puis on rejoue la fonction de P.
+run 2M
+poke8 0x3C3C0 0
+poke8 0x3C3C1 0
+poke8 0x3C3C4 0
+poke8 0x3D0BC 0
+poke8 0x3D0F0 0x50
+poke8 0x3D100 0x14
+poke8 0x3D0F3 0x4C
+poke8 0x3CCB9 0x0A
+# --- Voie 1 : constante à taille égale. Tv0 de P sous 57 mm : LDI:20 #0x150,R5 en 0xC430A -> #0x1B0 (1/500)
+dis 0xC430A 1
+poke16 0xC430C 0x01B0
+dis 0xC430A 1
+poke16 0x3CCC2 576
+appel 0xC60E2
+expect16 0x3CCC0 432
+expect16 0x3CCBE 144
+poke16 0xC430C 0x0150
+# --- Voie 2 : une ligne à nous dans la place libre (0xF3910), appelée à la place de expo_ligneProgramme.
+# « Sujet rapide » : pleine ouverture, Tv = Ev − 4·d100 (la chaîne commune borne ensuite à 1/4000).
+poke16 0xF3910 0x9B3C
+poke16 0xF3912 0xCCC2     # LDI:20 #0x3CCC2,R12
+poke16 0xF3914 0x05C4     # LDUH @R12,R4      (Ev)
+poke16 0xF3916 0x97A4     # EXTSH R4
+poke16 0xF3918 0x9B3C
+poke16 0xF391A 0xD100     # LDI:20 #0x3D100,R12
+poke16 0xF391C 0x06C5     # LDUB @R12,R5      (ouverture maxi, 1/12 IL)
+poke16 0xF391E 0xB425     # LSL #2,R5         (-> Av en 1/48 IL)
+poke16 0xF3920 0x9F20     # RET:D
+poke16 0xF3922 0xAC54     # SUB R5,R4         (créneau de délai)
+poke16 0xC60F6 0x3910
+poke16 0xC60F4 0x9BFC     # LDI:20 #0xF3910,R12 au lieu de #0xC41C2
+dis 0xF3910 8
+dis 0xC60F4 2
+poke16 0x3CCC2 576        # Ev 12 : Tv = 576 − 80 = 496 (1/1290 s), f/1,8
+appel 0xC60E2
+expect16 0x3CCC0 496
+expect16 0x3CCBE 80
+poke16 0x3CCC2 768        # Ev 16 : Tv 688 borné à 576 (1/4000), Av = 192 (f/4)
+appel 0xC60E2
+expect16 0x3CCC0 576
+expect16 0x3CCBE 192
+poke16 0x3CCC2 192        # Ev 4 : Tv = 112 (1/5), f/1,8 — comme la ligne d'usine en basse lumière
+appel 0xC60E2
+expect16 0x3CCC0 112
+expect16 0x3CCBE 80

@@ -1,0 +1,68 @@
+# Programme envoyé au processeur A (étape 9 du Pip-Boy, outils/pipboy.py ; côté A : outils/programmes_a.py).
+# Le faux A enregistre ce qu'il reçoit sur le fil et renvoie cet écho en 0x06, comme le vrai.
+# Contrôles : choisir un Programme envoie la commande 5 ; la copie envoyée porte bit 7 (ISO auto) et 8 + Programme
+# dans le quartet bas ; l'octet ISO auto du B (0x83CE974F) n'est pas touché ; l'écho 0x06 retouché est remis à
+# la valeur du B (pas de renvois en boucle) ; Standard renvoie l'octet de l'utilisateur.
+#   python3 emulateur/d40emu.py scenario programme-a --firmware build/V5/2-ensuite-processeur-B/BD400111.BIN --style tous
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+expect8 0x83CED24E 0x00        # Programme : Standard au départ
+expect8 0x83CE974F 0x00        # ISO auto : arrêt, vitesse mini indice 0
+press menu 4M 30M
+press down 4M 16M              # Programme
+press right 4M 20M             # liste des Programmes, curseur sur Standard
+raza
+press down 4M 16M              # Sujet rapide
+press ok 4M 40M                # prog_choix, puis commande 5 en file
+run 20M
+expect8 0x83CED24E 0x01        # Programme rangé : Sujet rapide
+expectcomptea 0x05 1 2         # la commande 5 est partie (une fois, deux au plus)
+expecta 0x05 2 0x89            # copie envoyée : ISO auto (bit 7) + 8 + 1
+expect8 0x83CE974F 0x00        # réglage ISO auto du menu inchangé
+expect8 0x83CE975D 0x00        # écho 0x06 remis à la valeur du B
+# ISO auto en marche par le menu, Programme toujours actif : un seul envoi (l'écho est remis, la comparaison
+# de FUN_00132c3e passe du premier coup)
+press down 4M 16M              # ISO auto
+press right 4M 20M
+press right 4M 20M             # Marche
+press down 4M 16M              # ON
+raza
+press ok 4M 40M                # iso_choix : octet ISO auto, envoi par FUN_00132c3e
+run 20M
+expect8 0x83CE974F 0x80        # ISO auto en marche dans le B
+expectcomptea 0x05 1 2
+expecta 0x05 2 0x89            # le A reçoit toujours Sujet rapide (bit 7 déjà là)
+expect8 0x83CE975D 0x80        # écho remis à la valeur du B
+press left 4M 16M              # retour à la liste PRISE DE VUE
+press up 4M 16M                # Programme
+press right 4M 20M             # curseur sur Sujet rapide
+press up 4M 16M                # Standard
+raza
+press ok 4M 40M
+run 20M
+expect8 0x83CED24E 0x00
+expectcomptea 0x05 1 2
+expecta 0x05 2 0x80            # Standard : l'octet de l'utilisateur, tel quel
+expect8 0x83CE975D 0x80
+png 1-prise-de-vue.png
+# Réinitialiser (PERSO) avec un Programme actif : Programme remis à Standard, et le A reçoit l'octet de
+# l'utilisateur (la fonction de Nikon n'enverrait plus rien, les blocs étant égaux : envoi en file après coup)
+press right 4M 20M             # liste des Programmes, curseur sur Standard
+press down 4M 16M              # Sujet rapide
+press ok 4M 40M
+run 20M
+expecta 0x05 2 0x89
+press left 4M 16M              # bandeau, ou colonne des onglets
+poke32 0x83CEE49C 0x83CE5E6C   # menu PERSO (comme reinitialiser.txt)
+press ok 4M 20M                # entrer : écran Réinitialiser
+expect16 0x83CEE49E 0x68CC
+press down 4M 16M              # Oui
+raza
+press ok 4M 40M
+run 30M
+expect8 0x83CED24E 0x00        # Programme : Standard
+expectcomptea 0x05 1 4         # envois de Nikon (réglages perso) et le nôtre
+expect8 0x83CE974F 0x32        # octet ISO auto d'usine de Nikon : arrêt, ISO maxi indice 3, vitesse mini indice 2
+expecta 0x05 2 0x32            # le A le reçoit tel quel, sans retouche
+expect8 0x83CE975D 0x32

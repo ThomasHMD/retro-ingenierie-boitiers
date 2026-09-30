@@ -1,0 +1,42 @@
+# Même chemin, avec 0x83CE950C forcé à 0xC0 (accumulateur plein) juste avant 106 : contrôle que seul le
+# niveau de batterie fourni par le A bloque l'écran 106.
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+retour 0xAB5CC 1
+press menu 4M 30M
+expect16 0x83CED23A 0x0005
+press left 4M 16M
+onglet 0x03
+press ok 4M 20M
+expect16 0x83CEE49E 0x69AC
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press right 4M 20M
+expect16 0x83CEE49E 0x733C
+press down 4M 16M
+press ok 4M 30M
+expect16 0x83CEE49E 0x69AC
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CEE49E 0x6B2C
+png 02-ecran105.png
+press down 4M 16M
+poke8 0x83CE950C 0xC0
+press right 4M 30M
+expect16 0x83CEE49E 0x6B6C
+png 03-ecran106.png

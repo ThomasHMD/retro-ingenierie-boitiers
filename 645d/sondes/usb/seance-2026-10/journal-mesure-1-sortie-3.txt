@@ -1,0 +1,85 @@
+Boîtier trouvé : 645D
+Séance 645D 2026-10 +0000
+Batterie 67 %
+Fichiers déjà sur la carte : 12
+Vue 02/24 mono-filtre-1-vert
+  D024 : 2 → 1
+  THAM3249.PEF (sur la carte)
+Vue 03/24 mono-filtre-2-jaune
+  D024 : 1 → 2
+  THAM3250.PEF (sur la carte)
+Vue 04/24 mono-filtre-3-orange
+  D024 : 2 → 3
+  THAM3251.PEF (sur la carte)
+Vue 05/24 mono-filtre-4-rouge
+  D024 : 3 → 4
+  THAM3252.PEF (sur la carte)
+Vue 06/24 mono-filtre-5-magenta
+  D024 : 4 → 5
+  THAM3253.PEF (sur la carte)
+Vue 07/24 mono-filtre-6-bleu
+  D024 : 5 → 6
+  THAM3254.PEF (sur la carte)
+Vue 08/24 mono-filtre-7-cyan
+  D024 : 6 → 7
+  THAM3255.PEF (sur la carte)
+Vue 09/24 mono-filtre-8-infrarouge
+  D024 : 7 → 8
+  THAM3256.PEF (sur la carte)
+Vue 10/24 mono-contraste-0
+  contraste : 4 → 0
+  D024 : 8 → 0
+  THAM3257.PEF (sur la carte)
+Vue 11/24 mono-contraste-8
+  contraste : 0 → 8
+  THAM3258.PEF (sur la carte)
+Vue 12/24 mono-virage-2
+  contraste : 8 → 4
+  D025 : 4 → 2
+  THAM3259.PEF (sur la carte)
+Vue 13/24 mono-virage-6
+  D025 : 2 → 6
+  THAM3260.PEF (sur la carte)
+Vue 14/24 mode-0
+  mode : 5 → 0
+  THAM3261.PEF (sur la carte)
+Vue 15/24 mode-1
+  mode : 0 → 1
+  contraste : 5 → 4
+  netteté : 5 → 4
+  THAM3262.PEF (sur la carte)
+Vue 16/24 mode-2
+  mode : 1 → 2
+  THAM3263.PEF (sur la carte)
+Vue 17/24 mode-3
+  mode : 2 → 3
+  contraste : 5 → 4
+  netteté : 5 → 4
+  THAM3264.PEF (sur la carte)
+Vue 18/24 mode-4
+  mode : 3 → 4
+  THAM3265.PEF (sur la carte)
+Vue 19/24 mode-6
+  mode : 4 → 6
+  contraste : 1 → 4
+  netteté : 2 → 4
+  THAM3266.PEF (sur la carte)
+Vue 20/24 mode-7
+  mode : 6 → 7
+  THAM3267.PEF (sur la carte)
+Vue 21/24 naturel-saturation-0
+  mode : 7 → 0
+  saturation : 4 → 0
+  THAM3268.PEF (sur la carte)
+Vue 22/24 naturel-saturation-8
+  saturation : 0 → 8
+  THAM3269.PEF (sur la carte)
+Vue 23/24 naturel-teinte-2
+  saturation : 8 → 4
+  teinte : 4 → 2
+  THAM3270.PEF (sur la carte)
+Vue 24/24 naturel-teinte-6
+  teinte : 2 → 6
+  THAM3271.PEF (sur la carte)
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

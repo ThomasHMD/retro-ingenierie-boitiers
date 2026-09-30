@@ -1,0 +1,4 @@
+Banque d'origine : A ; passage sur B
+  banque B : active, vérifiée
+  lecture de 168 réglages
+  banque A : active, vérifiée

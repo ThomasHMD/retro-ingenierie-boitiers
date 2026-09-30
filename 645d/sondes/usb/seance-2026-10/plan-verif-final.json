@@ -1,0 +1,4 @@
+{"vues": [
+ {"nom": "verif-monochrome", "reglages": {"D020": 5}},
+ {"nom": "verif-naturel", "reglages": {"D020": 0}}
+]}

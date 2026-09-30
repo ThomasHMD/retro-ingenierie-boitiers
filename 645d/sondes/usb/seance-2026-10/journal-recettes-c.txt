@@ -1,0 +1,11 @@
+Séance 645D 2026-10 +0000
+Batterie 100 %
+Fichiers déjà sur la carte : 4
+Vue 01/01 hp5-monochrome-cyan-contraste-8
+  mode : 0 → 5
+  contraste : 7 → 8
+  D024 : 0 → 7
+  dossier 100PENTX
+  01-hp5-monochrome-cyan-contraste-8-THAM3306.PEF 33789 Ko
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

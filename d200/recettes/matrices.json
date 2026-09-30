@@ -1,0 +1,52 @@
+{
+ "chrome": {
+  "matrice": [
+   [
+    980,
+    -443,
+    -25
+   ],
+   [
+    -37,
+    594,
+    -45
+   ],
+   [
+    27,
+    -188,
+    673
+   ]
+  ],
+  "ajustement_dE2000": {
+   "mediane": 1.27,
+   "moyenne": 2.04,
+   "centile_90": 4.93
+  },
+  "source": "d40/recettes/mesures/classic-chrome.json (K, courbe) appliqué au XYZ exact ; capteur : camspec Nikon D200 ; 424 réflectances (ColorChecker Ohta + 400 spectres lisses, graine 0), D65 ; d200/outils/d200_rendus.py ajuster"
+ },
+ "positive": {
+  "matrice": [
+   [
+    950,
+    -220,
+    -218
+   ],
+   [
+    -163,
+    980,
+    -305
+   ],
+   [
+    -90,
+    5,
+    597
+   ]
+  ],
+  "ajustement_dE2000": {
+   "mediane": 0.72,
+   "moyenne": 0.99,
+   "centile_90": 2.21
+  },
+  "source": "d40/recettes/mesures/positive-film.json (K, courbe) appliqué au XYZ exact ; capteur : camspec Nikon D200 ; 424 réflectances (ColorChecker Ohta + 400 spectres lisses, graine 0), D65 ; d200/outils/d200_rendus.py ajuster"
+ }
+}

@@ -1,0 +1,147 @@
+# Menu Pip-Boy (patchs/menu-pipboy.json), après la passe critique UX : PRISE DE VUE à 7 entrées,
+# aides, Programme, ISO auto (valeurs à droite), Marche, ISO mini, ISO maxi, Vitesse mini,
+# Si trop sombre, PERSO 06, CONFIG, Menus, VISU.
+# Étape 5 (onglets en bandeau) : pixels du bandeau contrôlés dans le tampon d'écran (Y du point
+# (x, y) = 0x83BD6510 + 640 y + x) ; ▲▼ sur les onglets suivent l'ordre du bandeau
+# (PRISE DE VUE, VISU, PERSO, CONFIG).
+# Étape 7 (navigation du bandeau) : sur les onglets ◀ ▶ changent d'onglet, ▼ ou OK entrent, ▲ ne fait rien ;
+# ▲ sur la première ligne d'une liste de tête remonte au bandeau.
+# Étape 6 : menus et écran d'infos forcés en Graphique ; à jouer avec --style tous (mêmes contrôles
+# dans les deux styles).
+# python3 emulateur/d40emu.py patch patchs/menu-pipboy.json pipboy --style tous
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+png 00-infos.png
+expect8 0x83CEE4BF 0x01        # écran d'infos en Graphique, quel que soit --style (étape 6)
+expect8 0x83BF5FEA 0xA4        # étape 8 : chiffre allumé de l'ouverture en vert, point (474, 202) (Nikon : noir)
+expect8 0x83BF8802 0x25        # fantôme « 8 » de l'ouverture en vert très sombre, point (498, 218)
+expect8 0x83BF8746 0x25        # fantôme de la vitesse, point (310, 218)
+expect8 0x83C0F500 0xA4        # compteur de vues allumé, point (496, 364)
+expect8 0x83C12BAE 0x25        # fantôme du compteur, point (414, 386)
+press menu 4M 30M
+png 01-prise-de-vue.png
+expect8 0x83CE0231 0xBD        # tampon d'écran en 0x83BD6510 (les adresses de pixels en dépendent)
+expect8 0x83CE0232 0x65
+expect8 0x83CE0233 0x10
+expect8 0x83BD832C 0xA4        # bandeau : mot PRISE DE VUE en (28, 12), vert (onglet choisi)
+expect8 0x83BD8485 0x72        # mot CONFIG en (373, 12), vert doux (onglet non choisi)
+expect8 0x83BDCA3C 0xA4        # filet de base du bandeau en (300, 40)
+expect8 0x83BE3228 0xA4        # barre de sélection en (24, 82), là où était la colonne des onglets
+down b08                       # aide (?) sur Préréglage
+run 30M
+png 02-aide-preglage.png
+up b08
+run 16M
+press right 4M 20M
+png 03-preglage.png
+expect8 0x83BE07AA 0x72        # titre du sous-écran sous le bandeau : jambage du P de PRÉRÉGLAGE en (26, 65)
+press left 4M 16M
+press down 4M 16M
+down b08                       # aide sur Programme
+run 30M
+png 04-aide-programme.png
+up b08
+run 16M
+press right 4M 20M
+png 05-programme.png
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CED24E 0x01        # Programme rangé (bloc de réglages sauvegardé à l'extinction) : Sujet rapide
+press right 4M 20M
+press left 4M 16M
+press down 4M 16M
+down b08                       # aide sur ISO auto
+run 30M
+png 06-aide-iso-auto.png
+up b08
+run 16M
+press right 4M 20M
+png 07-iso-auto.png            # valeurs à droite : OFF, 200, 400, 1/125, VIT
+press right 4M 20M
+png 08-iso-marche.png
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE974F 0x80        # ISO auto activé (bit 7 ; le faux A laisse les autres bits à 0)
+png 09-iso-auto-on.png
+press down 4M 16M
+press right 4M 20M
+png 10-iso-mini.png            # 200 à 1600, ni Automatique ni HI 1
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE957D 0x54        # ISO mini : 400
+press down 4M 16M
+press right 4M 20M
+png 11-iso-maxi.png
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE974F 0xA0        # ISO maxi : 800 (bits 4-6 = 2), marche gardée
+press down 4M 16M
+press right 4M 20M
+png 12-vitesse-mini.png
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE974F 0xA1        # vitesse mini : 1/60 s (bits 0-3 = 1)
+press down 4M 16M
+press right 4M 20M
+png 13-si-trop-sombre.png
+press down 4M 16M
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CED24F 0x02        # Si trop sombre (bloc sauvegardé) : Sous-exposer
+png 14-iso-auto-apres.png      # ON, 400, 800, 1/60, SOUS
+press left 4M 16M
+png 15-prise-de-vue-apres.png  # RAP, ON
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+png 16-prise-de-vue-bas.png    # Réduction du bruit atteinte (7e ligne)
+press right 4M 20M
+png 16b-reduction-bruit.png
+press left 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+expect16 0x83CE53D8 0x0000     # PRISE DE VUE, première ligne
+press up 4M 16M                # étape 7 : ▲ sur la première ligne remonte au bandeau (avant : allait en bas)
+png 16c-onglets.png            # curseur sur les onglets : PRISE DE VUE en noir sur case pleine
+expect8 0x83BD832C 0x10
+expect16 0x83CEE49E 0x53CC     # toujours PRISE DE VUE
+press up 4M 16M                # ▲ sur le bandeau : rien
+expect16 0x83CEE49E 0x53CC
+expect8 0x83BD832C 0x10
+press right 4M 16M             # ▶ : VISU (ordre du bandeau)
+expect16 0x83CEE49E 0x4DBC
+press right 4M 16M             # ▶ : PERSO
+expect16 0x83CEE49E 0x5E6C
+press down 4M 20M              # ▼ : entrer dans la liste
+expect8 0x83BD832C 0x72        # mot PRISE DE VUE en vert doux : PERSO choisi, curseur dans la liste
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+png 17-perso.png               # 06 Sans carte : BLOQ
+press left 4M 16M              # ◀ : retour au bandeau, comme chez Nikon
+press right 4M 16M             # ▶ : CONFIG
+expect16 0x83CEE49E 0x69AC
+press ok 4M 20M                # OK : entrer dans la liste
+png 18-config.png
+press right 4M 20M
+png 19-menus.png               # une seule option : Complet
+press left 4M 16M
+press left 4M 16M
+press right 4M 16M             # ▶ depuis CONFIG : retour à PRISE DE VUE
+expect16 0x83CEE49E 0x53CC
+press left 4M 16M              # ◀ : CONFIG
+expect16 0x83CEE49E 0x69AC
+press right 4M 16M
+press right 4M 16M             # ▶ : VISU
+expect16 0x83CEE49E 0x4DBC
+press down 4M 20M
+png 20-visu.png

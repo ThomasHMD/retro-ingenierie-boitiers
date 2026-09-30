@@ -1,0 +1,8 @@
+MODE ÉCRITURE
+Modèle : D750 | firmware : V1.15
+C-4 avant : « POSITIVE V1 », 610 octets (sauvé dans avant_204_0.bin)
+Bloc à envoyer : « POSITIVE », base 1, 610 octets, avec courbe perso
+SetPictCtrlData 0x90CD (204, 0) : 0x2001 OK
+Relecture (courant) : identique à l'envoi
+Relecture (défaut) : identique à l'envoi
+Terminé. À choisir dans le menu Régler le Picture Control (ou relancer avec --activer).

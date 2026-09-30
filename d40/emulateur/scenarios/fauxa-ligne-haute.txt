@@ -1,0 +1,9 @@
+# Le A tient sa ligne « prêt » (0x50000104 bit 6) haute au démarrage du B et ne répond pas :
+# la tâche 14 (0xA92EC) attend 100 ms (twai_flg) puis part dans la boucle 0xA93B4 (bit 0 de 0x64000028 basculé
+# toutes les 50 ms, liaison série coupée).
+poke8 0x50000104 0x40
+watch 0xA9336 0xA9386 0xA93B4 0xA93D4
+run 70M
+peek 0x64000028 1
+peek 0x50000104 1
+png ligne-haute.png

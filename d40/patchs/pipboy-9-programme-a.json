@@ -1,0 +1,60 @@
+{
+ "description": "Menu Pip-Boy, étape 9 : le Programme envoyé au processeur A (quartet bas de l'octet ISO auto de la copie du bloc 0x05 = 8 + Programme, bit 7 = ISO auto). Sans effet sans le patch du A (patchs/a-programmes.json), à ne pas flasher sans lui. Suppose l'étape 4.",
+ "patchs": [
+  {
+   "offset": "0x3cf200",
+   "avant": {
+    "sha256": "c80a17673aa3c620f955b53433262f72c351eecccd3679f0a3c50b7e4ee77f13",
+    "longueur": 232
+   },
+   "apres": {
+    "hex": "17819f8c0040f252971c9f8c83cee96006c0a850e31c9f8c83ced24e06c1a801e216a861eb14a4819f8c83cee85a06c0c0fd82d0a800e30b9f8c83cee85c06c08b02c70d82d2c80d92d2921216c2078197208f709f8583cee9609f8c000a951e970c9fa09f8c83ce975d06c1c0fd82d1a881ea059f8d83ce974f06d016c08fe017819f8483ce975b9f8c000a9bfe970c17819f8c0040f2ac971c1704c0549f8c000a9a50971c0704078197209f8483cee49c04409f8c003e80be970c17819f8c0040f2d8971c1704c0549f8c000a9a50971c07040781972017819f8c001385469f8d003f313e970d"
+   },
+   "texte": "Programme vers le A : copie du bloc 0x05 retouchée, écho 0x06 remis, envoi au choix (code dans la place libre)"
+  },
+  {
+   "offset": "0x69516",
+   "avant": {
+    "sha256": "1a051c1031c3316d6216a503fb6b1b9855c654005042a18bf9ea8b02cd13cb9a",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f200970c"
+   },
+   "texte": "0xa9516 : entrée détournée vers env_preparer (LDI:32 #…,R12 ; JMP @R12)"
+  },
+  {
+   "offset": "0x69bf4",
+   "avant": {
+    "sha256": "1ff3f7a6139421c94177372e83eb1771cc101743073a0c7c9046c2d4c517458e",
+    "longueur": 10
+   },
+   "apres": {
+    "hex": "9f8c0040f264970c9fa0"
+   },
+   "texte": "0xa9bf4 : entrée détournée vers env_fin06 (LDI:32 #…,R12 ; JMP @R12)"
+  },
+  {
+   "offset": "0x3a80b6",
+   "avant": {
+    "sha256": "0b68ca30cbe3fff91a0f36062827ee03a7789238c6eb101ceeb4cf4b7d58d3a3",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f290970c"
+   },
+   "texte": "prog_choix (0x3e80b6, étape 4) : entrée détournée vers env_prog"
+  },
+  {
+   "offset": "0x3b3136",
+   "avant": {
+    "sha256": "75addb50534877f065f2b94129542cef35f532261b1622e8b1158185a6c97a09",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f2bc970c"
+   },
+   "texte": "preglage_reinit (0x3f3136, préréglages V1) : entrée détournée vers env_reinit"
+  }
+ ]
+}

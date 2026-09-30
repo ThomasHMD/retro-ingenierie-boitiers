@@ -1,0 +1,45 @@
+{
+ "description": "Premier test du flash : les titres des menus en français renommés comme les onglets du Pip-Boy. Données seulement, aucun code touché. Boîtier réglé en français.",
+ "patchs": [
+  {
+   "offset": "0x271d22",
+   "avant": {
+    "sha256": "7a2aac411634e4198b1ff7027e6d4211cecfc9170a189a89a6bcaff81358bf5f",
+    "longueur": 17
+   },
+   "apres": "STAT"
+  },
+  {
+   "offset": "0x271bb4",
+   "avant": {
+    "sha256": "72b86233cdb66a7acac867a2abc1299dd671c014aabf0582973bbadfb545c043",
+    "longueur": 18
+   },
+   "apres": "DATA"
+  },
+  {
+   "offset": "0x27206b",
+   "avant": {
+    "sha256": "243ab303f9da4110aed83f1eaf963fd99c5ca3b76330325c6e39de7d441253ef",
+    "longueur": 21
+   },
+   "apres": "INV"
+  },
+  {
+   "offset": "0x27284d",
+   "avant": {
+    "sha256": "6a04cc76662dd0e9733f948eb0d8d4a6abadfaf6dfe5cd01c8a29e672d52d27e",
+    "longueur": 13
+   },
+   "apres": "MAP"
+  },
+  {
+   "offset": "0x2722d8",
+   "avant": {
+    "sha256": "093eec1368ee9e572954f0c5b53e06fd10aa819ba66eeaad5ffb0d0b55531f05",
+    "longueur": 18
+   },
+   "apres": "PIP-BOY 3000"
+  }
+ ]
+}

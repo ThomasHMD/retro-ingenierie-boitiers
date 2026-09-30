@@ -1,0 +1,83 @@
+{
+ "_source": "octobre 2026 : « esprit Portra » demandé par Thomas, équilibre entre ses Portra 400 scannées et le preset Portra tel qu'il le règle, plus de poids au film",
+ "poids_film": 0.65,
+ "centiles": [
+  5,
+  25,
+  50,
+  75,
+  95,
+  99
+ ],
+ "src": [
+  10.6,
+  34.6,
+  57.6,
+  72.4,
+  85.6,
+  91.4
+ ],
+ "dst": [
+  9.8,
+  36.2,
+  60.0,
+  77.2,
+  89.6,
+  94.2
+ ],
+ "tranches_centres": [
+  15,
+  35,
+  55,
+  75,
+  91.5
+ ],
+ "teinte_src": [
+  [
+   -0.01,
+   0.39
+  ],
+  [
+   -0.88,
+   -2.03
+  ],
+  [
+   -0.0,
+   -0.97
+  ],
+  [
+   2.12,
+   0.46
+  ],
+  [
+   1.82,
+   2.17
+  ]
+ ],
+ "teinte_dst": [
+  [
+   0.09,
+   2.22
+  ],
+  [
+   0.44,
+   1.4
+  ],
+  [
+   0.66,
+   1.05
+  ],
+  [
+   0.53,
+   2.32
+  ],
+  [
+   0.36,
+   -0.0
+  ]
+ ],
+ "sources": {
+  "src": "22 exports Lightroom du preset Portra à 50 % + réglage auto de Thomas ",
+  "dst": "73 scans Portra 400 retouchés (aperçus Lightroom, portra-cibles.zip)"
+ }
+}

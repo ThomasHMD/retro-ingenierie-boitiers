@@ -1,0 +1,10 @@
+run 1M
+poke8 0x83CED0FC 0x18
+poke8 0x83CED0FF 0x00
+run 69M
+watchw 0x83C0D02E 1 30
+watchw 0x83BF591A 1 30
+watchw 0x83BE9138 1 30
+watchw 0x83C0535D 1 30
+press menu 4M 30M
+png 01-prise-de-vue.png

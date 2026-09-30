@@ -1,0 +1,116 @@
+{
+ "firmware": "D200B",
+ "description": "D200 2.01, mode Noir et blanc → fp4 : pondération [0.199, 0.095, 0.706] (erreur médiane 0.038), k = 0.705, {'logH_gris': 2.23, 'densite_gris': 0.8, 'v_gris': 0.1206}. Jamais flashé.",
+ "patchs": [
+  {
+   "offset": "0x87840",
+   "avant": {
+    "sha256": "435259df3aa8c4cf64a7f0de2df93f8462cb0057b585cb0f9e1222c1055ff7f9",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9b000048"
+   },
+   "note": "matrice N&B [0] = 72"
+  },
+  {
+   "offset": "0x87846",
+   "avant": {
+    "sha256": "406ecb75a3ad36fae23d157641da3462d426831a6da575f9aeca8408420a713a",
+    "longueur": 6
+   },
+   "apres": {
+    "hex": "9f8000000022"
+   },
+   "note": "matrice N&B [1] = 34"
+  },
+  {
+   "offset": "0x87850",
+   "avant": {
+    "sha256": "027b73aeb96be15e85495958beee38e4586047d4e70fcc7be89c04d3468345db",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "cff09fa0"
+   },
+   "note": "matrice N&B [2] = 255, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87858",
+   "avant": {
+    "sha256": "0171afeadd1cd5dd4a2b5d2b57e46b3bb481a1a82bfc1e512778a3ee1e870eb3",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "c4809fa0"
+   },
+   "note": "matrice N&B [3] = 72, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87860",
+   "avant": {
+    "sha256": "61e18d10f21672360907c944d813170fe32709a679d9060d2a46a5a654bfeeb3",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9b000022"
+   },
+   "note": "matrice N&B [4] = 34"
+  },
+  {
+   "offset": "0x87868",
+   "avant": {
+    "sha256": "2f5d1805f2e6e8b94defa355411173d40d147221700c30ac0b5a79edf67c6dec",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "cff09fa0"
+   },
+   "note": "matrice N&B [5] = 255, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87888",
+   "avant": {
+    "sha256": "41ba143349aefa744721bf6573d91f3d03dce450d8a26986d42e6cf1e0c2a12b",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c800"
+   },
+   "note": "ligne Y [0] = 128"
+  },
+  {
+   "offset": "0x87892",
+   "avant": {
+    "sha256": "6df7e0a4fad1147782d1561b0942ac6512a265b5747065a44f039e5f911dccc3",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c800"
+   },
+   "note": "ligne Y [1] = 128"
+  },
+  {
+   "offset": "0x8789c",
+   "avant": {
+    "sha256": "6bcbb50dbc93dc9f0e0221cfed6d712be67c7ca0143c4d3661c5690e74417f81",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c000"
+   },
+   "note": "ligne Y [2] = 0"
+  },
+  {
+   "offset": "0x3622dd",
+   "avant": {
+    "sha256": "5b9c058f50643f506640130a8e17ba82d047f7f271612ccc4d812efd7ca47ea3",
+    "longueur": 4096
+   },
+   "apres": {
+    "hex": "050505050505050505050505050505050505060606060606060707070708080808090909090a0a0a0b0b0b0b0c0c0c0d0d0d0e0e0e0e0f0f0f10101011111112121212131313141414151515161616171717181818181919191a1a1a1b1b1b1c1c1c1d1d1d1d1e1e1e1f1f1f202020212121222222232323232424242525252626262727272828282929292a2a2a2b2b2b2c2c2c2d2d2d2e2e2e2f2f2f303030313131323232333333343434353536363637373738383839393a3a3a3b3b3b3c3c3c3d3d3e3e3e3f3f3f40404041414242424343444444454545464647474748484949494a4a4a4b4b4c4c4c4d4d4e4e4e4f4f4f50505151515252525353545454555555565657575758585959595a5a5a5b5b5c5c5c5d5d5d5e5e5f5f5f6060606161626262636363646465656566666667676768686869696a6a6a6b6b6b6c6c6c6d6d6d6e6e6e6f6f70707071717172727273737374747475757576767777777878787979797a7a7a7b7b7b7c7c7c7d7d7d7d7e7e7e7f7f7f80808081818182828283838383848484858585868686878787878888888989898a8a8a8a8b8b8b8c8c8c8c8d8d8d8e8e8e8e8f8f8f9090909091919191929292939393939494949495959595969696969797979798989898999999999a9a9a9b9b9b9b9b9c9c9c9c9d9d9d9d9e9e9e9e9f9f9f9fa0a0a0a0a0a1a1a1a1a2a2a2a2a2a3a3a3a3a4a4a4a4a4a5a5a5a5a6a6a6a6a6a7a7a7a7a7a8a8a8a8a8a9a9a9a9a9aaaaaaaaaaababababababacacacacacadadadadadaeaeaeaeaeaeafafafafafb0b0b0b0b0b0b1b1b1b1b1b1b2b2b2b2b2b3b3b3b3b3b3b4b4b4b4b4b4b5b5b5b5b5b5b5b6b6b6b6b6b6b7b7b7b7b7b7b8b8b8b8b8b8b8b9b9b9b9b9b9babababababababbbbbbbbbbbbbbbcbcbcbcbcbcbcbdbdbdbdbdbdbdbebebebebebebebfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9cacacacacacacacacacacbcbcbcbcbcbcbcbcbcccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcececececececececececfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddedededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebececececececececececececececececececececececececececececececececececececececedededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "courbe N&B fp4"
+  }
+ ]
+}

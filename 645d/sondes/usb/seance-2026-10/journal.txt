@@ -1,0 +1,13 @@
+Séance 645D 2026-10 +0000
+Batterie 67 %
+Fichiers déjà sur la carte : 5
+Vue 01/13 mono-d024-6
+  mode : 0 → 5
+  D024 : 0 → 6
+  dossier 100PENTX
+  01-mono-d024-6-THAM3247.PEF 44804 Ko
+Vue 02/13 mono-d021-7
+  0x1016 : pas de réponse en 30 s
+  0x1015 : pas de réponse en 30 s
+  saturation (0xD021) = 7 : 0x0000 ?, relu ?
+  réglage refusé : vue faite quand même (l'EXIF dira ce qui a pris)

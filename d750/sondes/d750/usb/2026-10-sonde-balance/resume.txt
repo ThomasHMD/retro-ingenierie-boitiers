@@ -1,0 +1,52 @@
+Fabricant : Nikon Corporation | modèle : D750 | firmware : V1.15 | extension : 0x6
+Commandes annoncées : 60, réglages annoncés : 22
+  0x100E InitiateCapture (déclencher) : OUI
+  0x1014 GetDevicePropDesc : OUI
+  0x1016 SetDevicePropValue : OUI
+  0x90C5 CurveDownload (lire la courbe perso) : non
+  0x90C6 CurveUpload (envoyer la courbe perso) : non
+  0x90CA GetVendorPropCodes : OUI
+  0x90CC GetPictCtrlData (lire un Picture Control) : OUI
+  0x90CD SetPictCtrlData (écrire un Picture Control) : OUI
+  0x90CE DelCstPicCtrl (effacer un Picture Control perso) : OUI
+  0x90CF GetPicCtrlCapability : OUI
+  0x9207 InitiateCaptureRecInMedia (déclencher sur la carte) : OUI
+  0x940D variante de GetPictCtrlData à 3 paramètres : OUI
+Verdict : le D750 annonce l'écriture des Picture Control par USB.
+  réglage 0x5005 balance des blancs : modifiable | 05 50 04 00 01 02 00 02 00 02 09 00 02 00 04 00 05 00 06 00 07 00 10 80 …
+  réglages Nikon annoncés (0x90CA) : 217 
+  réglage 0xD015 wb? : modifiable | 15 d0 02 00 01 00 00 01 00 01 01
+  réglage 0xD016 wb? : modifiable | 16 d0 02 00 01 00 00 01 00 01 01
+  réglage 0xD017 wb? : modifiable | 17 d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD018 wb? : modifiable | 18 d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD019 wb? : modifiable | 19 d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD01A wb? : modifiable | 1a d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD01B wb? : modifiable | 1b d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD01C wb? : modifiable | 1c d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD01D wb? : modifiable | 1d d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD01E wb? : modifiable | 1e d0 04 00 01 88 13 6a 18 01 c4 09 10 27 0a 00
+  réglage 0xD01F wb? : modifiable | 1f d0 02 00 01 01 01 01 01 06 01
+  réglage 0xD021 wb? : modifiable | 21 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD022 wb? : modifiable | 22 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD023 wb? : modifiable | 23 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD024 wb? : modifiable | 24 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD026 wb? : lecture seule | 26 d0 06 00 00 00 01 00 01 57 01 f3 01 00
+  réglage 0xD027 wb? : lecture seule | 27 d0 06 00 00 00 01 00 01 57 01 f3 01 00
+  réglage 0xD028 wb? : lecture seule | 28 d0 06 00 00 00 01 00 01 57 01 f3 01 00
+  réglage 0xD029 wb? : lecture seule | 29 d0 06 00 00 00 01 00 01 57 01 f3 01 00
+  réglage 0xD02E wb? : modifiable | 2e d0 02 00 01 00 17 01 00 28 01
+  réglage 0xD02F wb? : modifiable | 2f d0 02 00 01 00 06 01 00 16 01
+  réglage 0xD030 wb? : modifiable | 30 d0 02 00 01 00 00 01 00 03 01
+  réglage 0xD031 wb? : modifiable | 31 d0 02 00 01 00 01 01 00 01 01
+  réglage 0xD032 wb? : modifiable | 32 d0 02 00 01 00 00 01 00 01 01
+  réglage 0xD033 wb? : modifiable | 33 d0 02 00 01 01 01 01 00 01 01
+  réglage 0xD034 wb? : modifiable | 34 d0 02 00 01 02 02 01 00 02 01
+  réglage 0xD037 wb? : modifiable | 37 d0 02 00 01 01 ff 01 00 06 01
+  réglage 0xD038 wb? : modifiable | 38 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD039 wb? : modifiable | 39 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  réglage 0xD03A wb? : modifiable | 3a d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD03B wb? : modifiable | 3b d0 04 00 01 64 02 64 02 01 00 00 c8 04 01 00
+  réglage 0xD03C wb? : modifiable | 3c d0 02 00 01 00 00 01 00 01 01
+  réglage 0xD03D wb? : modifiable | 3d d0 02 00 01 00 00 01 00 01 01
+  réglage 0xD03E wb? : lecture seule | 3e d0 06 00 00 00 01 00 01 57 01 f3 01 00
+  réglage 0xD03F wb? : lecture seule | 3f d0 06 00 00 00 01 00 01 57 01 f3 01 00

@@ -1,0 +1,54 @@
+# Programme et redémarrage (étape 9 du Pip-Boy, outils/pipboy.py ; côté A : outils/programmes_a.py).
+# Démarrage par la branche de FUN_0004044c où la broche 0x50000105 bit 1 est à 1 (hypothèse : celle du boîtier ;
+# sans « entree », l'émulateur prend l'autre et le B n'envoie rien au A) : le B relit ses réglages perso en flash
+# (0x83CED254 → 0x83CE974D, PC 0x40596) et les renvoie au A (commandes 1, 7 et 5).
+# Le faux A a gardé, comme le vrai (RAM du A alimentée boîtier éteint, hypothèse), le bloc 0x05 reçu avant
+# l'extinction, Programme actif, et le renvoie en 0x06 dès son démarrage, avant que le B ait relu le sien.
+# Contrôles : l'octet ISO auto de l'utilisateur sort intact du démarrage ; le A reçoit le Programme gardé.
+# Puis la molette (commande 0x14 du A, mode dans le quartet haut du 1er octet : 0 P, 2 A, 3 M, 8 et plus scènes) :
+# le Programme ne part qu'en P, le A reçoit l'octet de l'utilisateur dans les autres modes.
+#   python3 emulateur/d40emu.py scenario programme-a-demarrage --firmware build/V5/2-ensuite-processeur-B/BD400111.BIN
+# Sur le B de Nikon, doit échouer (le A reçoit 0x23, sans Programme).
+entree 0x50000105 0x02
+etata 0x05 00 00 B9 00 26 00 04 00 00 00 00 F0 22 00   # le A a gardé Sujet rapide (bit 7, ISO maxi 3, 8 + 1)
+run 1M
+poke8 0x83CED0FC 0x18          # français
+poke8 0x83CED24E 0x01          # Programme gardé en flash (bloc 10, relu par reglages_lire avant 1M) : Sujet rapide
+poke8 0x83CED256 0x23          # octet ISO auto gardé en flash (bloc 3) : arrêt, ISO maxi indice 2, vitesse mini indice 3
+# (arrêt : le bit 7 suit aussi 0x83CED100 bit 2, que le B recopie dans 0x83CE974F à la réception de 0x08, 0xA9D88)
+raza
+run 69M
+expect8 0x83CED24E 0x01        # Programme toujours Sujet rapide
+expect8 0x83CE974F 0x23        # réglage de l'utilisateur, relu en flash : ni l'écho du A ni notre retouche
+expectcomptea 0x05 1 3         # l'envoi du démarrage (et, après l'écho précoce du A, le renvoi de Nikon)
+expecta 0x05 2 0xA9            # le A reçoit Sujet rapide avec l'ISO maxi de l'utilisateur (0x80 | 0x20 | 8 + 1)
+expect8 0x83CE975D 0x23        # écho 0x06 remis à la valeur du B
+png 1-demarrage.png
+# molette sur A : le B envoie 5 (mode dans le 1er octet), sans Programme
+raza
+a 14 20 00 00 00 00 00 00 00 00 00 00 00 00
+run 20M
+expectcomptea 0x05 1 2
+expecta 0x05 0 0x02            # mode A
+expecta 0x05 2 0x23            # octet de l'utilisateur, tel quel : ISO auto arrêté, comme chez Nikon
+expect8 0x83CE974F 0x23
+# molette sur M, puis sur une scène (Portrait de nuit) : toujours l'octet de l'utilisateur
+raza
+a 14 30 00 00 00 00 00 00 00 00 00 00 00 00
+run 20M
+expecta 0x05 2 0x23
+raza
+a 14 80 00 00 00 00 00 00 00 00 00 00 00 00
+run 20M
+expectcomptea 0x05 1 2
+expecta 0x05 2 0x23
+# retour sur P : le Programme repart
+raza
+a 14 00 00 00 00 00 00 00 00 00 00 00 00 00
+run 20M
+expectcomptea 0x05 1 2
+expecta 0x05 0 0x00
+expecta 0x05 2 0xA9
+expect8 0x83CE974F 0x23
+expect8 0x83CE975D 0x23
+

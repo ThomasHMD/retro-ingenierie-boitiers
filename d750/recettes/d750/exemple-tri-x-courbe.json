@@ -1,0 +1,4 @@
+{"nom": "TRI-X COURBE", "base": "Monochrome",
+ "reglages": {"filtre": "aucun", "accentuation": 5, "clarte": 1},
+ "courbe": {"points": [[0, 0], [64, 52], [192, 200], [255, 255]]},
+ "note": "Exemple de format pour outils/picture_control.py bloc, pas une recette réglée : courbe en S douce, points arbitraires."}

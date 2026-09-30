@@ -1,0 +1,20 @@
+# Palier 2 : un faux B envoie la commande 0x05 (14 octets, réglages perso) au vrai A émulé.
+# Table du A (0xFB528) : commande 5 = 14 octets B→A, reçus dans 0x3E53F, recopiés dans 0x3D259 par 0xD1C22
+# (tâche 4) ; 0x3D25B = octet ISO auto (recherche/programmes-expo-iso-auto.md §4).
+eeprom valide
+entree 0x09 0x02          # PDR9 bit 1 : le B est allumé
+fakeb inverser 1 controle 0
+run 3M
+b 05 11 22 A3 44 55 66 77 88 99 AA BB CC DD EE
+run 3M
+finb
+peek 0x3E40C 20           # octets reçus par le A (après 0xFF − x)
+expect8 0x3E510 0         # pas d'erreur d'échange
+expect8 0x3E51A 0xFF      # somme de contrôle acceptée
+expect8 0x3D218 0x20      # commande 5 reçue, en attente de traitement
+expect8 0x3E541 0xA3
+# La tâche 4, qui l'appliquerait, n'est pas encore lancée (démarrage bloqué) : on appelle la fonction elle-même
+appel 0xD1C22
+peek 0x3D259 14
+expect8 0x3D25B 0xA3      # l'octet ISO auto du B est arrivé dans la variable du A
+expect8 0x3D218 0

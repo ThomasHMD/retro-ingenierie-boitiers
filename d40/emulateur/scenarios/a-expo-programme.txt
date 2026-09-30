@@ -1,0 +1,49 @@
+# Processeur A : toute la chaîne d'exposition, expo_programme (0xC3F84), depuis la mesure.
+# Ev (ccc2) = cf68 + 8·e1ee − 8·d0b2 − 4 (objectif plus ouvert que f/2,8 : ccb9 ≥ 7), FUN_000c4064.
+# ISO 200 : e1ee = 36 (0x24). 50 mm f/1,8, mode P, sans flash, objectif à puce (d0e6 = 1).
+run 2M
+poke8 0x3C3C0 0
+poke8 0x3C3C1 0
+poke8 0x3C3C4 0
+poke8 0x3E1E0 0
+poke8 0x3D0E6 1
+poke8 0x3D0F0 0x50
+poke8 0x3D100 0x14
+poke8 0x3D0F3 0x4C
+poke8 0x3D0B2 0
+poke8 0x3D105 0
+poke8 0x3E1EE 0x24
+# 1) sans ISO auto, Ev 12 à ISO 200 : cf68 = 576 − 288 + 4 = 292
+poke8 0x3D0BC 0
+poke16 0x3CF68 292
+appel 0xC3F84
+expect16 0x3CCC2 576
+expect16 0x3CCC0 336
+expect16 0x3CCBE 240
+peek16s 0x3CCB2
+peek16s 0x3CCB4
+peek 0x3CCBC 1
+peek16s 0x3CCBA
+# 2) sans ISO auto, Ev 6 (cf68 = 4) : ligne → 1/16 f/2 (Tv 192, Av 96)
+poke16 0x3CF68 4
+appel 0xC3F84
+peek16s 0x3CCC2
+peek16s 0x3CCC0
+peek16s 0x3CCBE
+peek 0x3CCBC 1
+peek16s 0x3CCBA
+# 3) ISO auto actif (d0bc bit 1), réglage 0x3D25B = 0xA0 : actif, ISO maxi indice 2 (0xFA86C : 48 = ISO 800),
+#    vitesse mini indice 0 (0xFA876 : 336 = 1/125). Ev 6 à ISO 200 : il manque 128/48 = 2,7 IL à 1/125 f/1,8 ;
+#    l'ISO doit monter à 800 (ccbc = 48), puis la vitesse redescendre sous 1/125.
+poke8 0x3D0BC 2
+poke8 0x3D25B 0xA0
+poke8 0x3E1EE 0x24
+appel 0xC3F84
+peek16s 0x3CCC2
+peek16s 0x3CCC0
+peek16s 0x3CCBE
+peek 0x3CCBC 1
+peek16s 0x3CCB2
+peek16s 0x3CCB4
+peek16s 0x3CCBA
+expect8 0x3CCBC 0x30

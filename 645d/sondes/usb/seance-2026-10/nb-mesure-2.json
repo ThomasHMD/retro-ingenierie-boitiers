@@ -1,0 +1,427 @@
+{
+ "blocs": 1224,
+ "vues": {
+  "01-mono-filtre-0-aucun": {
+   "poids_rvb": [
+    0.255,
+    0.519,
+    0.226
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "02-mono-filtre-1-vert": {
+   "poids_rvb": [
+    0.139,
+    0.67,
+    0.191
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 1,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "03-mono-filtre-2-jaune": {
+   "poids_rvb": [
+    0.293,
+    0.514,
+    0.193
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 2,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "04-mono-filtre-3-orange": {
+   "poids_rvb": [
+    0.596,
+    0.236,
+    0.167
+   ],
+   "ecart_rms_niveaux": 0.08,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 3,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "05-mono-filtre-4-rouge": {
+   "poids_rvb": [
+    0.694,
+    0.113,
+    0.192
+   ],
+   "ecart_rms_niveaux": 0.08,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 4,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "06-mono-filtre-5-magenta": {
+   "poids_rvb": [
+    0.491,
+    0.206,
+    0.303
+   ],
+   "ecart_rms_niveaux": 0.04,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 5,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "07-mono-filtre-6-bleu": {
+   "poids_rvb": [
+    -0.081,
+    0.151,
+    0.93
+   ],
+   "ecart_rms_niveaux": 0.17,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 6,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "08-mono-filtre-7-cyan": {
+   "poids_rvb": [
+    -0.043,
+    0.391,
+    0.652
+   ],
+   "ecart_rms_niveaux": 0.09,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 7,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "09-mono-filtre-8-infrarouge": {
+   "poids_rvb": [
+    0.651,
+    0.926,
+    -0.577
+   ],
+   "ecart_rms_niveaux": 0.18,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 8,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "10-mono-contraste-0": {
+   "poids_rvb": [
+    0.255,
+    0.52,
+    0.225
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 1,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "11-mono-contraste-2": {
+   "poids_rvb": [
+    0.255,
+    0.52,
+    0.224
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 1,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "12-mono-contraste-6": {
+   "poids_rvb": [
+    0.256,
+    0.521,
+    0.223
+   ],
+   "ecart_rms_niveaux": 0.04,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 2,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "13-mono-contraste-8": {
+   "poids_rvb": [
+    0.255,
+    0.521,
+    0.224
+   ],
+   "ecart_rms_niveaux": 0.04,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 2,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "14-mono-virage-2": {
+   "poids_rvb": [
+    0.255,
+    0.52,
+    0.225
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": -39.91,
+   "ecart_canaux": 39.91,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 2,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "15-mono-virage-6": {
+   "poids_rvb": [
+    0.255,
+    0.52,
+    0.225
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 56.95,
+   "ecart_canaux": 56.95,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 6,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "16-mono-d026-1": {
+   "poids_rvb": [
+    0.255,
+    0.519,
+    0.226
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "17-mono-d027-1": {
+   "poids_rvb": [
+    0.255,
+    0.519,
+    0.226
+   ],
+   "ecart_rms_niveaux": 0.03,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  },
+  "23-mode-6": {
+   "poids_rvb": [
+    0.156,
+    0.31,
+    0.534
+   ],
+   "ecart_rms_niveaux": 0.65,
+   "virage_R_moins_B": 23.39,
+   "ecart_canaux": 29.58,
+   "exif": {
+    "MonochromeFilterEffect": 65535,
+    "MonochromeToning": 65535,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  }
+ },
+ "films": {
+  "Tri-X": {
+   "poids_cible": [
+    0.167,
+    0.312,
+    0.521
+   ],
+   "classement": [
+    {
+     "filtre": "01-mono-filtre-0-aucun",
+     "contraste": 4,
+     "rms_niveaux": 10.37,
+     "gris_film_IL": 0.15
+    },
+    {
+     "filtre": "02-mono-filtre-1-vert",
+     "contraste": 4,
+     "rms_niveaux": 10.48,
+     "gris_film_IL": 0.1
+    },
+    {
+     "filtre": "01-mono-filtre-0-aucun",
+     "contraste": 2,
+     "rms_niveaux": 11.68,
+     "gris_film_IL": 0.1
+    },
+    {
+     "filtre": "02-mono-filtre-1-vert",
+     "contraste": 2,
+     "rms_niveaux": 11.97,
+     "gris_film_IL": 0.1
+    },
+    {
+     "filtre": "03-mono-filtre-2-jaune",
+     "contraste": 4,
+     "rms_niveaux": 12.24,
+     "gris_film_IL": 0.15
+    },
+    {
+     "filtre": "03-mono-filtre-2-jaune",
+     "contraste": 2,
+     "rms_niveaux": 13.23,
+     "gris_film_IL": 0.15
+    },
+    {
+     "filtre": "08-mono-filtre-7-cyan",
+     "contraste": 0,
+     "rms_niveaux": 13.58,
+     "gris_film_IL": -0.2
+    },
+    {
+     "filtre": "01-mono-filtre-0-aucun",
+     "contraste": 0,
+     "rms_niveaux": 14.12,
+     "gris_film_IL": 0.1
+    }
+   ]
+  },
+  "HP5": {
+   "poids_cible": [
+    0.096,
+    0.238,
+    0.666
+   ],
+   "classement": [
+    {
+     "filtre": "08-mono-filtre-7-cyan",
+     "contraste": 4,
+     "rms_niveaux": 10.9,
+     "gris_film_IL": -0.2
+    },
+    {
+     "filtre": "08-mono-filtre-7-cyan",
+     "contraste": 2,
+     "rms_niveaux": 11.03,
+     "gris_film_IL": -0.15
+    },
+    {
+     "filtre": "08-mono-filtre-7-cyan",
+     "contraste": 0,
+     "rms_niveaux": 13.27,
+     "gris_film_IL": -0.15
+    },
+    {
+     "filtre": "07-mono-filtre-6-bleu",
+     "contraste": 0,
+     "rms_niveaux": 13.96,
+     "gris_film_IL": -0.3
+    },
+    {
+     "filtre": "07-mono-filtre-6-bleu",
+     "contraste": -2,
+     "rms_niveaux": 14.92,
+     "gris_film_IL": -0.3
+    },
+    {
+     "filtre": "07-mono-filtre-6-bleu",
+     "contraste": 2,
+     "rms_niveaux": 15.2,
+     "gris_film_IL": -0.3
+    },
+    {
+     "filtre": "08-mono-filtre-7-cyan",
+     "contraste": -2,
+     "rms_niveaux": 16.74,
+     "gris_film_IL": -0.1
+    },
+    {
+     "filtre": "07-mono-filtre-6-bleu",
+     "contraste": -4,
+     "rms_niveaux": 17.79,
+     "gris_film_IL": -0.3
+    }
+   ]
+  }
+ }
+}

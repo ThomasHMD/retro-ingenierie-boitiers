@@ -1,0 +1,13 @@
+Séance 645D 2026-10 +0000
+Batterie 100 %
+Fichiers déjà sur la carte : 4
+Vue 01/02 verif-monochrome
+  mode : 0 → 5
+  dossier 100PENTX
+  01-verif-monochrome-THAM3310.PEF 49734 Ko
+Vue 02/02 verif-naturel
+  mode : 5 → 0
+  dossier 100PENTX
+  02-verif-naturel-THAM3311.PEF 49450 Ko
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

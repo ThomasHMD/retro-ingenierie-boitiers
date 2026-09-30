@@ -1,0 +1,53 @@
+# Navigation du bandeau (étape 7 du Pip-Boy, octobre 2026) : les cas que pipboy.txt ne couvre pas.
+# - liste qui défile (CONFIG) : ▲ remonte le défilement avant de quitter la liste ; seule la vraie
+#   première ligne (ligne visible + 0xC et défilement + 0xE à 0) renvoie au bandeau ;
+# - sous-écran (Programme) : ▲ sur la première ligne boucle en bas, comme chez Nikon (le détour ne
+#   joue que pour les listes de tête, retour 0x131F78).
+# À jouer sur un firmware avec l'étape 7 : python3 emulateur/d40emu.py scenario navigation --firmware build/v1/BD400111.BIN --style tous
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+press menu 4M 30M
+press left 4M 16M              # bandeau
+onglet 0x03                    # CONFIG
+expect16 0x83CEE49E 0x69AC
+press down 4M 20M              # ▼ : entrer
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+expect16 0x83CE69B8 0x0005     # ligne visible 5
+expect16 0x83CE69BA 0x0003     # défilement 3 : 9e ligne
+png 01-config-bas.png
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+press up 4M 16M
+expect16 0x83CE69B8 0x0000     # revenu en tête, toujours dans la liste
+expect16 0x83CE69BA 0x0000
+png 02-config-haut.png
+expect8 0x83BE3228 0xA4        # barre de sélection sur la première ligne (point (24, 82))
+press up 4M 16M                # ▲ : bandeau
+png 03-bandeau.png
+expect8 0x83BE3228 0x10        # plus de barre verte sur la ligne : le curseur est sur le bandeau
+expect16 0x83CEE49E 0x69AC
+onglet 0x01                    # PRISE DE VUE (0x83CE3FE8 : 0 VISU, 1 PRISE DE VUE, 2 PERSO, 3 CONFIG)
+expect16 0x83CEE49E 0x53CC
+press down 4M 20M              # entrer
+press down 4M 16M              # Programme
+press right 4M 20M             # sous-écran Programme
+expect16 0x83CEE49E 0x747C
+expect16 0x83CE7488 0x0000     # première ligne (Standard)
+png 04-programme.png
+press up 4M 16M                # ▲ en haut d'un sous-écran : boucle en bas (Nikon)
+png 05-programme-bas.png
+expect16 0x83CEE49E 0x747C     # toujours dans Programme
+expect16 0x83CE7488 0x0005     # dernière ligne (Piqué max)

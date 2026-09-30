@@ -1,0 +1,794 @@
+{
+ "colorimetrie_mire": {
+  "mediane": 1.4,
+  "p90": 3.27
+ },
+ "blocs_communs": 5212,
+ "part_blocs_chroma_40_et_plus": 0.112,
+ "vues": [
+  {
+   "vue": "CLASSIC CHROME V1",
+   "profil": "CLASSIC CHROME",
+   "recette": "classic-chrome-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 1.56,
+    "p90": 3.79
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 1.29,
+    "p90": 2.99
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.08,
+    "p90": 1.75
+   },
+   "prevu": {
+    "mediane": 1.27,
+    "p90": 3.56
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.08,
+    "teinte_deg": -2.3,
+    "chroma_x": 1.038
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 3336,
+     "dE": 1.26,
+     "teinte_deg": -0.3,
+     "chroma_x": 1.04,
+     "dL": -1.0
+    },
+    {
+     "secteur": "jaune",
+     "n": 18,
+     "dE": 3.91,
+     "teinte_deg": -5.6,
+     "chroma_x": 1.23,
+     "dL": 0.0
+    },
+    {
+     "secteur": "vert-jaune",
+     "n": 233,
+     "dE": 3.32,
+     "teinte_deg": -3.0,
+     "chroma_x": 1.09,
+     "dL": 3.0
+    },
+    {
+     "secteur": "vert",
+     "n": 350,
+     "dE": 4.02,
+     "teinte_deg": -5.4,
+     "chroma_x": 1.08,
+     "dL": 3.3
+    },
+    {
+     "secteur": "cyan",
+     "n": 31,
+     "dE": 4.65,
+     "teinte_deg": 11.5,
+     "chroma_x": 0.8,
+     "dL": -1.3
+    },
+    {
+     "secteur": "neutres",
+     "n": 1239,
+     "dE": 1.59,
+     "da": 0.7,
+     "db": -0.3,
+     "dL": -0.9
+    }
+   ]
+  },
+  {
+   "vue": "CLASSIC NEG V1",
+   "profil": "CLASSIC NEG",
+   "recette": "classic-neg-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 3.67,
+    "p90": 10.05
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.78,
+    "p90": 5.09
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.18,
+    "p90": 1.94
+   },
+   "prevu": {
+    "mediane": 3.96,
+    "p90": 10.47
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.11,
+    "teinte_deg": -2.7,
+    "chroma_x": 1.039
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 95,
+     "dE": 5.13,
+     "teinte_deg": -1.2,
+     "chroma_x": 0.48,
+     "dL": -2.6
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 3847,
+     "dE": 1.79,
+     "teinte_deg": 2.1,
+     "chroma_x": 1.03,
+     "dL": -1.3
+    },
+    {
+     "secteur": "vert",
+     "n": 583,
+     "dE": 10.89,
+     "teinte_deg": -17.6,
+     "chroma_x": 1.39,
+     "dL": 6.6
+    },
+    {
+     "secteur": "bleu",
+     "n": 31,
+     "dE": 4.51,
+     "teinte_deg": 6.2,
+     "chroma_x": 0.94,
+     "dL": -4.3
+    },
+    {
+     "secteur": "neutres",
+     "n": 655,
+     "dE": 4.83,
+     "da": -2.9,
+     "db": -3.0,
+     "dL": -2.1
+    }
+   ]
+  },
+  {
+   "vue": "FP4 V1",
+   "profil": "FP4",
+   "recette": "fp4-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 2.46,
+    "p90": 15.61
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.35,
+    "p90": 4.28
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.36,
+    "p90": 9.83
+   },
+   "prevu": {
+    "mediane": 2.65,
+    "p90": 4.18
+   },
+   "jpeg_moins_modele": {
+    "dL": 0.36,
+    "teinte_deg": null,
+    "chroma_x": null
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 5212,
+     "dE": 2.46,
+     "da": 0.0,
+     "db": -0.0,
+     "dL": -2.2
+    }
+   ]
+  },
+  {
+   "vue": "HASSELBLAD V1",
+   "profil": "HASSELBLAD",
+   "recette": "hasselblad-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 2.6,
+    "p90": 4.75
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.51,
+    "p90": 3.42
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.13,
+    "p90": 1.83
+   },
+   "prevu": {
+    "mediane": 1.77,
+    "p90": 4.82
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.08,
+    "teinte_deg": -2.7,
+    "chroma_x": 1.0
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 3670,
+     "dE": 2.39,
+     "teinte_deg": -5.9,
+     "chroma_x": 1.02,
+     "dL": -1.2
+    },
+    {
+     "secteur": "jaune",
+     "n": 246,
+     "dE": 2.66,
+     "teinte_deg": -7.6,
+     "chroma_x": 0.98,
+     "dL": -0.9
+    },
+    {
+     "secteur": "vert-jaune",
+     "n": 151,
+     "dE": 4.74,
+     "teinte_deg": -6.7,
+     "chroma_x": 0.87,
+     "dL": 2.5
+    },
+    {
+     "secteur": "vert",
+     "n": 432,
+     "dE": 4.97,
+     "teinte_deg": -6.8,
+     "chroma_x": 0.88,
+     "dL": 3.1
+    },
+    {
+     "secteur": "cyan",
+     "n": 31,
+     "dE": 6.16,
+     "teinte_deg": 20.2,
+     "chroma_x": 0.9,
+     "dL": 1.0
+    },
+    {
+     "secteur": "neutres",
+     "n": 674,
+     "dE": 3.2,
+     "da": -0.4,
+     "db": -3.5,
+     "dL": -1.2
+    }
+   ]
+  },
+  {
+   "vue": "HP5 V1",
+   "profil": "HP5",
+   "recette": "hp5-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 2.75,
+    "p90": 11.19
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.5,
+    "p90": 3.96
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.74,
+    "p90": 5.87
+   },
+   "prevu": {
+    "mediane": 2.94,
+    "p90": 4.44
+   },
+   "jpeg_moins_modele": {
+    "dL": 0.73,
+    "teinte_deg": null,
+    "chroma_x": null
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 5212,
+     "dE": 2.75,
+     "da": 0.0,
+     "db": -0.0,
+     "dL": -2.4
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME 5600K",
+   "profil": "KODACHROME",
+   "recette": "kodachrome-v1-variante-5600k",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 4.72,
+    "p90": 5.82
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 4.45,
+    "p90": 5.61
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.24,
+    "p90": 2.52
+   },
+   "prevu": {
+    "mediane": 3.95,
+    "p90": 5.43
+   },
+   "jpeg_moins_modele": {
+    "dL": 0.17,
+    "teinte_deg": -2.9,
+    "chroma_x": 1.018
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 39,
+     "dE": 2.9,
+     "teinte_deg": 0.1,
+     "chroma_x": 1.29,
+     "dL": -0.9
+    },
+    {
+     "secteur": "vert",
+     "n": 583,
+     "dE": 6.96,
+     "teinte_deg": -14.0,
+     "chroma_x": 1.12,
+     "dL": 4.1
+    },
+    {
+     "secteur": "bleu",
+     "n": 31,
+     "dE": 4.83,
+     "teinte_deg": -6.2,
+     "chroma_x": 0.62,
+     "dL": 0.6
+    },
+    {
+     "secteur": "neutres",
+     "n": 4557,
+     "dE": 4.45,
+     "da": 1.9,
+     "db": 4.3,
+     "dL": -0.9
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME V1",
+   "profil": "KODACHROME",
+   "recette": "kodachrome-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5000,
+   "gains_wb_nef_sur_5600": [
+    0.9439,
+    1.0,
+    1.089
+   ],
+   "gains_wb_calcules": [
+    0.9487,
+    1.0,
+    1.0842
+   ],
+   "mesure": {
+    "mediane": 2.82,
+    "p90": 4.83
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.43,
+    "p90": 3.95
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.24,
+    "p90": 1.78
+   },
+   "prevu": {
+    "mediane": 2.1,
+    "p90": 4.36
+   },
+   "jpeg_moins_modele": {
+    "dL": 0.23,
+    "teinte_deg": 0.1,
+    "chroma_x": 1.118
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 38,
+     "dE": 2.62,
+     "teinte_deg": 1.2,
+     "chroma_x": 1.26,
+     "dL": -0.1
+    },
+    {
+     "secteur": "vert",
+     "n": 583,
+     "dE": 5.92,
+     "teinte_deg": -12.6,
+     "chroma_x": 1.08,
+     "dL": 3.3
+    },
+    {
+     "secteur": "bleu",
+     "n": 32,
+     "dE": 3.22,
+     "teinte_deg": 2.1,
+     "chroma_x": 0.81,
+     "dL": 2.0
+    },
+    {
+     "secteur": "neutres",
+     "n": 4555,
+     "dE": 2.4,
+     "da": 1.3,
+     "db": 1.7,
+     "dL": -1.2
+    }
+   ]
+  },
+  {
+   "vue": "PORTRA 400 V1",
+   "profil": "PORTRA",
+   "recette": "portra-400-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 2.78,
+    "p90": 12.35
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 2.54,
+    "p90": 7.83
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.18,
+    "p90": 1.92
+   },
+   "prevu": {
+    "mediane": 2.55,
+    "p90": 12.3
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.08,
+    "teinte_deg": -1.9,
+    "chroma_x": 0.984
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 2886,
+     "dE": 2.34,
+     "teinte_deg": -1.2,
+     "chroma_x": 0.87,
+     "dL": -1.0
+    },
+    {
+     "secteur": "jaune",
+     "n": 449,
+     "dE": 2.85,
+     "teinte_deg": 5.3,
+     "chroma_x": 1.16,
+     "dL": 0.5
+    },
+    {
+     "secteur": "vert",
+     "n": 583,
+     "dE": 13.85,
+     "teinte_deg": -11.9,
+     "chroma_x": 1.27,
+     "dL": 13.4
+    },
+    {
+     "secteur": "bleu",
+     "n": 31,
+     "dE": 6.34,
+     "teinte_deg": 11.4,
+     "chroma_x": 0.86,
+     "dL": 3.7
+    },
+    {
+     "secteur": "neutres",
+     "n": 1263,
+     "dE": 4.21,
+     "da": -0.7,
+     "db": 2.6,
+     "dL": -1.7
+    }
+   ]
+  },
+  {
+   "vue": "POSITIVE V1",
+   "profil": "POSITIVE",
+   "recette": "positive-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 3.21,
+    "p90": 5.53
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 3.16,
+    "p90": 3.54
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.26,
+    "p90": 1.93
+   },
+   "prevu": {
+    "mediane": 2.87,
+    "p90": 5.53
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.08,
+    "teinte_deg": -2.5,
+    "chroma_x": 1.007
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 3609,
+     "dE": 3.23,
+     "teinte_deg": -1.7,
+     "chroma_x": 1.09,
+     "dL": -2.7
+    },
+    {
+     "secteur": "jaune",
+     "n": 19,
+     "dE": 6.95,
+     "teinte_deg": -9.2,
+     "chroma_x": 1.26,
+     "dL": -0.9
+    },
+    {
+     "secteur": "vert-jaune",
+     "n": 65,
+     "dE": 5.25,
+     "teinte_deg": -6.3,
+     "chroma_x": 1.28,
+     "dL": -1.7
+    },
+    {
+     "secteur": "vert",
+     "n": 518,
+     "dE": 6.33,
+     "teinte_deg": -10.2,
+     "chroma_x": 1.27,
+     "dL": -0.8
+    },
+    {
+     "secteur": "cyan",
+     "n": 31,
+     "dE": 5.21,
+     "teinte_deg": 16.7,
+     "chroma_x": 0.95,
+     "dL": -0.7
+    },
+    {
+     "secteur": "neutres",
+     "n": 958,
+     "dE": 1.79,
+     "da": -0.7,
+     "db": -0.5,
+     "dL": -1.2
+    }
+   ]
+  },
+  {
+   "vue": "TRI-X V1",
+   "profil": "TRI-X",
+   "recette": "tri-x-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 10000,
+   "gains_wb_nef_sur_5600": [
+    1.3075,
+    1.0,
+    0.8037
+   ],
+   "gains_wb_calcules": [
+    1.1843,
+    1.0,
+    0.7566
+   ],
+   "mesure": {
+    "mediane": 1.49,
+    "p90": 3.9
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 1.42,
+    "p90": 2.04
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.86,
+    "p90": 7.91
+   },
+   "prevu": {
+    "mediane": 1.29,
+    "p90": 3.26
+   },
+   "jpeg_moins_modele": {
+    "dL": -0.32,
+    "teinte_deg": null,
+    "chroma_x": null
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 5212,
+     "dE": 1.49,
+     "da": 0.0,
+     "db": -0.0,
+     "dL": 1.7
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME V1 A 5600K",
+   "profil": "KODACHROME",
+   "recette": "kodachrome-v1",
+   "bloc_envoye_identique": true,
+   "kelvin": 5600,
+   "gains_wb_nef_sur_5600": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "gains_wb_calcules": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "mesure": {
+    "mediane": 5.7,
+    "p90": 6.89
+   },
+   "mesure_sans_objets_satures": {
+    "mediane": 5.63,
+    "p90": 6.7
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.54,
+    "p90": 1.95
+   },
+   "prevu": {
+    "mediane": 5.03,
+    "p90": 6.62
+   },
+   "jpeg_moins_modele": {
+    "dL": 0.34,
+    "teinte_deg": -2.8,
+    "chroma_x": 1.125
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 39,
+     "dE": 4.61,
+     "teinte_deg": 1.4,
+     "chroma_x": 1.55,
+     "dL": 0.7
+    },
+    {
+     "secteur": "vert",
+     "n": 583,
+     "dE": 8.08,
+     "teinte_deg": -17.5,
+     "chroma_x": 1.15,
+     "dL": 3.7
+    },
+    {
+     "secteur": "bleu",
+     "n": 32,
+     "dE": 4.92,
+     "teinte_deg": -9.2,
+     "chroma_x": 0.67,
+     "dL": 2.3
+    },
+    {
+     "secteur": "neutres",
+     "n": 4554,
+     "dE": 5.64,
+     "da": 2.9,
+     "db": 6.6,
+     "dL": -0.2
+    }
+   ]
+  }
+ ]
+}

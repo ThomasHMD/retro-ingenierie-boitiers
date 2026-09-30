@@ -1,0 +1,20 @@
+run 1M
+peek 0x83CED0F8 8
+poke8 0x83CED0FC 0x18
+peek 0x83CED0F8 8
+poke8 0x83CED0FF 0x00
+run 69M
+peek 0x83CED0F8 8
+peek 0x83CE987C 4
+peek 0x83CE98D9 1
+png 00-infos.png
+press menu 4M 30M
+peek 0x83CE987C 4
+png 01-prise-de-vue.png
+press down 4M 16M
+press right 4M 20M
+png 03-programme.png
+press left 4M 16M
+press up 4M 16M
+press right 4M 20M
+png 04-preglage.png

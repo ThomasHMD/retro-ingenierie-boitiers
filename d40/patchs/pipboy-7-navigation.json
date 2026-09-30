@@ -1,0 +1,38 @@
+{
+ "description": "Menu Pip-Boy, étape 7 (après le premier flash) : navigation suivant le bandeau. Sur les onglets, ◀ ▶ changent d'onglet, ▼ entre dans la liste (OK aussi), ▲ ne fait rien ; ▲ sur la première ligne d'une liste de tête remonte au bandeau. Suppose l'étape 5. Deux entrées détournées, code dans la place libre (0x40F000).",
+ "patchs": [
+  {
+   "offset": "0x3cf000",
+   "avant": {
+    "sha256": "0cb297d6669024017917eef4a45229fe47c2b47099a514ee62e89bc4874294a5",
+    "longueur": 132
+   },
+   "apres": {
+    "hex": "9b0c4000aac4e20d9b0c8000aac4e20c9b0c1000aac4e20b9b0c2000aac4e20ae00c9b042000e0099b041000e0069b048000e0039b044000e0008ff017810f028b5b9f8c00131f92970c9fa0b71c9f8d00131f78aadce30e9b0c2000aac4e30a9f8c83cee49c04ccc0cd00cca80ce3029b04400017058ff017810f029f8c0013228e970c"
+   },
+   "texte": "navigation du bandeau : touches remappées au niveau des onglets, ▲ en haut d'une liste de tête vers le bandeau (code dans la place libre)"
+  },
+  {
+   "offset": "0xf1f8a",
+   "avant": {
+    "sha256": "56cf096286cfd11e7c8de96d6809d90f48d47f69342df7a5fa67498c91559911",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f000970c"
+   },
+   "texte": "0x131f8a : entrée détournée vers env_onglets (LDI:32 #…,R12 ; JMP @R12)"
+  },
+  {
+   "offset": "0xf2286",
+   "avant": {
+    "sha256": "6a31b37ab31bcdc08ccdcd2a7cedcc8ac19a08c83e83d01eaefcccf9e7f219c6",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f04c970c"
+   },
+   "texte": "0x132286 : entrée détournée vers env_liste (LDI:32 #…,R12 ; JMP @R12)"
+  }
+ ]
+}

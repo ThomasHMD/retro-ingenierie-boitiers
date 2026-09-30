@@ -1,0 +1,239 @@
+# Voie de secours : CONFIG › Version du firmware (écran 105) › Version/MAJ (écran 106, « Mise à jour ? »),
+# depuis chacun des 4 onglets sur lesquels le menu peut rouvrir. S'arrête sur la question, sans répondre
+# Oui : rien n'est écrit. À chaque étape : écran attendu (pointeur de menu 0x83CEE49C), mode menus,
+# et sur les écrans 105 et 106 des pixels de l'écran Nikon d'origine (colonne des onglets, titre,
+# barre), les mêmes quel que soit le firmware : l'étape 5 (onglets en bandeau) y rend la main au code
+# Nikon sans rien changer. Y du point (x, y) = 0x83BD6510 + 640 y + x.
+# L'émulateur n'a pas de carte : « retour 0xAB5CC 1 » fait répondre à maj_chercherFichiers qu'un
+# BD40….BIN est sur la carte (sans quoi Version/MAJ n'apparaît pas), et 0x83CE950C = 0xC0
+# (accumulateur plein) laisse passer le contrôle de l'alimentation d'ecran105_action.
+# Navigation commune aux deux firmwares (octobre 2026) : « onglet n » pour changer d'onglet, OK pour
+# entrer, ▼ pour descendre jusqu'à Version du firmware (▲ en haut d'une liste de tête ne boucle plus en bas
+# avec la navigation du bandeau).
+#   python3 emulateur/d40emu.py scenario secours --firmware build/v1/BD400111.BIN --style tous
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+retour 0xAB5CC 1               # maj_chercherFichiers : un fichier de mise à jour est sur la carte
+press menu 4M 30M
+expect16 0x83CED23A 0x0005     # mode menus
+# réglages à zéro dans l'émulateur = menus « simples », sans Version du firmware :
+# CONFIG › Menus › Complet (la seule option du menu Pip-Boy)
+press left 4M 16M
+onglet 0x03
+press ok 4M 20M                # entrer dans la liste (▶ chez Nikon ; OK marche avec les deux navigations)
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press right 4M 20M
+expect16 0x83CEE49E 0x733C     # écran Menus
+press ok 4M 30M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG, complète
+# ---------- menu rouvert sur PRISE DE VUE
+press left 4M 16M
+onglet 0x01
+press menu 4M 30M              # sortie du menu
+press menu 4M 30M              # retour : le menu rouvre sur l'onglet mémorisé
+expect16 0x83CED23A 0x0005
+expect8 0x83CE3FE8 0x01
+png secours-1-prise-de-vue.png
+press left 4M 16M              # vers CONFIG, dans l'ordre des onglets du firmware
+onglet 0x03
+press ok 4M 20M                # entrer dans la liste (▶ chez Nikon ; OK marche avec les deux navigations)
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20  # en tête de liste
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M              # ▼ × 13 depuis le haut : Version du firmware (14e entrée sur 16) ; l'écran 105
+press down 4M 16M              # est contrôlé juste après (le couple ligne / défilement dépend du sens)
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x6B2C     # écran 105 : Version du firmware
+expect8 0x83BD9738 0x25    # colonne des onglets de Nikon : case VISU en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83BD926A 0xA4    # titre « Version du firmware » en (90, 18)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Terminé en (100, 380)
+png secours-1-105.png
+press down 4M 16M              # Version/MAJ
+poke8 0x83CE950C 0xC0          # accumulateur plein
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49E 0x6B6C     # écran 106 : « Mise à jour ? »
+expect16 0x83CE6B78 0x0000     # curseur sur Non
+expect16 0x83CE6B7A 0x0000
+expect8 0x83BD9738 0x25    # colonne des onglets en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Non en (100, 380)
+png secours-1-106.png
+press left 4M 20M              # retour sans répondre
+expect16 0x83CEE49E 0x6B2C     # écran 105
+press left 4M 20M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+# ---------- menu rouvert sur VISU
+press left 4M 16M
+onglet 0x00
+press menu 4M 30M              # sortie du menu
+press menu 4M 30M              # retour : le menu rouvre sur l'onglet mémorisé
+expect16 0x83CED23A 0x0005
+expect8 0x83CE3FE8 0x00
+png secours-0-visu.png
+press left 4M 16M              # vers CONFIG, dans l'ordre des onglets du firmware
+onglet 0x03
+press ok 4M 20M                # entrer dans la liste (▶ chez Nikon ; OK marche avec les deux navigations)
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20  # en tête de liste
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M              # ▼ × 13 depuis le haut : Version du firmware (14e entrée sur 16) ; l'écran 105
+press down 4M 16M              # est contrôlé juste après (le couple ligne / défilement dépend du sens)
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x6B2C     # écran 105 : Version du firmware
+expect8 0x83BD9738 0x25    # colonne des onglets de Nikon : case VISU en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83BD926A 0xA4    # titre « Version du firmware » en (90, 18)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Terminé en (100, 380)
+png secours-0-105.png
+press down 4M 16M              # Version/MAJ
+poke8 0x83CE950C 0xC0          # accumulateur plein
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49E 0x6B6C     # écran 106 : « Mise à jour ? »
+expect16 0x83CE6B78 0x0000     # curseur sur Non
+expect16 0x83CE6B7A 0x0000
+expect8 0x83BD9738 0x25    # colonne des onglets en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Non en (100, 380)
+png secours-0-106.png
+press left 4M 20M              # retour sans répondre
+expect16 0x83CEE49E 0x6B2C     # écran 105
+press left 4M 20M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+# ---------- menu rouvert sur PERSO
+press left 4M 16M
+onglet 0x02
+press menu 4M 30M              # sortie du menu
+press menu 4M 30M              # retour : le menu rouvre sur l'onglet mémorisé
+expect16 0x83CED23A 0x0005
+expect8 0x83CE3FE8 0x02
+png secours-2-perso.png
+press left 4M 16M              # vers CONFIG, dans l'ordre des onglets du firmware
+onglet 0x03
+press ok 4M 20M                # entrer dans la liste (▶ chez Nikon ; OK marche avec les deux navigations)
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20  # en tête de liste
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M              # ▼ × 13 depuis le haut : Version du firmware (14e entrée sur 16) ; l'écran 105
+press down 4M 16M              # est contrôlé juste après (le couple ligne / défilement dépend du sens)
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x6B2C     # écran 105 : Version du firmware
+expect8 0x83BD9738 0x25    # colonne des onglets de Nikon : case VISU en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83BD926A 0xA4    # titre « Version du firmware » en (90, 18)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Terminé en (100, 380)
+png secours-2-105.png
+press down 4M 16M              # Version/MAJ
+poke8 0x83CE950C 0xC0          # accumulateur plein
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49E 0x6B6C     # écran 106 : « Mise à jour ? »
+expect16 0x83CE6B78 0x0000     # curseur sur Non
+expect16 0x83CE6B7A 0x0000
+expect8 0x83BD9738 0x25    # colonne des onglets en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Non en (100, 380)
+png secours-2-106.png
+press left 4M 20M              # retour sans répondre
+expect16 0x83CEE49E 0x6B2C     # écran 105
+press left 4M 20M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+# ---------- menu rouvert sur CONFIG
+press left 4M 16M
+onglet 0x03
+press menu 4M 30M              # sortie du menu
+press menu 4M 30M              # retour : le menu rouvre sur l'onglet mémorisé
+expect16 0x83CED23A 0x0005
+expect8 0x83CE3FE8 0x03
+png secours-3-config.png
+press left 4M 16M              # vers CONFIG, dans l'ordre des onglets du firmware
+onglet 0x03
+press ok 4M 20M                # entrer dans la liste (▶ chez Nikon ; OK marche avec les deux navigations)
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20  # en tête de liste
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M              # ▼ × 13 depuis le haut : Version du firmware (14e entrée sur 16) ; l'écran 105
+press down 4M 16M              # est contrôlé juste après (le couple ligne / défilement dépend du sens)
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49C 0x83CE
+expect16 0x83CEE49E 0x6B2C     # écran 105 : Version du firmware
+expect8 0x83BD9738 0x25    # colonne des onglets de Nikon : case VISU en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83BD926A 0xA4    # titre « Version du firmware » en (90, 18)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Terminé en (100, 380)
+png secours-3-105.png
+press down 4M 16M              # Version/MAJ
+poke8 0x83CE950C 0xC0          # accumulateur plein
+press right 4M 30M
+expect16 0x83CED23A 0x0005
+expect16 0x83CEE49E 0x6B6C     # écran 106 : « Mise à jour ? »
+expect16 0x83CE6B78 0x0000     # curseur sur Non
+expect16 0x83CE6B7A 0x0000
+expect8 0x83BD9738 0x25    # colonne des onglets en (40, 20)
+expect8 0x83BF595E 0x4D    # filet vertical de la colonne en (78, 200)
+expect8 0x83C11B74 0xA4    # barre de sélection sur Non en (100, 380)
+png secours-3-106.png
+press left 4M 20M              # retour sans répondre
+expect16 0x83CEE49E 0x6B2C     # écran 105
+press left 4M 20M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG

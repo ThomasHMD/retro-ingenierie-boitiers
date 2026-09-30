@@ -1,0 +1,49 @@
+Fabricant : Nikon Corporation | modèle : D750 | firmware : V1.15 | extension : 0x6
+Commandes annoncées : 60, réglages annoncés : 22
+  0x100E InitiateCapture (déclencher) : OUI
+  0x1014 GetDevicePropDesc : OUI
+  0x1016 SetDevicePropValue : OUI
+  0x90C5 CurveDownload (lire la courbe perso) : non
+  0x90C6 CurveUpload (envoyer la courbe perso) : non
+  0x90CC GetPictCtrlData (lire un Picture Control) : OUI
+  0x90CD SetPictCtrlData (écrire un Picture Control) : OUI
+  0x90CE DelCstPicCtrl (effacer un Picture Control perso) : OUI
+  0x90CF GetPicCtrlCapability : OUI
+  0x9207 InitiateCaptureRecInMedia (déclencher sur la carte) : OUI
+Verdict : le D750 annonce l'écriture des Picture Control par USB.
+  réglage 0x5004 qualité : modifiable | 04 50 02 00 01 01 07 02 07 00 00 01 02 04 05 06 07
+  réglage 0x5005 balance des blancs : modifiable | 05 50 04 00 01 02 00 02 00 02 09 00 02 00 04 00 05 00 06 00 07 00 10 80 …
+  réglage 0x500E mode d'exposition : lecture seule | 0e 50 04 00 00 10 80 18 80 02 0a 00 01 00 02 00 03 00 04 00 10 80 16 80 …
+  réglage 0x500F ISO : modifiable | 0f 50 04 00 01 64 00 64 00 02 1d 00 32 00 40 00 50 00 64 00 7d 00 a0 00 …
+  Picture Control 1, paramètre 0 : 32 octets | 01 00 00 53 54 41 4e 44 41 52 44 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 0c 00 00 04 00
+  Picture Control 1, paramètre 1 : 32 octets | 01 00 00 53 54 41 4e 44 41 52 44 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 0c 00 00 04 00
+  Picture Control 2, paramètre 0 : 32 octets | 02 00 00 4e 45 55 54 52 41 4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00
+  Picture Control 2, paramètre 1 : 32 octets | 02 00 00 4e 45 55 54 52 41 4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 00
+  Picture Control 3, paramètre 0 : 32 octets | 03 00 00 56 49 56 49 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 00 00 04 00
+  Picture Control 3, paramètre 1 : 32 octets | 03 00 00 56 49 56 49 44 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 00 00 04 00
+  Picture Control 4, paramètre 0 : 32 octets | 04 01 00 4d 4f 4e 4f 43 48 52 4f 4d 45 00 00 00 00 00 00 00 00 00 00 00 02 10 00 0c 00 00 04 00
+  Picture Control 4, paramètre 1 : 32 octets | 04 01 00 4d 4f 4e 4f 43 48 52 4f 4d 45 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0c 00 00 04 00
+  Picture Control 5, paramètre 0 : 32 octets | 05 00 00 50 4f 52 54 52 41 49 54 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 08 00 00 00 00
+  Picture Control 5, paramètre 1 : 32 octets | 05 00 00 50 4f 52 54 52 41 49 54 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 08 00 00 00 00
+  Picture Control 6, paramètre 0 : 32 octets | 06 00 00 4c 41 4e 44 53 43 41 50 45 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 00 00 04 00
+  Picture Control 6, paramètre 1 : 32 octets | 06 00 00 4c 41 4e 44 53 43 41 50 45 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 00 00 04 00
+  Picture Control 7, paramètre 0 : 32 octets | 07 00 00 46 4c 41 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00
+  Picture Control 7, paramètre 1 : 32 octets | 07 00 00 46 4c 41 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00
+  Picture Control 201, paramètre 0 : 32 octets | 01 00 01 4b 6f 64 61 63 68 72 6f 6d 65 00 00 00 00 00 00 00 00 00 00 00 00 08 04 10 04 00 04 00
+  Picture Control 201, paramètre 1 : 32 octets | 01 00 01 4b 6f 64 61 63 68 72 6f 6d 65 00 00 00 00 00 00 00 00 00 00 00 00 08 04 0c 04 00 04 00
+  Picture Control 202, paramètre 0 : 32 octets | 04 01 01 54 52 49 2d 58 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 14 0c 00 04 00
+  Picture Control 202, paramètre 1 : 32 octets | 04 01 01 54 52 49 2d 58 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 10 0c 00 00 00
+  Picture Control 203, paramètre 0 : 32 octets | 05 00 01 50 6f 72 74 72 61 20 34 30 30 00 00 00 00 00 00 00 00 00 00 00 00 04 fc 10 00 04 00 00
+  Picture Control 203, paramètre 1 : 32 octets | 05 00 01 50 6f 72 74 72 61 20 34 30 30 00 00 00 00 00 00 00 00 00 00 00 00 04 fc 10 00 04 00 00
+  Picture Control 204, paramètre 0 : 32 octets | 04 01 01 54 52 49 2d 58 20 46 6f 72 65 74 00 00 00 00 00 00 00 00 00 04 00 00 00 14 0c 00 04 00
+  Picture Control 204, paramètre 1 : 32 octets | 04 01 01 54 52 49 2d 58 20 46 6f 72 65 74 00 00 00 00 00 00 00 00 00 04 00 00 00 14 0c 00 04 00
+  Picture Control 205, paramètre 0 : 32 octets | 04 01 01 54 52 49 2d 58 20 50 61 79 73 61 67 65 00 00 00 00 00 00 00 03 00 00 00 14 0c 00 04 00
+  Picture Control 205, paramètre 1 : 32 octets | 04 01 01 54 52 49 2d 58 20 50 61 79 73 61 67 65 00 00 00 00 00 00 00 03 00 00 00 14 0c 00 04 00
+  Picture Control 206, paramètre 0 : 32 octets | 04 01 01 48 50 35 2b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 04 00 fc 00
+  Picture Control 206, paramètre 1 : 32 octets | 04 01 01 48 50 35 2b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 10 04 00 fc 00
+  Picture Control 207, paramètre 0 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  Picture Control 207, paramètre 1 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  Picture Control 208, paramètre 0 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  Picture Control 208, paramètre 1 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  Picture Control 209, paramètre 0 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  Picture Control 209, paramètre 1 : 32 octets | 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00

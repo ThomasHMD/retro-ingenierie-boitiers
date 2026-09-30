@@ -1,0 +1,15 @@
+# Même ligne perso, mais avec l'erreur classique : un LDI:32 dans le créneau de délai du RET:D.
+# Attendu : arrêt sur garde (code 2).
+run 2M
+poke16 0xF3910 0x9B3C
+poke16 0xF3912 0xCCC2
+poke16 0xF3914 0x05C4
+poke16 0xF3916 0x97A4
+poke16 0xF3918 0x9F20     # RET:D
+poke16 0xF391A 0x9F85     # LDI:32 #…,R5 dans le créneau : interdit
+poke16 0xF391C 0x0000
+poke16 0xF391E 0x0050
+poke16 0xC60F6 0x3910
+poke16 0xC60F4 0x9BFC
+poke16 0x3CCC2 576
+appel 0xC60E2

@@ -1,0 +1,13 @@
+watchw 0x40021004 0xC 400
+watchw 0x40030F10 0x1C 40
+watchw 0x40040308 4 40
+run 1M
+poke8 0x83CED0FC 0x18
+poke8 0x83CED0FF 0x00
+run 69M
+png 00-infos.png
+press menu 4M 30M
+png 01-prise-de-vue.png
+press down 4M 16M
+press right 4M 20M
+png 03-programme.png

@@ -1,0 +1,50 @@
+# Étude mise à jour du A : le B arrive-t-il à CONFIG › Version du firmware (105) puis « Mise à jour ? » (106)
+# quand le A est muet ou partiel ? Tiré de emulateur/scenarios/secours.txt (première partie), sans poke de
+# la batterie avant le contrôle de l'écran 106 : 0x83CE950C est le tampon de la commande 0x03 (A → B).
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+png 00-demarrage.png
+peek 0x83CE950C 2              # batterie (commande 0x03 du A)
+peek 0x83CE9769 6              # version du A (commande 0x02 du A)
+peek 0x83CE9823 2              # commande 0x14 (molette)
+peek 0x83CE9839 2              # commande 0x19
+retour 0xAB5CC 1               # maj_chercherFichiers : un fichier de mise à jour est sur la carte
+press menu 4M 30M
+expect16 0x83CED23A 0x0005     # mode menus
+png 01-menu.png
+press left 4M 16M
+onglet 0x03
+press ok 4M 20M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press right 4M 20M
+expect16 0x83CEE49E 0x733C     # écran Menus
+press down 4M 16M              # Simple -> Complet (firmware d'origine)
+press ok 4M 30M
+expect16 0x83CEE49E 0x69AC     # liste CONFIG, complète
+peek 0x83CE69B4 8
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CEE49E 0x6B2C     # écran 105 : Version du firmware
+png 02-ecran105.png
+press down 4M 16M              # Version/MAJ
+press right 4M 30M
+expect16 0x83CEE49E 0x6B6C     # écran 106 : « Mise à jour ? » (sans poke de la batterie)
+png 03-ecran106-sans-batterie.png
+peek 0x83CEE49C 4

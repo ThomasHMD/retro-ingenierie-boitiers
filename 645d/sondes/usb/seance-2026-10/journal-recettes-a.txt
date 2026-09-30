@@ -1,0 +1,25 @@
+Séance 645D 2026-10 +0000
+Batterie 100 %
+Fichiers déjà sur la carte : 4
+Vue 01/04 portra-lumineux
+  mode : 0 → 1
+  contraste : 5 → 4
+  netteté : 5 → 4
+  dossier 100PENTX
+  01-portra-lumineux-THAM3302.PEF 33353 Ko
+Vue 02/04 classic-chrome-naturel-teinte-2
+  mode : 1 → 0
+  teinte : 4 → 2
+  dossier 100PENTX
+  02-classic-chrome-naturel-teinte-2-THAM3303.PEF 33262 Ko
+Vue 03/04 trix-monochrome-contraste-7
+  mode : 0 → 5
+  contraste : 4 → 7
+  dossier 100PENTX
+  03-trix-monochrome-contraste-7-THAM3304.PEF 33612 Ko
+Vue 04/04 retour-naturel-classic-chrome
+  mode : 5 → 0
+  dossier 100PENTX
+  04-retour-naturel-classic-chrome-THAM3305.PEF 33336 Ko
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

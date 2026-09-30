@@ -1,0 +1,215 @@
+{
+ "firmware": "D200B",
+ "description": "D200 2.01, noms de menu : fr:251 -> Chrome, fr:508 -> Chrome`: couleurs sourdes, fr:509 -> et ombres denses., fr:252 -> Positive, fr:510 -> Positive`: diapo, fr:511 -> couleurs vives,, fr:512 -> contraste doux,, fr:513 -> façon film inversible., fr:253 -> FP4, fr:514 -> FP4`: noir et blanc, fr:515 -> fin, tons gris doux,, fr:516 -> type Ilford FP4 Plus., fr:517 -> Ciel clair, vert sombre., fr:217 -> HP5, fr:518 -> HP5`: noir et blanc, fr:519 -> contrasté, noirs denses,, fr:520 -> type Ilford HP5 Plus., fr:254 -> Tri-X. Jamais flashé.",
+ "patchs": [
+  {
+   "offset": "0x209292",
+   "avant": {
+    "sha256": "dd55b419235953912e0cb54b4c836196a63d5c1c1d410e7a7b41c1bdfcf4620f",
+    "longueur": 24
+   },
+   "apres": {
+    "hex": "024302680272026f026d0265ffffffffffffffffffffffff"
+   },
+   "note": "fr id 251 (0x259292) : « Moins nette » -> « Chrome »"
+  },
+  {
+   "offset": "0x207DDA",
+   "avant": {
+    "sha256": "83676f4d8e566c23368fb28f388bb4fb56abc125804140c649de559bb11fb4ec",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024302680272026f026d0265003a02200263026f0275026c026502750272027302200273026f02750272026402650273ffff"
+   },
+   "note": "fr id 508 (0x257DDA) : « Moins nette`: adoucit les » -> « Chrome`: couleurs sourdes »"
+  },
+  {
+   "offset": "0x207DA8",
+   "avant": {
+    "sha256": "caf67aa157a768de59a5c51f790613b539535896b10fd67e326810a5274edd55",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "026502740220026f026d0262027202650273022002640265026e027302650273022effffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 509 (0x257DA8) : « contours et le contraste » -> « et ombres denses. »"
+  },
+  {
+   "offset": "0x126600",
+   "avant": {
+    "sha256": "6acf95f515743e1c0485d811685cbf247857ba14c40318f2142915fe89a666f6",
+    "longueur": 18
+   },
+   "apres": {
+    "hex": "0250026f027302690274026902760265ffff"
+   },
+   "note": "fr id 252 (0x259282) : « Saturée » -> « Positive » (nouveau texte, zone libre)"
+  },
+  {
+   "offset": "0x1F69F0",
+   "avant": {
+    "sha256": "a9cd821bd5b56f325b1a2468ccef06cb0615b07ab58d3ab63dbc8470fd4a41ec",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "00176600"
+   },
+   "note": "pointeur fr:252, 0x259282 -> 0x176600"
+  },
+  {
+   "offset": "0x207D84",
+   "avant": {
+    "sha256": "cf63e9c0004a2a50adb58f76fd16b8fc0750af85317e59fb13653155ee2a811f",
+    "longueur": 36
+   },
+   "apres": {
+    "hex": "0250026f027302690274026902760265003a02200264026902610270026fffffffffffff"
+   },
+   "note": "fr id 510 (0x257D84) : « Saturée`: augmente » -> « Positive`: diapo »"
+  },
+  {
+   "offset": "0x207D5C",
+   "avant": {
+    "sha256": "e0380b9fe241b202ea68cb13be9e77b41c64b4153b470caaf3c195e0fa402743",
+    "longueur": 40
+   },
+   "apres": {
+    "hex": "0263026f0275026c0265027502720273022002760269027602650273022cffffffffffffffffffff"
+   },
+   "note": "fr id 511 (0x257D5C) : « le contraste et la  » -> « couleurs vives, »"
+  },
+  {
+   "offset": "0x207D32",
+   "avant": {
+    "sha256": "8e1cd3740998a1c8f6aab6e0d3c7163ce0dd5292e151e9c83abf7c3d1f0f7f93",
+    "longueur": 42
+   },
+   "apres": {
+    "hex": "0263026f026e02740272026102730274026502200264026f02750278022cffffffffffffffffffffffff"
+   },
+   "note": "fr id 512 (0x257D32) : « saturation pour des  » -> « contraste doux, »"
+  },
+  {
+   "offset": "0x207D02",
+   "avant": {
+    "sha256": "f762ae0ec0443ec69bb073b56bf783c8abd0b21e15514b4feea33cad40429923",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "026602610285026f026e022002660269026c026d02200269026e027602650272027302690262026c0265022effffffff"
+   },
+   "note": "fr id 513 (0x257D02) : « images nettes et vives. » -> « façon film inversible. »"
+  },
+  {
+   "offset": "0x209268",
+   "avant": {
+    "sha256": "daf5745e060070347eeed18a6cc624d57ab67707c88b9d1ad64628dae45df1a1",
+    "longueur": 26
+   },
+   "apres": {
+    "hex": "024602500234ffffffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 253 (0x259268) : « Plus saturée » -> « FP4 »"
+  },
+  {
+   "offset": "0x207CD4",
+   "avant": {
+    "sha256": "c46f2320a5c2a641733c6cfc457ebc982849649f5581838334d2f72245b83489",
+    "longueur": 46
+   },
+   "apres": {
+    "hex": "024602500234003a0220026e026f0269027202200265027402200262026c0261026e0263ffffffffffffffffffff"
+   },
+   "note": "fr id 514 (0x257CD4) : « Plus saturée`: augmente » -> « FP4`: noir et blanc »"
+  },
+  {
+   "offset": "0x207CA4",
+   "avant": {
+    "sha256": "85f1f382d84a11f4660bc7935aae982a73af762e75a891fc3691147005ed19b6",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "02660269026e022c02200274026f026e02730220026702720269027302200264026f02750278022cffffffffffffffff"
+   },
+   "note": "fr id 515 (0x257CA4) : « contraste et saturation » -> « fin, tons gris doux, »"
+  },
+  {
+   "offset": "0x207C76",
+   "avant": {
+    "sha256": "95763ad14f4a43d474b705050f0edd289a6e459181c49c898c62149a2fa2bb42",
+    "longueur": 46
+   },
+   "apres": {
+    "hex": "027402790270026502200249026c0266026f02720264022002460250023402200250026c02750273022effffffff"
+   },
+   "note": "fr id 516 (0x257C76) : « pour des images encore » -> « type Ilford FP4 Plus. »"
+  },
+  {
+   "offset": "0x207C44",
+   "avant": {
+    "sha256": "e73c4beb585bf10e823e92317df9e433834002d8738e91c78fbe6e843468938c",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024302690265026c02200263026c026102690272022c0220027602650272027402200273026f026d026202720265022effff"
+   },
+   "note": "fr id 517 (0x257C44) : « plus nettes, plus vives. » -> « Ciel clair, vert sombre. »"
+  },
+  {
+   "offset": "0x20955A",
+   "avant": {
+    "sha256": "6ad008bd3682e3ba6fd94e44fe81f17447bb80dc39f2c9c20222ef65d8542e26",
+    "longueur": 18
+   },
+   "apres": {
+    "hex": "024802500235ffffffffffffffffffffffff"
+   },
+   "note": "fr id 217 (0x25955A) : « Portrait » -> « HP5 »"
+  },
+  {
+   "offset": "0x207C12",
+   "avant": {
+    "sha256": "965a64e606f2fa803ff702cd76a0efbdffc765074489d940ab8f847b6c07398b",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024802500235003a0220026e026f0269027202200265027402200262026c0261026e0263ffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 518 (0x257C12) : « Portrait`: contraste doux » -> « HP5`: noir et blanc »"
+  },
+  {
+   "offset": "0x207BE0",
+   "avant": {
+    "sha256": "94e2bf4e225d5f2e841e46f7e1c343196770f29a1614ce6eea3ab4e8ff3e7f2a",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "0263026f026e027402720261027302740287022c0220026e026f026902720273022002640265026e027302650273022cffff"
+   },
+   "note": "fr id 519 (0x257BE0) : « pour portraits naturels, » -> « contrasté, noirs denses, »"
+  },
+  {
+   "offset": "0x207BB0",
+   "avant": {
+    "sha256": "4b4711cb434ca59f5e7fb2b3404d0e8b8f5e787cd5a2d9e685b980b80c6aa4ea",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "027402790270026502200249026c0266026f02720264022002480250023502200250026c02750273022effffffffffff"
+   },
+   "note": "fr id 520 (0x257BB0) : « effet trois dimensions. » -> « type Ilford HP5 Plus. »"
+  },
+  {
+   "offset": "0x20924C",
+   "avant": {
+    "sha256": "f6f53c0939530147f2b0b2cdf5ec639581a4c3dea307f9bbbf0b81a5a8a0c8a6",
+    "longueur": 28
+   },
+   "apres": {
+    "hex": "025402720269022d0258ffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 254 (0x25924C) : « Noir et blanc » -> « Tri-X »"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "description": "TEST D'ÉMULATEUR, NE PAS FLASHER. crochet « ldi:32 #0x3E7000, r12 ; jmp @r12 » posé en 0x143B4C, dans ecran014_entree (0x143B46), fonction d'écran d'« Optimiser l'image » appelée dès que le menu Prise de vue s'affiche (vérifié dans l'émulateur). Le code ajouté (espace libre 0x3E7000) incrémente un compteur 32 bits en RAM 0x83D80000 (page que l'émulateur ne voit jamais servir ; rien ne prouve qu'elle est libre dans le boîtier), refait les deux instructions écrasées et revient en 0x143B58.",
+ "patchs": [
+  {
+   "offset": "0x103b4c",
+   "avant": {
+    "sha256": "ba4112404e72cdfa72ac8b80713c29f936402bb1f7f17ce1365d9fbab7c70ec6",
+    "longueur": 12
+   },
+   "apres": {
+    "hex": "9f8c003e7000970c9fa09fa0"
+   }
+  },
+  {
+   "offset": "0x3a7000",
+   "avant": {
+    "sha256": "af9613760f72635fbdb44a5a0a63c39f12af30f950a6ee5c971be188e89c4051",
+    "longueur": 32
+   },
+   "apres": {
+    "hex": "9f8083d800000401a41114019f8a83ce54ec9f8883ce53ec9f8c00143b58970c"
+   }
+  }
+ ]
+}

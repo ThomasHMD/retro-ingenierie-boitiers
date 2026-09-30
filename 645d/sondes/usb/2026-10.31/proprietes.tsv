@@ -1,0 +1,64 @@
+mode	code	réponse	type	accès	défaut	courant	forme
+annoncé	0x5001	0x2001	UINT8	R	100	67	plage 0 à 100 pas 1
+annoncé	0x5011	0x2001	STR	R	« 20100101T000000 »	« 2026-10 »	
+annoncé	0xD406	0x2001	STR	RW	«  »	«  »	
+annoncé	0xD407	0x2001	UINT32	R	0	1	
+annoncé	0xD303	0x2001	UINT8	R	0	1	
+constructeur	0x5001	0x2001	UINT8	R	100	67	plage 0 à 100 pas 1
+constructeur	0x5011	0x2001	STR	RW	« 20100101T000000 »	« 2026-10 »	
+constructeur	0xD406	0x2001	STR	RW	«  »	«  »	
+constructeur	0xD407	0x2001	UINT32	R	0	1	
+constructeur	0xD303	0x2001	UINT8	R	0	1	
+constructeur attendu	0x5004	0x2001	UINT8	RW	2	2	liste 0 1 2
+constructeur attendu	0x5005	0x2001	UINT16	R	4354	512	
+constructeur attendu	0x5007	0x2001	UINT16	R	258	0	
+constructeur attendu	0x5008	0x2001	UINT32	R	0	7500	
+constructeur attendu	0x500A	0x2001	UINT16	R	0	32770	liste 1 32769 32770
+constructeur attendu	0x500B	0x2001	UINT16	R	2	32769	liste 2 4 32769
+constructeur attendu	0x500C	0x2001	UINT16	R	2306	256	
+constructeur attendu	0x500D	0x2001	UINT32	R	16779520	16778240	forme 128
+constructeur attendu	0x500E	0x2001	UINT16	R	258	0	
+constructeur attendu	0x500F	0x2001	UINT16	R	256	0	
+constructeur attendu	0x5010	0x2001	INT16	R	256	0	
+constructeur attendu	0x5012	0x2001	UINT32	R	256	16778240	forme 128
+constructeur attendu	0x5013	0x2001	UINT16	R	258	0	
+constructeur attendu	0x5014	0x2001	UINT8	RW	4	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0x5015	0x2001	UINT8	RW	4	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0x501C	0x2001	UINT16	R	258	0	
+constructeur attendu	0x501E	0x2001	STR	RW	«  »	« Thomas Hammoudi »	
+constructeur attendu	0x501F	0x2001	STR	RW	«  »	« Thomas Hammoudi »	
+constructeur attendu	0xD001	0x2001	AUINT32	R	[]	[77320 487 18947872 18947872]	
+constructeur attendu	0xD002	0x2001	AUINT32	R	[]	[2 4 33554944 65011712 0 2 0]	
+constructeur attendu	0xD003	0x2001	AUINT32	R	[]	[2 4 33554944 65011712 0 2 0 0 255 0 0 0 256 1 60 40 10 0 10 0 3 10 0 0 0 0 0 100 1600 0 7 7 1 0 0 0 0 4 4 4 0 1 1 1 0 2 3 0 2 0 0 0 0 0 5 1 0 0 0 1 1 0 5600 4 0 1 0 16 10 40 10 0 10 0 10 1 4000 1600 3 0 22 28 10 220 10 0 0 0 10 0 0 576 880 834 0 0 904 0 139 0 0 1 7500 100 20 4294967281 0 240 63]	
+constructeur attendu	0xD004	0x2001	AUINT32	R	[]	[139 0 0 1 7500 100 20 4294967281]	
+constructeur attendu	0xD005	0x2001	AUINT32	R	[]	[0 240 63]	
+constructeur attendu	0xD006	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD011	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD012	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD013	0x2001	UINT32	RW	0	0	liste 0 1 2 3 4 5 6 7
+constructeur attendu	0xD014	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD015	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD016	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD017	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD01A	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD01B	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD01F	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD020	0x2001	UINT8	RW	0	0	liste 0 1 2 3 4 5 6 7
+constructeur attendu	0xD021	0x2001	UINT8	RW	4	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0xD022	0x2001	UINT8	RW	4	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0xD023	0x2001	UINT8	RW	4	0	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0xD024	0x2001	UINT8	RW	0	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0xD025	0x2001	UINT8	RW	4	4	liste 0 1 2 3 4 5 6 7 8
+constructeur attendu	0xD026	0x2001	UINT8	RW	0	0	liste 0 1
+constructeur attendu	0xD027	0x2001	UINT8	RW	0	0	liste 0 1
+constructeur attendu	0xD028	0x2001	UINT8	RW	0	0	liste 0 1
+constructeur attendu	0xD029	0x2001	UINT32	RW	0	0	liste 0 1
+constructeur attendu	0xD02A	0x200a					
+constructeur attendu	0xD02B	0x200a					
+constructeur attendu	0xD02C	0x200a					
+constructeur attendu	0xD02D	0x200a					
+constructeur attendu	0xD02E	0x200a					
+constructeur attendu	0xD02F	0x200a					
+constructeur attendu	0xD030	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD031	0x2001	type 0x0 inconnu				
+constructeur attendu	0xD032	0x2001	STR	RW	« IMGP »	« THAM »	

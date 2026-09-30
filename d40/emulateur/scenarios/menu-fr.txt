@@ -1,0 +1,17 @@
+# Menus en français : la langue est le champ bits 3-6 de 0x83CED0FC (FUN_0013ef26 -> langue_choisir) ;
+# codes vus à l'écran dans l'émulateur : 0 allemand, 1 anglais (défaut), 2 espagnol, 3 français, 4 italien. On l'écrit avant que la tâche d'interface ne démarre (~1,8 M).
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+press menu 4M 30M
+png 1-menu-prise-de-vue.png
+press left 4M 16M
+press up 4M 16M
+press right 4M 20M
+png 2-menu-visualisation.png
+press left 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 20M
+png 3-menu-configuration.png
