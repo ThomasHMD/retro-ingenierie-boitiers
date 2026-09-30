@@ -1,4 +1,4 @@
-# Nikon D200 : firmware modifié, six rendus en JPEG direct
+# Nikon D200 : firmware modifié, cinq rendus en JPEG direct
 
 Même démarche que pour le D40 : le firmware B 2.01 est cartographié, émulé, puis modifié **par données seulement** (tables de rendu, courbes, textes du menu), à partir du fichier officiel de Nikon. **V2 flashée et validée par l'auteur sur son boîtier (octobre 2026).**
 
