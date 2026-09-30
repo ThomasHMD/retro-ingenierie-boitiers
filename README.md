@@ -179,4 +179,6 @@ Prérequis : Python 3.10 ou plus (`pip install -r requirements.txt`) ; pour le D
 
 Mon travail (textes, outils, recettes, patchs) est sous **[CC BY-NC-SA 4.0](LICENSE)** : vous pouvez le reprendre et le modifier en citant l'auteur, sans usage commercial, et en partageant vos versions aux mêmes conditions. Exceptions, qui gardent la licence de leur origine : l'émulateur du D40 (`d40/emulateur/java/` et la configuration du désassembleur), bâti sur nikon-firmware-tools, est sous GPL-3.0 ; un script Ghidra repris de ghidra-fr60 est sous Apache 2.0. Détail : [`LICENCES-TIERS.md`](LICENCES-TIERS.md).
 
+Les photos (les vues de `vues/` et l'image d'aperçu du dépôt) ne sont pas sous cette licence : © Thomas Hammoudi, tous droits réservés. Les captures de l'émulateur du D40 et les analyses (mesures, tableaux, courbes) restent sous CC BY-NC-SA 4.0.
+
 Nikon, D40, D750, Picture Control, Fujifilm, Classic Chrome, Kodak, Kodachrome, Tri-X, Portra, Ilford, HP5, FP4, Hasselblad et Ricoh sont des marques de leurs propriétaires. Ce projet n'est lié à aucun d'eux.
