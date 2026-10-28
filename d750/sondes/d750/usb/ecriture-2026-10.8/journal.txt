@@ -1,0 +1,5 @@
+SIMULATION : rien ne sera écrit (ajouter --ecrire pour écrire)
+Modèle : D750 | firmware : V1.15
+C-8 avant : vide
+Bloc à envoyer : « HP5 V1 », base 4, 610 octets, avec courbe perso
+Simulation : enverrait SetPictCtrlData 0x90CD (208, 0) avec ces 610 octets.

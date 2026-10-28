@@ -1,0 +1,4 @@
+0xD021 : «  » → 0x2001 OK → relu « KODACHROME 6250K »
+0xD022 : «  » → 0x2001 OK → relu « TRI-X 10000K »
+0xD023 : «  » → 0x2001 OK → relu « PORTRA 400 5600K »
+Terminé.

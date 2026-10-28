@@ -1,0 +1,510 @@
+{
+ "gains_nef": {
+  "5000": [
+   0.9439,
+   1.0,
+   1.089
+  ],
+  "10000": [
+   1.3075,
+   1.0,
+   0.8037
+  ]
+ },
+ "calcules": [
+  {
+   "nom": "KODACHROME V1",
+   "profil": "KODACHROME",
+   "base": "NEUTRE",
+   "saturation": -2.0,
+   "teinte": -3.0,
+   "filtre": null,
+   "kelvin": 5000,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.66,
+     "p90": 4.17
+    },
+    "peau": {
+     "mediane": 0.87,
+     "p90": 1.27
+    },
+    "mire": {
+     "mediane": 2.69,
+     "p90": 8.54
+    }
+   },
+   "score": 3.238
+  },
+  {
+   "nom": "CLASSIC CHROME V1",
+   "profil": "CLASSIC CHROME",
+   "base": "STANDARD",
+   "saturation": -1.0,
+   "teinte": -2.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 1.28,
+     "p90": 2.55
+    },
+    "peau": {
+     "mediane": 0.93,
+     "p90": 1.33
+    },
+    "mire": {
+     "mediane": 2.26,
+     "p90": 7.19
+    }
+   },
+   "score": 2.413
+  },
+  {
+   "nom": "CLASSIC NEG V1",
+   "profil": "CLASSIC NEG",
+   "base": "STANDARD",
+   "saturation": 0.0,
+   "teinte": 0.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 4.35,
+     "p90": 6.29
+    },
+    "peau": {
+     "mediane": 1.59,
+     "p90": 2.71
+    },
+    "mire": {
+     "mediane": 4.77,
+     "p90": 10.21
+    }
+   },
+   "score": 5.171
+  },
+  {
+   "nom": "POSITIVE V1",
+   "profil": "POSITIVE",
+   "base": "STANDARD",
+   "saturation": 2.0,
+   "teinte": -2.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.51,
+     "p90": 4.15
+    },
+    "peau": {
+     "mediane": 1.15,
+     "p90": 2.23
+    },
+    "mire": {
+     "mediane": 2.61,
+     "p90": 8.52
+    }
+   },
+   "score": 3.332
+  },
+  {
+   "nom": "PORTRA 400 V1",
+   "profil": "PORTRA",
+   "base": "STANDARD",
+   "saturation": 2.0,
+   "teinte": 2.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 3.36,
+     "p90": 8.33
+    },
+    "peau": {
+     "mediane": 2.17,
+     "p90": 2.61
+    },
+    "mire": {
+     "mediane": 5.1,
+     "p90": 10.53
+    }
+   },
+   "score": 5.332
+  },
+  {
+   "nom": "HASSELBLAD V1",
+   "profil": "HASSELBLAD",
+   "base": "STANDARD",
+   "saturation": 1.0,
+   "teinte": -3.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.31,
+     "p90": 3.87
+    },
+    "peau": {
+     "mediane": 1.07,
+     "p90": 1.4
+    },
+    "mire": {
+     "mediane": 4.14,
+     "p90": 6.58
+    }
+   },
+   "score": 3.494
+  },
+  {
+   "nom": "TRI-X V1",
+   "profil": "TRI-X",
+   "base": "MONOCHROME",
+   "saturation": null,
+   "teinte": null,
+   "filtre": "AUCUN",
+   "kelvin": 10000,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.44,
+     "p90": 1.48
+    },
+    "peau": {
+     "mediane": 0.45,
+     "p90": 0.93
+    },
+    "mire": {
+     "mediane": 1.06,
+     "p90": 5.06
+    }
+   },
+   "score": 1.272
+  },
+  {
+   "nom": "HP5 V1",
+   "profil": "HP5",
+   "base": "MONOCHROME",
+   "saturation": null,
+   "teinte": null,
+   "filtre": "AUCUN",
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.1,
+     "p90": 7.71
+    },
+    "peau": {
+     "mediane": 0.84,
+     "p90": 1.93
+    },
+    "mire": {
+     "mediane": 3.14,
+     "p90": 10.86
+    }
+   },
+   "score": 3.735
+  },
+  {
+   "nom": "FP4 V1",
+   "profil": "FP4",
+   "base": "MONOCHROME",
+   "saturation": null,
+   "teinte": null,
+   "filtre": "AUCUN",
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 1.89,
+     "p90": 5.34
+    },
+    "peau": {
+     "mediane": 0.58,
+     "p90": 1.59
+    },
+    "mire": {
+     "mediane": 2.9,
+     "p90": 12.52
+    }
+   },
+   "score": 3.411
+  },
+  {
+   "nom": "KODACHROME 5600K",
+   "profil": "KODACHROME",
+   "base": "PAYSAGE",
+   "saturation": -3.0,
+   "teinte": -3.0,
+   "filtre": null,
+   "kelvin": 5600,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 4.54,
+     "p90": 5.96
+    },
+    "peau": {
+     "mediane": 1.23,
+     "p90": 1.89
+    },
+    "mire": {
+     "mediane": 4.31,
+     "p90": 8.41
+    }
+   },
+   "score": 4.715
+  }
+ ],
+ "avec_gains_nef": [
+  {
+   "nom": "KODACHROME V1",
+   "profil": "KODACHROME",
+   "base": "NEUTRE",
+   "saturation": -2.0,
+   "teinte": -3.0,
+   "filtre": null,
+   "kelvin": 5000,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.52,
+     "p90": 4.07
+    },
+    "peau": {
+     "mediane": 0.86,
+     "p90": 1.23
+    },
+    "mire": {
+     "mediane": 2.58,
+     "p90": 8.63
+    }
+   },
+   "score": 3.147
+  },
+  {
+   "nom": "TRI-X V1",
+   "profil": "TRI-X",
+   "base": "MONOCHROME",
+   "saturation": null,
+   "teinte": null,
+   "filtre": "AUCUN",
+   "kelvin": 10000,
+   "vert_magenta": null,
+   "ecarts": {
+    "scene": {
+     "mediane": 1.19,
+     "p90": 2.78
+    },
+    "peau": {
+     "mediane": 2.86,
+     "p90": 3.19
+    },
+    "mire": {
+     "mediane": 1.56,
+     "p90": 7.21
+    }
+   },
+   "score": 2.968
+  }
+ ],
+ "trix_v2": [
+  {
+   "filtre": "VERT",
+   "kelvin": 10000,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.31,
+     "p90": 1.21
+    },
+    "peau": {
+     "mediane": 0.59,
+     "p90": 1.47
+    },
+    "mire": {
+     "mediane": 0.78,
+     "p90": 3.33
+    }
+   },
+   "score": 1.061
+  },
+  {
+   "filtre": "AUCUN",
+   "kelvin": 10000,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.45,
+     "p90": 1.54
+    },
+    "peau": {
+     "mediane": 0.48,
+     "p90": 0.91
+    },
+    "mire": {
+     "mediane": 0.98,
+     "p90": 5.11
+    }
+   },
+   "score": 1.267
+  },
+  {
+   "filtre": "VERT",
+   "kelvin": 5600,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.48,
+     "p90": 2.2
+    },
+    "peau": {
+     "mediane": 0.85,
+     "p90": 1.6
+    },
+    "mire": {
+     "mediane": 0.98,
+     "p90": 5.17
+    }
+   },
+   "score": 1.518
+  },
+  {
+   "filtre": "AUCUN",
+   "kelvin": 5600,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.64,
+     "p90": 2.2
+    },
+    "peau": {
+     "mediane": 0.62,
+     "p90": 1.49
+    },
+    "mire": {
+     "mediane": 1.34,
+     "p90": 5.92
+    }
+   },
+   "score": 1.667
+  },
+  {
+   "filtre": "JAUNE",
+   "kelvin": 5600,
+   "ecarts": {
+    "scene": {
+     "mediane": 0.84,
+     "p90": 2.81
+    },
+    "peau": {
+     "mediane": 1.15,
+     "p90": 1.43
+    },
+    "mire": {
+     "mediane": 0.85,
+     "p90": 5.63
+    }
+   },
+   "score": 1.769
+  },
+  {
+   "filtre": "JAUNE",
+   "kelvin": 10000,
+   "ecarts": {
+    "scene": {
+     "mediane": 1.21,
+     "p90": 3.57
+    },
+    "peau": {
+     "mediane": 1.68,
+     "p90": 2.17
+    },
+    "mire": {
+     "mediane": 1.07,
+     "p90": 8.3
+    }
+   },
+   "score": 2.49
+  },
+  {
+   "filtre": "ORANGE",
+   "kelvin": 5600,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.56,
+     "p90": 6.87
+    },
+    "peau": {
+     "mediane": 3.13,
+     "p90": 4.0
+    },
+    "mire": {
+     "mediane": 2.14,
+     "p90": 15.25
+    }
+   },
+   "score": 4.787
+  },
+  {
+   "filtre": "ORANGE",
+   "kelvin": 10000,
+   "ecarts": {
+    "scene": {
+     "mediane": 2.71,
+     "p90": 7.07
+    },
+    "peau": {
+     "mediane": 3.32,
+     "p90": 4.13
+    },
+    "mire": {
+     "mediane": 2.32,
+     "p90": 16.14
+    }
+   },
+   "score": 5.062
+  },
+  {
+   "filtre": "ROUGE",
+   "kelvin": 10000,
+   "ecarts": {
+    "scene": {
+     "mediane": 4.95,
+     "p90": 11.34
+    },
+    "peau": {
+     "mediane": 4.24,
+     "p90": 6.36
+    },
+    "mire": {
+     "mediane": 4.55,
+     "p90": 23.57
+    }
+   },
+   "score": 8.019
+  },
+  {
+   "filtre": "ROUGE",
+   "kelvin": 5600,
+   "ecarts": {
+    "scene": {
+     "mediane": 5.49,
+     "p90": 12.52
+    },
+    "peau": {
+     "mediane": 4.16,
+     "p90": 6.99
+    },
+    "mire": {
+     "mediane": 4.65,
+     "p90": 25.69
+    }
+   },
+   "score": 8.533
+  }
+ ]
+}

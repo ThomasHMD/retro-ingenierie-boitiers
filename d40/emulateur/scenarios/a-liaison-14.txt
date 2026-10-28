@@ -1,0 +1,19 @@
+# Palier 2, sens A→B : le A envoie la commande 0x14 (13 octets ; quartet haut du 1er octet = mode de la
+# molette côté B, 0x83CE9823). Table du A : variable 0x3D2B7, tampon d'émission 0x3E59D.
+eeprom valide
+entree 0x09 0x02
+fakeb inverser 1 controle 0
+run 3M
+finb
+poke8 0x3D2B7 0x30        # un octet reconnaissable dans la variable de la commande 0x14
+poke8 0x3D2B8 0x5A
+poke8 0x3D212 0x10        # commande 0x14 (= 20 : octet 2, bit 4) à envoyer au B
+run 3M
+finb
+peek 0x3E308 18           # trame préparée par le A : requête, longueur, 13 octets, contrôle
+peek 0x3D210 8
+expect8 0x3D212 0         # plus rien à envoyer : le B a accusé réception (contrôle 0xFF au dernier octet)
+expect8 0x3E308 0x14      # trame : requête 0x14
+expect8 0x3E309 0x0D      # 13 octets
+expect8 0x3E30A 0x30
+expect8 0x3E317 0x54      # contrôle : 0x14 + 0x0D + 0x30 + 0x5A + 0x54 = 0xFF

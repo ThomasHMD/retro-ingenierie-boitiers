@@ -1,0 +1,24 @@
+# Écran d'infos Graphique, après la photo du boîtier (octobre 2026, étape 8 et palette de l'étape 1) :
+# chiffres allumés en vert et fantômes sombres (contrôlés dans pipboy.txt), mode Régler (touche info)
+# et sa liste de choix sur fond noir, case choisie en vert. Y du point (x, y) = 0x83BD6510 + 640 y + x.
+#   python3 emulateur/d40emu.py scenario ecran-infos --firmware build/v1/BD400111.BIN --style tous
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+png 1-infos.png
+expect8 0x83BF5FEA 0xA4        # chiffre allumé de l'ouverture, point (474, 202)
+expect8 0x83BF8802 0x25        # fantôme de l'ouverture, point (498, 218)
+press info 4M 30M              # mode Régler, sur Qualité
+png 2-regler.png
+expect8 0x83BD7F3C 0x10        # fond de l'écran, point (300, 10) : noir (Nikon : gris clair 0x97)
+expect8 0x83BF5A3C 0x10        # panneau assombri, point (300, 200) : noir (Nikon : gris 0x98)
+expect8 0x83BD9936 0xA4        # case choisie (RAW), point (550, 20) : vert (Nikon : jaune 0x86)
+expect8 0x83C1CF74 0xA4        # barre du bas, point (100, 452) : vert
+press down 4M 20M
+press down 4M 20M              # Balance des blancs
+png 3-regler-bas.png
+press ok 4M 30M                # liste des choix
+png 4-choix.png
+expect8 0x83BD9940 0x10        # fond de la colonne, point (560, 20) : noir (Nikon : gris clair 0xAC)
+expect8 0x83BE475A 0xA4        # case choisie (AUTO), point (330, 90) : vert
+expect8 0x83BF5B54 0x72        # colonne pendant le choix, point (580, 200) : vert doux (Nikon : gris 0x8C)

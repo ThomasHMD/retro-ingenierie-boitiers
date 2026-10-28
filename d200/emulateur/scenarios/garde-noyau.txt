@@ -1,0 +1,6 @@
+# Garde : FUN_0005d444 (l'appelant réel d'isp_chargerPuce) attend un drapeau du noyau (wai_flg) ; le noyau n'étant
+# pas émulé, l'appel doit s'arrêter sur la garde (code 2). C'est pourquoi les scénarios appellent isp_chargerPuce
+# (0x5D716) directement.
+poke8 0x97F0004D 0x0C
+appel 0x5D616 0x97F00000 1
+appel 0x5D444 0x97F00000 0x97F02000 0

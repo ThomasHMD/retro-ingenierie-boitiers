@@ -1,0 +1,230 @@
+adresse	nom	type	confiance	preuve
+0x0C0F90	reset	fonction	vérifié	vecteur INT #0 de la table 0xEFC00 ; init. bus, BSS, copie ROM→RAM, appel 0xC1610
+0x0C1610	demarrage_suite	fonction	probable	appelée en fin de reset
+0x0EFC00	tblVecteurs	donnee	vérifié	256 vecteurs, INT #n à 0xEFC00+0x3FC-4n
+0x0C1586	krn_int40	fonction	vérifié	vecteur INT #0x40 : appels système REALOS, numéro négatif dans R12
+0x0C157E	krn_tblAppels	donnee	vérifié	demi-mots signés, cible = 0xC157E + table[R12]
+0x0C275E	krn_objetParId	fonction	vérifié	FP = descripteur {u16 nombre, u16 taille, éléments} ; R4 = id
+0x0EA868	cfg_taches	donnee	vérifié	24 tâches × 28 octets : TCB, id/prio, ?, attributs, entrée, haut de pile, ?
+0x0EAB28	cfg_semaphores	donnee	vérifié	29 sémaphores × 16 octets
+0x0EACFC	cfg_drapeaux	donnee	vérifié	15 drapeaux d'événements × 16 octets
+0x0EADF0	cfg_boites	donnee	vérifié	0 boîte aux lettres
+0x0EADF4	cfg_pools	donnee	vérifié	0 pool variable
+0x0EADF8	cfg_poolsFixes	donnee	vérifié	0 pool fixe
+0x0EADFC	cfg_cycliques	donnee	vérifié	0 gestionnaire cyclique
+0x0EAE00	cfg_alarmes	donnee	vérifié	0 alarme
+0x044CCC	crc16	fonction	vérifié	CRC16 par table (0xC3A88) ; résultat 0 sur fichier + CRC = valide
+0x0C3A88	crc16_table	donnee	vérifié	256 demi-mots, polynôme 0x1021
+0x0AB5CC	maj_chercherFichiers	fonction	vérifié	cherche BD40????.BIN puis AD40????.BIN à la racine (0xABE82)
+0x0ABE82	fichier_chercherMotif	fonction	probable	appelée avec « BD40????.BIN » et une adresse de résultat
+0x0ABBFE	majB_ouvrir	fonction	vérifié	taille du fichier = 0x3D0000 exigée, ouvre A:\<nom>
+0x0ABC6E	majA_ouvrir	fonction	probable	branche AD40 de 0xAB5CC
+0x0ABCE4	majB_verifierSignature	fonction	vérifié	lit le pointeur 0xEFBF4 → « Q330FirmwareSignature », puis la version (pointeur 0xEFBF0)
+0x0AB88E	maj_executer	fonction	vérifié	lit le fichier en RAM 0x81000000, CRC (0x44CCC), puis flasheur 0x6B430
+0x0AB97C	maj_lireFichier	fonction	vérifié	lit <taille> octets du fichier à 0x81000000
+0x0EFBF0	ptr_version	donnee	vérifié	pointeur vers « Ver.1.11A D40 … »
+0x0EFBF4	ptr_signature	donnee	vérifié	pointeur vers « Q330FirmwareSignature » (Q330 = nom de code du D40)
+0x0E4BB8	nom_majA	donnee	vérifié	« AD40????.BIN »
+0x0E4BC8	nom_majB	donnee	vérifié	« BD40????.BIN »
+0x06B40C	flash_effacer	fonction	vérifié	saute à 0x83CE8954 (routine en RAM)
+0x06B41E	flash_ecrire	fonction	vérifié	saute à 0x83CE89E0 (routine en RAM)
+0x06B430	maj_flasher	fonction	vérifié	saute à 0x83CE86CE = copie RAM de 0x15CBE2
+0x15CBE2	flasheur	fonction	vérifié	efface et programme 0x40000-0xEFFFF, 0x120000-0x15FFFF, 0x1B0000-0x40FFFF, 0x160000 sous condition
+0x15CE68	flasheur_effacer	fonction	vérifié	(adresse, longueur)
+0x15CEF4	flasheur_programmer	fonction	vérifié	(adresse flash, source RAM, longueur)
+0x0AB3D8	fondEcran_enregistrer	fonction	vérifié	redimensionne en 640×480, encode en JPEG, écrit en flash 0x160000 avec l'en-tête NIKOND40_WP_USER
+0x0E4B84	ptr_fondEcranFlash	donnee	vérifié	0x160000 (en-tête 16 octets) ; 0xE4B88 = 0x160010 (JPEG)
+0x0E4B9C	fondEcran_enteteUser	donnee	vérifié	« NIKOND40_WP_USER »
+0x160000	fondEcran_flash	donnee	vérifié	« NIKOND40_WPVER01 » + JPEG d'usine (16 Ko)
+0x09B14E	langue_choisir	fonction	vérifié	pose 0x83CE3FF8/F4/F0 = tables A/B/C de la langue
+0x15C7A4	tblLangues	donnee	vérifié	15 langues × 3 pointeurs (A messages, B aides, C titres ; les libellés D suivent C de 31 entrées) ; en RAM à 0x83CE8290
+0x07C50E	texte_afficherLignes	fonction	probable	reçoit (début, fin) d'une chaîne A/B/C/D
+0x332888	tblMatricesCamRgb	donnee	vérifié	18 matrices 3×3, entiers 16 bits signés, échelle 512
+0x33270E	tblMatricesRgbYcc	donnee	vérifié	21 matrices RGB→YCbCr, échelle 256
+0x331B98	tblMatrices3	donnee	probable	12 matrices, utilisées quand _DAT_83eb3d1c = 1, que pose le mode d'optimisation 6 (Noir et blanc)
+0x320CD8	couleur_chargerMatrice	fonction	vérifié	lit 0x332888 + (DAT_83eb871d*indice + i)*2
+0x31F7B6	couleur_indiceYcc	fonction	vérifié	indice = 7*cd4 + cc4
+0x31F42E	couleur_parametresYcc	fonction	vérifié	classe de contraste ce4 depuis la correction des tons (2→0, 3→1, 1→3, 4→5, 5→6, Auto→calculée), classes de luminosité ce0 et d'ISO cdc (seuils)
+0x31ED1A	modesScene_reglages	fonction	vérifié	quartet haut de +0x5A = mode, constantes par mode scène
+0x0BE982	modulo	fonction	probable	reste de division
+0x0A23C4	jpeg_quantLuminance	donnee	vérifié	table de quantification JPEG standard (luminance)
+0x0A2404	jpeg_quantChrominance	donnee	vérifié	table de quantification JPEG standard (chrominance)
+0x0D9F54	tblPtpStd	donnee	vérifié	table PTP PTP standard : opcode 16 bits, 2 octets nuls, adresse du gestionnaire
+0x07FC24	ptp1001_GetDeviceInfo	fonction	vérifié	gestionnaire de l'opcode PTP 0x1001 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x07FDB0	ptp1002_OpenSession	fonction	vérifié	gestionnaire de l'opcode PTP 0x1002 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x07FE7A	ptp1003_CloseSession	fonction	vérifié	gestionnaire de l'opcode PTP 0x1003 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x07FF10	ptp1004_GetStorageIDs	fonction	vérifié	gestionnaire de l'opcode PTP 0x1004 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x07FFD4	ptp1005_GetStorageInfo	fonction	vérifié	gestionnaire de l'opcode PTP 0x1005 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x08026C	ptp1006_GetNumObjects	fonction	vérifié	gestionnaire de l'opcode PTP 0x1006 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x080662	ptp1007_GetObjectHandles	fonction	vérifié	gestionnaire de l'opcode PTP 0x1007 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x080D4E	ptp1008_GetObjectInfo	fonction	vérifié	gestionnaire de l'opcode PTP 0x1008 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x082200	ptp1009_GetObject	fonction	vérifié	gestionnaire de l'opcode PTP 0x1009 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x0826BC	ptp100A_GetThumb	fonction	vérifié	gestionnaire de l'opcode PTP 0x100A (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x082B5A	ptp100B_DeleteObject	fonction	vérifié	gestionnaire de l'opcode PTP 0x100B (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x0831F2	ptp100C_SendObjectInfo	fonction	vérifié	gestionnaire de l'opcode PTP 0x100C (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x0833F4	ptp100D_SendObject	fonction	vérifié	gestionnaire de l'opcode PTP 0x100D (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083528	ptp100E_InitiateCapture	fonction	vérifié	gestionnaire de l'opcode PTP 0x100E (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083B80	ptp100F_FormatStore	fonction	vérifié	gestionnaire de l'opcode PTP 0x100F (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083C78	ptp1014_GetDevicePropDesc	fonction	vérifié	gestionnaire de l'opcode PTP 0x1014 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083CA6	ptp1015_GetDevicePropValue	fonction	vérifié	gestionnaire de l'opcode PTP 0x1015 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083CD4	ptp1016_SetDevicePropValue	fonction	vérifié	gestionnaire de l'opcode PTP 0x1016 (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x083D78	ptp101B_GetPartialObject	fonction	vérifié	gestionnaire de l'opcode PTP 0x101B (table 0xD9F54) ; nom de l'opcode : libgphoto2 ptp.h
+0x0D9EEC	tblPtpNikon	donnee	vérifié	table PTP Nikon 90xx : opcode 16 bits, 2 octets nuls, adresse du gestionnaire
+0x084234	ptp90C0_InitiateCaptureRecInSdram	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C0 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x0849A2	ptp90C1_AfDrive	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C1 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x084B4A	ptp90C2_ChangeCameraMode	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C2 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x084CB6	ptp90C3_DelImageSdram	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C3 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x084DB6	ptp90C4_GetLargeThumb	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C4 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x085072	ptp90C5_CurveDownload	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C5 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x08510E	ptp90C6_CurveUpload	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C6 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x0851DE	ptp90C7_CheckEvent	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C7 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x08529A	ptp90C8_DeviceReady	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C8 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x085330	ptp90C9_SetPreWBData	fonction	vérifié	gestionnaire de l'opcode PTP 0x90C9 (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x08549C	ptp90CA_GetVendorPropCodes	fonction	vérifié	gestionnaire de l'opcode PTP 0x90CA (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x08550A	ptp90CB_AfCaptureSDRAM	fonction	vérifié	gestionnaire de l'opcode PTP 0x90CB (table 0xD9EEC) ; nom de l'opcode : libgphoto2 ptp.h
+0x0D9EC4	tblPtpMtp	donnee	vérifié	table PTP MTP 98xx : opcode 16 bits, 2 octets nuls, adresse du gestionnaire
+0x085986	ptp9801_GetObjectPropsSupported	fonction	vérifié	gestionnaire de l'opcode PTP 0x9801 (table 0xD9EC4) ; nom de l'opcode : libgphoto2 ptp.h
+0x085A3E	ptp9802_GetObjectPropDesc	fonction	vérifié	gestionnaire de l'opcode PTP 0x9802 (table 0xD9EC4) ; nom de l'opcode : libgphoto2 ptp.h
+0x085A6C	ptp9803_GetObjectPropValue	fonction	vérifié	gestionnaire de l'opcode PTP 0x9803 (table 0xD9EC4) ; nom de l'opcode : libgphoto2 ptp.h
+0x085A9A	ptp9805_GetObjectPropList	fonction	vérifié	gestionnaire de l'opcode PTP 0x9805 (table 0xD9EC4) ; nom de l'opcode : libgphoto2 ptp.h
+0x323C22	tonalite_construire	fonction	vérifié	table de tonalité 4 096 × 12 bits en RAM 0x83EB586C, d'après le numéro de courbe (+0x466) ; courbe perso si 0x17
+0x324306	courbe_decoder	fonction	vérifié	2 valeurs de départ + dérivée seconde sur 4 bits : y[k] = 2y[k-1] - y[k-2] + q - 8
+0x3234BE	tonalite_choisirNumero	fonction	vérifié	écrit +0x466 = cc0 (7 × groupe + niveau), +0x464, +0x6AE dans les réglages de la prise de vue
+0x34BC56	courbes_jeu1	donnee	vérifié	21 courbes × 2 047 octets (n° 0 à 20)
+0x34BC2C	courbes_jeu1_y1	donnee	vérifié	2e valeur de départ des courbes 0 à 20
+0x34BC41	courbes_jeu1_y0	donnee	vérifié	1re valeur de départ des courbes 0 à 20
+0x348433	courbes_jeu2	donnee	vérifié	7 courbes × 2 047 octets (n° 0x2F à 0x35), noir et blanc probable
+0x33692E	tonalite_corrections	donnee	probable	corrections signées sur 8 bits ajoutées à chaque entrée de la table de tonalité
+0x0DB20C	courbePerso_defaut1	donnee	vérifié	0x1044 octets : en-tête 68 + 2 048 × 16 bits ; = courbe intégrée 50
+0x0DC250	courbePerso_defaut2	donnee	vérifié	0x1044 octets ; = courbe intégrée 17 ; renvoyée par PTP 0x90C5 si aucune courbe perso
+0x04BE82	isp_chargerTablesFixes	fonction	vérifié	copie 0xCA60C, 0xC860C (racine), 0xC660C (carré) vers 0x40010200, 0x40010400, 0x40012400…
+0x066510	redim_chargerCourbes8bits	fonction	vérifié	moteur 0x40020000 : matrice 3×4 (0xD06F8) et deux courbes 8 bits de la famille 0xD2750
+0x0D2750	courbes8bits_famille	donnee	vérifié	21 courbes 8 bits (256 octets), de très sombre à très claire, identité à 0xD3150
+0x12337E	histogramme_lire	fonction	probable	lance le calcul matériel (0x40060080) et lit 256 cases à 0x40060400
+0x1B05E4	police_largeurs2octets	donnee	vérifié	pointeurs vers les largeurs des caractères sur 2 octets
+0x1B064C	police_largeurs1octet	donnee	vérifié	largeur de chaque caractère sur 1 octet
+0x1B0000	palette_interface	donnee	vérifié	104 entrées 00 Y Cb Cr ; pointeur en RAM 0x83CE3FD8 (ROM 0x1584EC), lu par icone_dessiner ; Y va au plan de luminance ; entrée 1 = rouge pur BT.601
+0x156644	tblEcrans	donnee	hypothèse	enregistrements de 12 octets {u16 attributs, u16, fonction, fonction} indexés par l'écran courant (état +0x12) ; RAM 0x83CE2130
+0x154CB0	tblEntreesMenu	donnee	hypothèse	enregistrements de 12 octets avec une fonction par entrée ; RAM 0x83CE079C
+0x0A9A50	liaisonA_envoyerCommande	fonction	vérifié	met la commande n (0 à 0x2F ; entrées de 12 octets en RAM 0x83CEE504, octet +9 : 0x80 en file, 0x40 à renvoyer) dans la file 0x83CEE4FC et réveille la tâche 14 (drapeau 3, bit 8)
+0x0E482C	tblCommandesA	donnee	vérifié	48 commandes de la liaison avec le A, 16 octets : tampon RAM, longueur, sens (1 B→A, 0 A→B, 2 variable), fonction de fin ; lue par liaisonA_preparer (outils/liaison_a.py)
+0x0A995A	liaisonA_init	fonction	vérifié	vide la file 0x83CEE4FC et numérote les 48 entrées de commande
+0x0A9516	liaisonA_preparer	fonction	probable	choisit la commande (demandée par le A en 0x83CEE961, sinon tête de file), copie les données à envoyer dans 0x83CEE85A
+0x0A9724	liaisonA_recevoir	fonction	probable	recopie les octets reçus (0x83CEE75A) dans le tampon de la commande si son sens est 0 (A→B)
+0x0A99CC	liaisonA_terminer	fonction	probable	retire la commande de la file (ou la remet si 0x40) puis appelle sa fonction de fin (+0xC)
+0x07C1A0	texte_parIdentifiant	fonction	vérifié	identifiant 16 bits : bits 13-15 = table (0 D libellés, 0x2000 C, 0x4000 B, 0x6000 A), bits 0-12 = numéro
+0x07C904	icone_dessiner	fonction	vérifié	icône = liste de tuiles de 4 octets (table 0x157904) ; couleur = palette 0x1B0000[octet 1] ; planches de glyphes en 0x1B01A0 (12 octets)
+0x07BD56	osd_tracerBloc	fonction	vérifié	écrit un bloc dans l'écran d'interface YCbCr 4:2:0 : Y 640×480 (pas 0x280), puis deux plans de chrominance 320×240 à +0x4B000 et +0x5DC00
+0x157904	tblIcones	donnee	vérifié	pointeurs vers les icônes (RAM 0x83CE33F0), indexés par le numéro d'icône des entrées de menu (0x8xxx)
+0x3251C4	tblModeCouleurBits	donnee	vérifié	groupe couleur (cd4 : 0 Ia, 1 II, 2 IIIa) → bits 6-7 de l'octet +0x2D : 1, 2, 0
+0x1342A0	modeScene_appliquerDefauts	fonction	vérifié	en mode scène (code > 3) : zone AF 5 → point sélectif, 6 → dynamique, sinon sujet le plus proche ; assistance AF coupée en 6 et 8
+0x1598E0	menu_PriseDeVue	donnee	vérifié	en-tête de menu (32 octets) suivi des entrées (16 octets), écran 14 ; arbre complet : outils/menus.py
+0x1592D0	menu_Visualisation	donnee	vérifié	en-tête de menu, écran 0
+0x15A380	menu_ReglagesPerso	donnee	vérifié	en-tête de menu, écran 36
+0x15AEC0	menu_Configuration	donnee	vérifié	en-tête de menu, écran 66
+0x15BDC0	menu_Retouche	donnee	vérifié	en-tête de menu, écran 108
+0x159DC0	menu_OptimiserImage	donnee	vérifié	7 entrées : Normal, Plus doux, Vif, Très vif, Portrait, Noir et blanc, Personnalisé (valeurs 0, 1, 2, 3, 4, 6, 5)
+0x159F60	menu_ModeCouleur	donnee	vérifié	Ia, II, IIIa ; valeur rangée dans les bits 6-7 de 0x83CED225 : 1, 2, 0
+0x31F6B8	parametres_lire	fonction	vérifié	lit la table 0x32AE90 (indice cd8·3 + cd4 + ce4·12 + ce0·84 + cdc·588 + s·2940) : ccc bits 11-15, cc8 bits 6-10, niveau de courbe cc4 bits 3-5
+0x32AE90	tblParametresImage	donnee	vérifié	5 880 entrées de 32 bits ; niveau de courbe = classe de contraste, −1 en scène très lumineuse, resserré à l'ISO le plus haut
+0x04E2B6	touches_lire	fonction	vérifié	mot de touches de la tâche 15 : bits 24-29 = port 0x5000010C du B (actif à 0, recopié en 0x83CE991D par 0x4C22C), bits 4-15 = octets de la commande 0x11 du A (0x83CE98EC..) ; émulateur : MENU 0x04000000, OK 0x20000000, haut 0x2000, bas 0x1000, gauche 0x4000, droite 0x8000
+0x04C22C	touches_echantillonner	fonction	vérifié	0x83CE991D = (port 0x5000010C ^ 0xFF) & 0x3F, 0x83CE98EC/ED = octets 0 et 1 de la commande 0x11 du A
+0x04C570	menu_ouvrir	fonction	probable	0x83CE9919 = 0x21 puis ui_demarrer(0) ; touche MENU quand l'interface est éteinte (mot 0x04000000 dans FUN_0004ce1e). Interface déjà active : c'est FUN_0004ccc4 qui traite la touche (vu dans l'émulateur)
+0x04C4DC	visu_ouvrir	fonction	probable	0x83CE9919 = 0x11 puis ui_demarrer(1 ou 2) ; touche de visualisation (mot 0x02000000)
+0x04C456	infos_afficher	fonction	probable	0x83CE9919 = 0x41 puis ui_demarrer(6) : écran d'infos de prise de vue (dessiné ainsi dans l'émulateur au démarrage)
+0x14D47A	ui_demarrer	fonction	vérifié	sta_tsk(16, mode) sauf cas 0x83CE950C ; lance la tâche d'interface
+0x13EF26	langue_appliquer	fonction	vérifié	langue = bits 3-6 de 0x83CED0FC puis langue_choisir ; codes vus à l'écran dans l'émulateur : 0 allemand, 1 anglais, 2 espagnol, 3 français, 4 italien
+0x07D5FA	osd_effacer	fonction	vérifié	remplit les trois plans du tampon d'interface (*0x83CE0230, +0x4B000, +0x5DC00) avec le moteur 2D 0x40060000 (commande 0x47xx, couleur de la palette 3 octets 0xD87C3), attend le drapeau 4 bit 0x80000 ; reproduit dans l'émulateur
+0x0476A6	int24_moteur2D	fonction	vérifié	vecteur 0x24 : état 0x40060032 (bit 0x20 = fin, écrire 1 efface) -> drapeau 4 bit 0x80000 ; bits 0x08 et 0x04 -> 0x200000 et 0x1000000
+0x047806	int28_redimensionnement	fonction	vérifié	vecteur 0x28 : état 0x40021FFE bit 0x8000 (écrire 1 efface) -> drapeau 4 bit 0x800000
+0x04763A	int1E_synchroTrame	fonction	probable	vecteur 0x1E, canal 0 de l'unité d'interruptions externes 0x38-0x3A : drapeau 9 bit 1, réveille la tâche 18 (affichage) ; émulé comme une synchro verticale périodique
+0x0AADA2	int1B_liaisonA_reception	fonction	vérifié	vecteur 0x1B : octet reçu en 0x61 (SIDR0), erreurs dans 0x60 (SSR0) bits 5-7, puis gestionnaire tblLiaisonA_etatsRx[0x83CEE964]
+0x0AAE4E	int1F_liaisonA_ligne	fonction	vérifié	vecteur 0x1F, canal 1 de l'unité 0x38 (ligne de requête du A) : gestionnaire tblLiaisonA_etatsLigne[0x83CEE963] (1 : drapeau 3 bit 1, 3 : drapeau 3 bit 2)
+0x0AAE8E	int1A_liaisonA_delai	fonction	vérifié	vecteur 0x1A, minuterie 2 de garde de la liaison : drapeau 3 bit 0x40 (délai dépassé)
+0x0E4B3C	tblLiaisonA_etatsRx	donnee	vérifié	18 gestionnaires d'octet reçu (0xAA8CC-0xAAD8C) : 1 numéro de commande, 2-4 et B-D réception n + données + contrôle (somme des octets reçus + contrôle = 0xFF), 5-7 et 8-A émission, E-0x10 transfert vers 0x81000000 ; protocole reproduit par le faux A de l'émulateur
+0x0E4B2C	tblLiaisonA_etatsLigne	donnee	vérifié	4 gestionnaires de la ligne de requête du A (0xAAE08, 0xAAE0A, 0xAAE1E, 0xAAE42)
+0x0A948E	liaisonA_envoyerNumero	fonction	vérifié	état 1, numéro de commande du B dans 0x61, poignée de main 0x50000106 bit 4, attend le drapeau 3 (0x10 bon, 0x20 erreur, 0x40 délai) ; le A répond en même temps par sa propre requête
+0x0A97E6	liaisonA_finEchange	fonction	probable	fin d'échange : attend la ligne du A (drapeau 3 bit 1) ou le délai ; en cas d'erreur (paramètre 0) repasse la liaison en attente d'un octet (état 0x11)
+0x060172	redim_lancer	fonction	probable	programme le moteur 0x40020000 (source 0x4002100C, destination 0x40021008, corrigé en octobre 2026 d'après les traces de l'émulateur, recherche/ecran-reel-composition.md ; tailles, pas) et le démarre (bit 3 de 0x40020000, table 0xD0638), attend le drapeau 4 bit 0x800000
+0x06A636	affichage_attendre	fonction	probable	attend (drapeau 9 bit 4, posé par la tâche 18) que l'état d'affichage 0x83CEA3C4 le permette
+0x09B174	langue_choisir_ptrD	donnee	vérifié	LDI:32 #0x2B124C,R11 : pointeur de la table D du français dans le code de langue_choisir (valeur à 0x9B176) ; patché par menu-pipboy, textes appliqués dans l'émulateur
+0x15C7D4	tblLangues_francais_C	donnee	vérifié	pointeur de la table C de la langue 4 (français, 0x2B11D0) ; patché par menu-pipboy
+0x0D87C3	palette_menus	donnee	vérifié	223 entrées Y Cb Cr de 3 octets lues par rectangle_remplir ; rôles mesurés par sonde en luminance (fond 0xC8, lignes 0xCF, texte 0xD2, barre 0x3F, dégradé 0x21-0x41, texte sur barre 0x00)
+0x07D72A	rectangle_remplir	fonction	vérifié	remplissage par le moteur 2D avec une couleur de la palette 0xD87C3 ; sonde dans l'émulateur
+0x131F8A	onglets_navigation	fonction	probable	passage d'un onglet à l'autre ; comparaisons à 0x13208E et 0x13218A (RETOUCHE) patchées, navigation vérifiée dans l'émulateur
+0x146C48	onglets_dessiner	fonction	probable	dessine la colonne des onglets ; boucles CMP #5,R8 à 0x146CC6 et 0x146DE0 (5 onglets), passées à 4 sans plantage
+0x132286	menu_ok	fonction	probable	sur OK, appelle la fonction de l'enregistrement du n° d'entrée (tblEntrees +8)
+0x154CAC	tblEntrees	donnee	vérifié	enregistrements de 12 octets par n° d'entrée de menu (+0 état 8 sous-menu / 0xA feuille, +2 message, +4 drapeaux, +8 fonction) ; RAM 0x83CE0798 ; nouveaux n° 0x144-0x154 fonctionnent
+0x143EE4	entree_sousMenu	fonction	vérifié	fonction d'enregistrement : entre dans le sous-menu de l'entrée ; utilisée par Programme, ISO auto, Si trop sombre
+0x132D0C	menu_surbrillance	fonction	probable	(index) place la surbrillance de l'écran courant ; appelée par les fonctions d'entrée ajoutées
+0x130EE4	ecran_actionGenerique	fonction	probable	action d'écran par défaut de tblEcrans ; reprise pour les écrans 70 à 72
+0x143B46	ecran014_entree	fonction	vérifié	entrée de PRISE DE VUE ; écrit les icônes de valeur à 0x83CE53EC + 16k ; appelée par pdv_entree
+0x14385C	pdv_compteurs	fonction	hypothèse	remet +8/+A de l'en-tête PRISE DE VUE à 6 (selon le mode)
+0x136454	isoAuto_action	fonction	vérifié	action d'origine d'ISO auto : bit 7 de 0x83CE974F, commande 5 au A ; recopiée dans iso_choix
+0x138546	liaisonA_envoyerCmd5	fonction	probable	envoie au A la commande 5 (réglages ISO auto) ; drapeau 0x83CED100 bit 2
+0x0A1302	batterie_dessiner	fonction	vérifié	choisit le pictogramme de batterie selon 0x83CEE4D4 (tables 0xDF698, 0xDF6A0, 0xDF6A8, 0xDF6B0) ; vérifié avec les niveaux du faux A
+0x83CEE4D4	batterie_niveau	ram	vérifié	octet 19 de la commande 0x2D du A (tampon 0x83CE92ED, recopie 0x83CEE4C1) ; 0x11 plein, 0x12 deux barres, 0x13 une barre
+0x83CE974F	isoAuto_reglages	ram	probable	bit 7 marche, bits 4-6 ISO maxi, bits 0-3 vitesse mini
+0x3E8000	pdv_entree	fonction	vérifié	ajouté (menu-pipboy) : appelle ecran014_entree, pose la liste à 7 entrées, recopie les icônes de valeur
+0x3E809E	prog_entree	fonction	vérifié	ajouté : surbrillance = 0x83CED24E (bornée à 0-5) ; prog_choix 0x3E80B6 range l'index et remonte
+0x3E80D8	sombre_entree	fonction	vérifié	ajouté : surbrillance = 0x83CED24F (bornée à 0-2) ; sombre_choix 0x3E80F0
+0x3E8112	iso_entree	fonction	vérifié	ajouté : écran ISO auto ; iso_choix 0x3E81D6 (copie de isoAuto_action)
+0x3E8260	icones_prog	donnee	vérifié	ajouté : pictogrammes 0x8173-0x8178 des 6 programmes
+0x3EA000	textes_francais	donnee	vérifié	ajouté : table C+D française reconstruite
+0x83CED24E	pipboy_programme	ram	vérifié	V1 : programme choisi (0 Standard … 5 Piqué max), octet libre du bloc de réglages 10 (0x83CED248), gardé à l'extinction ; aucune référence Nikon (C de Ghidra, constantes) ; avant la V1 en 0x83CE75CC, non persistant
+0x83CED24F	pipboy_siTropSombre	ram	vérifié	V1 : 0 baisser la vitesse, 1 monter en ISO, 2 sous-exposer ; octet libre du bloc de réglages 10, gardé à l'extinction (avant la V1 en 0x83CE75CD)
+0x04B260	isp_lancer	fonction	vérifié	à chaque photo (appelée par FUN_0004ae5e après FUN_0004b168 → FUN_0031a0f8) : plans Y/Cb/Cr, RAW, puis isp_chargerPuce(fiche), démarrage du moteur (0x4001FF00 = 0x4000) et attente de fin
+0x04B41C	isp_chargerPuce	fonction	vérifié	copie la fiche de prise de vue dans la puce : +0x3A4 → matrice 0x40010022, +0x3B6 → YCbCr 0x40010034, +0x3DC…+0x45B → secteurs 0x4001E400, tonalite_construire → 3 × 4 096 en 0x40018400/A400/C400 ; joué dans l'émulateur (scénario preglages-v1)
+0x04B5B2	isp_appelTonalite	donnee	vérifié	LDI:32 #0x323C22,R12 ; CALL:D @R12 ; MOV R10,R4 dans isp_chargerPuce : la constante (0x4B5B4) pointe sur preglage_crochet dans la V1
+0x04BEF6	copie16	fonction	vérifié	(source R4, destination R5, n R6) : copie n demi-mots
+0x04793A	fiche_copierReglages	fonction	vérifié	(fiche + 0x2C) : recopie 0x83CED224-22B (+0x2C, dont +0x2D = mode couleur et mode d'optimisation), le bloc de la commande 7, celui de la commande 5… dans la fiche ; tâche 5
+0x31A0F8	image_parametres	fonction	vérifié	(fiche, mode) : pose _DAT_83eb5864 = fiche puis calcule tous les paramètres d'image (modesScene_reglages, couleur_chargerMatrice, tonalite_choisirNumero…) ; joué dans l'émulateur
+0x83CED225	reglages_optimisation	ram	vérifié	bits 6-7 mode couleur (Ia 1, II 2, IIIa 0), bits 2-5 mode d'optimisation (0 Nikon … 6 N&B), recopié en fiche +0x2D ; bloc de réglages 2, gardé à l'extinction
+0x83EB3AB4	couleur_indiceMatrice	ram	vérifié	matrice caméra choisie (0-17) par couleur_chargerMatrice ; indice des secteurs 0x331E0E aussi ; modulo 6 = indice de balance ; recopiée par image_parametres dans la fiche, +0x4FE (bloc +0x498 pointé par 0x83EB3A48)
+0x83EB3D3C	couleur_cheminSpecial	ram	vérifié	(0x83CE974C & 7) >> 2 ; ≠ 0 : couleur_chargerMatrice écrit des matrices en dur
+0x83EB586C	tonalite_table	ram	vérifié	table de tonalité 4 096 × 12 bits construite par tonalite_construire, copiée dans les 3 tables de la puce
+0x331E0E	tblSecteurs	donnee	vérifié	18 jeux de 64 valeurs (4 tables × 16 secteurs), un par matrice caméra ; neutres en usine (256, 0, 0, 256)
+0x0403FA	reglages_extinction	fonction	probable	recopie les blocs des commandes 7 et 5 dans les blocs 2 et 3, puis reglages_sauver ; appelée par la tâche 4 (priorité 1) et par maj_executer : sauvegarde des réglages, à l'extinction d'après son rôle (moment exact non lu)
+0x06B708	reglages_sauver	fonction	vérifié	compare les 12 blocs de tblBlocsReglages à leur dernière copie en flash et écrit ceux qui ont changé (journal en 0x180000 / 0x190000)
+0x06B44C	reglages_lire	fonction	vérifié	au démarrage (tâche 4) : relit le journal de la flash et recopie chaque bloc en RAM, octet par octet, si sa longueur est la bonne
+0x0D5364	tblBlocsReglages	donnee	vérifié	12 blocs gardés à l'extinction {adresse RAM, longueur} : 0x83CEA524/0x14, 0x83CED0F8/0x48, 0x83CED21A/0x12, 0x83CED254/0xE, 0x83CEB124/0x34, 0x83CEE068/0x44, 0x83E89310/0x1044 (courbe perso), 0x83CEE0B4/0x10, 0x83E882CC/0x1044 (courbe perso N&B), 0x83CEE040/0x28, 0x83CED248/0xC, 0x83CE901C/4
+0x3F3000	preglage_crochet	fonction	vérifié	V1 (preglages_v1.py) : appelle tonalite_construire puis, préréglage V1 actif en P/S/A/M, balance = matrice Nikon de la photo lue dans sa fiche (+0x4FE), écrit matrice, YCbCr et secteurs de l'emplacement dans la puce et rend sa courbe ; joué dans l'émulateur
+0x3F30C6	preglage_reglages	fonction	vérifié	V1 : appelle modesScene_reglages puis, préréglage V1 actif en P/S/A/M, pose la netteté (_DAT_83eb3d20) et la saturation (_DAT_83eb3d44) de l'emplacement, et les tons Normal (_DAT_83eb3d50) ; joué dans l'émulateur
+0x3F3200	preglage_tables	donnee	vérifié	V1 : « PREGLAGES-V1 », mode d'optimisation → emplacement (+0x10), matrice 0-17 → balance (+0x20), adresses des 5 emplacements (+0x34), netteté, saturation, tons et 0 par emplacement (+0x48, 4 octets)
+0x3F3400	preglage_emplacements	donnee	vérifié	V1 : 5 × 0x2380 octets (Hasselblad, Chrome, Positive, Tri-X, HP5) : 6 matrices, 6 jeux de secteurs, YCbCr, courbe 4 096, au format des registres (signe + grandeur)
+0x31B22E	image_appelModes	fonction	vérifié	appelée par image_parametres : LDI:32 #0x31ED1A,R12 ; CALL @R12 (0x31B230, sans créneau) puis R4 = 1 ; la constante (0x31B232) pointe sur preglage_reglages dans la V1
+0x83EB3D20	nettete_courante	donnee	vérifié	netteté posée par modesScene_reglages (0 Auto, 1 Normale, 2 Faible, 3 Moyennement faible, 4 Moyennement élevée, 5 Élevée, 6 Aucune), lue par FUN_003229ca ; mot de 32 bits
+0x83EB3D44	saturation_courante	donnee	vérifié	saturation posée par modesScene_reglages (0 Auto, 1 Normale, 2 Modérée, 3 Rehaussée), lue par FUN_003232d8 ; mot de 32 bits
+0x3229CA	nettete_calculer	fonction	probable	netteté → _DAT_83eb3a84 → _DAT_83eb78ae (table 0x3319F0) → fiche +0x3D8 → registre 0x40010054 ; valeurs mesurées dans l'émulateur
+0x3232D8	saturation_choisirTable	fonction	probable	saturation (et luminosité si Auto) → table de 1 024 valeurs chargée en 0x4001EC00 ; Rehaussée et Modérée la changent (mesuré)
+0x83EB3D50	tons_courants	donnee	vérifié	correction des tons posée par modesScene_reglages (0 Auto, 1 Normal, 2 Moins de contraste, 3 Moyennement faible, 4 Moyennement élevée, 5 Plus de contraste, 6 Personnalisée), lue par couleur_parametresYcc, couleur_indiceYcc et 0x3239C2 ; mot de 32 bits
+0x83EB3D34	teinte_courante	donnee	vérifié	teinte + 3 (0 = −9°, 3 = 0°, 6 = +9°) posée par modesScene_reglages, lue par FUN_00322606 (matrice YCbCr seule, mesuré) et 0x323A1E (fiche +0x2E, +0x48C)
+0x322504	tons_parametrePuce	fonction	probable	(R4 = _DAT_83eb5858, R5 = _DAT_83eb3aac, R6 = destination) : interpole la table 0x3471FC (N&B : 0x3471ED) → _DAT_83eb78be → registre 0x40010056 ; rôle non établi
+0x3F3136	preglage_reinit	fonction	vérifié	V1 : remplace le second appel de 0x138546 dans reglagesPerso_reinitialiser ; fait l'envoi d'origine puis remet Programme (0x83CED24E) et Si trop sombre (0x83CED24F) à 0 ; joué dans l'émulateur (scénario reinitialiser)
+0x135570	reglagesPerso_reinitialiser	fonction	vérifié	PERSO › Réinitialiser › Oui (écran 37, action 0x135536) : remet les réglages perso (0x83CED0F8…, bits du bloc 10, 0x83CE974D), envoie deux fois au A (0x138546)
+0x135678	reglagesPerso_appelEnvoi	donnee	vérifié	LDI:32 #0x138546,R12 ; CALL @R12 (second envoi) : la constante (0x13567A) pointe sur preglage_reinit dans la V1
+0x83EB3A48	image_blocFiche	donnee	vérifié	pointeur posé par image_parametres sur fiche +0x498 : globales de la photo recopiées en +0x5B…+0x6C (+0x66 = matrice _DAT_83eb3ab4, +0x67 = _DAT_83eb3ab0)
+0x146A08	menu_dessinerEcran	fonction	probable	dessine l'écran de menu courant : si l'attribut 0x8000 de l'écran, menu_fond puis aide_effacer ; titre par menu_titre (couleur 0xD8750) ; aide_icone selon les attributs
+0x146EE2	menu_fond	fonction	vérifié	fond du menu (case 0xD8714, couleur 0xD8724[style]) et filet vertical de la colonne en x − 2 (largeur 2 unités, couleur 0xD8728[style]) ; détourné par l'étape 5 du Pip-Boy (fond à x = 0, filet supprimé)
+0x146F44	menu_titre	fonction	vérifié	(identifiant de texte, couleur) : titre de l'écran de menu ; crochet « titre » de l'étape 5 (le bandeau est dessiné ici)
+0x147216	menu_sousTitre	fonction	probable	sous-titre de l'écran de menu (sauf une liste de menus particuliers) ; non détourné
+0x14777C	onglet_actifDessiner	fonction	vérifié	(param) dessine l'onglet courant 0x83CE3FE8 via 0x147464 et 0x147672 ; crochet « onglet_actif » de l'étape 5
+0x07E0A0	degrade_remplir	fonction	vérifié	dégradé dans une case en unités (barre de sélection, via 0x7E474 et 0x7E4AA) ; crochet « degrade » de l'étape 5
+0x07CDE2	texte_dessinerA	fonction	vérifié	tracé d'un texte, x en points au mot 2 de la pile (8 mots) ; appelé par 0x7BA7E ; crochet « cde2 » de l'étape 5
+0x07D00E	texte_dessinerB	fonction	vérifié	tracé d'un texte, x en points au mot 1 de la pile (6 mots) ; crochet « d00e » de l'étape 5
+0x07F5E4	texte_dessinerC	fonction	vérifié	tracé d'un texte pour FUN_0013e58c, x en unités au mot 1 de la pile (5 mots) ; crochet « f5e4 » de l'étape 5
+0x07ED4E	aide_icone	fonction	vérifié	(0 ou 1) pictogramme d'aide 0x8157 / 0x8158 en (6, 0xCF) unités (en (0xE, 0xB2) pour 3 menus, absent pour 2) ; déplacé en haut à droite par l'étape 5
+0x07EDF4	aide_effacer	fonction	vérifié	efface la case de l'aide (6, 0xCF, 0x1B, 0x1B) unités, couleur 0xD8758[style] ; déplacée en (0x122, 2) par l'étape 5
+0x04C1C2	style_courant	fonction	vérifié	rend le style d'affichage ; indice (× 2) des tables de couleurs du menu 0xD8724 fond, 0xD8728 filet, 0xD8744 texte, 0xD8748 gris, 0xD8750 titre, 0xD8758 aide
+0x149220	message_afficher	fonction	probable	(identifiant) message centré (« Cette option n'est pas disponible… ») ; appelé par ecran104/105/106_action ; crochet « message1 » de l'étape 5 (drapeau DIALOGUE, rien décalé)
+0x14947C	message_afficher2	fonction	probable	autre message centré ; crochet « message2 » de l'étape 5 (même traitement que 0x149220)
+0x15B040	menu_versionFirmware	donnee	vérifié	en-tête du menu Version du firmware (écran 105, RAM 0x83CE6B2C) ; l'entrée Version/MAJ n'est visible que si maj_chercherFichiers rend 1
+0x15B080	menu_miseAJour	donnee	vérifié	en-tête du menu de confirmation de mise à jour (écran 106, RAM 0x83CE6B6C) : Non / Oui, surbrillance sur Non ; Oui → écran 104 (exécution)
+0x83CE950C	batterie_etatMaj	ram	probable	bits 6-7 = 3 : batterie suffisante pour ouvrir l'écran 106 (mise à jour) ; mis à 0xC0 par le scénario secours
+0x83CED23A	ui_mode	ram	vérifié	mot de 16 bits, 5 tant qu'un menu est affiché (relevé dans tous les scénarios de menu)
+0x83CE3FE8	onglet_courant	ram	vérifié	0 VISU, 1 PRISE DE VUE, 2 PERSO, 3 CONFIG ; changé par onglets_navigation
+0x83CE2130	tblEcrans_ram	ram	vérifié	copie RAM de tblEcrans ; attribut +0 : 0x8000 écran à onglets, 0x1000 curseur dans la liste (0 = sur les onglets)
+0x83CE0230	osd_tampon	ram	vérifié	pointeur du tampon d'écran d'interface YCbCr 4:2:0 ; vaut 0x83BD6510 dans l'émulateur
+0x83CE75CE	pipboy_drapeaux	ram	vérifié	ajouté (étape 5) : 4 octets DIALOGUE, PROF, MUET, SECOURS (message en cours, appel imbriqué, colonne rejouée sans tracé, verrou de la voie de secours) ; à zéro au démarrage
+0x40C000	bandeau_actif	fonction	vérifié	ajouté (étape 5, pipboy-5-onglets.json), début du code du bandeau : barrière (R0 = 0 laisser, 1 décaler, 2 taire) ; suivent le sas de secours (écrans 104-106 → code d'origine), enveloppes des 11 crochets, dessin du bandeau, tremplins ; 3 042 octets
+0x40D000	bandeau_donnees	donnee	vérifié	ajouté (étape 5) : mots PRISE DE VUE, VISU, PERSO, CONFIG (1 bit par point), cadres des 4 onglets, 59 glyphes de la petite police des titres, avances, accents ; 5 192 octets

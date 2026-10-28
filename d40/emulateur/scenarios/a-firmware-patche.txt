@@ -1,0 +1,17 @@
+# À jouer avec --firmware-a sur un AD400111.BIN fabriqué par patch.py (patchs-a/a-sujet-rapide.json) :
+# même état que a-ligne-p, la ligne « Sujet rapide » doit être celle du fichier, sans aucun poke en flash.
+run 2M
+poke8 0x3C3C0 0
+poke8 0x3C3C1 0
+poke8 0x3C3C4 0
+poke8 0x3D0BC 0
+poke8 0x3D0F0 0x50
+poke8 0x3D100 0x14
+poke8 0x3D0F3 0x4C
+poke8 0x3CCB9 0x0A
+dis 0xC60F4 2
+balayage p 2 18 2
+poke16 0x3CCC2 576
+appel 0xC60E2
+expect16 0x3CCC0 496
+expect16 0x3CCBE 80

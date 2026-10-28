@@ -1,0 +1,17 @@
+Boîtier trouvé : 645D
+Séance 645D 2026-10 +0000
+Batterie 33 %
+Fichiers déjà sur la carte : 12
+Vue 02/24 mono-filtre-1-vert
+  mode : 0 → 5
+  netteté : 6 → 4
+  D024 : 0 → 1
+  THAM3247.PEF (sur la carte)
+Vue 03/24 mono-filtre-2-jaune
+  D024 : 1 → 2
+  THAM3248.PEF (sur la carte)
+  0x9001 : erreur The operation couldn’t be completed. (com.apple.ImageCaptureCore error -21400.)
+  mode constructeur refusé à la réouverture
+  arrêt avant la vue 4 : reprendre avec --depuis 4
+  0x9001 : erreur The operation couldn’t be completed. (com.apple.ImageCaptureCore error -21400.)
+Mode constructeur refermé : 0x0000 ?

@@ -1,0 +1,26 @@
+{
+ "firmware": "A",
+ "description": "Étude (non destiné au flash) : voie 2, ligne « Sujet rapide » en 0xF3910 appelée par la fonction de P",
+ "patchs": [
+  {
+   "offset": "0x33910",
+   "avant": {
+    "sha256": "9a8dcd3f9ff7aa3114e141f03c12989d363ea81fd74c02eea63c5f41489cb17a",
+    "longueur": 20
+   },
+   "apres": {
+    "hex": "9B3CCCC205C497A49B3CD10006C5B4259F20AC54"
+   }
+  },
+  {
+   "offset": "0x060F4",
+   "avant": {
+    "sha256": "63cc951c345d5e73c0f83736d8be511c363a4ecd2390c6bf0e7fd2f82ba559c3",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9BFC3910"
+   }
+  }
+ ]
+}

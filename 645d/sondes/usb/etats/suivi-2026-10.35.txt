@@ -1,0 +1,9 @@
+14:52:53 suivi pendant 2400 s : Thomas règle au menu, chaque changement est noté.
+14:52:54 départ : 5004=2 5014=4 5015=4 D013=0 D020=0 D021=4 D022=4 D023=0 D024=4 D025=4 D026=0 D027=0 D028=0 D029=0
+14:54:53 changement :
+    D003[92] : 879 → 878
+14:55:10 changement :
+    D003[92] : 878 → 879
+14:55:27 changement :
+    D003[92] : 879 → 878
+14:57:16 pas de réponse (menu ouvert ou veille ?)

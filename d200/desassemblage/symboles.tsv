@@ -1,0 +1,39 @@
+adresse	nom	type	confiance	preuve
+0x0DF48A	reset	fonction	vérifié	vecteur INT #0 (mot à 0xEFFFC) de la table 0xEFC00
+0x0EFC00	tblVecteurs	donnee	vérifié	256 vecteurs, INT #n à 0xEFC00+0x3FC-4n, comme le D40
+0x08D164	ptp90C5_CurveDownload	fonction	vérifié	table PTP Nikon ; 0 paramètre, renvoie 0x844 octets de 0x97BD0B14
+0x08D1C0	ptp90C6_CurveUpload	fonction	vérifié	table PTP Nikon ; 0 paramètre, reçoit 0x844 octets dans 0x97BD0B14, 0x2019 si occupé
+0x08D268	ptp90C7_GetEvent	fonction	vérifié	table PTP Nikon ; construit la liste d'événements
+0x08D3E2	ptp90C9_SetPreWBData	fonction	vérifié	table PTP Nikon ; p1 = préréglage 0-4, p2 = deux gains < 0x800, p3 = taille des données (<= 0x3600)
+0x05DEDE	courbePerso_versMakerNote	fonction	vérifié	développe la table 8 bits (2048) en 4096 octets ; courbe d'usine 0x17329C si octets 0 ou 1 de l'entête nuls
+0x05DF30	courbePerso_versPuce	fonction	vérifié	même chose en 4096 demi-mots ; appelée 3 fois par isp_chargerPuce
+0x05D716	isp_chargerPuce	fonction	vérifié	copie la fiche de prise de vue dans les registres 0x5001xxxx, puis les trois courbes de tonalité
+0x072C06	reglages_lire	fonction	vérifié	recopie au démarrage les 12 zones de tblBlocsReglages depuis la plus récente des deux copies
+0x07E3D4	makerNote_courbe	fonction	probable	écrit « I », 0x10, l'entête 6..67 et la table développée (0x1040 octets) : balise ContrastCurve du NEF
+0x16C768	tblBlocsReglages	donnee	vérifié	12 entrées {adresse, longueur, 0} ; la 7e est la courbe perso (0x97BD0B14, 0x844)
+0x17329C	courbePerso_usine	donnee	vérifié	2048 octets, courbe utilisée quand aucune courbe perso n'est chargée
+0x16CAB0	signature	donnee	vérifié	« Q220FirmwareSignature », pointée par 0xEFBF4
+0x0D57E6	isp_matricesEtNB	fonction	vérifié	choisit le jeu de matrices (0x97BE0A14) ; N&B : matrice caméra et ligne Y en LDI à 0xD7840-0xD78A6, rangées en 0x97BE09F0 et 0x97BE09CC
+0x0D3EE6	courbe_numero	fonction	vérifié	numéro de courbe intégrée = 7 × groupe + cran
+0x05DF82	courbe_developperSeuils	fonction	vérifié	256 seuils 16 bits → table de 4096 sorties 8 bits
+0x0DCF50	nb_choisirCourbes	fonction	vérifié	variante 0 = N&B (0x3B22DD sur R, V, B), 1 = sépia (0x39DB30…), 2 = cyanotype (0x3A2CCB…)
+0x384BF8	tblMatrices	donnee	vérifié	294 jeux de 24 demi-mots (caméra /512, YCbCr /256, 6 autres) ; 126 à 209 vides
+0x3884D8	tblCourbes	donnee	vérifié	21 courbes de 256 seuils 16 bits
+0x38B6C0	tblSecteurs	donnee	probable	tables à 16 secteurs, 0x50 demi-mots par jeu
+0x3B22DD	courbeNB	donnee	vérifié	4096 octets, courbe du N&B neutre, seule référence à 0xDCF52
+0x162978	tblVariantesNB	donnee	vérifié	(0, 1, 2, 0) indexé par les bits 6-7 de l'octet 0x4E de la fiche
+0x09A680	maj_chercherFichier	fonction	vérifié	B200????.BIN, sinon A200????.BIN, sinon _WT3????.BIN (maj-lot1.c)
+0x09B0B0	maj_parcourirRacine	fonction	vérifié	parcours de A:\, ? = n'importe quel caractère, casse ignorée
+0x09ACAC	maj_controlerB	fonction	vérifié	taille 0x3C0000, puis signature et version
+0x09AD1E	maj_controlerA	fonction	vérifié	taille 0x40000 ou 0x40002, version à l'offset 0x200
+0x09AE2C	maj_signature	fonction	vérifié	32 octets pointés par 0xEFBF4 comparés à « Q220FirmwareSignature » du firmware en cours
+0x09A888	maj_afficherVersions	fonction	vérifié	version ancienne et nouvelle, affichage seul
+0x09A9FC	maj_executer	fonction	vérifié	charge en 0x90000000, CRC16, commande 0x27 au A, sauvegarde des réglages, flasheur
+0x054552	crc16	fonction	vérifié	CRC16 XMODEM (table 0x15D284), seul appelant : maj_executer
+0x15D284	tblCrc16	donnee	vérifié	table du CRC16, polynôme 0x1021
+0x15C72C	flasheur_rom	donnee	vérifié	0x338 octets de code copiés au démarrage vers la RAM 0x9798CFB0 (maj-flasheur.c)
+0x1538CC	tblSecteursFlash	donnee	vérifié	découpage de 0x3F0000-0x3FFFFF en secteurs de 8 Ko (avec 0x1538EC)
+0x15E008	tblCommandesA	donnee	vérifié	commandes de liaison vers le processeur A, 16 octets chacune (0x10, 0x27, 0x28)
+0x16C760	ptrJournalReglages	donnee	vérifié	journal des réglages, deux copies à 0x1D0000 et 0x1E0000
+0x16CB18	ptrJournal2	donnee	vérifié	second journal, deux copies à 0x410000 et 0x420000
+0x16CAC8	version	donnee	vérifié	chaîne de version, pointée par 0xEFBF0

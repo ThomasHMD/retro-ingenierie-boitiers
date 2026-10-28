@@ -1,0 +1,7 @@
+  lecture de 168 réglages
+Banque d'origine : A ; passage sur C
+  banque C : active, vérifiée
+  lecture de 168 réglages
+  banque A : active, vérifiée
+  lecture de 168 réglages
+Retour vérifié : tous les réglages sont comme avant.

@@ -1,0 +1,413 @@
+{
+ "firmware": "D200B",
+ "description": "SONDE 2 (pas un firmware d'usage) : V1 du D200, secteurs de Positive (Saturé) en rampe : secteur s → chroma × (64 + 12 s)/256, pour lire l'ordre des 16 secteurs sur la roue",
+ "patchs": [
+  {
+   "offset": "0x87840",
+   "avant": {
+    "sha256": "435259df3aa8c4cf64a7f0de2df93f8462cb0057b585cb0f9e1222c1055ff7f9",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9b000079"
+   },
+   "note": "matrice N&B [0] = 121"
+  },
+  {
+   "offset": "0x87846",
+   "avant": {
+    "sha256": "406ecb75a3ad36fae23d157641da3462d426831a6da575f9aeca8408420a713a",
+    "longueur": 6
+   },
+   "apres": {
+    "hex": "9f8000000041"
+   },
+   "note": "matrice N&B [1] = 65"
+  },
+  {
+   "offset": "0x87850",
+   "avant": {
+    "sha256": "027b73aeb96be15e85495958beee38e4586047d4e70fcc7be89c04d3468345db",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "cff09fa0"
+   },
+   "note": "matrice N&B [2] = 255, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87858",
+   "avant": {
+    "sha256": "0171afeadd1cd5dd4a2b5d2b57e46b3bb481a1a82bfc1e512778a3ee1e870eb3",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "c7909fa0"
+   },
+   "note": "matrice N&B [3] = 121, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87860",
+   "avant": {
+    "sha256": "61e18d10f21672360907c944d813170fe32709a679d9060d2a46a5a654bfeeb3",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9b000041"
+   },
+   "note": "matrice N&B [4] = 65"
+  },
+  {
+   "offset": "0x87868",
+   "avant": {
+    "sha256": "2f5d1805f2e6e8b94defa355411173d40d147221700c30ac0b5a79edf67c6dec",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "cff09fa0"
+   },
+   "note": "matrice N&B [5] = 255, EXTSB → NOP"
+  },
+  {
+   "offset": "0x87888",
+   "avant": {
+    "sha256": "41ba143349aefa744721bf6573d91f3d03dce450d8a26986d42e6cf1e0c2a12b",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c800"
+   },
+   "note": "ligne Y [0] = 128"
+  },
+  {
+   "offset": "0x87892",
+   "avant": {
+    "sha256": "6df7e0a4fad1147782d1561b0942ac6512a265b5747065a44f039e5f911dccc3",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c800"
+   },
+   "note": "ligne Y [1] = 128"
+  },
+  {
+   "offset": "0x8789c",
+   "avant": {
+    "sha256": "6bcbb50dbc93dc9f0e0221cfed6d712be67c7ca0143c4d3661c5690e74417f81",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "c000"
+   },
+   "note": "ligne Y [2] = 0"
+  },
+  {
+   "offset": "0x3622dd",
+   "avant": {
+    "sha256": "5b9c058f50643f506640130a8e17ba82d047f7f271612ccc4d812efd7ca47ea3",
+    "longueur": 4096
+   },
+   "apres": {
+    "hex": "09090909090909090a0a0a0a0a0b0b0b0b0b0b0b0c0c0c0c0c0c0d0d0d0d0e0e0e0e0f0f0f0f0f10101010101111111212121313131414141515151516161617171717181818191919191a1a1a1b1b1b1c1c1c1d1d1d1d1e1e1e1f1f1f202020202121212222222323232424242425252526262626272727282828282929292a2a2a2a2b2b2b2c2c2c2d2d2d2d2e2e2e2f2f2f30303030313131323232333333333434343535353536363637373737383838393939393a3a3a3a3b3b3b3b3c3c3c3c3d3d3d3e3e3e3e3f3f3f3f4040404041414141424242424343434344444444454545454646464647474748484848494949494a4a4a4b4b4b4b4c4c4c4d4d4d4d4e4e4e4f4f4f4f50505050515151525252525353535354545454555555555656565757575758585858595959595a5a5a5a5b5b5b5b5c5c5c5c5d5d5d5d5e5e5e5e5f5f5f5f6060606061616161626262626363636364646464656565656566666666676767676868686869696969696a6a6a6a6b6b6b6b6c6c6c6c6c6d6d6d6d6e6e6e6e6e6f6f6f6f6f70707070717171717172727272737373737374747474747575757575767676767677777777787878787879797979797a7a7a7a7a7a7b7b7b7b7c7c7c7c7c7c7d7d7d7d7d7e7e7e7e7e7f7f7f7f7f8080808080808181818181828282828282838383838384848484848485858585858686868686868787878787878888888888888989898989898a8a8a8a8a8a8a8b8b8b8b8b8b8b8c8c8c8c8c8c8d8d8d8d8d8d8d8e8e8e8e8e8e8e8f8f8f8f8f8f8f9090909090909091919191919191929292929292929393939393939393949494949494949595959595959595969696969696969797979797979797989898989898989899999999999999999a9a9a9a9a9a9a9a9b9b9b9b9b9b9b9b9b9c9c9c9c9c9c9c9c9d9d9d9d9d9d9d9d9d9e9e9e9e9e9e9e9e9f9f9f9f9f9f9f9f9fa0a0a0a0a0a0a0a0a0a1a1a1a1a1a1a1a1a2a2a2a2a2a2a2a3a3a3a3a3a3a3a3a4a4a4a4a4a4a4a4a5a5a5a5a5a5a5a5a6a6a6a6a6a6a6a7a7a7a7a7a7a7a7a7a8a8a8a8a8a8a8a8a9a9a9a9a9a9a9a9aaaaaaaaaaaaaaaaaaababababababababacacacacacacacacacadadadadadadadadadaeaeaeaeaeaeaeaeaeafafafafafafafafafafb0b0b0b0b0b0b0b0b0b1b1b1b1b1b1b1b1b1b1b2b2b2b2b2b2b2b2b2b3b3b3b3b3b3b3b3b3b3b4b4b4b4b4b4b4b4b4b4b4b5b5b5b5b5b5b5b5b5b5b6b6b6b6b6b6b6b6b6b6b6b7b7b7b7b7b7b7b7b7b7b7b8b8b8b8b8b8b8b8b8b8b8b9b9b9b9b9b9b9b9b9b9b9babababababababababababbbbbbbbbbbbbbbbbbbbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbdbdbdbdbdbdbdbdbdbdbdbdbdbebebebebebebebebebebebebfbfbfbfbfbfbfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9cacacacacacacacacacacacacacacacacacbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcccccccccccccccccccccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcecececececececececececececececececececececececfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddedededededededededededededededededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebecececececececececececececececececececececececececececececececececececececececececececececececececededededededededededededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "courbe N&B trix"
+  },
+  {
+   "offset": "0x209292",
+   "avant": {
+    "sha256": "dd55b419235953912e0cb54b4c836196a63d5c1c1d410e7a7b41c1bdfcf4620f",
+    "longueur": 24
+   },
+   "apres": {
+    "hex": "024302680272026f026d0265ffffffffffffffffffffffff"
+   },
+   "note": "fr id 251 (0x259292) : « Moins nette » -> « Chrome »"
+  },
+  {
+   "offset": "0x207DDA",
+   "avant": {
+    "sha256": "83676f4d8e566c23368fb28f388bb4fb56abc125804140c649de559bb11fb4ec",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024302680272026f026d0265003a02200263026f0275026c026502750272027302200273026f02750272026402650273ffff"
+   },
+   "note": "fr id 508 (0x257DDA) : « Moins nette`: adoucit les » -> « Chrome`: couleurs sourdes »"
+  },
+  {
+   "offset": "0x207DA8",
+   "avant": {
+    "sha256": "caf67aa157a768de59a5c51f790613b539535896b10fd67e326810a5274edd55",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "026502740220026f026d0262027202650273022002640265026e027302650273022effffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 509 (0x257DA8) : « contours et le contraste » -> « et ombres denses. »"
+  },
+  {
+   "offset": "0x126600",
+   "avant": {
+    "sha256": "6acf95f515743e1c0485d811685cbf247857ba14c40318f2142915fe89a666f6",
+    "longueur": 18
+   },
+   "apres": {
+    "hex": "0250026f027302690274026902760265ffff"
+   },
+   "note": "fr id 252 (0x259282) : « Saturée » -> « Positive » (nouveau texte, zone libre)"
+  },
+  {
+   "offset": "0x1F69F0",
+   "avant": {
+    "sha256": "a9cd821bd5b56f325b1a2468ccef06cb0615b07ab58d3ab63dbc8470fd4a41ec",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "00176600"
+   },
+   "note": "pointeur fr:252, 0x259282 -> 0x176600"
+  },
+  {
+   "offset": "0x207D84",
+   "avant": {
+    "sha256": "cf63e9c0004a2a50adb58f76fd16b8fc0750af85317e59fb13653155ee2a811f",
+    "longueur": 36
+   },
+   "apres": {
+    "hex": "0250026f027302690274026902760265003a02200264026902610270026fffffffffffff"
+   },
+   "note": "fr id 510 (0x257D84) : « Saturée`: augmente » -> « Positive`: diapo »"
+  },
+  {
+   "offset": "0x207D5C",
+   "avant": {
+    "sha256": "e0380b9fe241b202ea68cb13be9e77b41c64b4153b470caaf3c195e0fa402743",
+    "longueur": 40
+   },
+   "apres": {
+    "hex": "0263026f0275026c0265027502720273022002760269027602650273022cffffffffffffffffffff"
+   },
+   "note": "fr id 511 (0x257D5C) : « le contraste et la  » -> « couleurs vives, »"
+  },
+  {
+   "offset": "0x207D32",
+   "avant": {
+    "sha256": "8e1cd3740998a1c8f6aab6e0d3c7163ce0dd5292e151e9c83abf7c3d1f0f7f93",
+    "longueur": 42
+   },
+   "apres": {
+    "hex": "0263026f026e02740272026102730274026502200264026f02750278022cffffffffffffffffffffffff"
+   },
+   "note": "fr id 512 (0x257D32) : « saturation pour des  » -> « contraste doux, »"
+  },
+  {
+   "offset": "0x207D02",
+   "avant": {
+    "sha256": "f762ae0ec0443ec69bb073b56bf783c8abd0b21e15514b4feea33cad40429923",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "026602610285026f026e022002660269026c026d02200269026e027602650272027302690262026c0265022effffffff"
+   },
+   "note": "fr id 513 (0x257D02) : « images nettes et vives. » -> « façon film inversible. »"
+  },
+  {
+   "offset": "0x209268",
+   "avant": {
+    "sha256": "daf5745e060070347eeed18a6cc624d57ab67707c88b9d1ad64628dae45df1a1",
+    "longueur": 26
+   },
+   "apres": {
+    "hex": "024602500234ffffffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 253 (0x259268) : « Plus saturée » -> « FP4 »"
+  },
+  {
+   "offset": "0x207CD4",
+   "avant": {
+    "sha256": "c46f2320a5c2a641733c6cfc457ebc982849649f5581838334d2f72245b83489",
+    "longueur": 46
+   },
+   "apres": {
+    "hex": "024602500234003a0220026e026f0269027202200265027402200262026c0261026e0263ffffffffffffffffffff"
+   },
+   "note": "fr id 514 (0x257CD4) : « Plus saturée`: augmente » -> « FP4`: noir et blanc »"
+  },
+  {
+   "offset": "0x207CA4",
+   "avant": {
+    "sha256": "85f1f382d84a11f4660bc7935aae982a73af762e75a891fc3691147005ed19b6",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "02660269026e022c02200274026f026e02730220026702720269027302200264026f02750278022cffffffffffffffff"
+   },
+   "note": "fr id 515 (0x257CA4) : « contraste et saturation » -> « fin, tons gris doux, »"
+  },
+  {
+   "offset": "0x207C76",
+   "avant": {
+    "sha256": "95763ad14f4a43d474b705050f0edd289a6e459181c49c898c62149a2fa2bb42",
+    "longueur": 46
+   },
+   "apres": {
+    "hex": "027402790270026502200249026c0266026f02720264022002460250023402200250026c02750273022effffffff"
+   },
+   "note": "fr id 516 (0x257C76) : « pour des images encore » -> « type Ilford FP4 Plus. »"
+  },
+  {
+   "offset": "0x207C44",
+   "avant": {
+    "sha256": "e73c4beb585bf10e823e92317df9e433834002d8738e91c78fbe6e843468938c",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024302690265026c02200263026c026102690272022c0220027602650272027402200273026f026d026202720265022effff"
+   },
+   "note": "fr id 517 (0x257C44) : « plus nettes, plus vives. » -> « Ciel clair, vert sombre. »"
+  },
+  {
+   "offset": "0x20955A",
+   "avant": {
+    "sha256": "6ad008bd3682e3ba6fd94e44fe81f17447bb80dc39f2c9c20222ef65d8542e26",
+    "longueur": 18
+   },
+   "apres": {
+    "hex": "024802500235ffffffffffffffffffffffff"
+   },
+   "note": "fr id 217 (0x25955A) : « Portrait » -> « HP5 »"
+  },
+  {
+   "offset": "0x207C12",
+   "avant": {
+    "sha256": "965a64e606f2fa803ff702cd76a0efbdffc765074489d940ab8f847b6c07398b",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "024802500235003a0220026e026f0269027202200265027402200262026c0261026e0263ffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 518 (0x257C12) : « Portrait`: contraste doux » -> « HP5`: noir et blanc »"
+  },
+  {
+   "offset": "0x207BE0",
+   "avant": {
+    "sha256": "94e2bf4e225d5f2e841e46f7e1c343196770f29a1614ce6eea3ab4e8ff3e7f2a",
+    "longueur": 50
+   },
+   "apres": {
+    "hex": "0263026f026e027402720261027302740287022c0220026e026f026902720273022002640265026e027302650273022cffff"
+   },
+   "note": "fr id 519 (0x257BE0) : « pour portraits naturels, » -> « contrasté, noirs denses, »"
+  },
+  {
+   "offset": "0x207BB0",
+   "avant": {
+    "sha256": "4b4711cb434ca59f5e7fb2b3404d0e8b8f5e787cd5a2d9e685b980b80c6aa4ea",
+    "longueur": 48
+   },
+   "apres": {
+    "hex": "027402790270026502200249026c0266026f02720264022002480250023502200250026c02750273022effffffffffff"
+   },
+   "note": "fr id 520 (0x257BB0) : « effet trois dimensions. » -> « type Ilford HP5 Plus. »"
+  },
+  {
+   "offset": "0x20924C",
+   "avant": {
+    "sha256": "f6f53c0939530147f2b0b2cdf5ec639581a4c3dea307f9bbbf0b81a5a8a0c8a6",
+    "longueur": 28
+   },
+   "apres": {
+    "hex": "025402720269022d0258ffffffffffffffffffffffffffffffffffff"
+   },
+   "note": "fr id 254 (0x25924C) : « Noir et blanc » -> « Tri-X »"
+  },
+  {
+   "offset": "0x7dfae",
+   "avant": {
+    "sha256": "99b1475977eda6b073e0acdf3e231549eeb60e5cda9695355476b6f520d85973",
+    "longueur": 6
+   },
+   "apres": {
+    "hex": "9f8c00177000"
+   },
+   "texte": "FUN_000cd9a2 : LDI:32 #0xCF86A (FUN_000cf86a) → #0x177000 (preglage_reglages : netteté Moyenne +, saturation Normale, tons Normale pour les 4 rendus), CALL @R12 sans créneau, inchangé"
+  },
+  {
+   "offset": "0xda28",
+   "avant": {
+    "sha256": "3a06f7c09a3f7157f8d423faaba4aea754f85ea9d8cdb28e5d33a19b2406bf42",
+    "longueur": 6
+   },
+   "apres": {
+    "hex": "9f8c00177060"
+   },
+   "texte": "isp_chargerPuce : LDI:32 #0xDCFF8 (FUN_000dcff8) → #0x177060 (preglage_puce : matrice, YCbCr, secteurs et courbes du rendu), CALL @R12 sans créneau, inchangé"
+  },
+  {
+   "offset": "0x127000",
+   "avant": {
+    "sha256": "9022bdd06c8eb4395f9b070b3b1d9e3c4d0e737da54c52267a846aa92eacf847",
+    "longueur": 364
+   },
+   "apres": {
+    "hex": "9f8197be3e4c0411c4dd0210c1f28220b0109f8200177210a6020620a840eb1c9f8297be3dcc0422a802e316b4209f8200177220a60206209f8197be3dd41410a41206209f8197be3df81410a41206209f8197be3e0814109f8c000cf86a970c178117089f8c000dcff8971c17042061c4dd0210c1f28220b0109f8200177210a6020620a840eb6e9b0d04240212c173aa32eb689f8297be3dcc0422a802e3629b0d042201129b030126aa32e55b9f8300177240a6230632c0c3aa32e553b4209f8300177230a60304388b23b443b412a623a6839f8550010022c09605301550a423a425a5f6e3fa9b0300d8a6839f8550010034c09605301550a423a425a5f6e3fa9b0300eaa6839f855001e400c40605301550a423a425a5f6e3fa9b040180a6849f85500184009b0610009f8c0005debe971c9b040180a6849f855001a4009b0610009f8c0005debe971c9b040180a6849f855001c4009b0610009f8c0005debe971c0704070807819720"
+   },
+   "texte": "preglage_reglages et preglage_puce (364 octets)"
+  },
+  {
+   "offset": "0x127200",
+   "avant": {
+    "sha256": "8f1cab52f0b6fdafcc5255079cd654fc7ea34f13205b66090d0bf59f35141c95",
+    "longueur": 358
+   },
+   "apres": {
+    "hex": "505245474c414745532d443230300000ff00010203ffffffffffffffffffffff040101000401010004010100040101000017740000178580001797000017a880000000000000000101010101010102020202020202030303030303030404040404040405050505050505ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000101010101010102020202020202030303030303030404040404040405050505050505ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff060606060606060707070707070708080808080808090909090909090a0a0a0a0a0a0a0b0b0b0b0b0b0b060606060606060707070707070708080808080808090909090909090a0a0a0a0a0a0a0b0b0b0b0b0b0b"
+   },
+   "texte": "tables : signature, mode d'Optimiser → emplacement, netteté/saturation/tons, adresses des 4 emplacements, jeu de Nikon (0-293) → n° de matrice (F, F + 6 en Adobe)"
+  },
+  {
+   "offset": "0x127400",
+   "avant": {
+    "sha256": "d6cff7dcce3511f068c61563906640f73a9453865774286706b83ec2fbc129a1",
+    "longueur": 4480
+   },
+   "apres": {
+    "hex": "0392055904390433023e040b002a04dd02b303d405bb041904250252042d001b04bc02a103e805e304050422027d045b001104a3029203bb057e043d040802480440001c0475025903e705d104160429024f0426001a04ac029203d405bb041904250252042d001b04bc02a1028e046e042004160221040b004004c30283029d0497040604130237042400290497026e02ca04bd040d040802600458002a048f026502ae048d042104020237043500260465023f02d204e70015040e02210413003104a50274029d0497040604130237042400290497026e004d0096001d022b025500800080026b02150100010001000100010001000100010001000100010001000100010001000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001000100010001000100010001000100010001000100010001000100000000000000000000000000000000000000000000000000000101010102020202030303030404040405050505060606060707070708080808090909090a0a0a0a0b0b0b0b0c0c0c0c0d0d0d0d0e0e0e0e0f0f0f0f101010101111111112121212131313131414141415151515161616161717171718181818191919191a1a1a1a1b1b1b1b1c1c1c1c1d1d1d1d1e1e1e1e1f1f1f1f202020202121212122222222232323232424242425252525262626262727272728282828292929292a2a2a2a2b2b2b2b2c2c2c2c2d2d2d2d2e2e2e2e2f2f2f2f30303030313131313232323233333333333434343435353535363636363737373738383838393939393a3a3a3a3b3b3b3b3c3c3c3c3d3d3d3d3e3e3e3e3f3f3f3f404040404141414142424242434343434444444445454545464646464747474748484848494949494a4a4a4a4b4b4b4b4c4c4c4c4d4d4d4d4e4e4e4e4f4f4f4f505050505151515152525252535353535454545455555555565656565757575758585858595959595a5a5a5a5b5b5b5b5c5c5c5c5d5d5d5d5e5e5e5e5f5f5f5f60606060616161616262626263636363646464646565656566666666666767676768686868696969696a6a6a6a6b6b6b6b6c6c6c6c6d6d6d6d6d6e6e6e6e6e6e6f6f6f6f6f6f6f7070707070707171717171717172727272727273737373737373747474747474747575757575757576767676767676777777777777777878787878787878797979797979797a7a7a7a7a7a7a7b7b7b7b7b7b7b7b7c7c7c7c7c7c7c7c7d7d7d7d7d7d7d7e7e7e7e7e7e7e7e7f7f7f7f7f7f7f7f80808080808080808181818181818181818282828282828282838383838383838384848484848484848585858585858585868686868686868687878787878787878888888888888888888889898989898989898a8a8a8a8a8a8a8a8a8b8b8b8b8b8b8b8b8b8c8c8c8c8c8c8c8c8c8d8d8d8d8d8d8d8d8d8e8e8e8e8e8e8e8e8e8f8f8f8f8f8f8f8f8f8f90909090909090909091919191919191919191929292929292929292939393939393939393939494949494949494949495959595959595959595969696969696969696969697979797979797979797989898989898989898989899999999999999999999999a9a9a9a9a9a9a9a9a9a9a9b9b9b9b9b9b9b9b9b9b9b9c9c9c9c9c9c9c9c9c9c9c9d9d9d9d9d9d9d9d9d9d9d9e9e9e9e9e9e9e9e9e9e9e9e9f9f9f9f9f9f9f9f9f9f9fa0a0a0a0a0a0a0a0a0a0a0a0a1a1a1a1a1a1a1a1a1a1a1a1a1a2a2a2a2a2a2a2a2a2a2a2a2a2a3a3a3a3a3a3a3a3a3a3a3a3a3a3a4a4a4a4a4a4a4a4a4a4a4a4a4a4a5a5a5a5a5a5a5a5a5a5a5a5a5a6a6a6a6a6a6a6a6a6a6a6a6a6a6a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a8a8a8a8a8a8a8a8a8a8a8a8a8a8a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababababababababababacacacacacacacacacacacacacacacacadadadadadadadadadadadadadadadaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeafafafafafafafafafafafafafafafafb0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9babababababababababababababababababababbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbebebebebebebebebebebebebebebebebebebebebebebfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9cacacacacacacacacacacacacacacacacacacacacacacacacacacacacbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcecececececececececececececececececececececececececececececfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddededededededededededededededededededededededededededededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebecececececececececececececececececececececececececececececececececececececececececececececececececececececececececececececededededededededededededededededededededededededededededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffff"
+   },
+   "texte": "emplacement 0 « Chrome » (Optimiser = 1, ex-Moins net) : 12 matrices (F 0-5 sRGB, F 0-5 Adobe), YCbCr, secteurs, courbe 4 096 octets ; source d200_rendus.recette('chrome') : matrice ajustée pour le D200 (d200/recettes/matrices.json), secteurs neutres, courbe d40/recettes/mesures/classic-chrome.json ; déclinée sur les matrices de Nikon E = 0 (sRGB) et 5 (Adobe) ; déclinaison réduite (t) : {2: 0.675, 4: 0.175}"
+  },
+  {
+   "offset": "0x128580",
+   "avant": {
+    "sha256": "d6cff7dcce3511f068c61563906640f73a9453865774286706b83ec2fbc129a1",
+    "longueur": 4480
+   },
+   "apres": {
+    "hex": "034d046c04e104c9039904d004530435028803b604dc04da04a303d40531045a0005025503c004e304dd049d03e7054a045b0014024703a304f704ac0487037004e9045b0022023903e7052404c304b103b4050304600026023a03b604dc04da04a303d40531045a00050255023900b704f00495038104ec0432000e0224027a006604e0047d03b005330444003c02080276007404ea047e03c105430445004801fd02ac040f049d045a033b04e104370031020602b1003404e5048e03b9052b044f006401eb027a006604e0047d03b005330444003c0208004d0096001d022b025500800080026b02150040004c005800640070007c0088009400a000ac00b800c400d000dc00e800f4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040004c005800640070007c0088009400a000ac00b800c400d000dc00e800f40000000000000000000000000000000000000000000000000101010102020202030303040404040505050506060607070707080808090909090a0a0a0a0b0b0b0c0c0c0c0d0d0d0d0e0e0e0f0f0f0f1010101111111112121212131313141414141515151516161617171717181818181919191a1a1a1a1b1b1b1c1c1c1c1d1d1d1d1e1e1e1f1f1f1f202020202121212222222223232323242424252525252626262627272728282828292929292a2a2a2a2b2b2b2b2c2c2c2c2d2d2d2d2d2e2e2e2e2f2f2f30303031313132323232333333343434343535353636363637373738383838393939393a3a3a3b3b3b3b3c3c3c3c3d3d3d3d3e3e3e3e3f3f3f3f40404040404141414142424242434343434344444444444545454546464647474747484848494949494a4a4a4a4b4b4b4b4c4c4c4d4d4d4d4e4e4e4e4f4f4f4f50505050515151515252525252535353535454545455555555555656565657575757575858585859595959595a5a5a5a5b5b5b5b5b5c5c5c5c5c5d5d5d5d5d5e5e5e5e5e5f5f5f5f5f606060606061616161616262626262636363636364646464646565656565656666666666676767676767686868686869696969696a6a6a6a6a6a6b6b6b6b6b6b6c6c6c6c6c6d6d6d6d6d6d6e6e6e6e6e6e6f6f6f6f6f6f707070707070717171717171727272727272737373737373747474747474747575757575757676767676767677777777777777787878787878797979797979797a7a7a7a7a7a7a7b7b7b7b7b7b7b7c7c7c7c7c7c7c7d7d7d7d7d7d7d7e7e7e7e7e7e7e7f7f7f7f7f7f7f80808080808080808181818181818182828282828282828383838383838383848484848484848484858585858585858586868686868686868787878787878787878888888888888888888989898989898989898a8a8a8a8a8a8a8a8a8b8b8b8b8b8b8b8b8b8c8c8c8c8c8c8c8c8c8d8d8d8d8d8d8d8d8d8d8e8e8e8e8e8e8e8e8e8f8f8f8f8f8f8f8f8f8f90909090909090909091919191919191919191929292929292929292929393939393939393939394949494949494949494949595959595959595959596969696969696969696969797979797979797979798989898989898989898989999999999999999999999999a9a9a9a9a9a9a9a9a9a9a9b9b9b9b9b9b9b9b9b9b9b9c9c9c9c9c9c9c9c9c9c9c9c9d9d9d9d9d9d9d9d9d9d9d9d9e9e9e9e9e9e9e9e9e9e9e9f9f9f9f9f9f9f9f9f9f9f9fa0a0a0a0a0a0a0a0a0a0a0a0a0a1a1a1a1a1a1a1a1a1a1a1a1a1a2a2a2a2a2a2a2a2a2a2a2a2a2a3a3a3a3a3a3a3a3a3a3a3a3a3a4a4a4a4a4a4a4a4a4a4a4a4a4a4a5a5a5a5a5a5a5a5a5a5a5a5a5a6a6a6a6a6a6a6a6a6a6a6a6a6a6a7a7a7a7a7a7a7a7a7a7a7a7a7a7a8a8a8a8a8a8a8a8a8a8a8a8a8a8a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabababababababababababababababacacacacacacacacacacacacacacacadadadadadadadadadadadadadadadadaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeafafafafafafafafafafafafafafafafb0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b8b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9b9bababababababababababababababababababbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbebebebebebebebebebebebebebebebebebebebebebfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9cacacacacacacacacacacacacacacacacacacacacacacacacbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcccccccccccccccccccccccccccccccccccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcecececececececececececececececececececececececececfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddededededededededededededededededededededededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebececececececececececececececececececececececececececececececececececececececececececececededededededededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffffffffffffffffff"
+   },
+   "texte": "emplacement 1 « Positive » (Optimiser = 2, ex-Saturé) : 12 matrices (F 0-5 sRGB, F 0-5 Adobe), YCbCr, secteurs, courbe 4 096 octets ; source d200_rendus.recette('positive') : matrice ajustée pour le D200 (d200/recettes/matrices.json), secteurs de SONDE 2 (rampe : secteur s → gain de chroma (64 + 12 s)/256, de 0,25 à 0,95, sans rotation), courbe d40/recettes/mesures/positive-film.json ; déclinée sur les matrices de Nikon E = 2 (sRGB) et 6 (Adobe) ; déclinaison réduite (t) : {2: 0.2, 4: 0.45}"
+  },
+  {
+   "offset": "0x129700",
+   "avant": {
+    "sha256": "d6cff7dcce3511f068c61563906640f73a9453865774286706b83ec2fbc129a1",
+    "longueur": 4480
+   },
+   "apres": {
+    "hex": "00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a00660030016a004d0096001d022b025500800080026b0215010001000100010001000100010001000100010001000100010001000100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001000100010001000100010001000100010001000100010001000100010000000000000000000000000000000000000000000000050505050505050505050505050505050505050505050505050506060606060606060607070707070708080808080809090909090a0a0a0a0a0b0b0b0b0b0c0c0c0c0d0d0d0d0d0e0e0e0e0e0f0f0f0f101010101011111111111212121213131313131414141415151515151616161617171717171818181819191919191a1a1a1a1b1b1b1b1b1c1c1c1c1d1d1d1d1d1e1e1e1e1e1f1f1f1f20202020212121212122222222232323232324242424252525252526262626272727272828282828292929292a2a2a2a2b2b2b2b2c2c2c2c2c2d2d2d2d2e2e2e2e2f2f2f2f303030303031313131323232323333333334343434353535353636363637373737383838383939393a3a3a3a3b3b3b3b3c3c3c3c3d3d3d3d3e3e3e3e3f3f3f3f404040404141414142424243434343444444444545454646464647474747484848494949494a4a4a4a4b4b4b4c4c4c4c4d4d4d4d4e4e4e4f4f4f4f50505050515151515252525353535354545454555555555656565657575758585858595959595a5a5a5b5b5b5b5c5c5c5c5d5d5d5d5e5e5e5f5f5f5f6060606061616161626262636363636464646465656565666666666767676768686868696969696a6a6a6a6b6b6b6b6c6c6c6c6d6d6d6d6e6e6e6e6f6f6f6f70707070717171717272727273737373747474747575757576767676777777777778787878797979797a7a7a7a7a7b7b7b7b7c7c7c7c7d7d7d7d7d7e7e7e7e7f7f7f7f80808080808181818182828282828383838384848484848585858585868686868787878787888888888889898989898a8a8a8a8a8b8b8b8b8c8c8c8c8c8d8d8d8d8d8e8e8e8e8e8f8f8f8f8f909090909090919191919192929292929393939393949494949494959595959596969696969797979797979898989898989999999999999a9a9a9a9a9b9b9b9b9b9b9c9c9c9c9c9c9d9d9d9d9d9d9e9e9e9e9e9e9f9f9f9f9f9fa0a0a0a0a0a0a1a1a1a1a1a1a2a2a2a2a2a2a3a3a3a3a3a3a3a4a4a4a4a4a4a5a5a5a5a5a5a5a6a6a6a6a6a6a6a7a7a7a7a7a7a7a8a8a8a8a8a8a8a9a9a9a9a9a9a9aaaaaaaaaaaaaaaaabababababababacacacacacacacadadadadadadadadaeaeaeaeaeaeaeaeafafafafafafafafb0b0b0b0b0b0b0b0b1b1b1b1b1b1b1b1b2b2b2b2b2b2b2b2b3b3b3b3b3b3b3b3b4b4b4b4b4b4b4b4b4b5b5b5b5b5b5b5b5b5b6b6b6b6b6b6b6b6b7b7b7b7b7b7b7b7b7b8b8b8b8b8b8b8b8b8b8b9b9b9b9b9b9b9b9b9babababababababababbbbbbbbbbbbbbbbbbbbbbbcbcbcbcbcbcbcbcbcbcbdbdbdbdbdbdbdbdbdbebebebebebebebebebebebfbfbfbfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9c9c9c9c9cacacacacacacacacacacacacacbcbcbcbcbcbcbcbcbcbcbcbcbcbcccccccccccccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcdcdcdcecececececececececececececececfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddddddddddddddddddededededededededededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebecececececececececececececececececececececececececececececececececececececececececececececececececececececededededededededededededededededededededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffffffffffffffff"
+   },
+   "texte": "emplacement 2 « FP4 » (Optimiser = 3, ex-Très saturé) : 12 matrices (F 0-5 sRGB, F 0-5 Adobe), YCbCr, secteurs, courbe 4 096 octets ; source films_nb.poids('fp4', camspec D200) = [0.199, 0.095, 0.706] (écart médian 0.038) → [102, 48, 362] ×3 ; courbe films_nb.courbe {'logH_gris': 2.23, 'densite_gris': 0.8, 'v_gris': 0.1206}"
+  },
+  {
+   "offset": "0x12a880",
+   "avant": {
+    "sha256": "d6cff7dcce3511f068c61563906640f73a9453865774286706b83ec2fbc129a1",
+    "longueur": 4480
+   },
+   "apres": {
+    "hex": "005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197005100180197004d0096001d022b025500800080026b02150100010001000100010001000100010001000100010001000100010001000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001000100010001000100010001000100010001000100010001000100000000000000000000000000000000000000000000000707070707070707070707070707070707070707070708080808080808090909090909090a0a0a0a0a0a0b0b0b0b0b0c0c0c0c0c0c0d0d0d0d0d0e0e0e0e0e0f0f0f0f0f101010101011111111111112121212121313131313141414141515151516161616161717171718181818191919191a1a1a1a1b1b1b1b1b1c1c1c1c1d1d1d1d1e1e1e1e1f1f1f1f1f2020202020212121212222222222232323232324242424242525252525262626262727272727282828292929292a2a2a2a2b2b2b2c2c2c2c2d2d2d2e2e2e2e2f2f2f2f303030313131313232323333333334343434353535353636363737373738383838393939393a3a3a3a3b3b3b3b3c3c3c3c3d3d3d3d3e3e3e3f3f3f3f40404040414141414242424243434343444444444545454546464647474747484848484949494a4a4a4a4b4b4b4b4c4c4c4d4d4d4d4e4e4e4e4f4f4f4f50505051515151525252525353535454545455555555565656565757575758585858595959595a5a5a5a5b5b5b5b5b5c5c5c5c5d5d5d5d5e5e5e5e5e5f5f5f5f6060606061616161616262626263636363636464646465656565656666666667676767676868686868696969696a6a6a6a6a6b6b6b6b6b6c6c6c6c6d6d6d6d6d6e6e6e6e6e6f6f6f6f707070707071717171727272727273737373747474747475757575767676767677777777777878787879797979797a7a7a7a7b7b7b7b7b7c7c7c7c7c7d7d7d7d7d7e7e7e7e7e7f7f7f7f80808080808181818181828282828283838383838484848484858585858585868686868687878787878888888888888989898989898a8a8a8a8a8a8a8b8b8b8b8b8b8c8c8c8c8c8c8c8d8d8d8d8d8d8e8e8e8e8e8e8e8f8f8f8f8f8f8f909090909090909191919191919192929292929292939393939393939494949494949495959595959595969696969696969697979797979797989898989898989899999999999999999a9a9a9a9a9a9a9a9b9b9b9b9b9b9b9b9c9c9c9c9c9c9c9c9d9d9d9d9d9d9d9d9e9e9e9e9e9e9e9e9e9f9f9f9f9f9f9f9fa0a0a0a0a0a0a0a0a0a0a1a1a1a1a1a1a1a1a1a2a2a2a2a2a2a2a2a2a2a3a3a3a3a3a3a3a3a3a4a4a4a4a4a4a4a4a4a4a5a5a5a5a5a5a5a5a5a5a6a6a6a6a6a6a6a6a6a6a6a7a7a7a7a7a7a7a7a7a7a8a8a8a8a8a8a8a8a8a8a8a9a9a9a9a9a9a9a9a9a9a9aaaaaaaaaaaaaaaaaaaaaaababababababababababababacacacacacacacacacacacadadadadadadadadadadadadaeaeaeaeaeaeaeaeaeaeaeaeafafafafafafafafafafafafb0b0b0b0b0b0b0b0b0b0b0b0b1b1b1b1b1b1b1b1b1b1b1b1b1b2b2b2b2b2b2b2b2b2b2b2b2b2b3b3b3b3b3b3b3b3b3b3b3b4b4b4b4b4b4b4b4b4b4b5b5b5b5b5b5b5b5b5b5b6b6b6b6b6b6b6b6b6b6b6b7b7b7b7b7b7b7b7b7b7b8b8b8b8b8b8b8b8b8b8b8b9b9b9b9b9b9b9b9b9b9b9babababababababababababbbbbbbbbbbbbbbbbbbbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbdbdbdbdbdbdbdbdbdbdbdbebebebebebebebebebebebebebfbfbfbfbfbfbfbfbfbfbfbfc0c0c0c0c0c0c0c0c0c0c0c0c0c1c1c1c1c1c1c1c1c1c1c1c1c1c2c2c2c2c2c2c2c2c2c2c2c2c2c3c3c3c3c3c3c3c3c3c3c3c3c3c4c4c4c4c4c4c4c4c4c4c4c4c4c4c5c5c5c5c5c5c5c5c5c5c5c5c5c5c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9cacacacacacacacacacacacacacacacacacacacacacbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcccccccccccccccccccccccccccccccccccccccccccccccccdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcecececececececececececececececececececececececececfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfd0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d6d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9d9dadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddedededededededededededededededededededededededededededededededededededededededfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfe0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebebecececececececececececececececececececececececececececececececececececececececececececececececececececececececececececededededededededededededededededededededededededededededededededededededededededededededededededededededededededededededeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeff0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f4f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f5f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f6f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f8f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9fafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfcfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+   },
+   "texte": "emplacement 3 « HP5 » (Optimiser = 4, ex-Portrait) : 12 matrices (F 0-5 sRGB, F 0-5 Adobe), YCbCr, secteurs, courbe 4 096 octets ; source films_nb.poids('hp5', camspec D200) = [0.158, 0.048, 0.794] (écart médian 0.053) → [81, 24, 407] ×3 ; courbe films_nb.courbe {'logH_gris': 2.07, 'densite_gris': 0.83, 'v_gris': 0.1206}"
+  }
+ ]
+}

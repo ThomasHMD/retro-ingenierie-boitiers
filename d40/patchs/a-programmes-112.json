@@ -1,0 +1,39 @@
+{
+ "firmware": "A112",
+ "description": "Lignes de programme (Sujet rapide, Portrait, Street, Profondeur, Piqué max) dans le A 1.12, activées par le quartet bas 9 à 13 de l'octet ISO auto envoyé par le B (étape 9 du Pip-Boy). Mise au point dans l'émulateur du A ; flash à décider (recherche/etude-a/).",
+ "patchs": [
+  {
+   "offset": "0x32400",
+   "avant": {
+    "sha256": "986815fc993bd938fec4684af84091cceeb537d6182c4b1166647d3725f4d0c9",
+    "longueur": 230
+   },
+   "apres": {
+    "hex": "9b3cd25b06c0c0f18210a890ea35a8e0eb339b3cccc205c497a49b3cd10006c2b422a890e209a8a0e209a8b0e209a8c0e209a8d0e20ae020c003e01cc003e01acf03e0109b030150e00d8b23c601a613cf01aa13eb018b139b010120aa13ec018b13e0008b31b0319b3cccb906c5aa51ec0116c1ac3497209bcc42b8970c9fa09b3cd25b06c0c0f18210a880ea24a890e20ba8a0e20ca8b0e20da8c0e20ea8d0e2139b040150e01c9b0401b0e0199b040150e0169b040180e0139b3cd0f006c4b414c8c1a614e00c9b3cd0f006c4b414c8c1a614e0059bfda876b410010497a49bcc463c970c"
+   },
+   "texte": "ligne_perso et vitesse_mini (230 octets, place libre 0xf2400-0xf2fff)"
+  },
+  {
+   "offset": "0x61ea",
+   "avant": {
+    "sha256": "3938db722d3a04d3e51b1fc5a25cb98a55a63a93a49b0af54ace51595dde1082",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "9bfc2400"
+   },
+   "texte": "fonction de P : LDI:20 #0xC41C2 (ligne d'usine) → #ligne_perso, CALL @R12 inchangé"
+  },
+  {
+   "offset": "0x4620",
+   "avant": {
+    "sha256": "4d35cadb788c4d356ca670f0a870093c714759310487e83e12a247610096c424",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9bfc2480970c9fa0"
+   },
+   "texte": "expo_limiterVitesse : lecture de la vitesse mini de l'ISO auto → JMP vitesse_mini (8 octets, hors créneau de délai ; LDI:20 #vitesse_mini,R12 ; JMP @R12 ; NOP)"
+  }
+ ]
+}

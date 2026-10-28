@@ -1,0 +1,69 @@
+# a. Noir et blanc, firmware B 2.01 d'origine (octobre 2026).
+# Chaîne de prise de vue jouée par ses vraies fonctions :
+#   FUN_0005d616(fiche, 1)  comme la tâche de prise de vue FUN_0005cc64 ; elle appelle FUN_000cd9a2 (mode 0),
+#                           FUN_000ce4fa (drapeau N&B depuis l'octet 0x4D de la fiche), FUN_000cf86a ->
+#                           FUN_000d57e6 isp_matricesEtNB (mots 0x97BE09F0 et 0x97BE09CC) -> FUN_000d846a (teinte)
+#                           -> FUN_000d93a6 (conversion vers la fiche +0x33C et +0x34E)
+#   isp_chargerPuce(fiche)  0x5D716 : fiche -> registres 0x5001xxxx, puis les trois courbes
+# Fiche de prise de vue posée à 0x97F00000 (adresse de travail : dans le boîtier elle sort des files
+# 0x979DAF3C / 0x979DAF44 de FUN_00051992), à zéro sauf le mode d'Optimiser l'image.
+
+titre préparation
+lectures fiche 0x97F00000 0x1800
+poke8 0x97F0004D 0x0C              # bits 1 à 4 = 6 : Optimiser l'image = Noir et blanc
+poke8 0x97F0004E 0x00              # bits 6 et 7 = 0 : variante N&B neutre (1 sépia, 2 cyanotype)
+# témoins : ce qui n'est pas réécrit par le code garde 0xEE et fait échouer les contrôles
+remplir 0x97BE09CC 0x48 0xEE       # ligne Y, Cb, Cr (9 mots) puis matrice caméra (9 mots)
+remplir 0x97F0033C 0x24 0xEE       # fiche +0x33C et +0x34E
+remplir 0x50010022 0x24 0xEE       # registres des deux matrices
+remplir 0x50018400 0x6000 0xEE     # registres des trois courbes (3 x 4096 demi-mots)
+
+titre FUN_0005d616 : choix et conversion des matrices
+appel 0x5D616 0x97F00000 1
+bilanlectures
+expect32 0x97BE3DBC 1              # drapeau N&B posé par FUN_000ce4fa
+expect32 0x97BE3DB8 0              # variante
+expect32 0x97BE09F0 744 -223 -9 -41 656 -103 -23 -7 542     # matrice caméra N&B (/512), LDI de FUN_000d57e6
+expect32 0x97BE09CC 76 151 29 0 0 0 0 0 0                    # ligne Y (/256), Cb = Cr = 0
+expect32 0x97BE0A14 500            # numéro de jeu forcé à 500 en N&B
+# FUN_000d93a6 : signe et module, bit 10 (0x400) pour la caméra, bit 9 (0x200) pour YCbCr
+expect16 0x97F0033C 0x02E8 0x04DF 0x0409 0x0429 0x0290 0x0467 0x0417 0x0407 0x021E
+expectconv 0x97F0033C 0x97BE09F0 9 4 0x400
+expect16 0x97F0034E 0x004C 0x0097 0x001D 0 0 0 0 0 0
+expectconv 0x97F0034E 0x97BE09CC 9 4 0x200
+
+titre isp_chargerPuce : registres de la puce
+appel 0x5D716 0x97F00000
+expect16 0x50010022 0x02E8 0x04DF 0x0409 0x0429 0x0290 0x0467 0x0417 0x0407 0x021E
+expectegal 0x50010022 0x97F0033C 18
+expect16 0x50010034 0x004C 0x0097 0x001D 0 0 0 0 0 0
+expectegal 0x50010034 0x97F0034E 18
+# courbe N&B 0x3B22DD (4096 octets) recopiée en demi-mots sur R, V, B
+expectdemi 0x50018400 0x3B22DD 4096
+expectdemi 0x5001A400 0x3B22DD 4096
+expectdemi 0x5001C400 0x3B22DD 4096
+# étage à 16 secteurs neutralisé en N&B (blocs 0x97BE0828 = 0xFF et 0x97BE0768 = 0xFF, les autres à 0)
+expect16 0x5001E400 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF
+expect16 0x5001E420 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+expect16 0x5001E440 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+expect16 0x5001E460 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF
+
+titre conversion d'un LDI:8 suivi d'EXTSB (coefficient [2] en 0xD7850), v = 0 à 255
+macro chaine
+poke8 0x97F00035 0x00              # bit 7 = fiche déjà traitée : remis à 0 pour rejouer le même chemin (mode 0)
+appel 0x5D616 0x97F00000 1
+appel 0x5D716 0x97F00000
+fin
+balayage chaine 0xD7850 0 255 0x50010026 0x400 signe
+
+titre limite du format : un coefficient positif de 1023 passe, 1024 tombe sur le bit de signe
+copier 0xD7840 0x9E000000 4        # LDI:20 #0x2E8,R0 du coefficient [0], gardé
+poke16 0xD7842 1023
+jouer chaine
+expect16 0x50010022 0x03FF
+poke16 0xD7842 1024
+jouer chaine
+expect16 0x50010022 0x0400         # rangé tel quel, sans masque ni plafond : la puce y lirait -0 (hypothèse)
+copier 0x9E000000 0xD7840 4
+jouer chaine
+expect16 0x50010022 0x02E8

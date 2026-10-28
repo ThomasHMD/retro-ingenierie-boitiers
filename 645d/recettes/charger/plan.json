@@ -1,0 +1,6 @@
+{"vues": [
+ {"nom": "portra-lumineux", "reglages": {"D020": 1, "D021": 4, "D022": 4, "5014": 4, "5015": 4, "D026": 0, "D027": 0}},
+ {"nom": "classic-chrome-naturel-teinte-2", "reglages": {"D020": 0, "D021": 4, "D022": 2, "5014": 4, "5015": 4, "D026": 0, "D027": 0}},
+ {"nom": "trix-monochrome-contraste-7", "reglages": {"D020": 5, "D024": 0, "D025": 4, "5014": 7, "5015": 6, "D026": 0, "D027": 0}},
+ {"nom": "retour-naturel-classic-chrome", "reglages": {"D020": 0}}
+]}

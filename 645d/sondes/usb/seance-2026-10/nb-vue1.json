@@ -1,0 +1,54 @@
+{
+ "blocs": 1353,
+ "vues": {
+  "01-mono-filtre-0-aucun": {
+   "poids_rvb": [
+    0.254,
+    0.515,
+    0.231
+   ],
+   "ecart_rms_niveaux": 0.04,
+   "virage_R_moins_B": 0.0,
+   "ecart_canaux": 0.0,
+   "exif": {
+    "MonochromeFilterEffect": 0,
+    "MonochromeToning": 4,
+    "Contrast": 0,
+    "ISO": 9,
+    "ExposureTime": 0.25
+   }
+  }
+ },
+ "films": {
+  "Tri-X": {
+   "poids_cible": [
+    0.167,
+    0.312,
+    0.521
+   ],
+   "classement": [
+    {
+     "filtre": "01-mono-filtre-0-aucun",
+     "contraste": 0,
+     "rms_niveaux": 14.81,
+     "gris_film_IL": -0.15
+    }
+   ]
+  },
+  "HP5": {
+   "poids_cible": [
+    0.096,
+    0.238,
+    0.666
+   ],
+   "classement": [
+    {
+     "filtre": "01-mono-filtre-0-aucun",
+     "contraste": 0,
+     "rms_niveaux": 23.28,
+     "gris_film_IL": -0.15
+    }
+   ]
+  }
+ }
+}

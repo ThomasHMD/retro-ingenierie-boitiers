@@ -1,0 +1,23 @@
+run 1M
+poke8 0x83CED0FC 0x18
+poke8 0x83CED0FF 0x51
+run 69M
+png infos.png
+press menu 4M 30M
+press down 4M 16M
+png pdv-programme.png
+press right 4M 20M
+png programme.png
+press left 4M 16M
+press up 4M 16M
+press right 4M 20M
+png preglage.png
+press left 4M 16M
+press left 4M 16M
+press down 4M 16M
+png perso-onglet.png
+down b08
+run 30M
+png aide-perso.png
+up b08
+run 16M

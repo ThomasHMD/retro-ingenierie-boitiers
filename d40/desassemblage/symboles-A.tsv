@@ -1,0 +1,37 @@
+adresse	nom	type	confiance	preuve
+0x0FA876	isoAuto_vitessesMini	donnee	vérifié	8 valeurs 336…0 par pas de 48 (1/48 IL, 0 = 1 s) = les 8 choix du menu, de 1/125 s à 1 s
+0x0C441E	expo_limiterVitesse	fonction	vérifié	borne la vitesse (1/48 IL, 0 = 1 s) entre un minimum selon le mode (au flash : Portrait de nuit 1 s, Gros plan 1/125, autres scènes 1/60, P/A 30 s, comme le manuel) ou l'ISO auto (table 0xFA876) et 0x240 = 1/4000 s
+0x0C4592	expo_vitesseMaxFlash	fonction	probable	vitesse max quand le flash part (états 3, 5, 0xD de 0x3C3C1 & 0x1F) : la vitesse de synchro
+0x0FA86C	isoAuto_sensibilitesMax	donnee	vérifié	table des ISO maxi de l'ISO auto (recherche/programmes-expo-iso-auto.md §4) ; plafond codé en dur à 1600
+0x0FAB38	molette_versMode	donnee	vérifié	position de la molette (0x3C3C9 & 0xF) → code de mode 0x3C3C0 : 0 P, 1 S, 2 A, 3 M, 8 Portrait de nuit, 9 Gros plan, 10 Sport, 11 Enfant, 12 Paysage, 13 Portrait, 14 Auto sans flash, 15 Auto (identités : recoupement avec le manuel)
+0x0FAB44	flash_modesPSAM	donnee	vérifié	4 modes × 5 réglages flash ; bits 1 second rideau, 2 synchro lente, 4 atténuation yeux rouges, 8 flash coupé
+0x0FAB58	flash_modesScene	donnee	vérifié	8 modes scène (code & 7) × 5 réglages flash : lignes 2, 4, 6 (Sport, Paysage, Auto sans flash) toujours 8 = coupé ; ligne 0 (Portrait de nuit) synchro lente
+0x0FAB80	flash_modesScene2	donnee	probable	variante de flash_modesScene quand l'état flash (0x3C3C1 & 0x1F) vaut 5 ou 0xD ; seule la ligne 6 est coupée
+0x0C802C	molette_lire	fonction	vérifié	code de mode = molette_versMode[position], forcé à 2 ou 3 dans certains cas
+0x0C3F84	expo_programme	fonction	probable	calcul d'exposition ; en mode scène (si 0x3E1E0 bit 0) appelle une fonction par mode (0xC58D6…0xC5F82)
+0x0C410A	expo_programmeMode	fonction	probable	P 0xC60E2, S 0xC617E, A 0xC61BC, M 0xC61FA ; modes scène : seconde série 0xC488E…0xC5616
+0x0C41C2	expo_ligneProgramme	fonction	probable	ligne de programme par mode : seuils et pentes (1/256) selon le mode et l'état flash
+0x0C58D6	isoAutoScene_auto	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 15
+0x0C5A2E	isoAutoScene_portrait	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 13
+0x0C5B28	isoAutoScene_paysage	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 12
+0x0C5C12	isoAutoScene_enfant	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 11
+0x0C5D0C	isoAutoScene_sport	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 10
+0x0C5DBE	isoAutoScene_grosPlan	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 9
+0x0C5E88	isoAutoScene_portraitNuit	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 8
+0x0C5F82	isoAutoScene_autoSansFlash	fonction	probable	ISO auto du mode scène (pas la ligne de programme, voir ligneScene_*), mode 14
+0x0C48E0	ligneScene_auto	fonction	vérifié	ligne de programme du mode 15 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C5674	ligneScene_autoSansFlash	fonction	vérifié	ligne de programme du mode 14 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C4CE2	ligneScene_portrait	fonction	vérifié	ligne de programme du mode 13 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C4E0A	ligneScene_paysage	fonction	vérifié	ligne de programme du mode 12 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C5034	ligneScene_enfant	fonction	vérifié	ligne de programme du mode 11 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C51F0	ligneScene_sport	fonction	vérifié	ligne de programme du mode 10 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C533E	ligneScene_grosPlan	fonction	vérifié	ligne de programme du mode 9 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C5544	ligneScene_portraitNuit	fonction	vérifié	ligne de programme du mode 8 (segments selon Ev, pente), appelée par la fonction du mode dans expo_programmeMode ; recherche/programmes-expo-iso-auto.md §2
+0x0C471C	isoAuto_monter	fonction	vérifié	montée en ISO de l'ISO auto ; recherche/programmes-expo-iso-auto.md §4
+0x0C4680	expo_bornerOuverture	fonction	vérifié	borne Av entre max(ouverture maxi, plancher ccb9) et l'ouverture mini
+0x0C4BB4	expo_bornerVitesseScene	fonction	vérifié	borne Tv : −0x150 à 0x240 sans flash, vitesse mini à synchro au flash
+0x0CEDF4	majA_accord	fonction	vérifié	commande 0x0D du B : accord (0x3D296 bit 6) ou refus (bit 3, si 0x3D0A9 bit 7) ; étude d’octobre 2026
+0x0CEE4C	majA_lancer	fonction	vérifié	lance la tâche 2 (0xF8136) de mise à jour
+0x0F8000	majA_copierFlasheur	fonction	vérifié	arrête les tâches 1 et 4-11, ILM 0x10, recopie 0xF3000-0xF3AFF en RAM 0x3D400 et y saute
+0x0F3000	majA_flasheur	fonction	vérifié	code exécuté depuis 0x3D400 : tire le fichier par blocs de 128 octets (commande 0x0F), efface et réécrit 0xC0000-0xF3FFF et 0xF8000-0xFFFFF (garde 0xF4000-0xF7FFF si l'octet 0x40 vaut 1), compte rendu 0x0E
+0x0C1E92	cles_lire	fonction	vérifié	lit deux clés propres au boîtier en 0xF4000 et 0xF4028 pour le chiffrement NEC (0xF1B74)

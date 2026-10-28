@@ -1,0 +1,48 @@
+# Démarrage avec le boîtier réglé en « Mon menu » (test 8.4 de recherche/revue-critique-v1-firmware.md).
+# Le mode de menus est dans les bits 6-7 de 0x83CED0FE (0 Simple, 1 Complet, 2 Mon menu : lu par
+# ecran000_entree, ecran014_entree, ecran036_entree, qui filtrent alors leurs listes par FUN_0013c684
+# d'après les bits de 0x83CED277…). Réglages à zéro dans l'émulateur = Simple, cas déjà joué par
+# `secours`. Ici : Mon menu, toutes les rubriques cochées, comme un boîtier qui sort de l'original.
+# On ouvre le menu, on passe les 4 onglets, puis CONFIG › Menus › Complet (seule option de la V1).
+#   python3 emulateur/d40emu.py scenario mon-menu --firmware build/v1/BD400111.BIN
+run 1M
+poke8 0x83CED0FC 0x18          # français
+poke8 0x83CED0FE 0x80          # Mon menu
+poke8 0x83CED277 0xFF          # rubriques de Mon menu : toutes
+poke8 0x83CED278 0xFF
+poke8 0x83CED279 0xFF
+poke8 0x83CED27A 0xFF
+poke8 0x83CED27B 0xFF
+poke8 0x83CED27C 0xFF
+run 69M
+expect8 0x83CED0FE 0x80        # le réglage a tenu jusqu'à l'écran d'infos
+press menu 4M 30M
+expect16 0x83CED23A 0x0005     # mode menus
+png 1-menu.png
+press left 4M 16M
+onglet 0x00
+png 2-onglet-0.png
+onglet 0x01
+png 3-onglet-1.png
+onglet 0x02
+png 4-onglet-2.png
+onglet 0x03
+png 5-onglet-3.png
+expect16 0x83CED23A 0x0005     # toujours dans les menus
+press ok 4M 20M                # entrer dans la liste (OK : les deux navigations)
+expect16 0x83CEE49E 0x69AC     # liste CONFIG
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+png 6-config.png
+press right 4M 20M
+expect16 0x83CEE49E 0x733C     # écran Menus
+png 7-menus.png
+press ok 4M 30M
+expect16 0x83CEE49E 0x69AC     # retour à la liste CONFIG
+expect8 0x83CED0FE 0x40        # Complet
+png 8-config-complet.png
+press menu 4M 30M              # sortie, puis retour dans le menu
+press menu 4M 30M
+expect16 0x83CED23A 0x0005
+expect8 0x83CED0FE 0x40
+png 9-menu-complet.png

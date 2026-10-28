@@ -1,0 +1,2 @@
+MODE ÉCRITURE
+Pas de réponse complète du boîtier dans les 60 s : relancer d'abord sans --ecrire pour voir l'état de l'emplacement.

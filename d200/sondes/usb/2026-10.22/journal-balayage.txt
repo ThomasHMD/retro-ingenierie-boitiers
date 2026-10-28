@@ -1,0 +1,1036 @@
+Vu : D200
+Boîtier retenu : D200
+Fabricant : Nikon Corporation | modèle : D200 | firmware : V2.01 | extension : 0xa | réponse 0x2001
+Commandes annoncées : 30, événements : 11, réglages standard : 17
+  commandes : 0x1001 0x1002 0x1003 0x1004 0x1005 0x1006 0x1007 0x1008 0x1009 0x100A 0x100B 0x100C 0x100D 0x100E 0x100F 0x1014 0x1015 0x1016 0x101B 0x90C0 0x90C1 0x90C2 0x90C3 0x90C4 0x90C5 0x90C6 0x90C7 0x90C8 0x90C9 0x90CA
+  réglages standard : 0x5001 0x5003 0x5004 0x5005 0x5007 0x5008 0x500A 0x500B 0x500C 0x500D 0x500E 0x500F 0x5010 0x5011 0x5013 0x5018 0x501C
+CurveUpload 0x90C6 annoncée : OUI (non utilisée)
+  standard 0x5001 : lecture | 01 50 02 00 00 64 64 01 00 64 01
+  standard 0x5003 : écriture | 03 50 ff ff 01 0a 33 00 38 00 37 00 32 00 78 00 32 00 35 00 39 00 32 00 …
+  standard 0x5004 : écriture | 04 50 02 00 01 01 06 02 07 00 00 01 02 03 04 05 06
+  standard 0x5005 : écriture | 05 50 04 00 01 02 00 02 00 02 09 00 02 00 04 00 05 00 06 00 07 00 10 80 …
+  standard 0x5007 : écriture | 07 50 04 00 01 00 00 00 00 02 01 00 00 00
+  standard 0x5008 : lecture | 08 50 06 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 01 00 …
+  standard 0x500A : lecture | 0a 50 04 00 00 10 80 01 00 02 03 00 01 00 10 80 11 80
+  standard 0x500B : lecture | 0b 50 04 00 00 03 00 02 00 02 03 00 02 00 03 00 04 00
+  standard 0x500C : écriture | 0c 50 04 00 01 10 80 10 80 02 05 00 04 00 10 80 11 80 12 80 13 80
+  standard 0x500D : lecture | 0d 50 06 00 00 01 00 00 00 9a 02 00 00 02 1a 00 01 00 00 00 02 00 00 00 …
+  standard 0x500E : écriture | 0e 50 04 00 01 02 00 03 00 02 04 00 01 00 02 00 03 00 04 00
+  standard 0x500F : écriture | 0f 50 04 00 01 64 00 64 00 02 10 00 64 00 7d 00 a0 00 c8 00 fa 00 40 01 …
+  standard 0x5010 : écriture | 10 50 03 00 01 00 00 88 13 02 1f 00 78 ec c6 ed 13 ef 60 f0 ae f1 fb f2 …
+  standard 0x5011 : écriture | 11 50 ff ff 01 10 32 00 30 00 30 00 35 00 30 00 31 00 30 00 31 00 54 00 …
+  standard 0x5013 : lecture | 13 50 04 00 00 01 00 01 00 02 05 00 01 00 02 00 10 80 11 80 12 80
+  standard 0x5018 : écriture | 18 50 04 00 01 01 00 01 00 01 01 00 19 00 01 00
+  standard 0x501C : lecture | 1c 50 04 00 00 10 80 10 80 02 04 00 02 00 10 80 11 80 12 80
+Réglages Nikon annoncés (0x90CA) : 151 
+  0xD010 0xD011 0xD012 0xD013 0xD014 0xD015 0xD016 0xD017 0xD018 0xD019 0xD01A 0xD01B 0xD01C 0xD01D 0xD01E 0xD01F 0xD020 0xD021 0xD022 0xD023 0xD024 0xD025 0xD026 0xD027 0xD028 0xD029 0xD02A 0xD02B 0xD02C 0xD02D 0xD02E 0xD02F 0xD031 0xD032 0xD040 0xD041 0xD042 0xD043 0xD044 0xD045 0xD048 0xD049 0xD04A 0xD04B 0xD04F 0xD050 0xD051 0xD052 0xD054 0xD055 0xD056 0xD057 0xD058 0xD059 0xD05A 0xD05B 0xD05C 0xD05E 0xD05F 0xD062 0xD063 0xD064 0xD068 0xD06A 0xD06B 0xD06C 0xD06F 0xD070 0xD074 0xD075 0xD077 0xD078 0xD079 0xD07A 0xD07B 0xD080 0xD081 0xD082 0xD083 0xD084 0xD085 0xD086 0xD087 0xD088 0xD089 0xD08A 0xD08B 0xD090 0xD091 0xD092 0xD0C0 0xD0C1 0xD0C2 0xD0C3 0xD0C4 0xD0C5 0xD0E0 0xD0E1 0xD0E2 0xD0E3 0xD0E4 0xD0E5 0xD0E6 0xD100 0xD101 0xD102 0xD103 0xD104 0xD105 0xD106 0xD108 0xD109 0xD10A 0xD10B 0xD10C 0xD10D 0xD10E 0xD10F 0xD120 0xD121 0xD122 0xD124 0xD125 0xD126 0xD140 0xD142 0xD160 0xD163 0xD164 0xD166 0xD167 0xD16C 0xD16D 0xD181 0xD182 0xD183 0xD1C0 0xD1C1 0xD1D0 0xD1D1 0xD1D2 0xD1D3 0xD1D4 0xD1D5 0xD1D6 0xD1D7 0xD1D8 0xD1D9 0xD1DA 0xD1DB 0xD1DC
+  Nikon 0xD010 : écriture | 10 d0 02 00 01 00 00 01 00 03 01
+  Nikon 0xD011 : écriture | 11 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD012 : écriture | 12 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD013 : écriture | 13 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD014 : écriture | 14 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD015 : écriture | 15 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD016 : écriture | 16 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD017 : écriture | 17 d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD018 : écriture | 18 d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD019 : écriture | 19 d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD01A : écriture | 1a d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD01B : écriture | 1b d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD01C : écriture | 1c d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD01D : écriture | 1d d0 01 00 01 00 00 01 fd 03 01
+  Nikon 0xD01E : écriture | 1e d0 04 00 01 14 00 14 00 01 00 00 1e 00 01 00
+  Nikon 0xD01F : écriture | 1f d0 02 00 01 00 00 01 00 04 01
+  Nikon 0xD020 : écriture | 20 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD021 : écriture | 21 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD022 : écriture | 22 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD023 : écriture | 23 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD024 : écriture | 24 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD025 : lecture | 25 d0 06 00 00 00 01 00 01 84 01 b0 01 00
+  Nikon 0xD026 : lecture | 26 d0 06 00 00 00 01 00 01 92 01 c5 01 00
+  Nikon 0xD027 : lecture | 27 d0 06 00 00 00 01 00 01 22 02 9b 01 00
+  Nikon 0xD028 : lecture | 28 d0 06 00 00 00 01 00 01 6c 01 2c 01 00
+  Nikon 0xD029 : lecture | 29 d0 06 00 00 00 01 00 01 66 01 cd 01 00
+  Nikon 0xD02A : écriture | 2a d0 02 00 01 00 04 01 00 06 01
+  Nikon 0xD02B : écriture | 2b d0 02 00 01 00 03 01 00 04 01
+  Nikon 0xD02C : écriture | 2c d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD02D : écriture | 2d d0 01 00 01 00 00 01 f7 09 03
+  Nikon 0xD02E : écriture | 2e d0 02 00 01 00 00 01 00 28 01
+  Nikon 0xD02F : écriture | 2f d0 02 00 01 00 00 01 00 16 01
+  Nikon 0xD031 : écriture | 31 d0 02 00 01 00 01 01 00 01 01
+  Nikon 0xD032 : écriture | 32 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD040 : écriture | 40 d0 02 00 01 00 00 01 00 03 01
+  Nikon 0xD041 : écriture | 41 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD042 : écriture | 42 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD043 : écriture | 43 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD044 : écriture | 44 d0 ff ff 01 15 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD045 : écriture | 45 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD048 : écriture | 48 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD049 : écriture | 49 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD04A : écriture | 4a d0 02 00 01 02 02 01 00 03 01
+  Nikon 0xD04B : écriture | 4b d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD04F : écriture | 4f d0 02 00 01 00 01 01 00 01 01
+  Nikon 0xD050 : écriture | 50 d0 02 00 01 00 00 01 00 05 01
+  Nikon 0xD051 : écriture | 51 d0 02 00 01 01 01 01 00 03 01
+  Nikon 0xD052 : écriture | 52 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD054 : écriture | 54 d0 02 00 01 00 01 01 00 01 01
+  Nikon 0xD055 : écriture | 55 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD056 : écriture | 56 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD057 : écriture | 57 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD058 : écriture | 58 d0 02 00 01 00 01 01 00 02 01
+  Nikon 0xD059 : écriture | 59 d0 02 00 01 01 01 01 00 04 01
+  Nikon 0xD05A : écriture | 5a d0 01 00 01 00 00 01 fa 06 01
+  Nikon 0xD05B : écriture | 5b d0 01 00 01 00 00 01 fa 06 01
+  Nikon 0xD05C : écriture | 5c d0 01 00 01 00 00 01 fa 06 01
+  Nikon 0xD05E : écriture | 5e d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD05F : écriture | 5f d0 02 00 01 00 00 01 00 04 01
+  Nikon 0xD062 : écriture | 62 d0 02 00 01 01 01 01 00 04 01
+  Nikon 0xD063 : écriture | 63 d0 02 00 01 02 02 01 00 03 01
+  Nikon 0xD064 : écriture | 64 d0 02 00 01 01 01 01 00 04 01
+  Nikon 0xD068 : écriture | 68 d0 02 00 01 01 01 01 00 03 01
+  Nikon 0xD06A : écriture | 6a d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD06B : écriture | 6b d0 02 00 01 00 01 01 00 01 01
+  Nikon 0xD06C : écriture | 6c d0 02 00 01 00 01 01 00 02 01
+  Nikon 0xD06F : écriture | 6f d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD070 : écriture | 70 d0 02 00 01 02 02 01 00 03 01
+  Nikon 0xD074 : écriture | 74 d0 02 00 01 00 00 01 00 07 01
+  Nikon 0xD075 : écriture | 75 d0 02 00 01 00 00 01 00 0b 01
+  Nikon 0xD077 : écriture | 77 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD078 : écriture | 78 d0 02 00 01 00 00 01 00 03 01
+  Nikon 0xD079 : écriture | 79 d0 02 00 01 00 00 01 00 03 01
+  Nikon 0xD07A : écriture | 7a d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD07B : écriture | 7b d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD080 : écriture | 80 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD081 : écriture | 81 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD082 : écriture | 82 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD083 : écriture | 83 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD084 : écriture | 84 d0 02 00 01 00 06 01 00 09 01
+  Nikon 0xD085 : écriture | 85 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD086 : écriture | 86 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD087 : écriture | 87 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD088 : écriture | 88 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD089 : écriture | 89 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD08A : écriture | 8a d0 02 00 01 01 01 01 00 01 01
+  Nikon 0xD08B : écriture | 8b d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD090 : écriture | 90 d0 ff ff 01 25 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 20 00 …
+  Nikon 0xD091 : écriture | 91 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD092 : écriture | 92 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD0C0 : écriture | c0 d0 02 00 01 00 00 01 00 01 01
+  Nikon 0xD0C1 : écriture | c1 d0 02 00 01 00 03 01 00 03 01
+  Nikon 0xD0C2 : écriture | c2 d0 02 00 01 04 00 01 00 07 01
+  Nikon 0xD0C3 : lecture | c3 d0 02 00 00 01 01 01 01 09 01
+  Nikon 0xD0C4 : écriture | c4 d0 02 00 01 00 00 01 00 02 01
+  Nikon 0xD0C5 : écriture | c5 d0 02 00 01 04 00 01 00 07 01
+  Nikon 0xD0E0 : lecture | e0 d0 02 00 00 00 00 00
+  Nikon 0xD0E1 : lecture | e1 d0 02 00 00 01 00 01 00 01 01
+  Nikon 0xD0E2 : lecture | e2 d0 02 00 00 01 00 00
+  Nikon 0xD0E3 : lecture | e3 d0 06 00 00 88 13 00 00 00 00 00 00 00
+  Nikon 0xD0E4 : lecture | e4 d0 06 00 00 88 13 00 00 00 00 00 00 00
+  Nikon 0xD0E5 : lecture | e5 d0 04 00 00 8c 00 00 00 00
+  Nikon 0xD0E6 : lecture | e6 d0 04 00 00 40 06 00 00 00
+  Nikon 0xD100 : lecture | 00 d1 06 00 00 40 1f 01 00 0f 00 01 00 02 1c 00 40 1f 01 00 00 19 01 00 …
+  Nikon 0xD101 : lecture | 01 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD102 : lecture | 02 d1 02 00 00 00 00 00
+  Nikon 0xD103 : lecture | 03 d1 02 00 00 19 0a 01 01 19 01
+  Nikon 0xD104 : lecture | 04 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD105 : lecture | 05 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD106 : lecture | 06 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD108 : écriture | 08 d1 02 00 01 00 00 01 00 0a 01
+  Nikon 0xD109 : écriture | 09 d1 01 00 01 00 00 01 e2 1e 02
+  Nikon 0xD10A : lecture | 0a d1 01 00 00 00 fe 01 80 7f 01
+  Nikon 0xD10B : écriture | 0b d1 02 00 01 00 00 01 00 01 01
+  Nikon 0xD10C : lecture | 0c d1 02 00 00 00 01 01 00 01 01
+  Nikon 0xD10D : lecture | 0d d1 ff ff 00 15 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 …
+  Nikon 0xD10E : lecture | 0e d1 02 00 00 00 00 01 00 02 01
+  Nikon 0xD10F : lecture | 0f d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD120 : lecture | 20 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD121 : lecture | 21 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD122 : lecture | 22 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD124 : lecture | 24 d1 01 00 00 00 00 01 ee 12 01
+  Nikon 0xD125 : lecture | 25 d1 02 00 00 00 00 01 00 07 01
+  Nikon 0xD126 : écriture | 26 d1 01 00 01 00 00 01 ee 06 02
+  Nikon 0xD140 : écriture | 40 d1 02 00 01 00 05 01 00 06 01
+  Nikon 0xD142 : écriture | 42 d1 02 00 01 01 00 01 00 03 01
+  Nikon 0xD160 : écriture | 60 d1 02 00 01 00 02 01 00 02 01
+  Nikon 0xD163 : écriture | 63 d1 02 00 01 00 00 01 00 01 01
+  Nikon 0xD164 : écriture | 64 d1 02 00 01 08 09 01 00 0d 01
+  Nikon 0xD166 : écriture | 66 d1 02 00 01 00 00 01 00 02 01
+  Nikon 0xD167 : écriture | 67 d1 02 00 01 00 00 01 00 03 01
+  Nikon 0xD16C : écriture | 6c d1 02 00 01 00 01 01 00 01 01
+  Nikon 0xD16D : écriture | 6d d1 02 00 01 00 00 01 00 07 01
+  Nikon 0xD181 : écriture | 81 d1 02 00 01 00 00 01 00 01 01
+  Nikon 0xD182 : écriture | 82 d1 02 00 01 00 00 01 00 03 01
+  Nikon 0xD183 : écriture | 83 d1 02 00 01 03 01 01 00 03 01
+  Nikon 0xD1C0 : lecture | c0 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD1C1 : lecture | c1 d1 02 00 00 00 00 01 00 01 01
+  Nikon 0xD1D0 : écriture | d0 d1 02 00 01 04 03 01 00 05 01
+  Nikon 0xD1D1 : écriture | d1 d1 02 00 01 09 08 01 00 0d 01
+  Nikon 0xD1D2 : écriture | d2 d1 02 00 01 09 09 01 00 0d 01
+  Nikon 0xD1D3 : écriture | d3 d1 02 00 01 00 00 01 00 03 01
+  Nikon 0xD1D4 : écriture | d4 d1 02 00 01 00 00 01 00 02 01
+  Nikon 0xD1D5 : écriture | d5 d1 02 00 01 09 09 01 00 12 01
+  Nikon 0xD1D6 : écriture | d6 d1 02 00 01 00 00 01 00 07 01
+  Nikon 0xD1D7 : écriture | d7 d1 02 00 01 00 00 01 00 03 01
+  Nikon 0xD1D8 : écriture | d8 d1 02 00 01 09 09 01 00 12 01
+  Nikon 0xD1D9 : écriture | d9 d1 02 00 01 00 00 01 00 07 01
+  Nikon 0xD1DA : écriture | da d1 02 00 01 00 00 01 00 03 01
+  Nikon 0xD1DB : écriture | db d1 02 00 01 09 09 01 00 12 01
+  Nikon 0xD1DC : écriture | dc d1 02 00 01 00 00 01 00 07 01
+  caché ? 0x5000 : réponse 0x2006
+  caché ? 0x5002 : réponse 0x2006
+  caché ? 0x5006 : réponse 0x2006
+  caché ? 0x5009 : réponse 0x2006
+  caché ? 0x5012 : réponse 0x2006
+  caché ? 0x5014 : réponse 0x2006
+  caché ? 0x5015 : réponse 0x2006
+  caché ? 0x5016 : réponse 0x2006
+  caché ? 0x5017 : réponse 0x2006
+  caché ? 0x5019 : réponse 0x2006
+  caché ? 0x501A : réponse 0x2006
+  caché ? 0x501B : réponse 0x2006
+  caché ? 0x501D : réponse 0x2006
+  caché ? 0x501E : réponse 0x2006
+  caché ? 0x501F : réponse 0x2006
+  caché ? 0x5020 : réponse 0x2006
+  caché ? 0x5021 : réponse 0x2006
+  caché ? 0x5022 : réponse 0x2006
+  caché ? 0x5023 : réponse 0x2006
+  caché ? 0x5024 : réponse 0x2006
+  caché ? 0x5025 : réponse 0x2006
+  caché ? 0x5026 : réponse 0x2006
+  caché ? 0x5027 : réponse 0x2006
+  caché ? 0x5028 : réponse 0x2006
+  caché ? 0x5029 : réponse 0x2006
+  caché ? 0x502A : réponse 0x2006
+  caché ? 0x502B : réponse 0x2006
+  caché ? 0x502C : réponse 0x2006
+  caché ? 0x502D : réponse 0x2006
+  caché ? 0x502E : réponse 0x2006
+  caché ? 0x502F : réponse 0x2006
+  caché ? 0x5030 : réponse 0x2006
+  caché ? 0x5031 : réponse 0x2006
+  caché ? 0x5032 : réponse 0x2006
+  caché ? 0x5033 : réponse 0x2006
+  caché ? 0x5034 : réponse 0x2006
+  caché ? 0x5035 : réponse 0x2006
+  caché ? 0x5036 : réponse 0x2006
+  caché ? 0x5037 : réponse 0x2006
+  caché ? 0x5038 : réponse 0x2006
+  caché ? 0x5039 : réponse 0x2006
+  caché ? 0x503A : réponse 0x2006
+  caché ? 0x503B : réponse 0x2006
+  caché ? 0x503C : réponse 0x2006
+  caché ? 0x503D : réponse 0x2006
+  caché ? 0x503E : réponse 0x2006
+  caché ? 0x503F : réponse 0x2006
+  caché ? 0x5040 : réponse 0x2006
+  caché ? 0x5041 : réponse 0x2006
+  caché ? 0x5042 : réponse 0x2006
+  caché ? 0x5043 : réponse 0x2006
+  caché ? 0x5044 : réponse 0x2006
+  caché ? 0x5045 : réponse 0x2006
+  caché ? 0x5046 : réponse 0x2006
+  caché ? 0x5047 : réponse 0x2006
+  caché ? 0x5048 : réponse 0x2006
+  caché ? 0x5049 : réponse 0x2006
+  caché ? 0x504A : réponse 0x2006
+  caché ? 0x504B : réponse 0x2006
+  caché ? 0x504C : réponse 0x2006
+  caché ? 0x504D : réponse 0x2006
+  caché ? 0x504E : réponse 0x2006
+  caché ? 0x504F : réponse 0x2006
+  caché ? 0x5050 : réponse 0x2006
+  caché ? 0x5051 : réponse 0x2006
+  caché ? 0x5052 : réponse 0x2006
+  caché ? 0x5053 : réponse 0x2006
+  caché ? 0x5054 : réponse 0x2006
+  caché ? 0x5055 : réponse 0x2006
+  caché ? 0x5056 : réponse 0x2006
+  caché ? 0x5057 : réponse 0x2006
+  caché ? 0x5058 : réponse 0x2006
+  caché ? 0x5059 : réponse 0x2006
+  caché ? 0x505A : réponse 0x2006
+  caché ? 0x505B : réponse 0x2006
+  caché ? 0x505C : réponse 0x2006
+  caché ? 0x505D : réponse 0x2006
+  caché ? 0x505E : réponse 0x2006
+  caché ? 0x505F : réponse 0x2006
+  caché ? 0x5060 : réponse 0x2006
+  caché ? 0x5061 : réponse 0x2006
+  caché ? 0x5062 : réponse 0x2006
+  caché ? 0x5063 : réponse 0x2006
+  caché ? 0x5064 : réponse 0x2006
+  caché ? 0x5065 : réponse 0x2006
+  caché ? 0x5066 : réponse 0x2006
+  caché ? 0x5067 : réponse 0x2006
+  caché ? 0x5068 : réponse 0x2006
+  caché ? 0x5069 : réponse 0x2006
+  caché ? 0x506A : réponse 0x2006
+  caché ? 0x506B : réponse 0x2006
+  caché ? 0x506C : réponse 0x2006
+  caché ? 0x506D : réponse 0x2006
+  caché ? 0x506E : réponse 0x2006
+  caché ? 0x506F : réponse 0x2006
+  caché ? 0x5070 : réponse 0x2006
+  caché ? 0x5071 : réponse 0x2006
+  caché ? 0x5072 : réponse 0x2006
+  caché ? 0x5073 : réponse 0x2006
+  caché ? 0x5074 : réponse 0x2006
+  caché ? 0x5075 : réponse 0x2006
+  caché ? 0x5076 : réponse 0x2006
+  caché ? 0x5077 : réponse 0x2006
+  caché ? 0x5078 : réponse 0x2006
+  caché ? 0x5079 : réponse 0x2006
+  caché ? 0x507A : réponse 0x2006
+  caché ? 0x507B : réponse 0x2006
+  caché ? 0x507C : réponse 0x2006
+  caché ? 0x507D : réponse 0x2006
+  caché ? 0x507E : réponse 0x2006
+  caché ? 0x507F : réponse 0x2006
+  caché ? 0x5080 : réponse 0x2006
+  caché ? 0x5081 : réponse 0x2006
+  caché ? 0x5082 : réponse 0x2006
+  caché ? 0x5083 : réponse 0x2006
+  caché ? 0x5084 : réponse 0x2006
+  caché ? 0x5085 : réponse 0x2006
+  caché ? 0x5086 : réponse 0x2006
+  caché ? 0x5087 : réponse 0x2006
+  caché ? 0x5088 : réponse 0x2006
+  caché ? 0x5089 : réponse 0x2006
+  caché ? 0x508A : réponse 0x2006
+  caché ? 0x508B : réponse 0x2006
+  caché ? 0x508C : réponse 0x2006
+  caché ? 0x508D : réponse 0x2006
+  caché ? 0x508E : réponse 0x2006
+  caché ? 0x508F : réponse 0x2006
+  caché ? 0x5090 : réponse 0x2006
+  caché ? 0x5091 : réponse 0x2006
+  caché ? 0x5092 : réponse 0x2006
+  caché ? 0x5093 : réponse 0x2006
+  caché ? 0x5094 : réponse 0x2006
+  caché ? 0x5095 : réponse 0x2006
+  caché ? 0x5096 : réponse 0x2006
+  caché ? 0x5097 : réponse 0x2006
+  caché ? 0x5098 : réponse 0x2006
+  caché ? 0x5099 : réponse 0x2006
+  caché ? 0x509A : réponse 0x2006
+  caché ? 0x509B : réponse 0x2006
+  caché ? 0x509C : réponse 0x2006
+  caché ? 0x509D : réponse 0x2006
+  caché ? 0x509E : réponse 0x2006
+  caché ? 0x509F : réponse 0x2006
+  caché ? 0x50A0 : réponse 0x2006
+  caché ? 0x50A1 : réponse 0x2006
+  caché ? 0x50A2 : réponse 0x2006
+  caché ? 0x50A3 : réponse 0x2006
+  caché ? 0x50A4 : réponse 0x2006
+  caché ? 0x50A5 : réponse 0x2006
+  caché ? 0x50A6 : réponse 0x2006
+  caché ? 0x50A7 : réponse 0x2006
+  caché ? 0x50A8 : réponse 0x2006
+  caché ? 0x50A9 : réponse 0x2006
+  caché ? 0x50AA : réponse 0x2006
+  caché ? 0x50AB : réponse 0x2006
+  caché ? 0x50AC : réponse 0x2006
+  caché ? 0x50AD : réponse 0x2006
+  caché ? 0x50AE : réponse 0x2006
+  caché ? 0x50AF : réponse 0x2006
+  caché ? 0x50B0 : réponse 0x2006
+  caché ? 0x50B1 : réponse 0x2006
+  caché ? 0x50B2 : réponse 0x2006
+  caché ? 0x50B3 : réponse 0x2006
+  caché ? 0x50B4 : réponse 0x2006
+  caché ? 0x50B5 : réponse 0x2006
+  caché ? 0x50B6 : réponse 0x2006
+  caché ? 0x50B7 : réponse 0x2006
+  caché ? 0x50B8 : réponse 0x2006
+  caché ? 0x50B9 : réponse 0x2006
+  caché ? 0x50BA : réponse 0x2006
+  caché ? 0x50BB : réponse 0x2006
+  caché ? 0x50BC : réponse 0x2006
+  caché ? 0x50BD : réponse 0x2006
+  caché ? 0x50BE : réponse 0x2006
+  caché ? 0x50BF : réponse 0x2006
+  caché ? 0x50C0 : réponse 0x2006
+  caché ? 0x50C1 : réponse 0x2006
+  caché ? 0x50C2 : réponse 0x2006
+  caché ? 0x50C3 : réponse 0x2006
+  caché ? 0x50C4 : réponse 0x2006
+  caché ? 0x50C5 : réponse 0x2006
+  caché ? 0x50C6 : réponse 0x2006
+  caché ? 0x50C7 : réponse 0x2006
+  caché ? 0x50C8 : réponse 0x2006
+  caché ? 0x50C9 : réponse 0x2006
+  caché ? 0x50CA : réponse 0x2006
+  caché ? 0x50CB : réponse 0x2006
+  caché ? 0x50CC : réponse 0x2006
+  caché ? 0x50CD : réponse 0x2006
+  caché ? 0x50CE : réponse 0x2006
+  caché ? 0x50CF : réponse 0x2006
+  caché ? 0x50D0 : réponse 0x2006
+  caché ? 0x50D1 : réponse 0x2006
+  caché ? 0x50D2 : réponse 0x2006
+  caché ? 0x50D3 : réponse 0x2006
+  caché ? 0x50D4 : réponse 0x2006
+  caché ? 0x50D5 : réponse 0x2006
+  caché ? 0x50D6 : réponse 0x2006
+  caché ? 0x50D7 : réponse 0x2006
+  caché ? 0x50D8 : réponse 0x2006
+  caché ? 0x50D9 : réponse 0x2006
+  caché ? 0x50DA : réponse 0x2006
+  caché ? 0x50DB : réponse 0x2006
+  caché ? 0x50DC : réponse 0x2006
+  caché ? 0x50DD : réponse 0x2006
+  caché ? 0x50DE : réponse 0x2006
+  caché ? 0x50DF : réponse 0x2006
+  caché ? 0x50E0 : réponse 0x2006
+  caché ? 0x50E1 : réponse 0x2006
+  caché ? 0x50E2 : réponse 0x2006
+  caché ? 0x50E3 : réponse 0x2006
+  caché ? 0x50E4 : réponse 0x2006
+  caché ? 0x50E5 : réponse 0x2006
+  caché ? 0x50E6 : réponse 0x2006
+  caché ? 0x50E7 : réponse 0x2006
+  caché ? 0x50E8 : réponse 0x2006
+  caché ? 0x50E9 : réponse 0x2006
+  caché ? 0x50EA : réponse 0x2006
+  caché ? 0x50EB : réponse 0x2006
+  caché ? 0x50EC : réponse 0x2006
+  caché ? 0x50ED : réponse 0x2006
+  caché ? 0x50EE : réponse 0x2006
+  caché ? 0x50EF : réponse 0x2006
+  caché ? 0x50F0 : réponse 0x2006
+  caché ? 0x50F1 : réponse 0x2006
+  caché ? 0x50F2 : réponse 0x2006
+  caché ? 0x50F3 : réponse 0x2006
+  caché ? 0x50F4 : réponse 0x2006
+  caché ? 0x50F5 : réponse 0x2006
+  caché ? 0x50F6 : réponse 0x2006
+  caché ? 0x50F7 : réponse 0x2006
+  caché ? 0x50F8 : réponse 0x2006
+  caché ? 0x50F9 : réponse 0x2006
+  caché ? 0x50FA : réponse 0x2006
+  caché ? 0x50FB : réponse 0x2006
+  caché ? 0x50FC : réponse 0x2006
+  caché ? 0x50FD : réponse 0x2006
+  caché ? 0x50FE : réponse 0x2006
+  caché ? 0x50FF : réponse 0x2006
+  caché ? 0xD000 : réponse 0x2006
+  caché ? 0xD001 : réponse 0x2006
+  caché ? 0xD002 : réponse 0x2006
+  caché ? 0xD003 : réponse 0x2006
+  caché ? 0xD004 : réponse 0x2006
+  caché ? 0xD005 : réponse 0x2006
+  caché ? 0xD006 : réponse 0x2006
+  caché ? 0xD007 : réponse 0x2006
+  caché ? 0xD008 : réponse 0x2006
+  caché ? 0xD009 : réponse 0x2006
+  caché ? 0xD00A : réponse 0x2006
+  caché ? 0xD00B : réponse 0x2006
+  caché ? 0xD00C : réponse 0x2006
+  caché ? 0xD00D : réponse 0x2006
+  caché ? 0xD00E : réponse 0x2006
+  caché ? 0xD00F : réponse 0x2006
+  caché ? 0xD030 : réponse 0x2006
+  caché ? 0xD033 : réponse 0x2006
+  caché ? 0xD034 : réponse 0x2006
+  caché ? 0xD035 : réponse 0x2006
+  caché ? 0xD036 : réponse 0x2006
+  caché ? 0xD037 : réponse 0x2006
+  caché ? 0xD038 : réponse 0x2006
+  caché ? 0xD039 : réponse 0x2006
+  caché ? 0xD03A : réponse 0x2006
+  caché ? 0xD03B : réponse 0x2006
+  caché ? 0xD03C : réponse 0x2006
+  caché ? 0xD03D : réponse 0x2006
+  caché ? 0xD03E : réponse 0x2006
+  caché ? 0xD03F : réponse 0x2006
+  caché ? 0xD046 : réponse 0x2006
+  caché ? 0xD047 : réponse 0x2006
+  caché ? 0xD04C : réponse 0x2006
+  caché ? 0xD04D : réponse 0x2006
+  caché ? 0xD04E : réponse 0x2006
+  caché ? 0xD053 : réponse 0x2006
+  caché ? 0xD05D : réponse 0x2006
+  caché ? 0xD060 : réponse 0x2006
+  caché ? 0xD061 : réponse 0x2006
+  caché ? 0xD065 : réponse 0x2006
+  caché ? 0xD066 : réponse 0x2006
+  caché ? 0xD067 : réponse 0x2006
+  caché ? 0xD069 : réponse 0x2006
+  caché ? 0xD06D : réponse 0x2006
+  caché ? 0xD06E : réponse 0x2006
+  caché ? 0xD071 : réponse 0x2006
+  caché ? 0xD072 : réponse 0x2006
+  caché ? 0xD073 : réponse 0x2006
+  caché ? 0xD076 : réponse 0x2006
+  caché ? 0xD07C : réponse 0x2006
+  caché ? 0xD07D : réponse 0x2006
+  caché ? 0xD07E : réponse 0x2006
+  caché ? 0xD07F : réponse 0x2006
+  caché ? 0xD08C : réponse 0x2006
+  caché ? 0xD08D : réponse 0x2006
+  caché ? 0xD08E : réponse 0x2006
+  caché ? 0xD08F : réponse 0x2006
+  caché ? 0xD093 : réponse 0x2006
+  caché ? 0xD094 : réponse 0x2006
+  caché ? 0xD095 : réponse 0x2006
+  caché ? 0xD096 : réponse 0x2006
+  caché ? 0xD097 : réponse 0x2006
+  caché ? 0xD098 : réponse 0x2006
+  caché ? 0xD099 : réponse 0x2006
+  caché ? 0xD09A : réponse 0x2006
+  caché ? 0xD09B : réponse 0x2006
+  caché ? 0xD09C : réponse 0x2006
+  caché ? 0xD09D : réponse 0x2006
+  caché ? 0xD09E : réponse 0x2006
+  caché ? 0xD09F : réponse 0x2006
+  caché ? 0xD0A0 : réponse 0x2006
+  caché ? 0xD0A1 : réponse 0x2006
+  caché ? 0xD0A2 : réponse 0x2006
+  caché ? 0xD0A3 : réponse 0x2006
+  caché ? 0xD0A4 : réponse 0x2006
+  caché ? 0xD0A5 : réponse 0x2006
+  caché ? 0xD0A6 : réponse 0x2006
+  caché ? 0xD0A7 : réponse 0x2006
+  caché ? 0xD0A8 : réponse 0x2006
+  caché ? 0xD0A9 : réponse 0x2006
+  caché ? 0xD0AA : réponse 0x2006
+  caché ? 0xD0AB : réponse 0x2006
+  caché ? 0xD0AC : réponse 0x2006
+  caché ? 0xD0AD : réponse 0x2006
+  caché ? 0xD0AE : réponse 0x2006
+  caché ? 0xD0AF : réponse 0x2006
+  caché ? 0xD0B0 : réponse 0x2006
+  caché ? 0xD0B1 : réponse 0x2006
+  caché ? 0xD0B2 : réponse 0x2006
+  caché ? 0xD0B3 : réponse 0x2006
+  caché ? 0xD0B4 : réponse 0x2006
+  caché ? 0xD0B5 : réponse 0x2006
+  caché ? 0xD0B6 : réponse 0x2006
+  caché ? 0xD0B7 : réponse 0x2006
+  caché ? 0xD0B8 : réponse 0x2006
+  caché ? 0xD0B9 : réponse 0x2006
+  caché ? 0xD0BA : réponse 0x2006
+  caché ? 0xD0BB : réponse 0x2006
+  caché ? 0xD0BC : réponse 0x2006
+  caché ? 0xD0BD : réponse 0x2006
+  caché ? 0xD0BE : réponse 0x2006
+  caché ? 0xD0BF : réponse 0x2006
+  caché ? 0xD0C6 : réponse 0x2006
+  caché ? 0xD0C7 : réponse 0x2006
+  caché ? 0xD0C8 : réponse 0x2006
+  caché ? 0xD0C9 : réponse 0x2006
+  caché ? 0xD0CA : réponse 0x2006
+  caché ? 0xD0CB : réponse 0x2006
+  caché ? 0xD0CC : réponse 0x2006
+  caché ? 0xD0CD : réponse 0x2006
+  caché ? 0xD0CE : réponse 0x2006
+  caché ? 0xD0CF : réponse 0x2006
+  caché ? 0xD0D0 : réponse 0x2006
+  caché ? 0xD0D1 : réponse 0x2006
+  caché ? 0xD0D2 : réponse 0x2006
+  caché ? 0xD0D3 : réponse 0x2006
+  caché ? 0xD0D4 : réponse 0x2006
+  caché ? 0xD0D5 : réponse 0x2006
+  caché ? 0xD0D6 : réponse 0x2006
+  caché ? 0xD0D7 : réponse 0x2006
+  caché ? 0xD0D8 : réponse 0x2006
+  caché ? 0xD0D9 : réponse 0x2006
+  caché ? 0xD0DA : réponse 0x2006
+  caché ? 0xD0DB : réponse 0x2006
+  caché ? 0xD0DC : réponse 0x2006
+  caché ? 0xD0DD : réponse 0x2006
+  caché ? 0xD0DE : réponse 0x2006
+  caché ? 0xD0DF : réponse 0x2006
+  caché ? 0xD0E7 : réponse 0x2006
+  caché ? 0xD0E8 : réponse 0x2006
+  caché ? 0xD0E9 : réponse 0x2006
+  caché ? 0xD0EA : réponse 0x2006
+  caché ? 0xD0EB : réponse 0x2006
+  caché ? 0xD0EC : réponse 0x2006
+  caché ? 0xD0ED : réponse 0x2006
+  caché ? 0xD0EE : réponse 0x2006
+  caché ? 0xD0EF : réponse 0x2006
+  caché ? 0xD0F0 : réponse 0x2006
+  caché ? 0xD0F1 : réponse 0x2006
+  caché ? 0xD0F2 : réponse 0x2006
+  caché ? 0xD0F3 : réponse 0x2006
+  caché ? 0xD0F4 : réponse 0x2006
+  caché ? 0xD0F5 : réponse 0x2006
+  caché ? 0xD0F6 : réponse 0x2006
+  caché ? 0xD0F7 : réponse 0x2006
+  caché ? 0xD0F8 : réponse 0x2006
+  caché ? 0xD0F9 : réponse 0x2006
+  caché ? 0xD0FA : réponse 0x2006
+  caché ? 0xD0FB : réponse 0x2006
+  caché ? 0xD0FC : réponse 0x2006
+  caché ? 0xD0FD : réponse 0x2006
+  caché ? 0xD0FE : réponse 0x2006
+  caché ? 0xD0FF : réponse 0x2006
+  caché ? 0xD107 : réponse 0x2006
+  caché ? 0xD110 : réponse 0x2006
+  caché ? 0xD111 : réponse 0x2006
+  caché ? 0xD112 : réponse 0x2006
+  caché ? 0xD113 : réponse 0x2006
+  caché ? 0xD114 : réponse 0x2006
+  caché ? 0xD115 : réponse 0x2006
+  caché ? 0xD116 : réponse 0x2006
+  caché ? 0xD117 : réponse 0x2006
+  caché ? 0xD118 : réponse 0x2006
+  caché ? 0xD119 : réponse 0x2006
+  caché ? 0xD11A : réponse 0x2006
+  caché ? 0xD11B : réponse 0x2006
+  caché ? 0xD11C : réponse 0x2006
+  caché ? 0xD11D : réponse 0x2006
+  caché ? 0xD11E : réponse 0x2006
+  caché ? 0xD11F : réponse 0x2006
+  caché ? 0xD123 : réponse 0x2006
+  caché ? 0xD127 : réponse 0x2006
+  caché ? 0xD128 : réponse 0x2006
+  caché ? 0xD129 : réponse 0x2006
+  caché ? 0xD12A : réponse 0x2006
+  caché ? 0xD12B : réponse 0x2006
+  caché ? 0xD12C : réponse 0x2006
+  caché ? 0xD12D : réponse 0x2006
+  caché ? 0xD12E : réponse 0x2006
+  caché ? 0xD12F : réponse 0x2006
+  caché ? 0xD130 : réponse 0x2006
+  caché ? 0xD131 : réponse 0x2006
+  caché ? 0xD132 : réponse 0x2006
+  caché ? 0xD133 : réponse 0x2006
+  caché ? 0xD134 : réponse 0x2006
+  caché ? 0xD135 : réponse 0x2006
+  caché ? 0xD136 : réponse 0x2006
+  caché ? 0xD137 : réponse 0x2006
+  caché ? 0xD138 : réponse 0x2006
+  caché ? 0xD139 : réponse 0x2006
+  caché ? 0xD13A : réponse 0x2006
+  caché ? 0xD13B : réponse 0x2006
+  caché ? 0xD13C : réponse 0x2006
+  caché ? 0xD13D : réponse 0x2006
+  caché ? 0xD13E : réponse 0x2006
+  caché ? 0xD13F : réponse 0x2006
+  caché ? 0xD141 : réponse 0x2006
+  caché ? 0xD143 : réponse 0x2006
+  caché ? 0xD144 : réponse 0x2006
+  caché ? 0xD145 : réponse 0x2006
+  caché ? 0xD146 : réponse 0x2006
+  caché ? 0xD147 : réponse 0x2006
+  caché ? 0xD148 : réponse 0x2006
+  caché ? 0xD149 : réponse 0x2006
+  caché ? 0xD14A : réponse 0x2006
+  caché ? 0xD14B : réponse 0x2006
+  caché ? 0xD14C : réponse 0x2006
+  caché ? 0xD14D : réponse 0x2006
+  caché ? 0xD14E : réponse 0x2006
+  caché ? 0xD14F : réponse 0x2006
+  caché ? 0xD150 : réponse 0x2006
+  caché ? 0xD151 : réponse 0x2006
+  caché ? 0xD152 : réponse 0x2006
+  caché ? 0xD153 : réponse 0x2006
+  caché ? 0xD154 : réponse 0x2006
+  caché ? 0xD155 : réponse 0x2006
+  caché ? 0xD156 : réponse 0x2006
+  caché ? 0xD157 : réponse 0x2006
+  caché ? 0xD158 : réponse 0x2006
+  caché ? 0xD159 : réponse 0x2006
+  caché ? 0xD15A : réponse 0x2006
+  caché ? 0xD15B : réponse 0x2006
+  caché ? 0xD15C : réponse 0x2006
+  caché ? 0xD15D : réponse 0x2006
+  caché ? 0xD15E : réponse 0x2006
+  caché ? 0xD15F : réponse 0x2006
+  caché ? 0xD161 : réponse 0x2006
+  caché ? 0xD162 : réponse 0x2006
+  caché ? 0xD165 : réponse 0x2006
+  caché ? 0xD168 : réponse 0x2006
+  caché ? 0xD169 : réponse 0x2006
+  caché ? 0xD16A : réponse 0x2006
+  caché ? 0xD16B : réponse 0x2006
+  caché ? 0xD16E : réponse 0x2006
+  caché ? 0xD16F : réponse 0x2006
+  caché ? 0xD170 : réponse 0x2006
+  caché ? 0xD171 : réponse 0x2006
+  caché ? 0xD172 : réponse 0x2006
+  caché ? 0xD173 : réponse 0x2006
+  caché ? 0xD174 : réponse 0x2006
+  caché ? 0xD175 : réponse 0x2006
+  caché ? 0xD176 : réponse 0x2006
+  caché ? 0xD177 : réponse 0x2006
+  caché ? 0xD178 : réponse 0x2006
+  caché ? 0xD179 : réponse 0x2006
+  caché ? 0xD17A : réponse 0x2006
+  caché ? 0xD17B : réponse 0x2006
+  caché ? 0xD17C : réponse 0x2006
+  caché ? 0xD17D : réponse 0x2006
+  caché ? 0xD17E : réponse 0x2006
+  caché ? 0xD17F : réponse 0x2006
+  caché ? 0xD180 : réponse 0x2006
+  caché ? 0xD184 : réponse 0x2006
+  caché ? 0xD185 : réponse 0x2006
+  caché ? 0xD186 : réponse 0x2006
+  caché ? 0xD187 : réponse 0x2006
+  caché ? 0xD188 : réponse 0x2006
+  caché ? 0xD189 : réponse 0x2006
+  caché ? 0xD18A : réponse 0x2006
+  caché ? 0xD18B : réponse 0x2006
+  caché ? 0xD18C : réponse 0x2006
+  caché ? 0xD18D : réponse 0x2006
+  caché ? 0xD18E : réponse 0x2006
+  caché ? 0xD18F : réponse 0x2006
+  caché ? 0xD190 : réponse 0x2006
+  caché ? 0xD191 : réponse 0x2006
+  caché ? 0xD192 : réponse 0x2006
+  caché ? 0xD193 : réponse 0x2006
+  caché ? 0xD194 : réponse 0x2006
+  caché ? 0xD195 : réponse 0x2006
+  caché ? 0xD196 : réponse 0x2006
+  caché ? 0xD197 : réponse 0x2006
+  caché ? 0xD198 : réponse 0x2006
+  caché ? 0xD199 : réponse 0x2006
+  caché ? 0xD19A : réponse 0x2006
+  caché ? 0xD19B : réponse 0x2006
+  caché ? 0xD19C : réponse 0x2006
+  caché ? 0xD19D : réponse 0x2006
+  caché ? 0xD19E : réponse 0x2006
+  caché ? 0xD19F : réponse 0x2006
+  caché ? 0xD1A0 : réponse 0x2006
+  caché ? 0xD1A1 : réponse 0x2006
+  caché ? 0xD1A2 : réponse 0x2006
+  caché ? 0xD1A3 : réponse 0x2006
+  caché ? 0xD1A4 : réponse 0x2006
+  caché ? 0xD1A5 : réponse 0x2006
+  caché ? 0xD1A6 : réponse 0x2006
+  caché ? 0xD1A7 : réponse 0x2006
+  caché ? 0xD1A8 : réponse 0x2006
+  caché ? 0xD1A9 : réponse 0x2006
+  caché ? 0xD1AA : réponse 0x2006
+  caché ? 0xD1AB : réponse 0x2006
+  caché ? 0xD1AC : réponse 0x2006
+  caché ? 0xD1AD : réponse 0x2006
+  caché ? 0xD1AE : réponse 0x2006
+  caché ? 0xD1AF : réponse 0x2006
+  caché ? 0xD1B0 : réponse 0x2006
+  caché ? 0xD1B1 : réponse 0x2006
+  caché ? 0xD1B2 : réponse 0x2006
+  caché ? 0xD1B3 : réponse 0x2006
+  caché ? 0xD1B4 : réponse 0x2006
+  caché ? 0xD1B5 : réponse 0x2006
+  caché ? 0xD1B6 : réponse 0x2006
+  caché ? 0xD1B7 : réponse 0x2006
+  caché ? 0xD1B8 : réponse 0x2006
+  caché ? 0xD1B9 : réponse 0x2006
+  caché ? 0xD1BA : réponse 0x2006
+  caché ? 0xD1BB : réponse 0x2006
+  caché ? 0xD1BC : réponse 0x2006
+  caché ? 0xD1BD : réponse 0x2006
+  caché ? 0xD1BE : réponse 0x2006
+  caché ? 0xD1BF : réponse 0x2006
+  caché ? 0xD1C2 : réponse 0x2006
+  caché ? 0xD1C3 : réponse 0x2006
+  caché ? 0xD1C4 : réponse 0x2006
+  caché ? 0xD1C5 : réponse 0x2006
+  caché ? 0xD1C6 : réponse 0x2006
+  caché ? 0xD1C7 : réponse 0x2006
+  caché ? 0xD1C8 : réponse 0x2006
+  caché ? 0xD1C9 : réponse 0x2006
+  caché ? 0xD1CA : réponse 0x2006
+  caché ? 0xD1CB : réponse 0x2006
+  caché ? 0xD1CC : réponse 0x2006
+  caché ? 0xD1CD : réponse 0x2006
+  caché ? 0xD1CE : réponse 0x2006
+  caché ? 0xD1CF : réponse 0x2006
+  caché ? 0xD1DD : réponse 0x2006
+  caché ? 0xD1DE : réponse 0x2006
+  caché ? 0xD1DF : réponse 0x2006
+  caché ? 0xD1E0 : réponse 0x2006
+  caché ? 0xD1E1 : réponse 0x2006
+  caché ? 0xD1E2 : réponse 0x2006
+  caché ? 0xD1E3 : réponse 0x2006
+  caché ? 0xD1E4 : réponse 0x2006
+  caché ? 0xD1E5 : réponse 0x2006
+  caché ? 0xD1E6 : réponse 0x2006
+  caché ? 0xD1E7 : réponse 0x2006
+  caché ? 0xD1E8 : réponse 0x2006
+  caché ? 0xD1E9 : réponse 0x2006
+  caché ? 0xD1EA : réponse 0x2006
+  caché ? 0xD1EB : réponse 0x2006
+  caché ? 0xD1EC : réponse 0x2006
+  caché ? 0xD1ED : réponse 0x2006
+  caché ? 0xD1EE : réponse 0x2006
+  caché ? 0xD1EF : réponse 0x2006
+  caché ? 0xD1F0 : réponse 0x2006
+  caché ? 0xD1F1 : réponse 0x2006
+  caché ? 0xD1F2 : réponse 0x2006
+  caché ? 0xD1F3 : réponse 0x2006
+  caché ? 0xD1F4 : réponse 0x2006
+  caché ? 0xD1F5 : réponse 0x2006
+  caché ? 0xD1F6 : réponse 0x2006
+  caché ? 0xD1F7 : réponse 0x2006
+  caché ? 0xD1F8 : réponse 0x2006
+  caché ? 0xD1F9 : réponse 0x2006
+  caché ? 0xD1FA : réponse 0x2006
+  caché ? 0xD1FB : réponse 0x2006
+  caché ? 0xD1FC : réponse 0x2006
+  caché ? 0xD1FD : réponse 0x2006
+  caché ? 0xD1FE : réponse 0x2006
+  caché ? 0xD1FF : réponse 0x2006
+  caché ? 0xD200 : réponse 0x2006
+  caché ? 0xD201 : réponse 0x2006
+  caché ? 0xD202 : réponse 0x2006
+  caché ? 0xD203 : réponse 0x2006
+  caché ? 0xD204 : réponse 0x2006
+  caché ? 0xD205 : réponse 0x2006
+  caché ? 0xD206 : réponse 0x2006
+  caché ? 0xD207 : réponse 0x2006
+  caché ? 0xD208 : réponse 0x2006
+  caché ? 0xD209 : réponse 0x2006
+  caché ? 0xD20A : réponse 0x2006
+  caché ? 0xD20B : réponse 0x2006
+  caché ? 0xD20C : réponse 0x2006
+  caché ? 0xD20D : réponse 0x2006
+  caché ? 0xD20E : réponse 0x2006
+  caché ? 0xD20F : réponse 0x2006
+  caché ? 0xD210 : réponse 0x2006
+  caché ? 0xD211 : réponse 0x2006
+  caché ? 0xD212 : réponse 0x2006
+  caché ? 0xD213 : réponse 0x2006
+  caché ? 0xD214 : réponse 0x2006
+  caché ? 0xD215 : réponse 0x2006
+  caché ? 0xD216 : réponse 0x2006
+  caché ? 0xD217 : réponse 0x2006
+  caché ? 0xD218 : réponse 0x2006
+  caché ? 0xD219 : réponse 0x2006
+  caché ? 0xD21A : réponse 0x2006
+  caché ? 0xD21B : réponse 0x2006
+  caché ? 0xD21C : réponse 0x2006
+  caché ? 0xD21D : réponse 0x2006
+  caché ? 0xD21E : réponse 0x2006
+  caché ? 0xD21F : réponse 0x2006
+  caché ? 0xD220 : réponse 0x2006
+  caché ? 0xD221 : réponse 0x2006
+  caché ? 0xD222 : réponse 0x2006
+  caché ? 0xD223 : réponse 0x2006
+  caché ? 0xD224 : réponse 0x2006
+  caché ? 0xD225 : réponse 0x2006
+  caché ? 0xD226 : réponse 0x2006
+  caché ? 0xD227 : réponse 0x2006
+  caché ? 0xD228 : réponse 0x2006
+  caché ? 0xD229 : réponse 0x2006
+  caché ? 0xD22A : réponse 0x2006
+  caché ? 0xD22B : réponse 0x2006
+  caché ? 0xD22C : réponse 0x2006
+  caché ? 0xD22D : réponse 0x2006
+  caché ? 0xD22E : réponse 0x2006
+  caché ? 0xD22F : réponse 0x2006
+  caché ? 0xD230 : réponse 0x2006
+  caché ? 0xD231 : réponse 0x2006
+  caché ? 0xD232 : réponse 0x2006
+  caché ? 0xD233 : réponse 0x2006
+  caché ? 0xD234 : réponse 0x2006
+  caché ? 0xD235 : réponse 0x2006
+  caché ? 0xD236 : réponse 0x2006
+  caché ? 0xD237 : réponse 0x2006
+  caché ? 0xD238 : réponse 0x2006
+  caché ? 0xD239 : réponse 0x2006
+  caché ? 0xD23A : réponse 0x2006
+  caché ? 0xD23B : réponse 0x2006
+  caché ? 0xD23C : réponse 0x2006
+  caché ? 0xD23D : réponse 0x2006
+  caché ? 0xD23E : réponse 0x2006
+  caché ? 0xD23F : réponse 0x2006
+  caché ? 0xD240 : réponse 0x2006
+  caché ? 0xD241 : réponse 0x2006
+  caché ? 0xD242 : réponse 0x2006
+  caché ? 0xD243 : réponse 0x2006
+  caché ? 0xD244 : réponse 0x2006
+  caché ? 0xD245 : réponse 0x2006
+  caché ? 0xD246 : réponse 0x2006
+  caché ? 0xD247 : réponse 0x2006
+  caché ? 0xD248 : réponse 0x2006
+  caché ? 0xD249 : réponse 0x2006
+  caché ? 0xD24A : réponse 0x2006
+  caché ? 0xD24B : réponse 0x2006
+  caché ? 0xD24C : réponse 0x2006
+  caché ? 0xD24D : réponse 0x2006
+  caché ? 0xD24E : réponse 0x2006
+  caché ? 0xD24F : réponse 0x2006
+  caché ? 0xD250 : réponse 0x2006
+  caché ? 0xD251 : réponse 0x2006
+  caché ? 0xD252 : réponse 0x2006
+  caché ? 0xD253 : réponse 0x2006
+  caché ? 0xD254 : réponse 0x2006
+  caché ? 0xD255 : réponse 0x2006
+  caché ? 0xD256 : réponse 0x2006
+  caché ? 0xD257 : réponse 0x2006
+  caché ? 0xD258 : réponse 0x2006
+  caché ? 0xD259 : réponse 0x2006
+  caché ? 0xD25A : réponse 0x2006
+  caché ? 0xD25B : réponse 0x2006
+  caché ? 0xD25C : réponse 0x2006
+  caché ? 0xD25D : réponse 0x2006
+  caché ? 0xD25E : réponse 0x2006
+  caché ? 0xD25F : réponse 0x2006
+  caché ? 0xD260 : réponse 0x2006
+  caché ? 0xD261 : réponse 0x2006
+  caché ? 0xD262 : réponse 0x2006
+  caché ? 0xD263 : réponse 0x2006
+  caché ? 0xD264 : réponse 0x2006
+  caché ? 0xD265 : réponse 0x2006
+  caché ? 0xD266 : réponse 0x2006
+  caché ? 0xD267 : réponse 0x2006
+  caché ? 0xD268 : réponse 0x2006
+  caché ? 0xD269 : réponse 0x2006
+  caché ? 0xD26A : réponse 0x2006
+  caché ? 0xD26B : réponse 0x2006
+  caché ? 0xD26C : réponse 0x2006
+  caché ? 0xD26D : réponse 0x2006
+  caché ? 0xD26E : réponse 0x2006
+  caché ? 0xD26F : réponse 0x2006
+  caché ? 0xD270 : réponse 0x2006
+  caché ? 0xD271 : réponse 0x2006
+  caché ? 0xD272 : réponse 0x2006
+  caché ? 0xD273 : réponse 0x2006
+  caché ? 0xD274 : réponse 0x2006
+  caché ? 0xD275 : réponse 0x2006
+  caché ? 0xD276 : réponse 0x2006
+  caché ? 0xD277 : réponse 0x2006
+  caché ? 0xD278 : réponse 0x2006
+  caché ? 0xD279 : réponse 0x2006
+  caché ? 0xD27A : réponse 0x2006
+  caché ? 0xD27B : réponse 0x2006
+  caché ? 0xD27C : réponse 0x2006
+  caché ? 0xD27D : réponse 0x2006
+  caché ? 0xD27E : réponse 0x2006
+  caché ? 0xD27F : réponse 0x2006
+  caché ? 0xD280 : réponse 0x2006
+  caché ? 0xD281 : réponse 0x2006
+  caché ? 0xD282 : réponse 0x2006
+  caché ? 0xD283 : réponse 0x2006
+  caché ? 0xD284 : réponse 0x2006
+  caché ? 0xD285 : réponse 0x2006
+  caché ? 0xD286 : réponse 0x2006
+  caché ? 0xD287 : réponse 0x2006
+  caché ? 0xD288 : réponse 0x2006
+  caché ? 0xD289 : réponse 0x2006
+  caché ? 0xD28A : réponse 0x2006
+  caché ? 0xD28B : réponse 0x2006
+  caché ? 0xD28C : réponse 0x2006
+  caché ? 0xD28D : réponse 0x2006
+  caché ? 0xD28E : réponse 0x2006
+  caché ? 0xD28F : réponse 0x2006
+  caché ? 0xD290 : réponse 0x2006
+  caché ? 0xD291 : réponse 0x2006
+  caché ? 0xD292 : réponse 0x2006
+  caché ? 0xD293 : réponse 0x2006
+  caché ? 0xD294 : réponse 0x2006
+  caché ? 0xD295 : réponse 0x2006
+  caché ? 0xD296 : réponse 0x2006
+  caché ? 0xD297 : réponse 0x2006
+  caché ? 0xD298 : réponse 0x2006
+  caché ? 0xD299 : réponse 0x2006
+  caché ? 0xD29A : réponse 0x2006
+  caché ? 0xD29B : réponse 0x2006
+  caché ? 0xD29C : réponse 0x2006
+  caché ? 0xD29D : réponse 0x2006
+  caché ? 0xD29E : réponse 0x2006
+  caché ? 0xD29F : réponse 0x2006
+  caché ? 0xD2A0 : réponse 0x2006
+  caché ? 0xD2A1 : réponse 0x2006
+  caché ? 0xD2A2 : réponse 0x2006
+  caché ? 0xD2A3 : réponse 0x2006
+  caché ? 0xD2A4 : réponse 0x2006
+  caché ? 0xD2A5 : réponse 0x2006
+  caché ? 0xD2A6 : réponse 0x2006
+  caché ? 0xD2A7 : réponse 0x2006
+  caché ? 0xD2A8 : réponse 0x2006
+  caché ? 0xD2A9 : réponse 0x2006
+  caché ? 0xD2AA : réponse 0x2006
+  caché ? 0xD2AB : réponse 0x2006
+  caché ? 0xD2AC : réponse 0x2006
+  caché ? 0xD2AD : réponse 0x2006
+  caché ? 0xD2AE : réponse 0x2006
+  caché ? 0xD2AF : réponse 0x2006
+  caché ? 0xD2B0 : réponse 0x2006
+  caché ? 0xD2B1 : réponse 0x2006
+  caché ? 0xD2B2 : réponse 0x2006
+  caché ? 0xD2B3 : réponse 0x2006
+  caché ? 0xD2B4 : réponse 0x2006
+  caché ? 0xD2B5 : réponse 0x2006
+  caché ? 0xD2B6 : réponse 0x2006
+  caché ? 0xD2B7 : réponse 0x2006
+  caché ? 0xD2B8 : réponse 0x2006
+  caché ? 0xD2B9 : réponse 0x2006
+  caché ? 0xD2BA : réponse 0x2006
+  caché ? 0xD2BB : réponse 0x2006
+  caché ? 0xD2BC : réponse 0x2006
+  caché ? 0xD2BD : réponse 0x2006
+  caché ? 0xD2BE : réponse 0x2006
+  caché ? 0xD2BF : réponse 0x2006
+  caché ? 0xD2C0 : réponse 0x2006
+  caché ? 0xD2C1 : réponse 0x2006
+  caché ? 0xD2C2 : réponse 0x2006
+  caché ? 0xD2C3 : réponse 0x2006
+  caché ? 0xD2C4 : réponse 0x2006
+  caché ? 0xD2C5 : réponse 0x2006
+  caché ? 0xD2C6 : réponse 0x2006
+  caché ? 0xD2C7 : réponse 0x2006
+  caché ? 0xD2C8 : réponse 0x2006
+  caché ? 0xD2C9 : réponse 0x2006
+  caché ? 0xD2CA : réponse 0x2006
+  caché ? 0xD2CB : réponse 0x2006
+  caché ? 0xD2CC : réponse 0x2006
+  caché ? 0xD2CD : réponse 0x2006
+  caché ? 0xD2CE : réponse 0x2006
+  caché ? 0xD2CF : réponse 0x2006
+  caché ? 0xD2D0 : réponse 0x2006
+  caché ? 0xD2D1 : réponse 0x2006
+  caché ? 0xD2D2 : réponse 0x2006
+  caché ? 0xD2D3 : réponse 0x2006
+  caché ? 0xD2D4 : réponse 0x2006
+  caché ? 0xD2D5 : réponse 0x2006
+  caché ? 0xD2D6 : réponse 0x2006
+  caché ? 0xD2D7 : réponse 0x2006
+  caché ? 0xD2D8 : réponse 0x2006
+  caché ? 0xD2D9 : réponse 0x2006
+  caché ? 0xD2DA : réponse 0x2006
+  caché ? 0xD2DB : réponse 0x2006
+  caché ? 0xD2DC : réponse 0x2006
+  caché ? 0xD2DD : réponse 0x2006
+  caché ? 0xD2DE : réponse 0x2006
+  caché ? 0xD2DF : réponse 0x2006
+  caché ? 0xD2E0 : réponse 0x2006
+  caché ? 0xD2E1 : réponse 0x2006
+  caché ? 0xD2E2 : réponse 0x2006
+  caché ? 0xD2E3 : réponse 0x2006
+  caché ? 0xD2E4 : réponse 0x2006
+  caché ? 0xD2E5 : réponse 0x2006
+  caché ? 0xD2E6 : réponse 0x2006
+  caché ? 0xD2E7 : réponse 0x2006
+  caché ? 0xD2E8 : réponse 0x2006
+  caché ? 0xD2E9 : réponse 0x2006
+  caché ? 0xD2EA : réponse 0x2006
+  caché ? 0xD2EB : réponse 0x2006
+  caché ? 0xD2EC : réponse 0x2006
+  caché ? 0xD2ED : réponse 0x2006
+  caché ? 0xD2EE : réponse 0x2006
+  caché ? 0xD2EF : réponse 0x2006
+  caché ? 0xD2F0 : réponse 0x2006
+  caché ? 0xD2F1 : réponse 0x2006
+  caché ? 0xD2F2 : réponse 0x2006
+  caché ? 0xD2F3 : réponse 0x2006
+  caché ? 0xD2F4 : réponse 0x2006
+  caché ? 0xD2F5 : réponse 0x2006
+  caché ? 0xD2F6 : réponse 0x2006
+  caché ? 0xD2F7 : réponse 0x2006
+  caché ? 0xD2F8 : réponse 0x2006
+  caché ? 0xD2F9 : réponse 0x2006
+  caché ? 0xD2FA : réponse 0x2006
+  caché ? 0xD2FB : réponse 0x2006
+  caché ? 0xD2FC : réponse 0x2006
+  caché ? 0xD2FD : réponse 0x2006
+  caché ? 0xD2FE : réponse 0x2006
+  caché ? 0xD2FF : réponse 0x2006
+CurveDownload 0x90C5 [] : 2116 octets → courbe_90c5_sans.bin | 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 …
+CurveDownload 0x90C5 [0] : réponse 0x2006
+Résultats dans sondes/d200/usb/2026-10.22

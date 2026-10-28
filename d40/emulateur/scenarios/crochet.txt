@@ -1,0 +1,17 @@
+# Test de crochet (palier 4) avec tests/crochet-menu.json : le crochet est dans ecran014_entree,
+# appelée à chaque affichage du menu Prise de vue. Il compte ses passages en 0x83D80000.
+run 70M
+expect32min 0x83D80000 0     # avant le menu
+press menu 4M 30M
+expect32min 0x83D80000 1     # le crochet a tourné une fois et le menu s'est affiché
+png 1-menu.png
+press right 4M 16M
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE957F 0x10
+press right 4M 16M
+press up 4M 16M
+press ok 4M 40M
+expect8 0x83CE957F 0x00
+expect32min 0x83D80000 3     # trois affichages du menu, trois passages, aucun plantage
+png 2-apres-crochet.png

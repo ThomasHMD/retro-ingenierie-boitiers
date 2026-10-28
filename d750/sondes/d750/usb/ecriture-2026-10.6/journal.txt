@@ -1,0 +1,4 @@
+SIMULATION : rien ne sera écrit (ajouter --ecrire pour écrire)
+Modèle : D750 | firmware : V1.15
+C-1 avant : « Kodachrome », 32 octets (sauvé dans avant_201_0.bin)
+C-1 est occupé : refus (ajouter --remplacer pour l'écraser, l'ancien contenu est sauvé).

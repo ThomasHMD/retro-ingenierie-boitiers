@@ -1,0 +1,6 @@
+Captures de l'émulateur du D40 (d40/emulateur/), pas des photos de l'écran du boîtier : le vrai firmware V5
+(processeur B) tourne sur l'ordinateur, et ces images sont son tampon d'écran (640 × 480).
+Style d'écran Classique ; la V5 force les menus et l'écran d'infos en Graphique.
+Refaire : python3 d40/emulateur/d40emu.py scenario pipboy --firmware <V5>/2-ensuite-processeur-B/BD400111.BIN --style classique
+          python3 d40/emulateur/d40emu.py scenario preglages-fr --firmware <même fichier> --style classique
+Les deux scénarios vérifient en même temps ce qu'ils affichent (RÉSULTAT : OK).

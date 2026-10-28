@@ -1,0 +1,27 @@
+# « Réinitialiser » (réglages perso › Oui) remet aussi Programme à Standard et Si trop sombre à 0
+# (preglage_reinit, outils/preglages_v1.py ; README, « V1 : code des préréglages »).
+# Accès sans dépendre de l'ordre des onglets : juste après le démarrage, depuis la colonne des onglets,
+# on pose le menu PERSO (en-tête 0x15A380, RAM 0x83CE5E6C) ; ► ouvre son entrée 0, Réinitialiser.
+# python3 emulateur/d40emu.py scenario reinitialiser --firmware <build V1>/BD400111.BIN
+# Témoin : le même scénario sur un build sans preglage_reinit échoue sur les deux dernières attentes.
+run 1M
+poke8 0x83CED0FC 0x18          # français
+run 69M
+poke8 0x83CED24E 0x03          # Programme : Street
+poke8 0x83CED24F 0x01          # Si trop sombre : ISO
+press menu 4M 30M
+press left 4M 16M
+expect8 0x83CEE49F 0xCC        # colonne des onglets, PRISE DE VUE (0x83CE53CC)
+poke32 0x83CEE49C 0x83CE5E6C
+press ok 4M 20M                # entrer (OK : les deux navigations)
+expect8 0x83CEE49F 0xCC        # écran Réinitialiser (en-tête 0x83CE68CC)
+expect8 0x83CEE49E 0x68
+png 01-reinitialiser.png
+press down 4M 16M              # Oui
+press ok 4M 40M
+run 20M
+expect8 0x83CED24E 0x00        # Programme : Standard
+expect8 0x83CED24F 0x00        # Si trop sombre : baisser la vitesse
+press menu 4M 30M
+press menu 4M 30M
+png 02-prise-de-vue.png        # Programme : STD

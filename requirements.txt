@@ -1,0 +1,13 @@
+numpy
+scipy
+pillow
+rawpy
+colour-science
+# recalage JPEG / RAW (l'un ou l'autre)
+scikit-image
+opencv-python-headless
+# extraction des courbes des fiches techniques en PDF (fiches_vectorielles.py)
+pymupdf
+# figures de l'analyse du D750
+matplotlib
+# hors pip : exiftool (brew install exiftool), unar (brew install unar)

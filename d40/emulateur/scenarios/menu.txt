@@ -1,0 +1,20 @@
+# Menus et touches (palier 3) : MENU, entrer dans « Optimiser l'image », choisir « Plus doux », valider,
+# puis revenir à « Normal ». Les écrans sont ceux du firmware (langue : anglais, réglage par défaut du faux A).
+run 70M
+press menu 4M 30M
+png 1-menu-prise-de-vue.png
+press right 4M 16M
+png 2-optimiser-image.png
+press down 4M 16M
+press ok 4M 40M
+expect8 0x83CE957F 0x10      # quartet haut = 1 : Plus doux (CARTE §5 bis)
+png 3-retour-plus-doux.png
+press right 4M 16M
+press up 4M 16M
+press ok 4M 40M
+expect8 0x83CE957F 0x00      # retour à Normal
+png 4-retour-normal.png
+press left 4M 16M
+press down 4M 16M
+press right 4M 20M
+png 5-onglet-suivant.png

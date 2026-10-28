@@ -1,0 +1,133 @@
+Fabricant : PENTAX | modèle : 645D | firmware : 1.33 | extension : 0x6 v100 « microsoft.com/DeviceServices: 1.0;  » | réponse 0x2001
+Commandes annoncées : 23, événements : 4, réglages : 5
+  commandes : 0x1001 0x1002 0x1003 0x1004 0x1005 0x1006 0x1007 0x1008 0x1009 0x100A 0x100B 0x100C 0x100D 0x100F 0x1014 0x1015 0x1016 0x101B 0x9001 0x9801 0x9802 0x9803 0x9805
+  événements : 0x4003 0x4004 0x4005 0x4002
+  réglages : 0x5001 0x5011 0xD406 0xD407 0xD303
+  formats de capture :  | formats d'image : 0x3001 0x3006 0x380D 0x3801 0x3800 0x3000
+  annoncé 0x5001 : UINT8 | R | 100 | 67 | plage 0 à 100 pas 1
+    valeur 0x5001 : 67
+  annoncé 0x5011 : STR | R | « 20100101T000000 » | « 2026-10 » | 
+    valeur 0x5011 : « 2026-10 »
+  annoncé 0xD406 : STR | RW | «  » | «  » | 
+    valeur 0xD406 : «  »
+  annoncé 0xD407 : UINT32 | R | 0 | 1 | 
+    valeur 0xD407 : 1
+  annoncé 0xD303 : UINT8 | R | 0 | 1 | 
+    valeur 0xD303 : 1
+SetPentaxVendorMode 0x9001 (0x0D, 0x12E08, 1) : réponse 0x2001
+Mode constructeur : 26 commandes, 5 réglages
+  commandes : 0x1001 0x1002 0x1003 0x1004 0x1005 0x1006 0x1007 0x1008 0x1009 0x100A 0x100C 0x100D 0x1014 0x1015 0x1016 0x101B 0x9001 0x9003 0x9004 0x900F 0x9011 0x9012 0x9801 0x9802 0x9803 0x9805
+  réglages : 0x5001 0x5011 0xD406 0xD407 0xD303
+  constructeur 0x5001 : UINT8 | R | 100 | 67 | plage 0 à 100 pas 1
+    valeur 0x5001 : 67
+  constructeur 0x5011 : STR | RW | « 20100101T000000 » | « 2026-10 » | 
+    valeur 0x5011 : « 2026-10 »
+  constructeur 0xD406 : STR | RW | «  » | «  » | 
+    valeur 0xD406 : «  »
+  constructeur 0xD407 : UINT32 | R | 0 | 1 | 
+    valeur 0xD407 : 1
+  constructeur 0xD303 : UINT8 | R | 0 | 1 | 
+    valeur 0xD303 : 1
+  constructeur attendu 0x5004 : UINT8 | RW | 2 | 2 | liste 0 1 2
+    valeur 0x5004 : 2
+  constructeur attendu 0x5005 : UINT16 | R | 4354 | 512 | 
+    valeur 0x5005 : 20485
+  constructeur attendu 0x5007 : UINT16 | R | 258 | 0 | 
+    valeur 0x5007 : 20487
+  constructeur attendu 0x5008 : UINT32 | R | 0 | 7500 | 
+    valeur 0x5008 : 7500
+  constructeur attendu 0x500A : UINT16 | R | 0 | 32770 | liste 1 32769 32770
+    valeur 0x500A : 32770
+  constructeur attendu 0x500B : UINT16 | R | 2 | 32769 | liste 2 4 32769
+    valeur 0x500B : 32769
+  constructeur attendu 0x500C : UINT16 | R | 2306 | 256 | 
+    valeur 0x500C : 20492
+  constructeur attendu 0x500D : UINT32 | R | 16779520 | 16778240 | forme 128
+    valeur 0x500D : 413709
+  constructeur attendu 0x500E : UINT16 | R | 258 | 0 | 
+    valeur 0x500E : 20494
+  constructeur attendu 0x500F : UINT16 | R | 256 | 0 | 
+    valeur 0x500F : 20495
+  constructeur attendu 0x5010 : INT16 | R | 256 | 0 | 
+    valeur 0x5010 : 20496
+  constructeur attendu 0x5012 : UINT32 | R | 256 | 16778240 | forme 128
+    valeur 0x5012 : 413714
+  constructeur attendu 0x5013 : UINT16 | R | 258 | 0 | 
+    valeur 0x5013 : 20499
+  constructeur attendu 0x5014 : UINT8 | RW | 4 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0x5014 : 4
+  constructeur attendu 0x5015 : UINT8 | RW | 4 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0x5015 : 4
+  constructeur attendu 0x501C : UINT16 | R | 258 | 0 | 
+    valeur 0x501C : 20508
+  constructeur attendu 0x501E : STR | RW | «  » | « Thomas Hammoudi » | 
+    valeur 0x501E : « Thomas Hammoudi »
+  constructeur attendu 0x501F : STR | RW | «  » | « Thomas Hammoudi » | 
+    valeur 0x501F : « Thomas Hammoudi »
+  constructeur attendu 0xD001 : AUINT32 | R | [] | [77320 487 18947872 18947872] | 
+    valeur 0xD001 : [77320 487 18947872 18947872]
+  constructeur attendu 0xD002 : AUINT32 | R | [] | [2 4 33554944 65011712 0 2 0] | 
+    valeur 0xD002 : [2 4 33554944 65011712 0 2 0]
+  constructeur attendu 0xD003 : AUINT32 | R | [] | [2 4 33554944 65011712 0 2 0 0 255 0 0 0 256 1 60 40 10 0 10 0 3 10 0 0 0 0 0 100 1600 0 7 7 1 0 0 0 0 4 4 4 0 1 1 1 0 2 3 0 2 0 0 0 0 0 5 1 0 0 0 1 1 0 5600 4 0 1 0 16 10 40 10 0 10 0 10 1 4000 1600 3 0 22 28 10 220 10 0 0 0 10 0 0 576 880 834 0 0 904 0 139 0 0 1 7500 100 20 4294967281 0 240 63] | 
+    valeur 0xD003 : [2 4 33554944 65011712 0 2 0 0 255 0 0 0 256 1 60 40 10 0 10 0 3 10 0 0 0 0 0 100 1600 0 7 7 1 0 0 0 0 4 4 4 0 1 1 1 0 2 3 0 2 0 0 0 0 0 5 1 0 0 0 1 1 0 5600 4 0 1 0 16 10 40 10 0 10 0 10 1 4000 1600 3 0 22 28 10 220 10 0 0 0 10 0 0 576 880 834 0 0 904 0 139 0 0 1 7500 100 20 4294967281 0 240 63]
+  constructeur attendu 0xD004 : AUINT32 | R | [] | [139 0 0 1 7500 100 20 4294967281] | 
+    valeur 0xD004 : [139 0 0 1 7500 100 20 4294967281]
+  constructeur attendu 0xD005 : AUINT32 | R | [] | [0 240 63] | 
+    valeur 0xD005 : [0 240 63]
+  constructeur attendu 0xD006 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD006 : brut 
+  constructeur attendu 0xD011 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD011 : brut 
+  constructeur attendu 0xD012 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD012 : brut 
+  constructeur attendu 0xD013 : UINT32 | RW | 0 | 0 | liste 0 1 2 3 4 5 6 7
+    valeur 0xD013 : 0
+  constructeur attendu 0xD014 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD014 : brut 
+  constructeur attendu 0xD015 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD015 : brut 
+  constructeur attendu 0xD016 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD016 : brut 
+  constructeur attendu 0xD017 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD017 : brut 
+  constructeur attendu 0xD01A : type 0x0 inconnu |  |  |  | 
+    valeur 0xD01A : brut 
+  constructeur attendu 0xD01B : type 0x0 inconnu |  |  |  | 
+    valeur 0xD01B : brut 
+  constructeur attendu 0xD01F : type 0x0 inconnu |  |  |  | 
+    valeur 0xD01F : brut 
+  constructeur attendu 0xD020 : UINT8 | RW | 0 | 0 | liste 0 1 2 3 4 5 6 7
+    valeur 0xD020 : 0
+  constructeur attendu 0xD021 : UINT8 | RW | 4 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0xD021 : 4
+  constructeur attendu 0xD022 : UINT8 | RW | 4 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0xD022 : 4
+  constructeur attendu 0xD023 : UINT8 | RW | 4 | 0 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0xD023 : 0
+  constructeur attendu 0xD024 : UINT8 | RW | 0 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0xD024 : 4
+  constructeur attendu 0xD025 : UINT8 | RW | 4 | 4 | liste 0 1 2 3 4 5 6 7 8
+    valeur 0xD025 : 4
+  constructeur attendu 0xD026 : UINT8 | RW | 0 | 0 | liste 0 1
+    valeur 0xD026 : 0
+  constructeur attendu 0xD027 : UINT8 | RW | 0 | 0 | liste 0 1
+    valeur 0xD027 : 0
+  constructeur attendu 0xD028 : UINT8 | RW | 0 | 0 | liste 0 1
+    valeur 0xD028 : 0
+  constructeur attendu 0xD029 : UINT32 | RW | 0 | 0 | liste 0 1
+    valeur 0xD029 : 0
+  constructeur attendu 0xD02A : réponse 0x200a
+  constructeur attendu 0xD02B : réponse 0x200a
+  constructeur attendu 0xD02C : réponse 0x200a
+  constructeur attendu 0xD02D : réponse 0x200a
+  constructeur attendu 0xD02E : réponse 0x200a
+  constructeur attendu 0xD02F : réponse 0x200a
+  constructeur attendu 0xD030 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD030 : brut 
+  constructeur attendu 0xD031 : type 0x0 inconnu |  |  |  | 
+    valeur 0xD031 : brut 
+  constructeur attendu 0xD032 : STR | RW | « IMGP » | « THAM » | 
+    valeur 0xD032 : « THAM »
+GetAllConditions 0x900F : réponse 0x2001, 440 octets | 6d 00 00 00 02 00 00 00 04 00 00 00 00 02 00 02 00 00 e0 03 00 00 00 00 02 00 00 00 00 00 00 00 …
+Stockages (0x1004) : 04 00 00 00 01 00 01 00 01 00 02 00 01 00 03 00 01 00 04 00
+Fin : mode constructeur refermé (0x9001 … 0) : réponse 0x2001

@@ -1,0 +1,599 @@
+{
+ "description": "Menu Pip-Boy, étape 1 : couleurs (palettes 0xD87C3 et 0x1B0000), données seules.",
+ "patchs": [
+  {
+   "offset": "0x987c3",
+   "avant": {
+    "sha256": "918f6e5a09e47a80ddacc4621930333c483d69f8e7c042ccac2d824a9785bead",
+    "longueur": 669
+   },
+   "apres": {
+    "hex": "008080a46a244d55ff952b151dff6bb2ab016ad5eba46a241cb878108080288080408080588080708080888080a08080a46a24d080804d7854e3807b818c81645fcce78080238a7c0080803a897d918080788080a46a24a46a24a46a24a46a24a46a24a46a2444887ca46a24727242a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24a46a24b036969953c4eb718e715ebab779880a8080328e782f8080508d79238080478d7990867cb67f7ccb8678db83783a897da0369b5f8d7bff8080b88877f78379f56985e37993b96fb1e9698f338a7cc280807a69297a61db8366cb932dc58c584ea4b32a50cf565fc19da46a24a46a249265cda46a248a74833c847e7e38a1b03696616fb2b5915747907bd8886bac915b788f5b7e9059c68546148080828080cb807b108080b7817c5e807e8f817a9b905dea578c64897e9a8a7d44877e2c8a7d4c877e26867e83887e388280a46a24a46a24a46a24727242727242a46a24727242a46a24a46a24727242cc8080257d71727242a46a24a46a24bf80807041911080801080804d78544d78544d78544d7854a46a247272424d78544d7854108080a46a24d3319e727242257d71a46a24c080814d78544f857b30897d8f817a1080801080803b7e838380807272425f8080958080807d82a46a249680808f808022897d328080d98080108080257d71ea7782556387727242898080e28080918274457f819a847f8961377c80802b80809880801080804d7854257d71257d71257d71257d71108080108080a46a24727242a46a244d78544d78544d78544d78544d7854108080a46a244d78544d78544d78549b798445837f"
+   },
+   "texte": "palette 0xD87C3 : fond noir, texte, titres, filets et barre de sélection vert phosphore"
+  },
+  {
+   "offset": "0x170000",
+   "avant": {
+    "sha256": "f750c023a81e1efc819a27b0cbc6c16324c9ca665bb0d7c709bccced4a127a22",
+    "longueur": 416
+   },
+   "apres": {
+    "hex": "000080800046765600a8681a00d2671800e2671800077f7c0038785e00ce67180055744d001b7c7000327962003578600057734b0055744d00806e32003d775b0034786100247b6a0057734b009d69210038785e004276580044765700766f3900467656003a785d0045765600b867180058734b0053744e005e7247008f6b29008c6c2b00856d2f0047765500956a26006a7140006e703d00956a260064724300607246001a7c7000776f3800c8671800976a2500826d3100886c2e00896c2d00906b2900d1671800e7671800936b2700926b28009c692200ba6718009d6921009e692000956a26009a6a2300b4671800b9671800df671800b7671800b8671800e0671800e16718007f6e3300b8671800b0671800c1671800d3671800ea671800e5671800b8671800177d7200cc671800cb671800e1671800f6671800ea671800d0671800b6671800856d2f00e4671800d9671800ea671800ec671800e0671800dc671800e1671800a7681b00e4671800ab671800e7671800d8671800d4671800c9671800f0671800df671800f86718001d7c6e00836d3100b3671800ff6718"
+   },
+   "texte": "palette 0x1B0000 des pictogrammes teintée vert (pipboy-palette.json)"
+  },
+  {
+   "offset": "0x171499",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8194, calque 0 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x17149d",
+   "avant": {
+    "sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8194, calque 1 : couleur 0x24 → 0x13"
+  },
+  {
+   "offset": "0x1714a1",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8194, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x1714a5",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8194, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1714a9",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x8194, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x1714b1",
+   "avant": {
+    "sha256": "86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8196, calque 0 : couleur 0x4b → 0x13"
+  },
+  {
+   "offset": "0x1714b5",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8197, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x1714b9",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8197, calque 1 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x1714bd",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8197, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x1714c1",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x8197, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1714c5",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x8197, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x171691",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ea, calque 0 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x171695",
+   "avant": {
+    "sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ea, calque 1 : couleur 0x24 → 0x13"
+  },
+  {
+   "offset": "0x171699",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ea, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x17169d",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ea, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1716a1",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81ea, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x1716a5",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81eb, calque 0 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x1716a9",
+   "avant": {
+    "sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81eb, calque 1 : couleur 0x24 → 0x13"
+  },
+  {
+   "offset": "0x1716ad",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81eb, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x1716b1",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81eb, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1716b5",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81eb, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x1716b9",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ec, calque 0 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x1716bd",
+   "avant": {
+    "sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ec, calque 1 : couleur 0x24 → 0x13"
+  },
+  {
+   "offset": "0x1716c1",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ec, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x1716c5",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ec, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1716c9",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81ec, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x1716cd",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 0 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x1716d1",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 1 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x1716d5",
+   "avant": {
+    "sha256": "3973e022e93220f9212c18d0d0c543ae7c309e46640da93a4a0314de999f5112",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 2 : couleur 0x2d → 0x13"
+  },
+  {
+   "offset": "0x1716d9",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x1716dd",
+   "avant": {
+    "sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 4 : couleur 0x33 → 0x13"
+  },
+  {
+   "offset": "0x1716e1",
+   "avant": {
+    "sha256": "62b67e1f685b7fef51102005dddd27774be3fee38c42965c53aab035d0b6b221",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81ed, calque 5 : couleur 0x3e → 0x13"
+  },
+  {
+   "offset": "0x1716e5",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81ed, calque 6 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x1716fd",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f3, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171701",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f4, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171705",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f5, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171709",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f6, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x17170d",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f7, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171711",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f7, calque 1 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x171715",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f7, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x171719",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f7, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x17171d",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81f7, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x171721",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f8, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171725",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f8, calque 1 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x171729",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f8, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x17172d",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f8, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x171731",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81f8, calque 4 : couleur 0x67 → 0x00"
+  },
+  {
+   "offset": "0x171735",
+   "avant": {
+    "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f9, calque 0 : couleur 0x00 → 0x13"
+  },
+  {
+   "offset": "0x171739",
+   "avant": {
+    "sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f9, calque 1 : couleur 0x1b → 0x13"
+  },
+  {
+   "offset": "0x17173d",
+   "avant": {
+    "sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f9, calque 2 : couleur 0x2b → 0x13"
+  },
+  {
+   "offset": "0x171741",
+   "avant": {
+    "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "13"
+   },
+   "texte": "batterie 0x81f9, calque 3 : couleur 0x31 → 0x13"
+  },
+  {
+   "offset": "0x171745",
+   "avant": {
+    "sha256": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "longueur": 1
+   },
+   "apres": {
+    "hex": "00"
+   },
+   "texte": "batterie 0x81f9, calque 4 : couleur 0x67 → 0x00"
+  }
+ ]
+}

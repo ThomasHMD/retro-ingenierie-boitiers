@@ -1,0 +1,66 @@
+# Mise à jour du A jouée de bout en bout (étude d’octobre 2026, recherche/etude-a/mise-a-jour-et-recuperation.md) :
+# le faux A suit le protocole du vrai (0x0D, blocs de 128 octets par 0x0F, compte rendu 0x0E).
+#   D40_FAUXA_MAJ=1 D40_FAUXA_FICHIER=firmware/AD400111.bin python3 emulateur/d40emu.py scenario fauxa-maj-a
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+# --- état que majA_ouvrir (0xABC6E) aurait laissé pour un AD40….BIN de 0x40002 octets
+charger firmware/AD400111.bin 0x81000000
+poke32 0x83CEE980 2              # type de mise à jour : A
+poke32 0x83CEE97C 0x40002        # taille du fichier
+poke8 0x83CEE984 0x01            # 6 premiers octets du fichier (version affichée)
+poke8 0x83CEE985 0x11
+retour 0xAB646 1                 # carte présente, pas d'obstacle (FUN_000ab646)
+retour 0xAB97C 1                 # maj_lireFichier : « lu » (le fichier est déjà en 0x81000000)
+watch 0x1416DC 0xAB88E 0xABA80 0xAB934 0xAB93A 0xABB2A 0xABB3A 0xABB68 0xABB78 0xABB1E 0xAA1EC
+retour 0xAB5CC 1
+press menu 4M 30M
+expect16 0x83CED23A 0x0005
+press left 4M 16M
+onglet 0x03
+press ok 4M 20M
+expect16 0x83CEE49E 0x69AC
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press right 4M 20M
+expect16 0x83CEE49E 0x733C
+press down 4M 16M
+press ok 4M 30M
+expect16 0x83CEE49E 0x69AC
+jusqua8 0x83CE69BB 0x00 up 20
+jusqua8 0x83CE69B9 0x00 up 10
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press down 4M 16M
+press right 4M 30M
+expect16 0x83CEE49E 0x6B2C
+png 02-ecran105.png
+press down 4M 16M
+poke8 0x83CE950C 0xC0
+press right 4M 30M
+expect16 0x83CEE49E 0x6B6C
+png 03-ecran106.png
+peek 0x83CE6B78 4
+press down 4M 16M                # Non -> Oui
+peek 0x83CE6B78 4
+png 04-oui.png
+press ok 4M 20M
+png 05-maj-debut.png
+run 300M
+png 06-maj.png
+peek 0x83CE9508 4                # tampon de 0x0E reçu du A / 0x0D envoyé
+peek 0x83CEE759 1                # mode transfert
+run 600M
+png 07-maj-fin.png
+peek 0x83CE9508 4
+peek 0x40040308 4

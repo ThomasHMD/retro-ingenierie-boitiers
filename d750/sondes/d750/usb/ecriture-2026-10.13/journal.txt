@@ -1,0 +1,8 @@
+MODE ÉCRITURE
+Modèle : D750 | firmware : V1.15
+C-9 avant : vide
+Bloc à envoyer : « FP4 V1 », base 4, 610 octets, avec courbe perso
+SetPictCtrlData 0x90CD (209, 0) : 0x2001 OK
+Relecture (courant) : identique à l'envoi
+Relecture (défaut) : identique à l'envoi
+Terminé. À choisir dans le menu Régler le Picture Control (ou relancer avec --activer).

@@ -1,0 +1,7 @@
+Séance 645D 2026-10 +0000
+Batterie 100 %
+Fichiers déjà sur la carte : 4
+Vue d'essai, réglages du moment (mode 5) :
+  dossier 100PENTX
+  essai01-THAM3309.PEF 49941 Ko
+Mode constructeur refermé : 0x2001 OK

@@ -1,0 +1,14 @@
+run 1M
+poke8 0x83CED0FC 0x18
+run 69M
+png 00-infos.png
+press menu 4M 30M
+png 01-prise-de-vue.png
+press down 4M 16M
+png 02-pdv-programme.png
+press right 4M 20M
+png 03-programme.png
+press left 4M 16M
+press up 4M 16M
+press right 4M 20M
+png 04-preglage.png

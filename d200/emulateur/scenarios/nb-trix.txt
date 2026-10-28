@@ -1,0 +1,69 @@
+# b. Noir et blanc, firmware patché Tri-X (d200/patchs/d200-nb-trix.json, fabriqué par d40/patch.py dans le cache) (octobre 2026).
+# Même chaîne que nb-origine.txt. Valeurs attendues : d200/recherche/d200-firmware-image.md §5 et notes du JSON
+# (lignes 0 et 1 = 121, 65, 255 ; ligne 2 inchangée ; ligne Y = 128, 128, 0 ; courbe Tri-X à 0x3B22DD).
+# Joué sur le firmware d'origine, ce scénario doit échouer (code 1) : c'est la contre-épreuve de « verifier ».
+
+titre préparation
+poke8 0x97F0004D 0x0C              # Optimiser l'image = Noir et blanc
+poke8 0x97F0004E 0x00              # variante N&B neutre
+remplir 0x97BE09CC 0x48 0xEE
+remplir 0x97F0033C 0x24 0xEE
+remplir 0x50010022 0x24 0xEE
+remplir 0x50018400 0x6000 0xEE
+
+titre FUN_0005d616 : choix et conversion des matrices
+appel 0x5D616 0x97F00000 1
+expect32 0x97BE3DBC 1
+expect32 0x97BE09F0 121 65 255 121 65 255 -23 -7 542        # 255 rangé positif : les NOP ont remplacé les EXTSB
+expect32 0x97BE09CC 128 128 0 0 0 0 0 0 0
+expect16 0x97F0033C 0x0079 0x0041 0x00FF 0x0079 0x0041 0x00FF 0x0417 0x0407 0x021E
+expectconv 0x97F0033C 0x97BE09F0 9 4 0x400
+expect16 0x97F0034E 0x0080 0x0080 0 0 0 0 0 0 0
+expectconv 0x97F0034E 0x97BE09CC 9 4 0x200
+
+titre isp_chargerPuce : registres de la puce
+appel 0x5D716 0x97F00000
+expect16 0x50010022 0x0079 0x0041 0x00FF 0x0079 0x0041 0x00FF 0x0417 0x0407 0x021E
+expectegal 0x50010022 0x97F0033C 18
+expect16 0x50010034 0x0080 0x0080 0 0 0 0 0 0 0
+expectegal 0x50010034 0x97F0034E 18
+# courbe : celle du firmware joué, sur R, V, B ; premier et dernier octet de la courbe Tri-X du JSON
+expectdemi 0x50018400 0x3B22DD 4096
+expectdemi 0x5001A400 0x3B22DD 4096
+expectdemi 0x5001C400 0x3B22DD 4096
+expect16 0x50018400 0x0000                     # V2 (tirage dur, octobre 2026) ; V1 : 0x0009
+expect16 0x5001A3FE 0x00FF                     # blanc atteint (épaule, octobre 2026 ; 0xF3 avant)
+expect16 0x5001E400 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF
+expect16 0x5001E420 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+expect16 0x5001E440 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+expect16 0x5001E460 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF
+
+titre balayages : chaque LDI:8 du patch, v = 0 à 255, lu tel quel jusqu'au registre
+macro chaine
+poke8 0x97F00035 0x00              # rejouer le même chemin (mode 0)
+appel 0x5D616 0x97F00000 1
+appel 0x5D716 0x97F00000
+fin
+balayage chaine 0xD7850 0 255 0x50010026 0x400 brut      # matrice [2], EXTSB -> NOP
+balayage chaine 0xD7858 0 255 0x50010028 0x400 brut      # matrice [3], EXTSB -> NOP
+balayage chaine 0xD7868 0 255 0x5001002C 0x400 brut      # matrice [5], EXTSB -> NOP
+balayage chaine 0xD7888 0 255 0x50010034 0x200 brut      # ligne Y [0]
+balayage chaine 0xD7892 0 255 0x50010036 0x200 brut      # ligne Y [1]
+balayage chaine 0xD789C 0 255 0x50010038 0x200 brut      # ligne Y [2]
+# après les balayages (instructions remises), la chaîne redonne les valeurs du patch
+jouer chaine
+expect16 0x50010022 0x0079 0x0041 0x00FF 0x0079 0x0041 0x00FF 0x0417 0x0407 0x021E
+expect16 0x50010034 0x0080 0x0080 0 0 0 0 0 0 0
+
+titre variante sépia (octet 0x4E = 0x40, absente des menus) : la branche voisine du patch est intacte
+poke8 0x97F1004D 0x0C 0x40
+appel 0x5D616 0x97F10000 1
+expect32 0x97BE3DB8 1
+expect32 0x97BE09F0 0x98 0x12E 0x3A 0x98 0x12E 0x3A 0x98 0x12E 0x3A
+expect32 0x97BE09CC 0x100 0 0 0 -256 0 0 0 256
+appel 0x5D716 0x97F10000
+expect16 0x50010022 0x0098 0x012E 0x003A 0x0098 0x012E 0x003A 0x0098 0x012E 0x003A
+expect16 0x50010034 0x0100 0 0 0 0x0300 0 0 0 0x0100   # -256 -> 0x200 | 0x100 : module 256 = 9 bits, tient de justesse
+expectdemi 0x50018400 0x39DB30 4096    # courbes de la variante 1 (tblVariantesNB), une par canal
+expectdemi 0x5001A400 0x39EB30 4096
+expectdemi 0x5001C400 0x39FB30 4096

@@ -1,0 +1,38 @@
+{
+ "description": "Menu Pip-Boy, étape 8 (photo du boîtier) : chiffres de l'écran d'infos lisibles. Valeurs (remplies en noir par Nikon) en vert, fantômes « 8 » en vert très sombre sans contour. Deux entrées détournées (0x7B59E, 0x7B9C8), code à 0x40F100 ; couleurs 0x94, 0xBB, 0x91 à l'étape 1.",
+ "patchs": [
+  {
+   "offset": "0x3cf100",
+   "avant": {
+    "sha256": "9088fee917e5a748c2f0b4f5458c1cbdabbd696291c69be6e605bae0ef779e8f",
+    "longueur": 120
+   },
+   "apres": {
+    "hex": "c10d00fca80ce303c94c10fce00ccbbdaadce204c91daadce201e0059f8c0040f170c18d10fc8e0e8ff017810f0c9f8c0007b5a6970c9fa0c0cd00fca80ce303c94c10fce00ccbbdaadce204c91daadce201e0059f8c0040f170c14d10fc8e0c8ff017810f0b9f8c0007b9d0970c9fa00000000000000000"
+   },
+   "texte": "chiffres de l'écran d'infos : valeur remplie en noir → 0x94 (vert), fantômes 0xBB / 0x91 sans contour (code dans la place libre)"
+  },
+  {
+   "offset": "0x3b59e",
+   "avant": {
+    "sha256": "f2533968de5cd767fedcd985e0d4ce47ae4331246c890b36bed780cfc9be0242",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f100970c"
+   },
+   "texte": "0x7b59e : entrée détournée vers env_chaine (LDI:32 #…,R12 ; JMP @R12)"
+  },
+  {
+   "offset": "0x3b9c8",
+   "avant": {
+    "sha256": "a902e2cc890afac28a34b60fcfd8a847e8fc49b2c3f23efaf34541ef94075a3f",
+    "longueur": 8
+   },
+   "apres": {
+    "hex": "9f8c0040f138970c"
+   },
+   "texte": "0x7b9c8 : entrée détournée vers env_glyphe (LDI:32 #…,R12 ; JMP @R12)"
+  }
+ ]
+}

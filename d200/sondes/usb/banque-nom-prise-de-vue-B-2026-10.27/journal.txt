@@ -1,0 +1,2 @@
+Banque prise-de-vue B : nom actuel « STUDIO1 »
+  nouveau nom «  » : réponse 0x2001, relu «  » : vérifié

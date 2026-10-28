@@ -1,0 +1,14 @@
+Séance 645D 2026-10 +0000
+Batterie 67 %
+Fichiers déjà sur la carte : 12
+  D025 : 6 → 4
+  contraste : 4 → 5
+  netteté : 4 → 5
+  contraste : 4 → 5
+  netteté : 4 → 5
+  D025 : 6 → 4
+  netteté : 4 → 6
+  contraste : 4 → 1
+  netteté : 4 → 2
+Réglages de départ remis (8 modes, mode 0 Naturel).
+Mode constructeur refermé : 0x2001 OK

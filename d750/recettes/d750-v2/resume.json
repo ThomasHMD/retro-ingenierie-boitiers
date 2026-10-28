@@ -1,0 +1,102 @@
+{
+ "emplacement": "C-7 (U1)",
+ "nom": "TRI-X",
+ "base": "MONOCHROME",
+ "filtre": "AUCUN",
+ "kelvin": 10000,
+ "modele": "recherche/donnees-films/d750-seances/modele.json, version de la livraison d’octobre (coins du 28 mm corrigés), celui de la livraison chargée",
+ "gains_wb_10000K_sur_5600K": {
+  "lus_dans_le_NEF_du_test_v1": [
+   1.3075,
+   1.0,
+   0.8037
+  ],
+  "calcules": [
+   1.1843,
+   1.0,
+   0.7566
+  ]
+ },
+ "ecarts_prevus_v2": {
+  "scene": {
+   "mediane": 0.33,
+   "p90": 1.32
+  },
+  "peau": {
+   "mediane": 0.64,
+   "p90": 1.56
+  },
+  "mire": {
+   "mediane": 0.77,
+   "p90": 3.79
+  }
+ },
+ "score": 1.136,
+ "tri_x_charge_en_C7_avec_les_gains_reels": {
+  "scene": {
+   "mediane": 0.74,
+   "p90": 2.49
+  },
+  "peau": {
+   "mediane": 1.24,
+   "p90": 1.92
+  },
+  "mire": {
+   "mediane": 0.86,
+   "p90": 5.22
+  }
+ },
+ "tri_x_charge_en_C7_avec_les_gains_calcules": {
+  "scene": {
+   "mediane": 0.44,
+   "p90": 1.58
+  },
+  "peau": {
+   "mediane": 0.62,
+   "p90": 1.55
+  },
+  "mire": {
+   "mediane": 0.88,
+   "p90": 4.12
+  }
+ },
+ "autres_filtres": [
+  [
+   "JAUNE",
+   {
+    "scene": {
+     "mediane": 0.82,
+     "p90": 2.42
+    },
+    "peau": {
+     "mediane": 0.95,
+     "p90": 1.32
+    },
+    "mire": {
+     "mediane": 0.74,
+     "p90": 5.64
+    }
+   },
+   1.618
+  ],
+  [
+   "VERT",
+   {
+    "scene": {
+     "mediane": 0.67,
+     "p90": 3.68
+    },
+    "peau": {
+     "mediane": 0.65,
+     "p90": 1.96
+    },
+    "mire": {
+     "mediane": 1.2,
+     "p90": 7.6
+    }
+   },
+   1.943
+  ]
+ ],
+ "octets": 610
+}

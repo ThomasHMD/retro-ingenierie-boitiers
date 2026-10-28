@@ -1,0 +1,19 @@
+# D40 firmware B v1.11, config du désassembleur Dfr (NikonHacker, nikon-firmware-tools)
+# Tirée de la config du D80 (conf/BD800111.dfr.txt), même famille, même table d'interruptions.
+
+############################### File map
+-i 0x00040000-0x0040FFFF=0x00000000
+
+############################### Memory map
+# reset (dernier vecteur de la table)
+-e 0x000C0F90
+-m 0x00040000-0x000C165B=CODE
+
+# Softune RTOS Copyright
+-m 0x000C165C-0x000C16FF=DATA:L
+
+# Interrupt vector table
+-t 0x000EFC00
+
+############################### Symbols
+-s 0x000D9F1C=ptpEntry90C6

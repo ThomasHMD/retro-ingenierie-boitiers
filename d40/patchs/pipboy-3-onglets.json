@@ -1,0 +1,49 @@
+{
+ "description": "Menu Pip-Boy, étape 3 : onglet Retouche retiré (navigation et colonne des onglets), 4 constantes de code.",
+ "patchs": [
+  {
+   "offset": "0xf208e",
+   "avant": {
+    "sha256": "74f22a620681668ec4f0b96cd07ae9c279d0fad19fa31ec9927f370cca00434f",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "83ce69ac"
+   },
+   "texte": "FUN_00131f8a, touche haut sur VISU : CONFIG au lieu de RETOUCHE"
+  },
+  {
+   "offset": "0xf218a",
+   "avant": {
+    "sha256": "74f22a620681668ec4f0b96cd07ae9c279d0fad19fa31ec9927f370cca00434f",
+    "longueur": 4
+   },
+   "apres": {
+    "hex": "83ce4dbc"
+   },
+   "texte": "FUN_00131f8a, touche bas sur CONFIG : VISU au lieu de RETOUCHE"
+  },
+  {
+   "offset": "0x106de0",
+   "avant": {
+    "sha256": "fc531ced26734848c139afd890561ab23c98b15ab5189cad6f0c5703ed000490",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "a848"
+   },
+   "texte": "FUN_00146c48 : CMP #5 → #4, la colonne ne dessine que 4 onglets"
+  },
+  {
+   "offset": "0x106cc6",
+   "avant": {
+    "sha256": "fc531ced26734848c139afd890561ab23c98b15ab5189cad6f0c5703ed000490",
+    "longueur": 2
+   },
+   "apres": {
+    "hex": "a848"
+   },
+   "texte": "FUN_00146c48 (mode 6) : CMP #5 → #4"
+  }
+ ]
+}

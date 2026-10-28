@@ -1,0 +1,14 @@
+Séance 645D 2026-10 +0000
+Batterie 100 %
+Fichiers déjà sur la carte : 4
+Vue 01/02 trix-monochrome-contraste-7
+  contraste : 8 → 7
+  D024 : 7 → 0
+  dossier 100PENTX
+  01-trix-monochrome-contraste-7-THAM3307.PEF 49821 Ko
+Vue 02/02 retour-naturel-classic-chrome
+  mode : 5 → 0
+  dossier 100PENTX
+  02-retour-naturel-classic-chrome-THAM3308.PEF 49792 Ko
+Plan terminé. Remettre l'état de départ : --remettre
+Mode constructeur refermé : 0x2001 OK

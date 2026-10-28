@@ -1,0 +1,25 @@
+{
+ "description": "TEST D'ÉMULATEUR, NE PAS FLASHER. Même crochet « ldi:32 #0x3E7000, r12 ; jmp @r12 » posé en 0x143B4C, dans ecran014_entree (0x143B46), fonction d'écran d'« Optimiser l'image » appelée dès que le menu Prise de vue s'affiche (vérifié dans l'émulateur). Le code ajouté (espace libre 0x3E7000) incrémente un compteur 32 bits en RAM 0x83D80000 (page que l'émulateur ne voit jamais servir ; rien ne prouve qu'elle est libre dans le boîtier), refait les deux instructions écrasées et revient en 0x143B58. Mais le retour passe par « jmp:d @r12 » avec un « ldi:32 » dans le créneau de délai, l'instruction interdite qui a bloqué un boîtier chez Nikon Hacker : l'émulateur doit refuser.",
+ "patchs": [
+  {
+   "offset": "0x103b4c",
+   "avant": {
+    "sha256": "ba4112404e72cdfa72ac8b80713c29f936402bb1f7f17ce1365d9fbab7c70ec6",
+    "longueur": 12
+   },
+   "apres": {
+    "hex": "9f8c003e7000970c9fa09fa0"
+   }
+  },
+  {
+   "offset": "0x3a7000",
+   "avant": {
+    "sha256": "b22a774f0671c2a5c7816ad683a11031f8cbb52bfddab4a37f085fef6c60e63e",
+    "longueur": 38
+   },
+   "apres": {
+    "hex": "9f8083d800000401a41114019f8a83ce54ec9f8883ce53ec9f8c00143b589f0c9f8100000000"
+   }
+  }
+ ]
+}

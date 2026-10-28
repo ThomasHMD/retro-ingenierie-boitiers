@@ -1,0 +1,7 @@
+# Essai : sauter l'étalonnage des capteurs de la tâche 10 (0xE4D50) pour voir la suite du démarrage.
+eeprom valide
+entree 0x09 0x02
+fakeb inverser 1 controle 0
+retour 0xE4D50 0
+run 40M
+finb

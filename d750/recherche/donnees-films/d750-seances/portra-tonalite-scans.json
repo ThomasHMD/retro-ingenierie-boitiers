@@ -1,0 +1,94 @@
+{
+ "_source": "d750_analyse.py scans, octobre 2026 : médiane par image des centiles de L* (5, 25, 50, 75, 95, 99)",
+ "exports_preset_base_20_paires": {
+  "images": 20,
+  "L_centiles_5_25_50_75_95_99": [
+   0.3,
+   10.3,
+   40.4,
+   62.2,
+   82.0,
+   91.8
+  ],
+  "neutres_a_b_par_tranche_L": {
+   "5-25": [
+    -0.41,
+    -3.04
+   ],
+   "25-45": [
+    -2.72,
+    -2.23
+   ],
+   "45-65": [
+    1.02,
+    0.47
+   ],
+   "65-85": [
+    2.49,
+    1.47
+   ],
+   "85-98": [
+    0.69,
+    0.98
+   ]
+  }
+ },
+ "scans_portra400_retouches_73": {
+  "images": 73,
+  "L_centiles_5_25_50_75_95_99": [
+   9.8,
+   36.2,
+   60.0,
+   77.2,
+   89.6,
+   94.2
+  ],
+  "neutres_a_b_par_tranche_L": {
+   "5-25": [
+    0.09,
+    2.22
+   ],
+   "25-45": [
+    0.44,
+    1.4
+   ],
+   "45-65": [
+    0.66,
+    1.05
+   ],
+   "65-85": [
+    0.53,
+    2.32
+   ],
+   "85-98": [
+    0.36,
+    -0.0
+   ]
+  }
+ },
+ "centiles": [
+  5,
+  25,
+  50,
+  75,
+  95,
+  99
+ ],
+ "src": [
+  0.3,
+  10.3,
+  40.4,
+  62.2,
+  82.0,
+  91.8
+ ],
+ "dst": [
+  9.8,
+  36.2,
+  60.0,
+  77.2,
+  89.6,
+  94.2
+ ],
+ "lecture": "Option 2 du Portra : couleurs du preset Portra, clarté ramenée centile par centile sur les scans Portra 400 retouchés de Thomas. Scènes différentes d'un lot à l'autre : tendance, pas mesure."
+}

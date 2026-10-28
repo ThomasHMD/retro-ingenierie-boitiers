@@ -1,0 +1,452 @@
+{
+ "lot": "images/d750/2026-10-test-v2-bibliotheque",
+ "colorimetrie_mire": {
+  "mediane": 1.4,
+  "p90": 3.27
+ },
+ "blocs_communs": 4675,
+ "looks": [
+  {
+   "vue": "CLASSIC CHROME",
+   "cible": "CLASSIC CHROME",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 1.75,
+    "p90": 3.02
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.14,
+    "p90": 1.73
+   },
+   "prevu": {
+    "mediane": 1.37,
+    "p90": 2.46
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 145,
+     "dE": 1.32,
+     "teinte_deg": 2.5,
+     "chroma_x": 0.94,
+     "dL": -1.5
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 665,
+     "dE": 1.89,
+     "teinte_deg": 5.6,
+     "chroma_x": 1.0,
+     "dL": -1.2
+    },
+    {
+     "secteur": "neutres",
+     "n": 3827,
+     "dE": 1.74,
+     "da": -0.3,
+     "db": -0.2,
+     "dL": -1.2
+    }
+   ]
+  },
+  {
+   "vue": "CLASSIC NEG",
+   "cible": "CLASSIC NEG",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 5.08,
+    "p90": 6.89
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.17,
+    "p90": 1.72
+   },
+   "prevu": {
+    "mediane": 5.55,
+    "p90": 7.54
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "orange, peau",
+     "n": 354,
+     "dE": 6.0,
+     "teinte_deg": -6.7,
+     "chroma_x": 1.63,
+     "dL": 0.8
+    },
+    {
+     "secteur": "jaune",
+     "n": 66,
+     "dE": 7.52,
+     "teinte_deg": -18.0,
+     "chroma_x": 1.64,
+     "dL": -2.8
+    },
+    {
+     "secteur": "neutres",
+     "n": 4232,
+     "dE": 4.97,
+     "da": -0.4,
+     "db": -0.9,
+     "dL": -2.5
+    }
+   ]
+  },
+  {
+   "vue": "POSITIVE",
+   "cible": "POSITIVE",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 2.89,
+    "p90": 4.77
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.91,
+    "p90": 2.6
+   },
+   "prevu": {
+    "mediane": 2.14,
+    "p90": 3.5
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 1110,
+     "dE": 3.81,
+     "teinte_deg": 9.2,
+     "chroma_x": 0.81,
+     "dL": -1.7
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 637,
+     "dE": 4.06,
+     "teinte_deg": 7.0,
+     "chroma_x": 0.96,
+     "dL": -3.9
+    },
+    {
+     "secteur": "cyan-vert",
+     "n": 37,
+     "dE": 4.58,
+     "teinte_deg": 3.4,
+     "chroma_x": 0.72,
+     "dL": -4.9
+    },
+    {
+     "secteur": "cyan",
+     "n": 24,
+     "dE": 3.74,
+     "teinte_deg": 15.2,
+     "chroma_x": 0.87,
+     "dL": -1.6
+    },
+    {
+     "secteur": "bleu",
+     "n": 215,
+     "dE": 3.18,
+     "teinte_deg": 11.1,
+     "chroma_x": 1.25,
+     "dL": 0.9
+    },
+    {
+     "secteur": "neutres",
+     "n": 2626,
+     "dE": 1.31,
+     "da": -0.3,
+     "db": -0.0,
+     "dL": -0.8
+    }
+   ]
+  },
+  {
+   "vue": "PORTRA 400",
+   "cible": "PORTRA ESPRIT",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 4.59,
+    "p90": 6.29
+   },
+   "modele_contre_jpeg": {
+    "mediane": 2.46,
+    "p90": 3.12
+   },
+   "prevu": {
+    "mediane": 4.2,
+    "p90": 5.73
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 907,
+     "dE": 5.06,
+     "teinte_deg": 18.2,
+     "chroma_x": 0.8,
+     "dL": -1.7
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1003,
+     "dE": 5.62,
+     "teinte_deg": 15.5,
+     "chroma_x": 0.93,
+     "dL": -2.8
+    },
+    {
+     "secteur": "cyan",
+     "n": 27,
+     "dE": 5.7,
+     "teinte_deg": -5.6,
+     "chroma_x": 0.68,
+     "dL": -6.2
+    },
+    {
+     "secteur": "bleu",
+     "n": 74,
+     "dE": 5.3,
+     "teinte_deg": 11.8,
+     "chroma_x": 1.55,
+     "dL": -3.1
+    },
+    {
+     "secteur": "neutres",
+     "n": 2618,
+     "dE": 2.46,
+     "da": -0.1,
+     "db": -2.1,
+     "dL": -0.9
+    }
+   ]
+  },
+  {
+   "vue": "HASSELBLAD",
+   "cible": "HASSELBLAD",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 2.45,
+    "p90": 3.96
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.49,
+    "p90": 2.02
+   },
+   "prevu": {
+    "mediane": 2.68,
+    "p90": 4.05
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 501,
+     "dE": 3.84,
+     "teinte_deg": 5.3,
+     "chroma_x": 0.71,
+     "dL": -1.9
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1247,
+     "dE": 1.59,
+     "teinte_deg": 1.3,
+     "chroma_x": 0.92,
+     "dL": -1.3
+    },
+    {
+     "secteur": "jaune",
+     "n": 15,
+     "dE": 2.67,
+     "teinte_deg": -5.9,
+     "chroma_x": 0.88,
+     "dL": -1.2
+    },
+    {
+     "secteur": "cyan-vert",
+     "n": 33,
+     "dE": 4.57,
+     "teinte_deg": 7.3,
+     "chroma_x": 0.65,
+     "dL": -1.6
+    },
+    {
+     "secteur": "bleu",
+     "n": 71,
+     "dE": 4.52,
+     "teinte_deg": 19.6,
+     "chroma_x": 1.22,
+     "dL": -1.3
+    },
+    {
+     "secteur": "neutres",
+     "n": 2766,
+     "dE": 2.56,
+     "da": 1.0,
+     "db": -1.7,
+     "dL": -1.5
+    }
+   ]
+  },
+  {
+   "vue": "HP5+",
+   "cible": "HP5",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 3.21,
+    "p90": 6.73
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.1,
+    "p90": 1.58
+   },
+   "prevu": {
+    "mediane": 2.52,
+    "p90": 6.24
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 4675,
+     "dE": 3.21,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": -4.2
+    }
+   ]
+  },
+  {
+   "vue": "FP4+",
+   "cible": "FP4",
+   "kelvin": 5600,
+   "mesure": {
+    "mediane": 2.55,
+    "p90": 7.36
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.94,
+    "p90": 1.35
+   },
+   "prevu": {
+    "mediane": 2.3,
+    "p90": 7.13
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 4675,
+     "dE": 2.55,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": -3.3
+    }
+   ]
+  },
+  {
+   "vue": "KODACHROME",
+   "cible": "KODACHROME VIF",
+   "kelvin": 6250,
+   "mesure": {
+    "mediane": 3.44,
+    "p90": 6.15
+   },
+   "modele_contre_jpeg": {
+    "mediane": 0.97,
+    "p90": 1.68
+   },
+   "prevu": {
+    "mediane": 2.84,
+    "p90": 5.44
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "rouge",
+     "n": 498,
+     "dE": 6.76,
+     "teinte_deg": 4.3,
+     "chroma_x": 0.5,
+     "dL": -0.4
+    },
+    {
+     "secteur": "orange, peau",
+     "n": 1396,
+     "dE": 4.16,
+     "teinte_deg": 0.9,
+     "chroma_x": 0.7,
+     "dL": -1.8
+    },
+    {
+     "secteur": "cyan-vert",
+     "n": 28,
+     "dE": 7.44,
+     "teinte_deg": -11.8,
+     "chroma_x": 0.55,
+     "dL": -5.7
+    },
+    {
+     "secteur": "neutres",
+     "n": 2712,
+     "dE": 2.05,
+     "da": 0.6,
+     "db": 1.3,
+     "dL": -0.5
+    }
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "cible": "TRI-X",
+   "kelvin": 10000,
+   "mesure": {
+    "mediane": 1.17,
+    "p90": 1.72
+   },
+   "modele_contre_jpeg": {
+    "mediane": 1.01,
+    "p90": 1.63
+   },
+   "prevu": {
+    "mediane": 0.43,
+    "p90": 0.9
+   },
+   "secteurs_mesure": [
+    {
+     "secteur": "neutres",
+     "n": 4675,
+     "dE": 1.17,
+     "da": -0.5,
+     "db": 0.5,
+     "dL": 0.1
+    }
+   ]
+  }
+ ],
+ "wb": [
+  {
+   "vue": "KODACHROME",
+   "kelvin": 6250,
+   "gains_nef_sur_5600": [
+    1.0522,
+    1.0,
+    0.9387
+   ],
+   "gains_calcules": [
+    1.0448,
+    1.0,
+    0.933
+   ]
+  },
+  {
+   "vue": "TRI-X",
+   "kelvin": 10000,
+   "gains_nef_sur_5600": [
+    1.3075,
+    1.0,
+    0.8037
+   ],
+   "gains_calcules": [
+    1.1843,
+    1.0,
+    0.7566
+   ]
+  }
+ ],
+ "crans": []
+}
