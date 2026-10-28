@@ -170,7 +170,7 @@ def ecrire(cc, pf, hncs, trix, camspec, look):
                               'lecture': 'Pas de cible mesurée (aucun preset HP5, pas de paires) : écart relatif médian entre '
                                          'la réponse du film et sa reconstitution par le RGB du D40, sur 624 réflectances (ColorChecker + spectres lisses).'},
                   'poids_D40_RGB': w_hp5.round(4).tolist(), 'tirage': info,
-                  'sources': ['Ilford HP5 Plus, fiche technique Harman (2010) : spectrogramme au tungstène 2 850 K, courbe caractéristique '
+                  'sources': ['Ilford HP5 Plus, fiche technique Ilford (2010) : spectrogramme au tungstène 2 850 K, courbe caractéristique '
                               '(Ilfotec HC 1+31, 6 min 30, 20 °C)', 'Sensibilités du D40 : camspec (Jiang et al. 2013)',
                               'Tirage : papier grade 2 (ISO 6846, R 1,10), Dmin 0,05, Dmax 2,10 ; outils/films_nb.py'],
                   'notes': 'Lecture du spectrogramme incertaine (hauteur prise comme réponse linéaire au tungstène, puis divisée par '

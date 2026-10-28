@@ -10,7 +10,7 @@ Calcul : [`outils/d750_standard.py`](../../outils/d750_standard.py), sur la base
 | PICCON42.NCP | CLASSIC NEG V0 | Standard | Fujifilm Classic Neg. (LUT officielle) | 4,6 (Standard brut : 5,4) | rien |
 | PICCON43.NCP | KODACHROME V0 | Standard | Kodachrome 64 (modèle spectral de la fiche Kodak) | 6,0 ; **3,1 avec la WB** | **WB lumière du jour, réglage fin B3 à B5** (à la main, ou dans U1/U2) |
 | PICCON44.NCP | TRI-X DDX V0 | Monochrome, filtre aucun | Tri-X, DD-X à contraste normal (pente 0,62), tirage grade 2 | courbe seule | WB fixe vers 8 000 K (rapport *perspectives* §3.3) |
-| PICCON45.NCP | HP5 DDX V0 | Monochrome, filtre aucun | HP5, courbe Harman (même contraste que DD-X) | courbe seule | WB fixe 10 000 K |
+| PICCON45.NCP | HP5 DDX V0 | Monochrome, filtre aucun | HP5, courbe Ilford (même contraste que DD-X) | courbe seule | WB fixe 10 000 K |
 | PICCON46.NCP | FP4 DDX V0 | Monochrome, filtre aucun | FP4+, courbe Ilford (Ilfotec HC) | courbe seule | WB fixe 10 000 K |
 
 Tous : contraste et luminosité « gérés par la courbe », saturation et teinte à 0, accentuation 3. Le calage d'exposition est celui du posemètre (le Kodachrome sort donc dense, comme une diapositive : gris moyen vers 90/255).

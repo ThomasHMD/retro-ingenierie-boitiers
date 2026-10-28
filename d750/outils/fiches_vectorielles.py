@@ -16,7 +16,7 @@ Fiches traitées (PDF non recopiés dans le dépôt, à télécharger) :
 - Ilford FP4 Plus (avril 2004, pages 1 et 4) et HP5 Plus (juillet 2004, pages 1 et 5) :
   https://125px.com/docs/film/ilford/FP4+-200404.pdf, https://125px.com/docs/film/ilford/HP5+-200407.pdf
   Étiquettes vectorisées (pas de texte) : valeurs des graduations données ici, lues sur la page rendue.
-  Les fiches Harman de novembre 2018 reprennent les mêmes graphiques en image.
+  Les fiches Ilford de novembre 2018 reprennent les mêmes graphiques en image.
 
   fiches_vectorielles.py kodachrome <e55-1996_12.pdf> <sortie.json>
   fiches_vectorielles.py fp4 <FP4+-200404.pdf> <sortie.json>

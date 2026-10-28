@@ -23,9 +23,9 @@ Légende : **mesuré** = JPEG sorti du boîtier contre la cible du look, la scè
 | Hasselblad | D40 | 2,7 | 3,8 | DSC_6261, 1 vue |
 | Tri-X | D750 | 1,2 | 1,7 | reprise, Tri-X v2, WB 10 000 K ; cible : le preset Tri-X |
 | Tri-X | D40 | 0,5 | 2,8 | 4 vues (0,4 à 0,5, et 2,5 sur une) |
-| HP5+ | D750 | 3,2 | 6,7 | reprise ; cible : fiche Harman, tonalité des scans de Thomas |
-| HP5+ | D40 | 2,7 | 4,6 | 11 vues (1,1 à 3,7) ; cible : fiche Harman, tirage grade 2 |
-| FP4+ | D750 | 2,6 | 7,4 | reprise ; cible : fiche Harman |
+| HP5+ | D750 | 3,2 | 6,7 | reprise ; cible : fiche Ilford, tonalité des scans de Thomas |
+| HP5+ | D40 | 2,7 | 4,6 | 11 vues (1,1 à 3,7) ; cible : fiche Ilford, tirage grade 2 |
+| FP4+ | D750 | 2,6 | 7,4 | reprise ; cible : fiche Ilford |
 
 Le D40 n'a ni Kodachrome, ni Classic Neg, ni Portra, ni FP4. D750 : la bibliothèque sous une seule lumière (4 675 blocs du centre, les mêmes pour tous les looks) ; D40 : 1 à 11 photos par look.
 
@@ -183,7 +183,7 @@ Ce que le test établit :
 
 **Les photos.** `images/d40/2026-10-test-v1/`, prises avec la V3 (fiche EXIF dans `sondes/v1/test-10/exif.tsv`) ; on garde les 20 NEF pris en P, S, A ou M avec un préréglage (en mode Auto, rendu Nikon). Balance auto, lumière mêlée (lampes, fin de jour, flash sur 6 vues). La V5 a les mêmes tables de rendu, vérifié à l'octet (`patchs/preglages-v1.json` dans `build/V5/`) ; seuls 8 octets du code des préréglages y sont repris par l'étape 9 (Programme).
 
-**Méthode.** La scène vient du NEF : RVB du D40 (balance du boîtier) → XYZ par la matrice des sensibilités camspec (`recettes/mesures/*.json`), échelle d'exposition calée sur le D40 (un gris rendu 118/255 par la courbe IIIa Normal vaut 18 %). Cibles : les mêmes qu'au D750 (Hasselblad et Positive : modèles mesurés sur paires RAW + JPEG du X2D et du GR III ; Tri-X : le preset Tri-X), sauf HP5 (fiche Harman et tirage grade 2, la cible de la V1 du D40) et Classic Chrome (voir plus bas). « Prévu » = simulateur du D40 avec les tables de la V1.
+**Méthode.** La scène vient du NEF : RVB du D40 (balance du boîtier) → XYZ par la matrice des sensibilités camspec (`recettes/mesures/*.json`), échelle d'exposition calée sur le D40 (un gris rendu 118/255 par la courbe IIIa Normal vaut 18 %). Cibles : les mêmes qu'au D750 (Hasselblad et Positive : modèles mesurés sur paires RAW + JPEG du X2D et du GR III ; Tri-X : le preset Tri-X), sauf HP5 (fiche Ilford et tirage grade 2, la cible de la V1 du D40) et Classic Chrome (voir plus bas). « Prévu » = simulateur du D40 avec les tables de la V1.
 
 | Look (préréglage) | Vues | Mesuré | Simulateur contre JPEG | Prévu |
 |---|---|---|---|---|

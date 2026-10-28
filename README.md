@@ -121,8 +121,8 @@ En noir et blanc, le défaut du Monochrome d'origine est sa courbe trop plate : 
 | Portra 400 | | C-5 | « esprit Portra » : entre mes scans de Portra 400 et un preset acheté que j'aimais beaucoup |
 | Hasselblad | Soft | C-6 | paires RAW + JPEG d'un Hasselblad X2D (HNCS) |
 | Tri-X | Portrait | C-7, à 10 000 K | d'après un preset acheté que j'aimais beaucoup, contrôlé sur la fiche Kodak |
-| HP5+ | Black And White | C-8 | fiche Ilford Harman (sensibilité spectrale, tirage grade 2) |
-| FP4+ | | C-9 | fiche Ilford Harman |
+| HP5+ | Black And White | C-8 | fiche Ilford (sensibilité spectrale, tirage grade 2) |
+| FP4+ | | C-9 | fiche Ilford |
 
 Les cibles sont des rendus que j'aime, pas des vérités : une HP5 change selon le scan, le développement et le traitement. La méthode permet de viser les siens.
 

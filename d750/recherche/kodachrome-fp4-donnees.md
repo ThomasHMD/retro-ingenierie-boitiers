@@ -17,7 +17,7 @@ Accès aux sources : depuis le conteneur, les sites de Kodak et d'Ilford répond
 4. **Le modèle ne sait pas chiffrer la saturation absolue** : sans effets inter-couches (non publiés pour le K-14), il rend le Kodachrome *moins* saturé que la scène (×0,79 à tonalité égale), ce que contredit sa réputation. La saturation se cale donc sur le boîtier, pas sur ce chiffre. Hypothèse forte, nommée.
 5. **Gamme mesurée par Kodak sur du vrai Kodachrome** (mire IT8 Q-60K3, 1999) : chroma jusqu'à 68 dans les rouges, 102 dans les jaunes, 85 dans les verts, mais **23 au plus dans les bleus cyan (teintes 240 à 270°)** ; 11,7 % des plages sont hors sRGB, donc hors d'atteinte d'un JPEG sRGB. Vérifié (données Kodak) ; lecture : calcul.
 6. **FP4 Plus : spectralement presque une HP5** (ΔL\* médian 1,1 entre les deux fiches). Mélange en sRGB linéaire **0,12 / 0,27 / 0,61**, très bleu ; comme pour la HP5, aucun filtre du Monochrome ne s'en approche, et « aucun » reste le moins mauvais (ΔL\* médian 7,5). Courbe Ilfotec HC 1+31 : pente 0,68 (HP5 : 0,59), voile 0,08, **épaule à D 1,87** environ 2,8 log au-dessus du point de vitesse. Vérifié (fiche) ; mélange et écarts : calcul.
-7. **La fiche Harman FP4 Plus en vigueur (novembre 2018) ne publie ni granularité, ni FTM, ni indice de contraste, et une seule courbe** (Ilfotec HC 1+31) ; ses deux graphiques sont ceux de la fiche 2004. Vérifié.
+7. **La fiche Ilford FP4 Plus en vigueur (novembre 2018) ne publie ni granularité, ni FTM, ni indice de contraste, et une seule courbe** (Ilfotec HC 1+31) ; ses deux graphiques sont ceux de la fiche 2004. Vérifié.
 8. **HP5 et Tri-X relues de la même façon (§4)** : les numérisations à la main du projet étaient justes (écarts invisibles en JPEG, mélanges identiques à ±0,002). L'apport réel est la Tri-X selon le développement : huit courbes publiées (D-76 et T-MAX, 6 à 12 min), du rendu doux au rendu dur ; la courbe du D750 doit suivre le révélateur et le temps de Thomas. Vérifié (extraction) ; cibles : calcul.
 
 ## 1. Sources
@@ -39,7 +39,7 @@ Accès aux sources : depuis le conteneur, les sites de Kodak et d'Ilford répond
 | Nikon, *D800 Technical Guide, Picture Control* | https://download.nikonimglib.com/archive3/lhXO000b2U4Z03mDIHM65Qpykj23/D800_TG_PC_(En)01.pdf | 2012 | curseur Teinte : négatif = rouges vers pourpre, bleus vers vert, verts vers jaune ; positif = l'inverse (rotation de la roue) | lu par résumé de recherche ; supposé valable pour le D750 : hypothèse |
 | Hanson et al., *JOSA* 42, p. 663 à 669 (1952) | cité par des brevets Kodak et Fuji (USPTO 4788132, 6746834) | 1952 | origine du concept d'effet inter-image (saturation accrue par les couches voisines) | non lu ; contexte seulement |
 | Ilford, *FP4 Plus*, Fact Sheet | https://125px.com/docs/film/ilford/FP4+-200404.pdf | avril 2004 | spectrogramme au tungstène 2 850 K et courbe caractéristique (Ilfotec HC 1+31, 8 min), vectoriels | fabricant ; extraits exactement. Vérifié |
-| Harman, *ILFORD FP4 Plus Technical Information* | officielle : https://www.ilfordphoto.com/amfile/file/download/file/1919/product/687/ ; lue : https://125px.com/docs/film/ilford/FP4-Plus_201811.pdf | nov. 2018 (PDF du 16/09/2019) | mêmes graphiques en image ; réciprocité t^1,26 ; temps de développement (31 révélateurs ou dilutions, EI 50 à 200) | vérifié |
+| Ilford, *ILFORD FP4 Plus Technical Information* | officielle : https://www.ilfordphoto.com/amfile/file/download/file/1919/product/687/ ; lue : https://125px.com/docs/film/ilford/FP4-Plus_201811.pdf | nov. 2018 (PDF du 16/09/2019) | mêmes graphiques en image ; réciprocité t^1,26 ; temps de développement (31 révélateurs ou dilutions, EI 50 à 200) | vérifié |
 
 Rien n'a été trouvé de publié sur la colorimétrie scène → diapositive du Kodachrome (mire photographiée sur Kodachrome avec ses valeurs, ou mesure de l'effet inter-image du K-14). C'est la donnée qui manque le plus. Vérifié (absence dans ces recherches, pas une preuve d'inexistence).
 
@@ -163,7 +163,7 @@ Données complètes : [`donnees-films/fp4-plus.json`](donnees-films/fp4-plus.jso
 
 | Donnée | Contenu | Statut |
 |---|---|---|
-| Fiche en vigueur | Harman, novembre 2018 (PDF du 16/09/2019), 6 p. ; graphiques en image, identiques à ceux de la fiche Ilford d'avril 2004, elle vectorielle | vérifié (graphiques superposables à l'œil) |
+| Fiche en vigueur | Ilford, novembre 2018 (PDF du 16/09/2019), 6 p. ; graphiques en image, identiques à ceux de la fiche Ilford d'avril 2004, elle vectorielle | vérifié (graphiques superposables à l'œil) |
 | Sensibilité | ISO 125/22°, mesurée en ID-11 à 20 °C ; EI 50 à 200 conseillés (« évaluation pratique », pas le point de pied de la norme) ; latitude annoncée : +6 IL, −2 IL | vérifié |
 | Sensibilité spectrale | « Wedge spectrogram » au tungstène 2 850 K, sans valeurs ; lu comme pour la HP5 (hauteur relative linéaire, zéro aux graduations 0,5 et 1,0) : 0,39 à 400 nm, 0,58 à 440, 0,65 à 500, 0,75 à 540, maximum 0,97 vers 605 nm, coupure à 664 nm | courbe : vérifié ; lecture linéaire : hypothèse |
 | Courbe caractéristique | **une seule** : rouleau, Ilfotec HC 1+31, 8 min à 20 °C, agitation intermittente | vérifié |
@@ -225,7 +225,7 @@ La FP4 tirée sur grade 2 est la plus contrastée des trois : ombres plus profon
 
 ## 4. HP5 Plus et Tri-X 400 au même niveau de précision
 
-Demande de Thomas (octobre 2026). Même extraction directe dans les PDF vectoriels : fiche Ilford HP5 Plus de juillet 2004 (les graphiques de la fiche Harman 2018 sont les mêmes, en image ; voir [hp5-donnees-film.md](hp5-donnees-film.md) §1.1) et fiche Kodak F-4017 d'octobre 2021, celle que `films_nb.py` utilise déjà. Données : [`donnees-films/hp5-plus.json`](donnees-films/hp5-plus.json), [`donnees-films/tri-x-f4017-2021.json`](donnees-films/tri-x-f4017-2021.json) ; cibles : [`donnees-films/hp5-trix-cibles.json`](donnees-films/hp5-trix-cibles.json). Dans `films_nb.py`, la fonction `fiches_exactes()` ajoute ces données sans toucher aux constantes existantes.
+Demande de Thomas (octobre 2026). Même extraction directe dans les PDF vectoriels : fiche Ilford HP5 Plus de juillet 2004 (les graphiques de la fiche Ilford 2018 sont les mêmes, en image ; voir [hp5-donnees-film.md](hp5-donnees-film.md) §1.1) et fiche Kodak F-4017 d'octobre 2021, celle que `films_nb.py` utilise déjà. Données : [`donnees-films/hp5-plus.json`](donnees-films/hp5-plus.json), [`donnees-films/tri-x-f4017-2021.json`](donnees-films/tri-x-f4017-2021.json) ; cibles : [`donnees-films/hp5-trix-cibles.json`](donnees-films/hp5-trix-cibles.json). Dans `films_nb.py`, la fonction `fiches_exactes()` ajoute ces données sans toucher aux constantes existantes.
 
 **Les numérisations à la main du projet étaient bonnes.** Comparées aux courbes exactes (calcul) :
 
@@ -248,14 +248,14 @@ Donc rien à corriger dans les recettes existantes : les écarts sont sous ce qu
 | T-MAX, 7 min | 0,33 | 0,59 | 15 | 30 | 62 | 117 | 182 | 226 |
 | T-MAX, 9 min | 0,36 | 0,71 | 8 | 20 | 52 | 117 | 192 | 235 |
 | T-MAX, 11 min | 0,38 | 0,84 | 4 | 12 | 43 | 117 | 203 | 242 |
-| HP5, Ilfotec HC 1+31, 6 min 30 (seule courbe Harman) | 0,17 | 0,60 | 14 | 27 | 57 | 117 | 183 | 226 |
+| HP5, Ilfotec HC 1+31, 6 min 30 (seule courbe Ilford) | 0,17 | 0,60 | 14 | 27 | 57 | 117 | 183 | 226 |
 | FP4, Ilfotec HC 1+31, 8 min (seule courbe Ilford) | 0,08 | 0,68 | 12 | 25 | 53 | 117 | 194 | 237 |
 
 Lecture : d'un développement à l'autre, la Tri-X va d'un rendu doux (D-76 6 min, les ombres restent ouvertes) à un rendu très dur (T-MAX 11 min). Le choix de la courbe pour le D750 dépend donc du révélateur et du temps que Thomas utilise (ou qu'il veut évoquer), pas seulement du film. Temps conseillés par la fiche à EI 400 et 20 °C : T-MAX 6 min (petite cuve), D-76 6¾ min (petite cuve) ou 7¾ min (grande cuve), soit entre les courbes D-76 6 et 8 min. Vérifié (tableaux p. 3). La fiche donne aussi l'indice de contraste en fonction du temps (D-76 : 0,48 à 5,4 min, 0,82 à 10,8 min ; XTOL : 0,34 à 3,25 min, 0,98 à 14 min ; T-MAX RS : 0,51 à 0,99 entre 3,25 et 13 min) ; les courbes T-MAX, HC-110, D-76 1+1 et XTOL 1+1 n'ont pas pu être séparées sans ambiguïté (motifs de tirets répétés ou trop courts). Vérifié (extraction) ; tirage : calcul.
 
 Sensibilité spectrale de la Tri-X : la fiche donne deux courbes (D = 0,3 et D = 1,0 au-dessus du voile). Le mélange sRGB change un peu selon celle qu'on prend : 0,17 / 0,31 / 0,52 (D = 1,0, retenu jusqu'ici) contre 0,19 / 0,34 / 0,47 (D = 0,3). Curiosité : sur le graphique, la courbe légendée D = 1,0 est la plus haute, alors qu'il faut plus de lumière pour atteindre D = 1,0 que D = 0,3 ; légende peut-être inversée. Ça ne change que l'échelle, pas la forme retenue. Vérifié (graphique) ; interprétation : hypothèse.
 
-Pour la HP5, rien de plus n'est publié par Harman (une seule courbe, pas de spectre chiffré, pas de grain) : le niveau de précision atteint ici est le plafond de ce que donnent les fiches. Le reste viendra des scans HP5 de Thomas (cible déjà mesurée dans *perspectives* §3.3).
+Pour la HP5, rien de plus n'est publié par Ilford (une seule courbe, pas de spectre chiffré, pas de grain) : le niveau de précision atteint ici est le plafond de ce que donnent les fiches. Le reste viendra des scans HP5 de Thomas (cible déjà mesurée dans *perspectives* §3.3).
 
 Suite (octobre 2026) : la Tri-X en DD-X ou en Rodinal, les révélateurs de Thomas, est traitée dans [d750-leviers-reglages.md](d750-leviers-reglages.md) §4 (courbe interpolée au contraste « normal » d'Ilford, pente 0,62).
 

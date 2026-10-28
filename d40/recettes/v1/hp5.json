@@ -4579,7 +4579,7 @@
   "v_gris": 0.115
  },
  "sources": [
-  "Ilford HP5 Plus, fiche technique Harman (2010) : spectrogramme au tungstène 2 850 K, courbe caractéristique (Ilfotec HC 1+31, 6 min 30, 20 °C)",
+  "Ilford HP5 Plus, fiche technique Ilford (2010) : spectrogramme au tungstène 2 850 K, courbe caractéristique (Ilfotec HC 1+31, 6 min 30, 20 °C)",
   "Sensibilités du D40 : camspec (Jiang et al. 2013)",
   "Tirage : papier grade 2 (ISO 6846, R 1,10), Dmin 0,05, Dmax 2,10 ; outils/films_nb.py"
  ],
