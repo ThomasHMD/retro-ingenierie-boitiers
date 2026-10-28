@@ -11,6 +11,10 @@ Classic Chrome, Tri-X, HP5, Portra, Kodachrome, rendu Hasselblad, Positive du Ri
 
 Le principe est le même dans chaque cas : on mesure le rendu visé, on mesure ce que le boîtier sait faire, puis on calcule le réglage le plus proche et on le vérifie sur de vraies photos. La mesure est un écart de couleur perçu, le ΔE2000.
 
+<img src="vues/comparaison/classic-chrome-4-appareils.jpg" width="800" alt="Le même cheval à ressort photographié par quatre appareils réglés sur le Classic Chrome">
+
+*Quatre appareils qui visent le Classic Chrome : je vous mets au défi de dire quelle photo sort de quel appareil. JPEG sortis du boîtier, exposition et balance égalisées sur le gris du cheval pour compenser les éclaircies pendant la prise de vue.*
+
 Le dépôt est fait pour être **donné à une IA** (Claude Code, Codex, Cursor…) avec la consigne « reproduis ceci sur mon boîtier » : voir [`AGENTS.md`](AGENTS.md) et [`METHODE.md`](METHODE.md).
 
 > Auteur : Thomas Hammoudi, photographe. Travail fait avec Claude Code, en octobre 2026. Les textes sont en français.
