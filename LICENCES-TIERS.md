@@ -1,6 +1,6 @@
 # Licences et sources tierces
 
-Tout ce qui n'est pas listé ici est le travail de Thomas Hammoudi, sous [CC BY-NC-SA 4.0](LICENSE). Restent à Nikon : les tables d'usine du D40 décodées dans `d40/recettes/v1/nikon.json` (et sa copie sous `d750/`), gardées parce que les calculs en ont besoin, et les textes, glyphes et en-têtes que reprennent certains patchs (voir le README, « Cadre légal »).
+Tout ce qui n'est pas listé ici est le travail de Thomas Hammoudi, sous [CC BY-NC-SA 4.0](LICENSE), sauf les photos (vues de `vues/`, image d'aperçu du dépôt) : © Thomas Hammoudi, tous droits réservés. Restent à Nikon : les tables d'usine du D40 décodées dans `d40/recettes/v1/nikon.json` (et sa copie sous `d750/`), gardées parce que les calculs en ont besoin, et les textes, glyphes et en-têtes que reprennent certains patchs (voir le README, « Cadre légal »).
 
 ## Dans le dépôt, sous une autre licence
 
