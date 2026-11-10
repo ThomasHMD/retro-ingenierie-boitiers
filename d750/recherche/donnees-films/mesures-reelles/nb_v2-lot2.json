@@ -1,0 +1,318 @@
+{
+ "HP5": {
+  "v1": {
+   "filtre": "aucun",
+   "ecarts": {
+    "scene": {
+     "mediane": 2.24,
+     "p90": 7.9
+    },
+    "peau": {
+     "mediane": 0.93,
+     "p90": 1.98
+    },
+    "mire": {
+     "mediane": 3.02,
+     "p90": 14.29
+    },
+    "scene_lot2": {
+     "mediane": 2.27,
+     "p90": 6.87
+    }
+   },
+   "score": 4.055
+  },
+  "v2": {
+   "filtre": "aucun",
+   "ecarts": {
+    "scene": {
+     "mediane": 1.49,
+     "p90": 8.51
+    },
+    "peau": {
+     "mediane": 1.35,
+     "p90": 2.76
+    },
+    "mire": {
+     "mediane": 3.1,
+     "p90": 14.85
+    },
+    "scene_lot2": {
+     "mediane": 1.61,
+     "p90": 6.01
+    }
+   },
+   "score": 3.896
+  },
+  "essais": [
+   {
+    "filtre": "AUCUN",
+    "ecarts": {
+     "scene": {
+      "mediane": 1.49,
+      "p90": 8.51
+     },
+     "peau": {
+      "mediane": 1.35,
+      "p90": 2.76
+     },
+     "mire": {
+      "mediane": 3.1,
+      "p90": 14.85
+     },
+     "scene_lot2": {
+      "mediane": 1.61,
+      "p90": 6.01
+     }
+    },
+    "score": 3.896
+   },
+   {
+    "filtre": "JAUNE",
+    "ecarts": {
+     "scene": {
+      "mediane": 3.14,
+      "p90": 10.81
+     },
+     "peau": {
+      "mediane": 3.33,
+      "p90": 5.06
+     },
+     "mire": {
+      "mediane": 6.02,
+      "p90": 20.48
+     },
+     "scene_lot2": {
+      "mediane": 3.05,
+      "p90": 8.42
+     }
+    },
+    "score": 6.683
+   },
+   {
+    "filtre": "ORANGE",
+    "ecarts": {
+     "scene": {
+      "mediane": 4.39,
+      "p90": 12.99
+     },
+     "peau": {
+      "mediane": 4.97,
+      "p90": 7.77
+     },
+     "mire": {
+      "mediane": 6.77,
+      "p90": 25.44
+     },
+     "scene_lot2": {
+      "mediane": 3.88,
+      "p90": 8.78
+     }
+    },
+    "score": 8.439
+   },
+   {
+    "filtre": "ROUGE",
+    "ecarts": {
+     "scene": {
+      "mediane": 6.52,
+      "p90": 15.18
+     },
+     "peau": {
+      "mediane": 6.32,
+      "p90": 11.64
+     },
+     "mire": {
+      "mediane": 8.59,
+      "p90": 31.45
+     },
+     "scene_lot2": {
+      "mediane": 5.77,
+      "p90": 11.81
+     }
+    },
+    "score": 11.18
+   },
+   {
+    "filtre": "VERT",
+    "ecarts": {
+     "scene": {
+      "mediane": 1.64,
+      "p90": 7.28
+     },
+     "peau": {
+      "mediane": 1.54,
+      "p90": 2.37
+     },
+     "mire": {
+      "mediane": 3.02,
+      "p90": 18.04
+     },
+     "scene_lot2": {
+      "mediane": 2.13,
+      "p90": 5.42
+     }
+    },
+    "score": 4.152
+   }
+  ]
+ },
+ "FP4": {
+  "v1": {
+   "filtre": "aucun",
+   "ecarts": {
+    "scene": {
+     "mediane": 2.14,
+     "p90": 5.67
+    },
+    "peau": {
+     "mediane": 0.62,
+     "p90": 1.67
+    },
+    "mire": {
+     "mediane": 3.11,
+     "p90": 17.17
+    },
+    "scene_lot2": {
+     "mediane": 1.2,
+     "p90": 6.92
+    }
+   },
+   "score": 3.732
+  },
+  "v2": {
+   "filtre": "aucun",
+   "ecarts": {
+    "scene": {
+     "mediane": 1.45,
+     "p90": 4.31
+    },
+    "peau": {
+     "mediane": 1.0,
+     "p90": 1.95
+    },
+    "mire": {
+     "mediane": 3.3,
+     "p90": 18.45
+    },
+    "scene_lot2": {
+     "mediane": 1.02,
+     "p90": 5.1
+    }
+   },
+   "score": 3.556
+  },
+  "essais": [
+   {
+    "filtre": "AUCUN",
+    "ecarts": {
+     "scene": {
+      "mediane": 1.45,
+      "p90": 4.31
+     },
+     "peau": {
+      "mediane": 1.0,
+      "p90": 1.95
+     },
+     "mire": {
+      "mediane": 3.3,
+      "p90": 18.45
+     },
+     "scene_lot2": {
+      "mediane": 1.02,
+      "p90": 5.1
+     }
+    },
+    "score": 3.556
+   },
+   {
+    "filtre": "JAUNE",
+    "ecarts": {
+     "scene": {
+      "mediane": 3.14,
+      "p90": 9.81
+     },
+     "peau": {
+      "mediane": 3.27,
+      "p90": 4.26
+     },
+     "mire": {
+      "mediane": 5.92,
+      "p90": 25.02
+     },
+     "scene_lot2": {
+      "mediane": 2.07,
+      "p90": 7.51
+     }
+    },
+    "score": 6.513
+   },
+   {
+    "filtre": "ORANGE",
+    "ecarts": {
+     "scene": {
+      "mediane": 4.42,
+      "p90": 14.45
+     },
+     "peau": {
+      "mediane": 5.05,
+      "p90": 7.42
+     },
+     "mire": {
+      "mediane": 6.1,
+      "p90": 31.85
+     },
+     "scene_lot2": {
+      "mediane": 2.6,
+      "p90": 10.08
+     }
+    },
+    "score": 8.53
+   },
+   {
+    "filtre": "ROUGE",
+    "ecarts": {
+     "scene": {
+      "mediane": 8.28,
+      "p90": 21.84
+     },
+     "peau": {
+      "mediane": 6.43,
+      "p90": 18.72
+     },
+     "mire": {
+      "mediane": 12.29,
+      "p90": 45.93
+     },
+     "scene_lot2": {
+      "mediane": 3.79,
+      "p90": 14.56
+     }
+    },
+    "score": 14.013
+   },
+   {
+    "filtre": "VERT",
+    "ecarts": {
+     "scene": {
+      "mediane": 1.62,
+      "p90": 4.5
+     },
+     "peau": {
+      "mediane": 1.14,
+      "p90": 1.84
+     },
+     "mire": {
+      "mediane": 3.43,
+      "p90": 22.7
+     },
+     "scene_lot2": {
+      "mediane": 1.5,
+      "p90": 5.51
+     }
+    },
+    "score": 4.082
+   }
+  ]
+ }
+}

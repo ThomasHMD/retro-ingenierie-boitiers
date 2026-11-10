@@ -25,7 +25,7 @@ Légende : **vérifié** = lu dans les octets ou le code du firmware (adresse do
 | Outils : Python lancé en `-I`, Ghidra 12.2 avec le module FR60 (sans analyse automatique, décompilation fonction par fonction), un petit interpréteur FR écrit pour l'occasion (`frmini.py`) pour calculer type, accès et plage des propriétés PTP | vérifié |
 | Aucun outil installé ; aucun ne manquait. Pas d'émulateur FR complet : seules des fonctions feuilles ont été exécutées | vérifié |
 
-Scripts et décompilations : [`../desassemblage/`](../desassemblage/README.md) (rapatriés en octobre). Le firmware décodé et le projet Ghidra restent dans un dossier de travail hors du dépôt (`<dossier de travail>`), à refaire depuis le fichier officiel si besoin.
+Scripts et décompilations : [`../desassemblage/`](../desassemblage/README.md) (rapatriés en octobre). Le firmware décodé et le projet Ghidra se refont depuis le fichier officiel, gardé dans `../firmware/645v133.zip` (chantier `2026-10-645d-firmware` vidé en novembre 2026).
 
 ## 2. Architecture : une seule mécanique interne, trois portes d'entrée
 
