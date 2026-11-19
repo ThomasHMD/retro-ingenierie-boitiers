@@ -10,4 +10,4 @@ opencv-python-headless
 pymupdf
 # figures de l'analyse du D750
 matplotlib
-# hors pip : exiftool (brew install exiftool), unar (brew install unar)
+# hors pip : exiftool (brew install exiftool), unar (brew install unar) ; NX Studio pour le rendu des NEF du D750 (brew install --cask nx-studio)

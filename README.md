@@ -4,6 +4,10 @@
 
 **Give old digital cameras a second life: make a Nikon D40, D200, D750 or a Pentax 645D shoot film-look JPEGs straight out of the camera (Classic Chrome, Tri-X, Portra, Kodachrome, Hasselblad, Ricoh Positive), by modifying the firmware or loading custom looks over USB (Nikon Picture Control, Pentax Custom Image).**
 
+[<img src="https://i.ytimg.com/vi/VV38e7QBacQ/maxresdefault.jpg" width="640" alt="Watch the video: I gave the Classic Chrome and Tri-X looks to a 2006 Nikon D40 (in French)">](https://www.youtube.com/watch?v=VV38e7QBacQ)
+
+▶️ **[Watch the video](https://www.youtube.com/watch?v=VV38e7QBacQ)** (in French): I gave the Classic Chrome and Tri-X looks to a 2006 Nikon D40.
+
 Classic Chrome, Tri-X, HP5, Portra, Kodachrome, the Hasselblad look, the Ricoh Positive... Usually you have to buy the camera that has them, or run every photo through Lightroom. This repository shows how I recreated them in three old Nikons and a Pentax 645D, and gives the method to do the same on another camera:
 
 - **Nikon D40** (2006): its firmware was mapped, emulated on the Mac, then modified. Five looks replace the Optimize Image presets, with a Pip-Boy style menu ([emulator screenshots](d40/README.md#le-menu-pip-boy)) and real exposure programs. This is **V5**, flashed and used on my own camera.
@@ -25,7 +29,7 @@ The repository is meant to be **handed to an AI** (Claude Code, Codex, Cursor...
 
 - **D40, V5 ready to flash** (modified Nikon firmware, provided for convenience, no warranty; Nikon's rights reserved): [`d40-v5.zip`](https://github.com/ThomasHMD/retro-ingenierie-boitiers/releases/download/d40-v5/d40-v5.zip) (modified A 1.12 and B 1.11, checksums in `SHA256SUMS.txt`). Or rebuild it yourself from the official firmware: [`d40/README.md`](d40/README.md).
 - **D200, firmware ready to flash** (same warning): [`d200-v2.zip`](https://github.com/ThomasHMD/retro-ingenierie-boitiers/releases/download/d200-v2/d200-v2.zip) (modified B 2.01, checksum in `SHA256SUMS.txt`). Or rebuild it from the official firmware: [`d200/README.md`](d200/README.md).
-- **D750, the nine Picture Controls**: in the repository, [`d750/recettes/d750-v1/`](d750/recettes/d750-v1/README.md), to load over USB: [`d750/README.md`](d750/README.md).
+- **D750, the nine Picture Controls**: in the repository, [`d750/recettes/d750-v1/`](d750/recettes/d750-v1/README.md), four of them re-fitted in November 2026 in [`d750/recettes/d750-v3/`](d750/recettes/d750-v3/README.md); to load over USB: [`d750/README.md`](d750/README.md).
 - **645D, the four recipes**: [`645d/recettes/`](645d/recettes/recettes-645d.json), to load over USB: [`645d/README.md`](645d/README.md).
 
 ## What it does
@@ -150,6 +154,8 @@ The targets are looks I like, not truths: an HP5 changes with the scan, the deve
 | FP4+ | D750 | 2.6 | 7.4 | 1 scene |
 
 **Of the 14 looks measured, 10 have a median under 3, and none exceeds 5.1.** On the D750, these are the nine Picture Controls as they sit in the camera (Tri-X v2 included), photographed in October 2026 on one scene, a library, under a single light (daylight and 5,600 K LED), and measured on the same 4,675 zones for all the looks. The camera does what the model predicts (model against JPEG: 0.9 to 1.9, Portra 2.5): the remaining gaps come from the recipes and the format. Under mixed light (daylight and warm lamp), HP5 and FP4 rise to 5.2 and 5.4. A second scene, the view through a window (building and sky, on a tripod), gives from 1.0 (HP5+) to 6.3 (Classic Neg): images above, "What it does". The 645D (Classic Chrome 1.9, Portra 2.3, on a weakly colored crankset) is a case apart: [`645d/README.md`](645d/README.md). The D40 figures apply to the published V5 (same tables as the photographed version, verified to the byte).
+
+**November 2026 update.** Classic Chrome, Classic Neg, Positive and Portra 400 were re-fitted with NX Studio, Nikon's free software, used as the D750's own renderer on NEFs I had already shot (seven scenes, each one held out in turn). Against their targets, rendered in NX, the median goes from 2.35 to 1.93 (Classic Chrome), 4.95 to 4.73 (Classic Neg), 3.38 to 2.54 (Positive) and 3.78 to 2.85 (Portra 400); Hasselblad, HP5+ and FP4+ did not gain enough and stay as they were. The table above measures the earlier versions, photographed in October. Details: [`d750/README.md`](d750/README.md).
 
 Caveats, to keep in mind:
 - few views: one to eleven per look on the D40, two scenes on the D750, a library (the table figures) and the view through a window (Classic Neg and Portra depend heavily on the scene content, HP5 and FP4 on the light);

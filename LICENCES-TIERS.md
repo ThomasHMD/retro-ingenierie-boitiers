@@ -8,7 +8,35 @@ Tout ce qui n'est pas listé ici est le travail de Thomas Hammoudi, sous [CC BY-
 |---|---|---|
 | `d40/emulateur/java/*.java`, `d200/emulateur/java/*.java`, `d40/desassemblage/bd400111.dfr.txt` | **GPL-3.0** ([`d40/emulateur/COPYING`](d40/emulateur/COPYING)) | l'émulateur est écrit dans le paquet de [nikon-firmware-tools](https://github.com/simeonpilgrim/nikon-firmware-tools) (Simeon Pilgrim et les auteurs de Nikon Hacker) et compilé avec ses sources, que `d40emu.py --cloner` télécharge ; la configuration du désassembleur est tirée de celle du D80 du même projet |
 | `645d/desassemblage/pfw_deobf.py` | **GPL-2.0** ([`645d/desassemblage/COPYING`](645d/desassemblage/COPYING), en-tête du fichier) | réécriture en Python de l'étape « deobfuscate » de [pfwtool](https://github.com/twang2218/pentax-firmware-tool) (Tao Wang), lue dans ses sources |
+| `d750/outils/nx_rendu.py` (fonctions `nksc` et `rendre`), la disposition des cartes NP3 dans `d750/outils/picture_control.py` | **MIT** (Copyright (c) 2026 Gerry Needham, texte ci-dessous) | repris de [nikon-picture-control-matcher](https://github.com/gerard662/nikon-picture-control-matcher) : lancement de `SaveProcess` de NX Studio et fichier annexe `.nksc`, lecture du NP3 Flexible Color |
 | `d40/desassemblage/ghidra_scripts/ResolveUTronSyscallsScript.java` | **Apache 2.0** (en-tête du fichier) | copie corrigée d'un script de [ghidra-fr60](https://github.com/desrdev/ghidra-fr60) (Darren Thompson), lui-même dérivé de Ghidra |
+
+
+### Licence MIT de nikon-picture-control-matcher
+
+```
+MIT License
+
+Copyright (c) 2026 Gerry Needham
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ## Hors du dépôt : à récupérer soi-même
 

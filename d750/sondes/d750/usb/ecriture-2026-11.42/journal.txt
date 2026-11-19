@@ -1,0 +1,5 @@
+SIMULATION : rien ne sera écrit (ajouter --ecrire pour écrire)
+Modèle : D750 | firmware : V1.15
+C-5 avant : « PORTRA 400 », 610 octets (sauvé dans avant_205_0.bin)
+Bloc à envoyer : « PORTRA 400 », base 1, 610 octets, avec courbe perso
+Simulation : enverrait SetPictCtrlData 0x90CD (205, 0) avec ces 610 octets.

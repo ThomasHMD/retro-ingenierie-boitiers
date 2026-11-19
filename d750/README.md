@@ -5,16 +5,16 @@ Le firmware n'est pas touché. Le D750 accepte, par la commande USB que Nikon pr
 | C- | Nom dans le boîtier | Base | Saturation, teinte / filtre | Balance des blancs | Recette |
 |---|---|---|---|---|---|
 | 1 | KODACHROME | Standard | −1, −3 | **6 250 K**, à régler à la main (préréglage d-1) | [`kodachrome-v2.json`](recettes/d750-v1/usb/kodachrome-v2.json) |
-| 2 | CLASSIC CHROME | Standard | −1, −2 | 5 600 K | [`classic-chrome-v1.json`](recettes/d750-v1/usb/classic-chrome-v1.json) |
-| 3 | CLASSIC NEG | Standard | 0, 0 | 5 600 K | [`classic-neg-v1.json`](recettes/d750-v1/usb/classic-neg-v1.json) |
-| 4 | POSITIVE | Standard | +2, −2 | 5 600 K | [`positive-v1.json`](recettes/d750-v1/usb/positive-v1.json) |
-| 5 | PORTRA 400 | Standard | +3, +2 | **5 600 K**, dans U2 | [`portra-400-v2.json`](recettes/d750-v1/usb/portra-400-v2.json) |
+| 2 | CLASSIC CHROME | Standard | −1,25, −3 | 5 600 K | [`classic-chrome-v3.json`](recettes/d750-v3/usb/classic-chrome-v3.json) (v3 ; la v1 : [`classic-chrome-v1.json`](recettes/d750-v1/usb/classic-chrome-v1.json)) |
+| 3 | CLASSIC NEG | Standard | −1, −0,75 | 5 600 K | [`classic-neg-v3.json`](recettes/d750-v3/usb/classic-neg-v3.json) (v3 ; la v1 : [`classic-neg-v1.json`](recettes/d750-v1/usb/classic-neg-v1.json)) |
+| 4 | POSITIVE | Standard | +1,75, −3 | 5 600 K | [`positive-v3.json`](recettes/d750-v3/usb/positive-v3.json) (v3 ; la v1 : [`positive-v1.json`](recettes/d750-v1/usb/positive-v1.json)) |
+| 5 | PORTRA 400 | Standard | +2,75, +0,25 | **5 600 K**, dans U2 | [`portra-400-v3.json`](recettes/d750-v3/usb/portra-400-v3.json) (v3 ; la v2 : [`portra-400-v2.json`](recettes/d750-v1/usb/portra-400-v2.json)) |
 | 6 | HASSELBLAD | Standard | +1, −3 | 5 600 K | [`hasselblad-v1.json`](recettes/d750-v1/usb/hasselblad-v1.json) |
 | 7 | TRI-X | Monochrome | filtre aucun | **10 000 K**, dans U1 | [`tri-x.json`](recettes/d750-v2/usb/tri-x.json) (Tri-X v2, [`recettes/d750-v2/`](recettes/d750-v2/README.md) ; la v1 : [`tri-x-v1.json`](recettes/d750-v1/usb/tri-x-v1.json)) |
 | 8 | HP5+ | Monochrome | filtre aucun | 5 600 K | [`hp5-v1.json`](recettes/d750-v1/usb/hp5-v1.json) |
 | 9 | FP4+ | Monochrome | filtre aucun | 5 600 K | [`fp4-v1.json`](recettes/d750-v1/usb/fp4-v1.json) |
 
-Toutes : contraste et luminosité gérés par la courbe, D-Lighting actif désactivé, espace sRGB. Les blocs exacts tels que relus dans le boîtier après écriture sont dans [`recettes/d750-v1/blocs/`](recettes/d750-v1/blocs/) et, pour le Tri-X v2, [`recettes/d750-v2/blocs/`](recettes/d750-v2/blocs/) (identiques, à l'octet près, à ce que fabrique `picture_control.py bloc` depuis les `.json`). Écarts prévus et détail : [`recettes/d750-v1/README.md`](recettes/d750-v1/README.md) ; écarts mesurés (lot de contrôle d’octobre 2026) : [`recherche/resultats-mesures.md`](recherche/resultats-mesures.md).
+Toutes : contraste et luminosité gérés par la courbe, D-Lighting actif désactivé, espace sRGB. Les blocs exacts tels que relus dans le boîtier après écriture sont dans [`recettes/d750-v1/blocs/`](recettes/d750-v1/blocs/) et, pour le Tri-X v2, [`recettes/d750-v2/blocs/`](recettes/d750-v2/blocs/), pour les quatre v3, [`recettes/d750-v3/blocs/`](recettes/d750-v3/blocs/) (identiques, à l'octet près, à ce que fabrique `picture_control.py bloc` depuis les `.json`). Écarts prévus et détail : [`recettes/d750-v1/README.md`](recettes/d750-v1/README.md) ; écarts mesurés (lot de contrôle d’octobre 2026) : [`recherche/resultats-mesures.md`](recherche/resultats-mesures.md).
 
 > **La balance des blancs fait partie de la recette : toujours en Kelvin, jamais en Auto.** Kodachrome **6 250 K**, Tri-X **10 000 K**, tous les autres **5 600 K**. Un Picture Control ne mémorise pas la balance des blancs, et chaque recette a été calculée pour une température donnée : en Auto, le boîtier déplace les couleurs à chaque photo et le look ne ressemble plus à sa cible (par la fenêtre, à main levée en Auto, le Kodachrome était à 10 de ΔE ; sur trépied à 6 250 K, à 4,1 : images dans [`../README.md`](../README.md), « Ce que ça fait »).
 
@@ -37,10 +37,10 @@ while read n nom; do
   swift d750/outils/d750_ecrire.swift ecrire /tmp/d750-C$n.bin C-$n            # simulation : rien n'est écrit
 done <<FIN
 1 d750-v1/usb/kodachrome-v2
-2 d750-v1/usb/classic-chrome-v1
-3 d750-v1/usb/classic-neg-v1
-4 d750-v1/usb/positive-v1
-5 d750-v1/usb/portra-400-v2
+2 d750-v3/usb/classic-chrome-v3
+3 d750-v3/usb/classic-neg-v3
+4 d750-v3/usb/positive-v3
+5 d750-v3/usb/portra-400-v3
 6 d750-v1/usb/hasselblad-v1
 7 d750-v2/usb/tri-x
 8 d750-v1/usb/hp5-v1
@@ -72,6 +72,16 @@ C'est la boucle de [`../METHODE.md`](../METHODE.md), automatisée :
 Tenir l'historique de son boîtier : `python3 d750/outils/d750_historique.py` refait `recettes/d750/HISTORIQUE.md` depuis les journaux d'écriture (celui du dépôt est celui de mon boîtier) ; `--comparer <lecture>` confronte une lecture du boîtier (`swift d750/outils/d750_ptp.swift <dossier>`, lecture seule) à l'historique.
 
 Cibles qui ne sont pas dans le dépôt (voir [`../LICENCES-TIERS.md`](../LICENCES-TIERS.md)) : LUT F-Log2 de Fujifilm (dossier `fuji-lut/` à la racine de `d750/`), réponses Status A d'agx-emulsion (en-tête de [`outils/kodachrome.py`](outils/kodachrome.py)), table Kodachrome de spektrafilm (variable `D750_SPEKTRAFILM`, [`outils/d750_spektrafilm.py`](outils/d750_spektrafilm.py)), profils Lightroom pour Tri-X et Portra (variable `D750_LOOKS`).
+
+## Réajuster les recettes sur le rendu de Nikon (NX Studio), novembre 2026
+
+NX Studio, le logiciel gratuit de Nikon, contient le moteur qui fait les JPEG du boîtier. Son programme `SaveProcess` se lance sans interface : il développe un NEF en 2 à 3 s (`outils/nx_rendu.py`, méthode reprise de [gerard662/nikon-picture-control-matcher](https://github.com/gerard662/nikon-picture-control-matcher), MIT). On peut donc essayer un Picture Control sur des NEF déjà pris, sans le boîtier.
+
+- **Il refait le JPEG du D750** : de 0,35 à 1,07 de ΔE2000 médian selon la scène, sur 7 séances (le modèle maison du boîtier, `d750_modele.py`, est à 0,7 à 1,3). Seule différence : il n'applique pas le contrôle du vignetage du boîtier ; la mesure le retire (gain radial), ou `rendre(..., vignetage=N)` le règle. Détail : [`recherche/rd-nikon-2026-11-formats-nx.md`](recherche/rd-nikon-2026-11-formats-nx.md).
+- **Le Picture Control essayé passe en NP2** (`picture_control.py`, `ecrire_np2`), dans le fichier annexe que NX Studio lit (`.nksc`, réglage `SavedPicConProcess=1`) : le rendu est alors identique à celui du même réglage relu dans le NEF (0,0 code d'écart). Le NCP, lui, s'en écarte d'un peu plus d'un code. Le NP2 écrit ici n'a été validé que par NX Studio.
+- **Les recettes** : `outils/d750_ajuster_nx.py` ajuste saturation, teinte (au quart de cran) et courbe sur de vrais rendus NX ; `outils/d750_valider_nx.py` le refait par validation croisée sur 7 scènes déjà photographiées (chaque scène tenue à part tour à tour) et ne garde une nouvelle recette que si elle fait mieux sur les scènes tenues à part. Quatre passent : Classic Chrome (2,35 → 1,93), Classic Neg (4,95 → 4,73), Positive (3,38 → 2,54), Portra 400 (3,78 → 2,85), ΔE2000 médian contre la cible dans NX. Hasselblad, HP5+ et FP4+ ne gagnent pas assez et restent en v1. Écrites dans C-2 à C-5 le 19 novembre 2026 : [`recettes/d750-v3/`](recettes/d750-v3/README.md), [`recherche/rd-nikon-2026-11-passe3.md`](recherche/rd-nikon-2026-11-passe3.md).
+
+Prérequis : NX Studio (`brew install --cask nx-studio` sur Mac) et les dépendances de [`../requirements.txt`](../requirements.txt). `SaveProcess` en ligne de commande n'est pas une fonction officielle de Nikon : une mise à jour de NX Studio peut la casser.
 
 ## Les outils
 

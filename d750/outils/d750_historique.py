@@ -40,6 +40,8 @@ SOURCES = {
 LIVRAISON_V1 = 'première livraison d’octobre, recette v1 à courbe recalculée (`recettes/d750-v1/usb/`)'
 RENOMME = 'même recette, renommée sans version (`recettes/d750-v1/usb/`)'
 SOURCES.update({h: LIVRAISON_V1 for h in ('18f634f844', '1c732167d7', '16166240b4', '3a0f275ba6', '644b455b4c', 'd69e004783', '30a7b4aac6')})
+V3 = 'v3 de novembre 2026, réajustée sur le rendu de NX Studio et 7 scènes (`recettes/d750-v3/`)'
+SOURCES.update({h: V3 for h in ('14552d6403', '11d2c735fe', '104a75929b', '5bf9b2702f')})
 SOURCES.update({h: RENOMME for h in ('a5e0c5f4e1', '78243f9ed1', '15397862f9', 'a9f2b16dfe', '27b0d557a6', 'c0c76b1152', 'c57325f623')})
 
 

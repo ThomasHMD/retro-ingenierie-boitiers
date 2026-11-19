@@ -7,10 +7,10 @@ Fichier refait par `python3 outils/d750_historique.py` depuis les journaux d'éc
 | Emplacement | Nom | Base | Réglages | Source | Écrit le | Bloc (pour y revenir) |
 |---|---|---|---|---|---|---|
 | C-1 | KODACHROME | Standard | saturation -1, teinte -3, netteté 4, clarté +1, courbe | Kodachrome v2 « vif », renommé sans version : `recettes/d750-v1/usb/kodachrome-v2.json` | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.14/apres_201_0.bin` (sha 84c713a2fa) |
-| C-2 | CLASSIC CHROME | Standard | saturation -1, teinte -2, netteté 3, clarté +0, courbe | même recette, renommée sans version (`recettes/d750-v1/usb/`) | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.19/apres_202_0.bin` (sha a5e0c5f4e1) |
-| C-3 | CLASSIC NEG | Standard | saturation +0, teinte +0, netteté 3, clarté +0, courbe | même recette, renommée sans version (`recettes/d750-v1/usb/`) | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.16/apres_203_0.bin` (sha 78243f9ed1) |
-| C-4 | POSITIVE | Standard | saturation +2, teinte -2, netteté 3, clarté +0, courbe | même recette, renommée sans version (`recettes/d750-v1/usb/`) | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.16/apres_204_0.bin` (sha 15397862f9) |
-| C-5 | PORTRA 400 | Standard | saturation +3, teinte +2, netteté 4, clarté +0, courbe | Portra 400 v2 « esprit Portra », renommé sans version : `recettes/d750-v1/usb/portra-400-v2.json` | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.17/apres_205_0.bin` (sha 386743f90b) |
+| C-2 | CLASSIC CHROME | Standard | saturation -1.25, teinte -3, netteté 3, clarté +0, courbe | v3 de novembre 2026, réajustée sur le rendu de NX Studio et 7 scènes (`recettes/d750-v3/`) | novembre 2026 | `sondes/d750/usb/ecriture-2026-11.43/apres_202_0.bin` (sha 14552d6403) |
+| C-3 | CLASSIC NEG | Standard | saturation -1, teinte -0.75, netteté 3, clarté +0, courbe | v3 de novembre 2026, réajustée sur le rendu de NX Studio et 7 scènes (`recettes/d750-v3/`) | novembre 2026 | `sondes/d750/usb/ecriture-2026-11.44/apres_203_0.bin` (sha 11d2c735fe) |
+| C-4 | POSITIVE | Standard | saturation +1.75, teinte -3, netteté 3, clarté +0, courbe | v3 de novembre 2026, réajustée sur le rendu de NX Studio et 7 scènes (`recettes/d750-v3/`) | novembre 2026 | `sondes/d750/usb/ecriture-2026-11.45/apres_204_0.bin` (sha 5bf9b2702f) |
+| C-5 | PORTRA 400 | Standard | saturation +2.75, teinte +0.25, netteté 4, clarté +0, courbe | v3 de novembre 2026, réajustée sur le rendu de NX Studio et 7 scènes (`recettes/d750-v3/`) | novembre 2026 | `sondes/d750/usb/ecriture-2026-11.46/apres_205_0.bin` (sha 104a75929b) |
 | C-6 | HASSELBLAD | Standard | saturation +1, teinte -3, netteté 3, clarté +0, courbe | même recette, renommée sans version (`recettes/d750-v1/usb/`) | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.17/apres_206_0.bin` (sha a9f2b16dfe) |
 | C-7 | TRI-X | Monochrome | filtre aucun, contraste +0, netteté 5, clarté +1, courbe | Tri-X v2 (filtre aucun, courbe pour les gains réels de la WB à 10 000 K), `recettes/d750-v2/usb/tri-x.bin` | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.29/apres_207_0.bin` (sha 9f742fd580) |
 | C-8 | HP5+ | Monochrome | filtre aucun, contraste +0, netteté 4, clarté -1, courbe | même recette, renommée sans version (`recettes/d750-v1/usb/`) | octobre 2026 | `sondes/d750/usb/ecriture-2026-10.18/apres_208_0.bin` (sha c0c76b1152) |
@@ -39,6 +39,10 @@ Fichier refait par `python3 outils/d750_historique.py` depuis les journaux d'éc
 | octobre 2026 | C-9 | FP4 V1 (première livraison d’octobre, recette v1 à courbe recalculée (`recettes/d750-v1/usb/`)) | FP4+ (sha c57325f623) | `sondes/d750/usb/ecriture-2026-10.18/avant_209_0.bin` |
 | octobre 2026 | C-2 | CLASSIC CHROME V1 (première livraison d’octobre, recette v1 à courbe recalculée (`recettes/d750-v1/usb/`)) | CLASSIC CHROME (sha a5e0c5f4e1) | `sondes/d750/usb/ecriture-2026-10.19/avant_202_0.bin` |
 | octobre 2026 | C-7 | TRI-X (même recette, renommée sans version (`recettes/d750-v1/usb/`)) | TRI-X (sha 9f742fd580) | `sondes/d750/usb/ecriture-2026-10.29/avant_207_0.bin` |
+| novembre 2026 | C-2 | CLASSIC CHROME (même recette, renommée sans version (`recettes/d750-v1/usb/`)) | CLASSIC CHROME (sha 14552d6403) | `sondes/d750/usb/ecriture-2026-11.43/avant_202_0.bin` |
+| novembre 2026 | C-3 | CLASSIC NEG (même recette, renommée sans version (`recettes/d750-v1/usb/`)) | CLASSIC NEG (sha 11d2c735fe) | `sondes/d750/usb/ecriture-2026-11.44/avant_203_0.bin` |
+| novembre 2026 | C-4 | POSITIVE (même recette, renommée sans version (`recettes/d750-v1/usb/`)) | POSITIVE (sha 5bf9b2702f) | `sondes/d750/usb/ecriture-2026-11.45/avant_204_0.bin` |
+| novembre 2026 | C-5 | PORTRA 400 (Portra 400 v2 « esprit Portra », renommé sans version : `recettes/d750-v1/usb/portra-400-v2.json`) | PORTRA 400 (sha 104a75929b) | `sondes/d750/usb/ecriture-2026-11.46/avant_205_0.bin` |
 
 ## Hors Picture Control
 

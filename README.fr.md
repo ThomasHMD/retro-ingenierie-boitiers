@@ -4,6 +4,10 @@
 
 **Donner une seconde vie aux vieux boîtiers : leur faire sortir, en JPEG direct, les rendus qu'on aime.**
 
+[<img src="https://i.ytimg.com/vi/VV38e7QBacQ/maxresdefault.jpg" width="640" alt="Voir la vidéo : j'ai donné les looks Classic Chrome et Tri-X à un Nikon D40 de 2006">](https://www.youtube.com/watch?v=VV38e7QBacQ)
+
+▶️ **[Voir la vidéo](https://www.youtube.com/watch?v=VV38e7QBacQ)** : j'ai donné les looks Classic Chrome et Tri-X à un Nikon D40 de 2006.
+
 Classic Chrome, Tri-X, HP5, Portra, Kodachrome, rendu Hasselblad, Positive du Ricoh… D'habitude, il faut acheter le boîtier qui les a, ou passer chaque photo dans Lightroom. Ce dépôt montre comment je les ai recréés dans trois vieux Nikon et un Pentax 645D, et donne la méthode pour le refaire sur un autre appareil :
 
 - **Nikon D40** (2006) : son firmware a été cartographié, émulé sur le Mac puis modifié. Cinq looks remplacent les préréglages d'Optimiser l'image, avec un menu façon Pip-Boy ([captures de l'émulateur](d40/README.md#le-menu-pip-boy)) et de vrais programmes d'exposition. C'est la **V5**, flashée et utilisée sur mon boîtier.
@@ -25,7 +29,7 @@ Le dépôt est fait pour être **donné à une IA** (Claude Code, Codex, Cursor�
 
 - **D40, V5 prête à flasher** (firmware Nikon modifié, fourni pour commodité, sans garantie ; droits de Nikon réservés) : [`d40-v5.zip`](https://github.com/ThomasHMD/retro-ingenierie-boitiers/releases/download/d40-v5/d40-v5.zip) (A 1.12 et B 1.11 modifiés, empreintes dans `SHA256SUMS.txt`). Ou la refaire soi-même depuis le firmware officiel : [`d40/README.md`](d40/README.md).
 - **D200, firmware prêt à flasher** (même avertissement) : [`d200-v2.zip`](https://github.com/ThomasHMD/retro-ingenierie-boitiers/releases/download/d200-v2/d200-v2.zip) (B 2.01 modifié, empreinte dans `SHA256SUMS.txt`). Ou la refaire depuis le firmware officiel : [`d200/README.md`](d200/README.md).
-- **D750, les neuf Picture Control** : dans le dépôt, [`d750/recettes/d750-v1/`](d750/recettes/d750-v1/README.md), à charger par USB : [`d750/README.md`](d750/README.md).
+- **D750, les neuf Picture Control** : dans le dépôt, [`d750/recettes/d750-v1/`](d750/recettes/d750-v1/README.md), dont quatre réajustés en novembre 2026 dans [`d750/recettes/d750-v3/`](d750/recettes/d750-v3/README.md) ; à charger par USB : [`d750/README.md`](d750/README.md).
 - **645D, les quatre recettes** : [`645d/recettes/`](645d/recettes/recettes-645d.json), à charger par USB : [`645d/README.md`](645d/README.md).
 
 ## Ce que ça fait
@@ -150,6 +154,8 @@ Les cibles sont des rendus que j'aime, pas des vérités : une HP5 change selon 
 | FP4+ | D750 | 2,6 | 7,4 | 1 scène |
 
 **Sur les 14 looks mesurés, 10 ont une médiane sous 3, et aucun ne dépasse 5,1.** Au D750, ce sont les neuf Picture Control tels qu'ils sont dans le boîtier (Tri-X v2 compris), photographiés en octobre 2026 sur une scène, une bibliothèque, sous une seule lumière (jour et LED à 5 600 K), et mesurés sur les mêmes 4 675 zones pour tous les looks. Le boîtier fait ce que le modèle prévoit (modèle contre JPEG : 0,9 à 1,9, Portra 2,5) : les écarts restants viennent des recettes et du format. Sous une lumière mêlée (jour et lampe chaude), HP5 et FP4 montent à 5,2 et 5,4. Une deuxième scène, la vue par une fenêtre (bâtiment et ciel, sur trépied), donne de 1,0 (HP5+) à 6,3 (Classic Neg) : images plus haut, « Ce que ça fait ». Le 645D (Classic Chrome 1,9, Portra 2,3, sur un pédalier peu coloré) est à part : [`645d/README.md`](645d/README.md). Les chiffres du D40 valent pour la V5 publiée (mêmes tables que la version photographiée, vérifié à l'octet).
+
+**Mise à jour de novembre 2026.** Classic Chrome, Classic Neg, Positive et Portra 400 ont été réajustés avec NX Studio, le logiciel gratuit de Nikon, utilisé comme moteur de rendu du D750 sur des NEF que j'avais déjà pris (sept scènes, chacune tenue à part à tour de rôle). Contre leur cible, rendu dans NX, la médiane passe de 2,35 à 1,93 (Classic Chrome), de 4,95 à 4,73 (Classic Neg), de 3,38 à 2,54 (Positive) et de 3,78 à 2,85 (Portra 400) ; Hasselblad, HP5+ et FP4+ ne gagnaient pas assez et restent tels quels. Le tableau ci-dessus mesure les versions précédentes, photographiées en octobre. Détail : [`d750/README.md`](d750/README.md).
 
 Réserves, à garder en tête :
 - peu de vues : une à onze par look au D40, deux scènes au D750, une bibliothèque (chiffres du tableau) et la vue par une fenêtre (Classic Neg et Portra dépendent beaucoup du contenu de la scène, HP5 et FP4 de la lumière) ;

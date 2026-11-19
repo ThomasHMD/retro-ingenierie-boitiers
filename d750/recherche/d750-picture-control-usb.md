@@ -257,3 +257,5 @@ Lecture seule de 0xD010 à 0xD03F (`sondes/d750/usb/2026-10-sonde-balance/`) :
 - 0x90C9 SetPreWBData est annoncée, mais son format n'est pas documenté : pas essayée.
 
 Écrit par USB (0x1016) et relu : d-1 « KODACHROME 6250K », d-2 « TRI-X 10000K », d-3 « PORTRA 400 5600K » (`ecriture-2026-10.20/`, avec le script). La valeur se charge par le menu : photo prise à la bonne température, puis Pré-réglage manuel › Choisir une photo.
+
+**novembre 2026** : Thomas n'a pas trouvé ces légendes sur le boîtier (l'écriture d’octobre n'avait sans doute pas pris malgré la relecture) ; il les a saisies à la main (d-1 Kodachrome 6 250 K, d-2 Tri-X 10 000 K, d-3 Portra 400 5 600 K). Au prochain branchement : relire 0xD021 à 0xD023 pour savoir ce que le boîtier contient vraiment, et comprendre l'échec avant de réécrire quoi que ce soit.

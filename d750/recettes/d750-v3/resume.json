@@ -1,0 +1,2579 @@
+{
+ "regle": {
+  "mediane_baisse_min": 0.2,
+  "p90_hausse_max": 0.3,
+  "plis_en_perte_max": 1
+ },
+ "plis": [
+  [
+   "guitares",
+   "exterieur"
+  ],
+  [
+   "portrait",
+   "pedalier"
+  ],
+  [
+   "bibliotheque-soir",
+   "bibliotheque-jour",
+   "fenetre"
+  ]
+ ],
+ "scenes": {
+  "guitares": {
+   "note": "pièce aux guitares (séance d’octobre) : 28 mm, f/1,8, 1/160 s, ISO 1800",
+   "blocs": 14686,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 1.7315248012004456,
+    "p90": 2.6561296248735804,
+    "blocs": 14686
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 4.074908428390971,
+    "p90": 7.116576984126622,
+    "blocs": 14686
+   },
+   "gain_radial": [
+    0.9839,
+    -0.4935,
+    -0.1008
+   ],
+   "chroma_cible_mediane": 12.4,
+   "part_chroma_40_et_plus": 0.001
+  },
+  "portrait": {
+   "note": "portrait (séance d’octobre) : 28 mm, f/1,8, 1/160 s, ISO 200",
+   "blocs": 18592,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 1.2058782955017973,
+    "p90": 1.6469321286140077,
+    "blocs": 18592
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 2.7174498924082577,
+    "p90": 4.126907544795405,
+    "blocs": 18592
+   },
+   "gain_radial": [
+    0.9798,
+    -1.1355,
+    0.7538
+   ],
+   "chroma_cible_mediane": 4.9,
+   "part_chroma_40_et_plus": 0.0
+  },
+  "bibliotheque-soir": {
+   "note": "bibliothèque (séance d’octobre) : 28 mm, f/5,6, 1/10 s, ISO 200",
+   "blocs": 5568,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 0.7928654570222057,
+    "p90": 1.407246240086532,
+    "blocs": 5568
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 1.711169418666119,
+    "p90": 2.923719706701164,
+    "blocs": 5568
+   },
+   "gain_radial": [
+    0.9908,
+    0.1672,
+    0.2753
+   ],
+   "chroma_cible_mediane": 8.0,
+   "part_chroma_40_et_plus": 0.143
+  },
+  "pedalier": {
+   "note": "pédalier (test v1 = lot 3) : 135 mm sans CPU, f/4, 1/10 s, ISO 200",
+   "blocs": 5212,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 0.9408824097453884,
+    "p90": 2.316158903719837,
+    "blocs": 5212
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 0.9430148298824437,
+    "p90": 2.31381115960783,
+    "blocs": 5212
+   },
+   "gain_radial": [
+    0.9976,
+    0.0409,
+    -0.0418
+   ],
+   "chroma_cible_mediane": 16.1,
+   "part_chroma_40_et_plus": 0.112
+  },
+  "bibliotheque-jour": {
+   "note": "bibliothèque (test v2 d’octobre) : 28 mm, f/5,6, 1/20 s, ISO 200",
+   "blocs": 7148,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 1.205971411196611,
+    "p90": 1.8766462876294647,
+    "blocs": 7148
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 1.5868880199762887,
+    "p90": 2.49263965731145,
+    "blocs": 7148
+   },
+   "gain_radial": [
+    0.9924,
+    0.1343,
+    0.2822
+   ],
+   "chroma_cible_mediane": 5.7,
+   "part_chroma_40_et_plus": 0.002
+  },
+  "exterieur": {
+   "note": "rue, briques, ciel (octobre) : 28 mm, f/8, 1/250 s, ISO 200, WB Auto",
+   "blocs": 7763,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 0.9239598691586032,
+    "p90": 1.27152838224017,
+    "blocs": 7763
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 0.9787577705415778,
+    "p90": 1.4424248358547382,
+    "blocs": 7763
+   },
+   "gain_radial": [
+    1.007,
+    -0.0327,
+    0.1549
+   ],
+   "chroma_cible_mediane": 7.4,
+   "part_chroma_40_et_plus": 0.0
+  },
+  "fenetre": {
+   "note": "ciel, arbres, façade (octobre) : 50 mm, f/5,6, 1/1000 s, ISO 200, vertical, battant ouvert seulement",
+   "blocs": 4741,
+   "nx_tel_quel_contre_jpeg": {
+    "mediane": 0.9265343127899268,
+    "p90": 1.3442119915602924,
+    "blocs": 4741
+   },
+   "nx_tel_quel_sans_gain": {
+    "mediane": 0.925952889944447,
+    "p90": 1.3484405228325682,
+    "blocs": 4741
+   },
+   "gain_radial": [
+    0.9926,
+    0.0128,
+    0.0482
+   ],
+   "chroma_cible_mediane": 4.5,
+   "part_chroma_40_et_plus": 0.0
+  }
+ },
+ "recettes": {
+  "classic-chrome": {
+   "recette": "classic-chrome",
+   "emplacement": "C-2",
+   "nom": "CLASSIC CHROME",
+   "garder": true,
+   "decision": {
+    "gain_mediane_moyen": 0.426,
+    "hausse_p90_moyenne": -0.377,
+    "plis_en_perte": 0,
+    "criteres": {
+     "mediane": true,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": true,
+    "hausse_p90_max_pli": -0.283,
+    "garder_lecture_stricte": true
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 2.349,
+     "p90": 4.17
+    },
+    "apres": {
+     "mediane": 1.927,
+     "p90": 3.796
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -1.25,
+      "teinte": -2.75,
+      "ecart_courbe_codes": [
+       1.2,
+       3.1,
+       3.4,
+       1.8,
+       1.2,
+       1.1,
+       0.8,
+       1.1,
+       0.2
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 2.471625570563047,
+        "p90": 3.4679861005963275,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 2.1322849626248885,
+        "p90": 3.0482113932275743,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 3.026323966691102,
+        "p90": 6.12822284766764,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 2.661014000599863,
+        "p90": 5.558226578578974,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": 0.352,
+     "hausse_p90": -0.495
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -1.25,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       1.1,
+       2.3,
+       1.8,
+       1.5,
+       0.3,
+       1.1,
+       2.8,
+       0.6,
+       1.5
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 1.252399573649006,
+        "p90": 1.8799845831889117,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 0.8431158762742592,
+        "p90": 1.4166842775904258,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 2.0005129808815147,
+        "p90": 3.6657012854973403,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 1.3593089440718003,
+        "p90": 3.562245313925079,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 0.525,
+     "hausse_p90": -0.283
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -1.25,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       0.7,
+       3.2,
+       3.3,
+       0.6,
+       -0.1,
+       0.5,
+       2.8,
+       0.0,
+       1.5
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 1.5083077072583833,
+        "p90": 4.427450678849714,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 1.3014685053944064,
+        "p90": 5.013347887474847,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 2.2087043659906684,
+        "p90": 4.035509695241982,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 1.7773938039817399,
+        "p90": 3.314472475181255,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 3.977701864070899,
+        "p90": 5.581974914138604,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 3.4142837559296413,
+        "p90": 4.662198778206283,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.401,
+     "hausse_p90": -0.352
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "saturation": -1.25,
+     "teinte": -3.0,
+     "ecart_courbe_codes": [
+      1.0,
+      3.0,
+      3.1,
+      1.2,
+      0.4,
+      0.9,
+      2.2,
+      0.6,
+      1.2
+     ]
+    },
+    "ecart_courbe_codes": [
+     1.0,
+     3.0,
+     3.1,
+     1.2,
+     0.4,
+     0.9,
+     2.2,
+     0.6,
+     1.2
+    ],
+    "en_butee": [
+     "teinte : -3 (limite du boîtier -3 à +3)"
+    ],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 2.471625570563047,
+       "p90": 3.4679861005963275,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 1.9416273363285184,
+       "p90": 2.833435780976785,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 1.252399573649006,
+       "p90": 1.8799845831889117,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 0.7165918547640914,
+       "p90": 1.3071223803790453,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 1.5083077072583833,
+       "p90": 4.427450678849714,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 1.2816792189490012,
+       "p90": 5.009634362295047,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 2.0005129808815147,
+       "p90": 3.6657012854973403,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 1.3607157876561509,
+       "p90": 3.578257828037822,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 2.2087043659906684,
+       "p90": 4.035509695241982,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 1.7266088541303504,
+       "p90": 3.313878352576149,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 3.026323966691102,
+       "p90": 6.12822284766764,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 2.5232257859840095,
+       "p90": 5.369028711861655,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 3.977701864070899,
+       "p90": 5.581974914138604,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 3.3758643056950426,
+       "p90": 4.643011018526723,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 112,
+   "reglages_v1": {
+    "accentuation": 3,
+    "clarte": 0,
+    "saturation": -1,
+    "teinte": -2
+   },
+   "fichiers": [
+    "usb/classic-chrome-v3.json",
+    "usb/classic-chrome-v3.bin"
+   ],
+   "sha256_bloc": "14552d6403",
+   "commandes": [
+    "# C-2 : CLASSIC CHROME",
+    "python3 outils/picture_control.py bloc recettes/d750-v3/usb/classic-chrome-v3.json /tmp/d750-C-2.bin   # relit le bloc (doit afficher 610 octets)",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/classic-chrome-v3.bin C-2                    # simulation : rien n’est écrit",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/classic-chrome-v3.bin C-2 --ecrire --remplacer",
+    "# retour en arrière : swift outils/d750_ecrire.swift ecrire sondes/d750/usb/ecriture-2026-10.19/apres_202_0.bin C-2 --ecrire --remplacer"
+   ]
+  },
+  "classic-neg": {
+   "recette": "classic-neg",
+   "emplacement": "C-3",
+   "nom": "CLASSIC NEG",
+   "garder": true,
+   "decision": {
+    "gain_mediane_moyen": 0.218,
+    "hausse_p90_moyenne": -0.64,
+    "plis_en_perte": 0,
+    "criteres": {
+     "mediane": true,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": true,
+    "hausse_p90_max_pli": -0.208,
+    "garder_lecture_stricte": true
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 4.954,
+     "p90": 7.169
+    },
+    "apres": {
+     "mediane": 4.732,
+     "p90": 6.515
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -1.0,
+      "teinte": 0.0,
+      "ecart_courbe_codes": [
+       -0.4,
+       4.4,
+       6.2,
+       1.3,
+       1.0,
+       1.8,
+       3.2,
+       2.9,
+       0.2
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 4.8083803821225075,
+        "p90": 6.051016798674418,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 5.203381475198168,
+        "p90": 6.366086021293585,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 4.394053144423128,
+        "p90": 5.88715522400415,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 3.6478516502454914,
+        "p90": 5.156898630216818,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": 0.176,
+     "hausse_p90": -0.208
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -1.0,
+      "teinte": -0.75,
+      "ecart_courbe_codes": [
+       -0.2,
+       0.8,
+       1.9,
+       0.6,
+       -1.8,
+       0.0,
+       6.2,
+       5.1,
+       4.0
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 5.395814004062249,
+        "p90": 6.496249805233265,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 5.061216450599332,
+        "p90": 6.038449565984007,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 4.11857466650674,
+        "p90": 10.300859469309087,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 3.9956105531036803,
+        "p90": 8.813395481287825,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 0.229,
+     "hausse_p90": -0.973
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": -0.75,
+      "teinte": -1.0,
+      "ecart_courbe_codes": [
+       0.1,
+       5.5,
+       6.6,
+       -0.5,
+       -1.9,
+       -1.1,
+       5.2,
+       4.4,
+       4.0
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 4.807268731940142,
+        "p90": 7.130675918390241,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 4.884570392769471,
+        "p90": 6.689710946618926,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 5.147669945027005,
+        "p90": 7.014419123925684,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 4.955049960091902,
+        "p90": 6.392756106409726,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 6.00362615051977,
+        "p90": 7.304816783158266,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 5.3729119896376005,
+        "p90": 6.1459962404698425,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.249,
+     "hausse_p90": -0.74
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "saturation": -1.0,
+     "teinte": -0.75,
+     "ecart_courbe_codes": [
+      -0.3,
+      4.0,
+      5.7,
+      0.3,
+      -1.0,
+      0.1,
+      5.0,
+      4.4,
+      3.3
+     ]
+    },
+    "ecart_courbe_codes": [
+     -0.3,
+     4.0,
+     5.7,
+     0.3,
+     -1.0,
+     0.1,
+     5.0,
+     4.4,
+     3.3
+    ],
+    "en_butee": [],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 4.8083803821225075,
+       "p90": 6.051016798674418,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 4.7001200327192985,
+       "p90": 5.788165714811565,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 5.395814004062249,
+       "p90": 6.496249805233265,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 4.824185978343782,
+       "p90": 5.663056714812005,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 4.807268731940142,
+       "p90": 7.130675918390241,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 4.740534574620286,
+       "p90": 6.254482727837493,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 4.11857466650674,
+       "p90": 10.300859469309087,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 4.040027330801802,
+       "p90": 8.981447324730906,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 5.147669945027005,
+       "p90": 7.014419123925684,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 4.696551954510156,
+       "p90": 6.044778433131055,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 4.394053144423128,
+       "p90": 5.88715522400415,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 3.463407880393389,
+       "p90": 5.050382966419469,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 6.00362615051977,
+       "p90": 7.304816783158266,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 5.193602660760589,
+       "p90": 5.916136373402347,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 112,
+   "reglages_v1": {
+    "accentuation": 3,
+    "clarte": 0,
+    "saturation": 0,
+    "teinte": 0
+   },
+   "fichiers": [
+    "usb/classic-neg-v3.json",
+    "usb/classic-neg-v3.bin"
+   ],
+   "sha256_bloc": "11d2c735fe",
+   "commandes": [
+    "# C-3 : CLASSIC NEG",
+    "python3 outils/picture_control.py bloc recettes/d750-v3/usb/classic-neg-v3.json /tmp/d750-C-3.bin   # relit le bloc (doit afficher 610 octets)",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/classic-neg-v3.bin C-3                    # simulation : rien n’est écrit",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/classic-neg-v3.bin C-3 --ecrire --remplacer",
+    "# retour en arrière : swift outils/d750_ecrire.swift ecrire sondes/d750/usb/ecriture-2026-10.16/apres_203_0.bin C-3 --ecrire --remplacer"
+   ]
+  },
+  "positive": {
+   "recette": "positive",
+   "emplacement": "C-4",
+   "nom": "POSITIVE",
+   "garder": true,
+   "decision": {
+    "gain_mediane_moyen": 0.834,
+    "hausse_p90_moyenne": -0.44,
+    "plis_en_perte": 0,
+    "criteres": {
+     "mediane": true,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": true,
+    "hausse_p90_max_pli": -0.187,
+    "garder_lecture_stricte": true
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 3.381,
+     "p90": 5.782
+    },
+    "apres": {
+     "mediane": 2.538,
+     "p90": 5.346
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 1.5,
+      "teinte": -2.75,
+      "ecart_courbe_codes": [
+       1.9,
+       6.1,
+       8.0,
+       2.7,
+       4.0,
+       2.2,
+       -0.2,
+       0.5,
+       0.4
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 2.7485381674897527,
+        "p90": 4.245590690954753,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 2.1725977833002146,
+        "p90": 3.526943007349762,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 5.28433412129341,
+        "p90": 9.5606709454871,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 4.988819100484443,
+        "p90": 9.904871039744377,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": 0.436,
+     "hausse_p90": -0.187
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 1.75,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       1.7,
+       4.4,
+       5.2,
+       3.8,
+       3.0,
+       2.5,
+       0.7,
+       -0.7,
+       4.4
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 3.3071980025922505,
+        "p90": 3.880578462577749,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 2.068371152954608,
+        "p90": 2.583115074940123,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 3.3866195492399385,
+        "p90": 5.293725846430588,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 2.2814858682171835,
+        "p90": 5.15824712069516,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 1.172,
+     "hausse_p90": -0.716
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 1.75,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       1.1,
+       5.8,
+       7.4,
+       2.1,
+       3.4,
+       2.4,
+       1.2,
+       -0.4,
+       3.9
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 2.782690352964938,
+        "p90": 7.066405367934602,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 1.759588041122071,
+        "p90": 8.144314561516513,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 3.0217161276423283,
+        "p90": 5.556319610987108,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 1.9797696068353505,
+        "p90": 4.081610574298202,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 3.134272296989835,
+        "p90": 4.8690449283755965,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 2.515578489749216,
+        "p90": 4.0213194889225585,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.895,
+     "hausse_p90": -0.415
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "saturation": 1.75,
+     "teinte": -3.0,
+     "ecart_courbe_codes": [
+      1.6,
+      5.7,
+      7.4,
+      2.8,
+      3.4,
+      2.3,
+      0.6,
+      -0.2,
+      3.3
+     ]
+    },
+    "ecart_courbe_codes": [
+     1.6,
+     5.7,
+     7.4,
+     2.8,
+     3.4,
+     2.3,
+     0.6,
+     -0.2,
+     3.3
+    ],
+    "en_butee": [
+     "teinte : -3 (limite du boîtier -3 à +3)"
+    ],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 2.7485381674897527,
+       "p90": 4.245590690954753,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 1.9992856434499537,
+       "p90": 3.278247682783634,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 3.3071980025922505,
+       "p90": 3.880578462577749,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 1.6282444129446176,
+       "p90": 2.2224260552332353,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 2.782690352964938,
+       "p90": 7.066405367934602,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 1.7458391305347867,
+       "p90": 8.143841256615914,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 3.3866195492399385,
+       "p90": 5.293725846430588,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 2.2622291999076616,
+       "p90": 5.15851893997703,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 3.0217161276423283,
+       "p90": 5.556319610987108,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 1.9550310795629817,
+       "p90": 4.039502075871038,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 5.28433412129341,
+       "p90": 9.5606709454871,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 4.615927864627545,
+       "p90": 9.406817614915944,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 3.134272296989835,
+       "p90": 4.8690449283755965,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 2.5018118714399407,
+       "p90": 3.980205838215039,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 112,
+   "reglages_v1": {
+    "accentuation": 3,
+    "clarte": 0,
+    "saturation": 2,
+    "teinte": -2
+   },
+   "fichiers": [
+    "usb/positive-v3.json",
+    "usb/positive-v3.bin"
+   ],
+   "sha256_bloc": "5bf9b2702f",
+   "commandes": [
+    "# C-4 : POSITIVE",
+    "python3 outils/picture_control.py bloc recettes/d750-v3/usb/positive-v3.json /tmp/d750-C-4.bin   # relit le bloc (doit afficher 610 octets)",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/positive-v3.bin C-4                    # simulation : rien n’est écrit",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/positive-v3.bin C-4 --ecrire --remplacer",
+    "# retour en arrière : swift outils/d750_ecrire.swift ecrire sondes/d750/usb/ecriture-2026-10.16/apres_204_0.bin C-4 --ecrire --remplacer"
+   ]
+  },
+  "hasselblad": {
+   "recette": "hasselblad",
+   "emplacement": "C-6",
+   "nom": "HASSELBLAD",
+   "garder": false,
+   "decision": {
+    "gain_mediane_moyen": 0.151,
+    "hausse_p90_moyenne": -0.008,
+    "plis_en_perte": 1,
+    "criteres": {
+     "mediane": false,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": false,
+    "hausse_p90_max_pli": 0.142,
+    "garder_lecture_stricte": false
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 3.075,
+     "p90": 5.166
+    },
+    "apres": {
+     "mediane": 2.924,
+     "p90": 5.153
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 0.75,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       2.7,
+       3.5,
+       6.1,
+       1.2,
+       1.4,
+       1.2,
+       0.9,
+       1.9,
+       0.4
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 1.4221317103313782,
+        "p90": 2.9220927957166167,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 1.4621761023929363,
+        "p90": 2.9292025779653756,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 6.168816331080641,
+        "p90": 9.853968990875922,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 6.168274148676994,
+        "p90": 10.131105300338733,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": -0.02,
+     "hausse_p90": 0.142
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 1.0,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       1.8,
+       1.5,
+       2.2,
+       1.6,
+       0.5,
+       1.0,
+       1.8,
+       2.6,
+       4.7
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 2.703357458744702,
+        "p90": 3.615177515633189,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 2.2669714347745455,
+        "p90": 3.20332160184107,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 1.3383711956860995,
+        "p90": 5.020836735923032,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 1.139275683242932,
+        "p90": 5.191379044832008,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 0.318,
+     "hausse_p90": -0.121
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 1.25,
+      "teinte": -3.0,
+      "ecart_courbe_codes": [
+       1.6,
+       4.0,
+       6.0,
+       0.9,
+       0.9,
+       0.5,
+       1.6,
+       1.8,
+       4.4
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 2.7854839122468738,
+        "p90": 5.125399960703453,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 2.711926544344043,
+        "p90": 5.02039163186794,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 2.9099906204140655,
+        "p90": 4.141883429513871,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 2.547677687846682,
+        "p90": 4.056310320929058,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 4.194879166746993,
+        "p90": 5.485055819868168,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 4.1693908498780985,
+        "p90": 5.541950987531512,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.154,
+     "hausse_p90": -0.045
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "saturation": 1.0,
+     "teinte": -3.0,
+     "ecart_courbe_codes": [
+      2.0,
+      3.3,
+      5.3,
+      1.2,
+      0.9,
+      0.8,
+      1.5,
+      2.2,
+      3.6
+     ]
+    },
+    "ecart_courbe_codes": [
+     2.0,
+     3.3,
+     5.3,
+     1.2,
+     0.9,
+     0.8,
+     1.5,
+     2.2,
+     3.6
+    ],
+    "en_butee": [
+     "teinte : -3 (limite du boîtier -3 à +3)"
+    ],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 1.4221317103313782,
+       "p90": 2.9220927957166167,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 1.3924297321533405,
+       "p90": 2.8705360067656827,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 2.703357458744702,
+       "p90": 3.615177515633189,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 1.8132134981186914,
+       "p90": 2.7358103306030115,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 2.7854839122468738,
+       "p90": 5.125399960703453,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 2.685822189649984,
+       "p90": 5.109961869768732,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 1.3383711956860995,
+       "p90": 5.020836735923032,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 1.12909700136112,
+       "p90": 5.195095280757222,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 2.9099906204140655,
+       "p90": 4.141883429513871,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 2.5354490885636514,
+       "p90": 4.0206574008523335,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 6.168816331080641,
+       "p90": 9.853968990875922,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 5.779219053857986,
+       "p90": 9.568228276978248,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 4.194879166746993,
+       "p90": 5.485055819868168,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 4.074324937376245,
+       "p90": 5.404622135370929,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 112,
+   "reglages_v1": {
+    "accentuation": 3,
+    "clarte": 0,
+    "saturation": 1,
+    "teinte": -3
+   }
+  },
+  "portra": {
+   "recette": "portra",
+   "emplacement": "C-5",
+   "nom": "PORTRA 400",
+   "garder": true,
+   "decision": {
+    "gain_mediane_moyen": 0.969,
+    "hausse_p90_moyenne": -1.276,
+    "plis_en_perte": 0,
+    "criteres": {
+     "mediane": true,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": true,
+    "hausse_p90_max_pli": -0.945,
+    "garder_lecture_stricte": true
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 3.779,
+     "p90": 6.026
+    },
+    "apres": {
+     "mediane": 2.845,
+     "p90": 4.704
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 2.75,
+      "teinte": 0.25,
+      "ecart_courbe_codes": [
+       1.1,
+       6.9,
+       8.0,
+       1.5,
+       1.1,
+       -1.0,
+       5.5,
+       3.6,
+       0.2
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 4.343909599300886,
+        "p90": 5.783317075141113,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 2.9312131633649052,
+        "p90": 4.175742482158928,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 3.015389511437708,
+        "p90": 4.305764091871853,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 2.259035551987935,
+        "p90": 3.333471163313016,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": 1.085,
+     "hausse_p90": -1.29
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 2.75,
+      "teinte": 0.0,
+      "ecart_courbe_codes": [
+       1.2,
+       3.2,
+       3.7,
+       1.2,
+       -0.2,
+       -1.4,
+       8.5,
+       1.7,
+       4.4
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 4.647693078243917,
+        "p90": 5.59767587725157,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 3.68749150909479,
+        "p90": 4.449081825927346,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 2.887374820916587,
+        "p90": 5.960179796038768,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 1.6483649195143977,
+        "p90": 5.218445429572597,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 1.1,
+     "hausse_p90": -0.945
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "saturation": 3.0,
+      "teinte": 0.25,
+      "ecart_courbe_codes": [
+       0.8,
+       7.1,
+       7.5,
+       0.5,
+       -0.2,
+       -1.4,
+       7.3,
+       1.0,
+       4.5
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 3.216328070446101,
+        "p90": 6.860443589883271,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 3.030458485411174,
+        "p90": 5.904968583764022,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 4.2330248728029645,
+        "p90": 7.959760378621897,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 3.257250729165925,
+        "p90": 5.727302999882345,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 4.108127617835432,
+        "p90": 5.713759959733748,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 3.098068859389556,
+        "p90": 4.119024696714908,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.724,
+     "hausse_p90": -1.594
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "saturation": 2.75,
+     "teinte": 0.25,
+     "ecart_courbe_codes": [
+      1.0,
+      6.2,
+      7.2,
+      1.0,
+      0.2,
+      -1.3,
+      7.3,
+      2.0,
+      3.8
+     ]
+    },
+    "ecart_courbe_codes": [
+     1.0,
+     6.2,
+     7.2,
+     1.0,
+     0.2,
+     -1.3,
+     7.3,
+     2.0,
+     3.8
+    ],
+    "en_butee": [],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 4.343909599300886,
+       "p90": 5.783317075141113,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 2.834834774814494,
+       "p90": 4.098544626655078,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 4.647693078243917,
+       "p90": 5.59767587725157,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 3.297472586702437,
+       "p90": 4.300439007411448,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 3.216328070446101,
+       "p90": 6.860443589883271,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 2.9984647266605817,
+       "p90": 5.872310561885458,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 2.887374820916587,
+       "p90": 5.960179796038768,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 1.5958616992052037,
+       "p90": 5.302081915652975,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 4.2330248728029645,
+       "p90": 7.959760378621897,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 3.260227225632953,
+       "p90": 5.820228047815499,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 3.015389511437708,
+       "p90": 4.305764091871853,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 1.760992339895206,
+       "p90": 2.588697399584604,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 4.108127617835432,
+       "p90": 5.713759959733748,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 2.9280337635464777,
+       "p90": 3.9572510018381757,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 112,
+   "reglages_v1": {
+    "accentuation": 4,
+    "clarte": 0,
+    "saturation": 3,
+    "teinte": 2
+   },
+   "fichiers": [
+    "usb/portra-400-v3.json",
+    "usb/portra-400-v3.bin"
+   ],
+   "sha256_bloc": "104a75929b",
+   "commandes": [
+    "# C-5 : PORTRA 400",
+    "python3 outils/picture_control.py bloc recettes/d750-v3/usb/portra-400-v3.json /tmp/d750-C-5.bin   # relit le bloc (doit afficher 610 octets)",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/portra-400-v3.bin C-5                    # simulation : rien n’est écrit",
+    "swift outils/d750_ecrire.swift ecrire recettes/d750-v3/usb/portra-400-v3.bin C-5 --ecrire --remplacer",
+    "# retour en arrière : swift outils/d750_ecrire.swift ecrire sondes/d750/usb/ecriture-2026-10.17/apres_205_0.bin C-5 --ecrire --remplacer"
+   ]
+  },
+  "hp5": {
+   "recette": "hp5",
+   "emplacement": "C-8",
+   "nom": "HP5+",
+   "garder": false,
+   "decision": {
+    "gain_mediane_moyen": 0.132,
+    "hausse_p90_moyenne": -0.308,
+    "plis_en_perte": 1,
+    "criteres": {
+     "mediane": false,
+     "p90": true,
+     "pertes": true
+    },
+    "garder": false,
+    "hausse_p90_max_pli": 0.344,
+    "garder_lecture_stricte": false
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 2.278,
+     "p90": 6.261
+    },
+    "apres": {
+     "mediane": 2.123,
+     "p90": 5.915
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       1.8,
+       -0.3,
+       9.8,
+       1.8,
+       3.0,
+       5.0,
+       4.6,
+       1.2,
+       -0.2
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 1.6828551481425555,
+        "p90": 4.263140278639474,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 1.7658987862536368,
+        "p90": 3.5907316139843726,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 1.4719179076757012,
+        "p90": 2.569176901599276,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 1.40051800881879,
+        "p90": 1.8492743777101064,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": -0.006,
+     "hausse_p90": -0.696
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       1.4,
+       -3.2,
+       1.2,
+       4.1,
+       0.1,
+       5.6,
+       10.1,
+       0.6,
+       6.1
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 3.3947718721446565,
+        "p90": 6.281223296225425,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 3.427349283360802,
+        "p90": 6.372254788646797,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 2.474218408370776,
+        "p90": 11.635162854493483,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 2.216115879053161,
+        "p90": 12.23214966037514,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": 0.113,
+     "hausse_p90": 0.344
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       2.2,
+       0.5,
+       11.4,
+       2.5,
+       0.4,
+       3.1,
+       6.8,
+       2.8,
+       5.9
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 3.2948079573394367,
+        "p90": 8.558162905457975,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 3.293228031086029,
+        "p90": 9.274105936927054,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 2.911230887455755,
+        "p90": 8.00196283514042,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 2.2438345077902393,
+        "p90": 6.740475333041474,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 0.7184169820587318,
+        "p90": 2.5208695028200974,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 0.5175177005670447,
+        "p90": 1.3480178102249554,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": 0.29,
+     "hausse_p90": -0.573
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "filtre": "aucun",
+     "ecart_courbe_codes": [
+      1.6,
+      -0.2,
+      8.3,
+      2.7,
+      0.9,
+      4.4,
+      7.1,
+      1.1,
+      5.2
+     ]
+    },
+    "ecart_courbe_codes": [
+     1.6,
+     -0.2,
+     8.3,
+     2.7,
+     0.9,
+     4.4,
+     7.1,
+     1.1,
+     5.2
+    ],
+    "en_butee": [],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 1.6828551481425555,
+       "p90": 4.263140278639474,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 1.4591402804599076,
+       "p90": 3.435975753622185,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 3.3947718721446565,
+       "p90": 6.281223296225425,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 1.6703371910691722,
+       "p90": 4.432859795296274,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 3.2948079573394367,
+       "p90": 8.558162905457975,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 3.047090372964065,
+       "p90": 9.505238441570858,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 2.474218408370776,
+       "p90": 11.635162854493483,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 2.148552462698719,
+       "p90": 12.23000175596517,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 2.911230887455755,
+       "p90": 8.00196283514042,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 2.185984598527207,
+       "p90": 6.920417979717275,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 1.4719179076757012,
+       "p90": 2.569176901599276,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 0.6128988232280074,
+       "p90": 1.4477746925880859,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 0.7184169820587318,
+       "p90": 2.5208695028200974,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 0.38277445939161514,
+       "p90": 1.4239152916997322,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 98,
+   "reglages_v1": {
+    "accentuation": 4,
+    "clarte": -1,
+    "filtre": "aucun"
+   }
+  },
+  "fp4": {
+   "recette": "fp4",
+   "emplacement": "C-9",
+   "nom": "FP4+",
+   "garder": false,
+   "decision": {
+    "gain_mediane_moyen": -0.0,
+    "hausse_p90_moyenne": -0.093,
+    "plis_en_perte": 2,
+    "criteres": {
+     "mediane": false,
+     "p90": true,
+     "pertes": false
+    },
+    "garder": false,
+    "hausse_p90_max_pli": 0.084,
+    "garder_lecture_stricte": false
+   },
+   "moyennes_tenues_a_part": {
+    "avant": {
+     "mediane": 1.581,
+     "p90": 6.93
+    },
+    "apres": {
+     "mediane": 1.583,
+     "p90": 6.819
+    }
+   },
+   "plis": [
+    {
+     "tenues": [
+      "guitares",
+      "exterieur"
+     ],
+     "entrainement": [
+      "portrait",
+      "bibliotheque-soir",
+      "pedalier",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       0.2,
+       0.8,
+       2.8,
+       1.9,
+       2.0,
+       3.9,
+       4.0,
+       1.4,
+       -0.5
+      ]
+     },
+     "scenes": {
+      "guitares": {
+       "avant": {
+        "mediane": 2.4934323238954406,
+        "p90": 5.404254144196708,
+        "blocs": 14686
+       },
+       "apres": {
+        "mediane": 2.158352776973402,
+        "p90": 6.262642277202239,
+        "blocs": 14686
+       }
+      },
+      "exterieur": {
+       "avant": {
+        "mediane": 0.6324549158523803,
+        "p90": 3.1554439367755442,
+        "blocs": 7763
+       },
+       "apres": {
+        "mediane": 0.4341791922405595,
+        "p90": 2.4654985322054737,
+        "blocs": 7763
+       }
+      }
+     },
+     "gain_mediane": 0.267,
+     "hausse_p90": 0.084
+    },
+    {
+     "tenues": [
+      "portrait",
+      "pedalier"
+     ],
+     "entrainement": [
+      "guitares",
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "exterieur",
+      "fenetre"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       0.2,
+       -0.9,
+       0.2,
+       1.4,
+       -2.1,
+       1.4,
+       6.5,
+       2.3,
+       -2.1
+      ]
+     },
+     "scenes": {
+      "portrait": {
+       "avant": {
+        "mediane": 0.7206676827285302,
+        "p90": 1.7915007156789369,
+        "blocs": 18592
+       },
+       "apres": {
+        "mediane": 0.7872239137134278,
+        "p90": 1.8077785684531518,
+        "blocs": 18592
+       }
+      },
+      "pedalier": {
+       "avant": {
+        "mediane": 2.2339372802798527,
+        "p90": 17.104295756424378,
+        "blocs": 5212
+       },
+       "apres": {
+        "mediane": 2.6868279089674854,
+        "p90": 16.803592619847603,
+        "blocs": 5212
+       }
+      }
+     },
+     "gain_mediane": -0.26,
+     "hausse_p90": -0.142
+    },
+    {
+     "tenues": [
+      "bibliotheque-soir",
+      "bibliotheque-jour",
+      "fenetre"
+     ],
+     "entrainement": [
+      "guitares",
+      "portrait",
+      "pedalier",
+      "exterieur"
+     ],
+     "pas": 1.0,
+     "reglages": {
+      "filtre": "aucun",
+      "ecart_courbe_codes": [
+       0.4,
+       1.5,
+       3.1,
+       0.8,
+       -1.9,
+       -0.4,
+       3.8,
+       2.5,
+       -1.9
+      ]
+     },
+     "scenes": {
+      "bibliotheque-soir": {
+       "avant": {
+        "mediane": 2.937941651473574,
+        "p90": 9.830135632734141,
+        "blocs": 5568
+       },
+       "apres": {
+        "mediane": 3.380705785722642,
+        "p90": 9.959258583556666,
+        "blocs": 5568
+       }
+      },
+      "bibliotheque-jour": {
+       "avant": {
+        "mediane": 1.0538901188442305,
+        "p90": 7.903370923854751,
+        "blocs": 7148
+       },
+       "apres": {
+        "mediane": 1.1919950656650462,
+        "p90": 7.983540725800604,
+        "blocs": 7148
+       }
+      },
+      "fenetre": {
+       "avant": {
+        "mediane": 0.9971796929733214,
+        "p90": 3.3216050699199786,
+        "blocs": 4741
+       },
+       "apres": {
+        "mediane": 0.43917379765237535,
+        "p90": 2.4503258137726456,
+        "blocs": 4741
+       }
+      }
+     },
+     "gain_mediane": -0.008,
+     "hausse_p90": -0.221
+    }
+   ],
+   "candidate": {
+    "pas": 1.0,
+    "reglages": {
+     "filtre": "aucun",
+     "ecart_courbe_codes": [
+      0.2,
+      0.9,
+      2.5,
+      1.2,
+      -0.9,
+      1.2,
+      4.7,
+      2.0,
+      -1.8
+     ]
+    },
+    "ecart_courbe_codes": [
+     0.2,
+     0.9,
+     2.5,
+     1.2,
+     -0.9,
+     1.2,
+     4.7,
+     2.0,
+     -1.8
+    ],
+    "en_butee": [],
+    "sur_toutes_les_scenes": {
+     "guitares": {
+      "avant": {
+       "mediane": 2.4934323238954406,
+       "p90": 5.404254144196708,
+       "blocs": 14686
+      },
+      "apres": {
+       "mediane": 2.067820747083628,
+       "p90": 5.221847334854644,
+       "blocs": 14686
+      }
+     },
+     "portrait": {
+      "avant": {
+       "mediane": 0.7206676827285302,
+       "p90": 1.7915007156789369,
+       "blocs": 18592
+      },
+      "apres": {
+       "mediane": 0.30871481820852487,
+       "p90": 1.1736661335817469,
+       "blocs": 18592
+      }
+     },
+     "bibliotheque-soir": {
+      "avant": {
+       "mediane": 2.937941651473574,
+       "p90": 9.830135632734141,
+       "blocs": 5568
+      },
+      "apres": {
+       "mediane": 3.0938526777941737,
+       "p90": 10.053499373071563,
+       "blocs": 5568
+      }
+     },
+     "pedalier": {
+      "avant": {
+       "mediane": 2.2339372802798527,
+       "p90": 17.104295756424378,
+       "blocs": 5212
+      },
+      "apres": {
+       "mediane": 2.452712340234334,
+       "p90": 16.974891401627495,
+       "blocs": 5212
+      }
+     },
+     "bibliotheque-jour": {
+      "avant": {
+       "mediane": 1.0538901188442305,
+       "p90": 7.903370923854751,
+       "blocs": 7148
+      },
+      "apres": {
+       "mediane": 1.0035812023698072,
+       "p90": 7.720506385134073,
+       "blocs": 7148
+      }
+     },
+     "exterieur": {
+      "avant": {
+       "mediane": 0.6324549158523803,
+       "p90": 3.1554439367755442,
+       "blocs": 7763
+      },
+      "apres": {
+       "mediane": 0.27537226594473124,
+       "p90": 2.3525527756114166,
+       "blocs": 7763
+      }
+     },
+     "fenetre": {
+      "avant": {
+       "mediane": 0.9971796929733214,
+       "p90": 3.3216050699199786,
+       "blocs": 4741
+      },
+      "apres": {
+       "mediane": 0.4405871836214328,
+       "p90": 2.4670376279002286,
+       "blocs": 4741
+      }
+     }
+    }
+   },
+   "rendus": 98,
+   "reglages_v1": {
+    "accentuation": 4,
+    "clarte": 0,
+    "filtre": "aucun"
+   }
+  }
+ },
+ "rendus_recettes": 756,
+ "rendus_total": 763,
+ "procedure": "validation croisée en 3 plis (PLIS) ; un pas de Gauss-Newton par pli et sur toutes les scènes, jacobien partagé ; pas de criblage de base ni de filtre ; règle écrite avant les mesures, voir `regle`"
+}
